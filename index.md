@@ -4,7 +4,7 @@ title: Thank You!
 sitemap: false
 ---
 
-# About Me
+## About Me
 
 I am a graduate student specializing in telecommunication standards, Open RAN, and advanced research on cell offloading and RAN slicing using Game Theory. My work revolves around designing innovative solutions that bridge theory and practical implementation in modern telecom networks.
 
