@@ -1,29 +1,25 @@
 ---
 layout: post
-description: > 
-  This feature release adds new social media icons for 2024 and makes dark mode available to everyone.
+title: Joint Traffic Prediction and Base Station Sleeping for Energy Saving in Cellular Networks
+description: >
+  **Date**: 2021.08.06, 
+  **Tag**: [Base station sleeping], [Long short-term memory], [Traffic prediction]
 image: 
-  path: /assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg
+  path: /assets/img/blog/prediction_sleep/Prediction_Sleep.png
   srcset: 
-    1920w: /assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg
-    960w:  /assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash@0,5x.jpg
-    480w:  /assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash@0,25x.jpg
+    1920w: /assets/img/blog/prediction_sleep/Prediction_Sleep.png
+    960w:  /assets/img/blog/prediction_sleep/Prediction_Sleep@0,5x.png
+    480w:  /assets/img/blog/prediction_sleep/Prediction_Sleep@0,25x.png
 # accent_image: /assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg
 excerpt_separator: <!--more-->
 sitemap: false
 ---
-
-
-
-
-
 
 <!--more-->
 
 * toc
 {:toc .large-only}
 
-# Joint Traffic Prediction and Base Station Sleeping for Energy Saving in Cellular Networks
 ## 1. Why this paper?
 - 졸업 논문 레퍼런스
 - 트래픽 예측을 발전시킬 수 있는 연구

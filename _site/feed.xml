@@ -1,11 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-11-18T12:13:37+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Geon Kim</title><subtitle>Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
-</subtitle><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><entry><title type="html">AI-Ready Energy Modelling for Next Generation RAN</title><link href="http://localhost:4000/blog/paper/2024-11-15-AI-ready-Energy-Modeling-for-Next-Generation-RAN-copy/" rel="alternate" type="text/html" title="AI-Ready Energy Modelling for Next Generation RAN" /><published>2024-11-15T00:00:00+09:00</published><updated>2024-11-15T00:00:00+09:00</updated><id>http://localhost:4000/blog/paper/AI-ready-Energy-Modeling-for-Next-Generation-RAN%20copy</id><content type="html" xml:base="http://localhost:4000/blog/paper/2024-11-15-AI-ready-Energy-Modeling-for-Next-Generation-RAN-copy/"><![CDATA[<!--more-->
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-11-18T17:12:36+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Geon Kim</title><subtitle>Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
+</subtitle><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><entry><title type="html">AI-Ready Energy Modelling for Next Generation RAN</title><link href="http://localhost:4000/blog/paper/2024-11-15-AI-ready-Energy-Modeling-for-Next-Generation-RAN/" rel="alternate" type="text/html" title="AI-Ready Energy Modelling for Next Generation RAN" /><published>2024-11-15T00:00:00+09:00</published><updated>2024-11-15T00:00:00+09:00</updated><id>http://localhost:4000/blog/paper/AI-ready-Energy-Modeling-for-Next-Generation-RAN</id><content type="html" xml:base="http://localhost:4000/blog/paper/2024-11-15-AI-ready-Energy-Modeling-for-Next-Generation-RAN/"><![CDATA[<!--more-->
 <ul class="large-only" id="markdown-toc">
   <li><a href="#1-why-this-paper" id="markdown-toc-1-why-this-paper">1. Why this paper</a></li>
   <li><a href="#2-paper-summarization" id="markdown-toc-2-paper-summarization">2. Paper Summarization</a>    <ul>
-      <li><a href="#21-introduction" id="markdown-toc-21-introduction">2.1 Introduction</a></li>
+      <li><a href="#21-introduction" id="markdown-toc-21-introduction">2.1 Introduction</a>        <ul>
+          <li><a href="#211-문제-정의" id="markdown-toc-211-문제-정의">2.1.1 문제 정의</a></li>
+          <li><a href="#212-aimm-시뮬레이터" id="markdown-toc-212-aimm-시뮬레이터">2.1.2 AIMM 시뮬레이터</a></li>
+          <li><a href="#213-핵심-목표" id="markdown-toc-213-핵심-목표">2.1.3 핵심 목표</a></li>
+        </ul>
+      </li>
+      <li><a href="#22-backgroud" id="markdown-toc-22-backgroud">2.2 Backgroud</a>        <ul>
+          <li><a href="#221-5g-네트워크의-에너지-소비-문제" id="markdown-toc-221-5g-네트워크의-에너지-소비-문제">2.2.1 5G 네트워크의 에너지 소비 문제</a></li>
+          <li><a href="#222-디지털트윈과-aimm-시뮬레이터" id="markdown-toc-222-디지털트윈과-aimm-시뮬레이터">2.2.2 디지털트윈과 AIMM 시뮬레이터</a></li>
+        </ul>
+      </li>
+      <li><a href="#23-methods" id="markdown-toc-23-methods">2.3 Methods</a>        <ul>
+          <li><a href="#231-aimm-시뮬레이터-구성" id="markdown-toc-231-aimm-시뮬레이터-구성">2.3.1 AIMM 시뮬레이터 구성</a></li>
+          <li><a href="#232-기지국-전력-소비-모델" id="markdown-toc-232-기지국-전력-소비-모델">2.3.2 기지국 전력 소비 모델</a></li>
+          <li><a href="#233-실험-설정" id="markdown-toc-233-실험-설정">2.3.3 실험 설정</a></li>
+        </ul>
+      </li>
+      <li><a href="#24-results-and-discussion" id="markdown-toc-24-results-and-discussion">2.4 Results and Discussion</a>        <ul>
+          <li><a href="#241-송신-전력과-네트워크-성능" id="markdown-toc-241-송신-전력과-네트워크-성능">2.4.1 송신 전력과 네트워크 성능</a></li>
+          <li><a href="#242-에너지-효율성ee" id="markdown-toc-242-에너지-효율성ee">2.4.2 에너지 효율성(EE)</a></li>
+          <li><a href="#243-스펙트럼-효율성se됨" id="markdown-toc-243-스펙트럼-효율성se됨">2.4.3 스펙트럼 효율성(SE)됨</a></li>
+          <li><a href="#244-미래-네트워크-설계-시-주의할-점" id="markdown-toc-244-미래-네트워크-설계-시-주의할-점">2.4.4 미래 네트워크 설계 시 주의할 점</a></li>
+        </ul>
+      </li>
+      <li><a href="#25-conclusion" id="markdown-toc-25-conclusion">2.5 Conclusion</a></li>
     </ul>
   </li>
+  <li><a href="#3-take-away" id="markdown-toc-3-take-away">3. Take Away</a></li>
 </ul>
 
 <h1 id="1-why-this-paper">1. Why this paper</h1>
@@ -17,7 +42,176 @@
 
 <h1 id="2-paper-summarization">2. Paper Summarization</h1>
 
-<h2 id="21-introduction">2.1 Introduction</h2>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="paper" /><summary type="html"><![CDATA[**Date**: 2024.11.04, **Tag**: [AIMM], [System Level Simulator]]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">OSC AIMLFW Installation</title><link href="http://localhost:4000/blog/aimlfw/2024-10-04-OSC-AIMLFW-Installation/" rel="alternate" type="text/html" title="OSC AIMLFW Installation" /><published>2024-10-04T00:00:00+09:00</published><updated>2024-10-04T00:00:00+09:00</updated><id>http://localhost:4000/blog/aimlfw/OSC-AIMLFW-Installation</id><content type="html" xml:base="http://localhost:4000/blog/aimlfw/2024-10-04-OSC-AIMLFW-Installation/"><![CDATA[<!--more-->
+<h2 id="21-introduction">2.1 Introduction</h2>
+
+<h3 id="211-문제-정의">2.1.1 문제 정의</h3>
+<p>차세대 RAN 설계에서는 에너지 소비가 중요한 설계 기준이 되었으며 AI와 ML을 활용하여 네트워크 에너지 효율성과 성능 간의 트레이드오프를 최적화하려는 연구가 진행되고 있다.</p>
+
+<h3 id="212-aimm-시뮬레이터">2.1.2 AIMM 시뮬레이터</h3>
+<p>AIMM(AI-enabled Massive MIMO) 시뮬레이터는 5G 네트워크를 가상으로 재현하며, 송신 전력 감소 시나리오를 통해 에너지 효율성(EE)과 스펙트럼 효율성(SE)를 분석할 수 있는 오픈소스 시뮬레이터이다.</p>
+
+<h3 id="213-핵심-목표">2.1.3 핵심 목표</h3>
+<ol>
+  <li>송신 전력 조정을 통해 EE와 SE간의 관계를 파악</li>
+  <li>네트워크 성능을 저하하지 않으면서 에너지 소비를 최적화</li>
+</ol>
+
+<h2 id="22-backgroud">2.2 Backgroud</h2>
+
+<h3 id="221-5g-네트워크의-에너지-소비-문제">2.2.1 5G 네트워크의 에너지 소비 문제</h3>
+<ul>
+  <li>기지국(Base Station, BS)이 전체 에너지 소비의 70%를 차지하며 지속적으로 증가할 전망이다.
+    <ul>
+      <li>주요 원인: Massive MIMO와 같은 기술은 데이터 처리량을 증가시키지만, 더 많은 전력을 요구</li>
+      <li>기존 최적화 방법: Sleep mode, Lean Carrier Design, ML 기반 에너지 모델링 등</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="222-디지털트윈과-aimm-시뮬레이터">2.2.2 디지털트윈과 AIMM 시뮬레이터</h3>
+<ul>
+  <li>
+    <p>디지털 트윈은 실제 네트워크를 복제한 가상 환경으로, AI/ML 모델을 안전하게 학습하고 테스트할 수 있게 한다.</p>
+  </li>
+  <li>
+    <p>AIMM 시뮬레이터의 강원</p>
+    <ul>
+      <li>기지국과 사용자 장치 간의 상호작용을 정밀히 재현</li>
+      <li>빠른 실행 속도(평균 2초 실행 시간)로 ML 모델 훈련과 테스트 지원</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="23-methods">2.3 Methods</h2>
+
+<h3 id="231-aimm-시뮬레이터-구성">2.3.1 AIMM 시뮬레이터 구성</h3>
+<ul>
+  <li>시뮬레이터의 특징
+    <ul>
+      <li>3D 모델링: 기지국과 UE를 공간적으로 배치하고, Pathloss를 계산</li>
+      <li>SINR 및 CQI 계산: 신호 품질을 정밀히 추정하여 사용자 데이터 전송 품질 분석</li>
+      <li>Spectral Efficiency(SE) 및 처리량(\(T_{i,j}\)) 계산</li>
+    </ul>
+  </li>
+  <li>주요 수식</li>
+</ul>
+
+<p><strong>SINR 계산</strong></p>
+
+\[SINR_{i,j} = \frac{P_{Rx,i,j}}{P_{inter,i} + P_{noise,i}}\]
+
+<p>\(P_{R_{x_{i,j}}}\): 사용자 \(i\)가 기지국 \(j\)로부터 받은 신호 전력</p>
+
+<p>\(P_{inter_{i}}\): 사용자 \(i\)가 경험하는 간섭 전력</p>
+
+<p>\(P_{noise_{i}}\): 사용자 \(i\)가 경험하는 잡음 전력</p>
+
+<p><strong>Throughput 계산</strong></p>
+
+\[T_{i,j} = SE_{i,j} \times B\]
+
+<p>\(SE_{i,j}\): 사용자와 기지국 간의 Spectral Efficiency</p>
+
+<p>\(B\): 사용 가능한 대역폭(논문에서는 10MHz 사용)</p>
+
+<h3 id="232-기지국-전력-소비-모델">2.3.2 기지국 전력 소비 모델</h3>
+
+<ul>
+  <li>AIMM 시뮬레이터는 기존 전력 소비 모델을 확장하여 기지국의 에너지 소비를 정밀히 계산한다.</li>
+</ul>
+
+<p><strong>전력 소비 수식</strong></p>
+
+\[P_{BS} = N_{TRX} \times N_{ant} \times (P_0 + f(P_{T_{x}}))\]
+
+<p>\(P_{BS}\): 기지국의 총 전력 소비량(\(W\))</p>
+
+<p>\(f(P_{T_{x}})\): 송신 전력에 따른 동적 전력 소비</p>
+
+<p><strong>송신 전력 소비 함수</strong></p>
+
+\[f(P_{Tx}) = \frac{P_{Tx}}{\eta P_{PA} \cdot (1 - \sigma_{feed})} + P_{RF} + P_{BB}\]
+
+<p>\(\eta_{PA}\): 전력 증폭기 효율(논문에서는 0.311 사용)</p>
+
+<p>\(\sigma_{feed}\): Feeder loss, 송신신호가 기지국 안테나로 전달되는 동안 발생하는 전력 손실(논문에서는 0.5 사용)</p>
+
+<p>\(P_{RF}\): RF 처리 전력, RF 신호를 처리학 위해 필요한 전력(논문에서는 12.9W 사용)</p>
+
+<p>\(P_{BB}\): 베이스밴드 처리 전력(논문에서는 29.6W 사용)</p>
+
+<h3 id="233-실험-설정">2.3.3 실험 설정</h3>
+<ul>
+  <li>시나리오 구성
+    <ul>
+      <li>19개의 기지국을 기반으로 아래의 그림과 같이 네 가지 주요 시나리오를 설정하였다.</li>
+      <li>송신 전력을 0 - 20W로 조정하여 에너지 소비와 네트워크 성능을 분석하였다.</li>
+    </ul>
+  </li>
+</ul>
+
+<p align="center">
+  <img src="/assets/img/blog/aimm/network-topology.png" alt="Topology of this paper" width="50%" />
+  <img src="/assets/img/blog/aimm/scenario-table.png" alt="BS Scenario Definitions" width="40%" />
+</p>
+
+<h2 id="24-results-and-discussion">2.4 Results and Discussion</h2>
+
+<h3 id="241-송신-전력과-네트워크-성능">2.4.1 송신 전력과 네트워크 성능</h3>
+
+<ul>
+  <li>송신 전력 감소는 간섭을 줄여 SINR을 향상시킬 수 있으며, 일부 시나리오에서 네트워크 throughput이 증가하였다.
+    <ul>
+      <li>간섭 감소로 인해 네트워크 성능이 특정 송신 전력에서 최적화되는 결과를 확인할 수 있었다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="242-에너지-효율성ee">2.4.2 에너지 효율성(EE)</h3>
+
+<ul>
+  <li>에너지 효율성 계산:</li>
+</ul>
+
+\[EE = \frac{T_s \cdot \tau}{P_{Cs}}\]
+
+<p>\(T_s\): 네트워크의 총 처리량</p>
+
+<p>\(PC_{s}\): 네트워크 평균 전력 소비</p>
+
+<p class="note">송신 전력 조정 및 기지국 sleep 모드를 통해 EE가 최대 14.8% 향상</p>
+
+<h3 id="243-스펙트럼-효율성se됨">2.4.3 스펙트럼 효율성(SE)됨</h3>
+
+<p class="note">송신 전력 감소 초기에는 SE가 증가하지만, 송신 전력이 너무 낮아지면 데이터 전송량 감소로 인해 SE가 감소</p>
+
+<ul>
+  <li>최적의 송신 전력 설정이 필요</li>
+</ul>
+
+<h3 id="244-미래-네트워크-설계-시-주의할-점">2.4.4 미래 네트워크 설계 시 주의할 점</h3>
+
+<ul>
+  <li>EE와 SE 간 트레이드오프를 고려한 최적화 전략이 중요</li>
+  <li>AIMM 시뮬레이터는 디지털 트윈 환경에서 빠르고 정밀한 실험을 지원하며, 차세대 네트워크 설계에 중요한 도구로 평가됨</li>
+</ul>
+
+<h2 id="25-conclusion">2.5 Conclusion</h2>
+
+<ul>
+  <li>AIMM 시뮬레이터는 에너지 소비와 성능 간 trade-off를 분석하고 최적화를 지원하는 강력한 시뮬레이터임</li>
+  <li>디지털 트윈 환경에서 AI 및 ML 모델의 학습과 테스트를 안전하고 효율적으로 수행할 수 있음</li>
+  <li>본 논문에서는 에너지 소비와 성능을 동시에 고려한 차세대 네트워크 설계의 중요성을 강조</li>
+</ul>
+
+<hr />
+
+<h1 id="3-take-away">3. Take Away</h1>
+
+<ul>
+  <li>AIMM 시뮬레이터 구현 파라미터 현황</li>
+  <li>본 논문에서 임의로 정한 파라미터들(예. \(\sigma_{feed}\) 등)을 고려하여 후속 연구 진행</li>
+</ul>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="paper" /><summary type="html"><![CDATA[**Date**: 2024.11.04, **Tag**: [AIMM], [System Level Simulator]]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">OSC AIMLFW Installation</title><link href="http://localhost:4000/blog/aimlfw/2024-10-04-OSC-AIMLFW-Installation/" rel="alternate" type="text/html" title="OSC AIMLFW Installation" /><published>2024-10-04T00:00:00+09:00</published><updated>2024-10-04T00:00:00+09:00</updated><id>http://localhost:4000/blog/aimlfw/OSC-AIMLFW-Installation</id><content type="html" xml:base="http://localhost:4000/blog/aimlfw/2024-10-04-OSC-AIMLFW-Installation/"><![CDATA[<!--more-->
 <ul class="large-only" id="markdown-toc">
   <li><a href="#o-ran-aimlfw-installation" id="markdown-toc-o-ran-aimlfw-installation">O-RAN AIMLFW Installation</a>    <ul>
       <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a>        <ul>
@@ -111,31 +305,27 @@ sudo pip3 install influxdb_client
 
 <hr />
 
-<p>위의 과정을 마치게 되면 <code class="language-plaintext highlighter-rouge">AIMLFW</code>를 사용할 수 있는 정말 기초적인 준비가 끝나게 된다.</p>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="aimlfw" /><summary type="html"><![CDATA[O-RAN Software Community 프로젝트 AIMLFW 설치 정리]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Joint Traffic Prediction And Base Station Sleepiong For Energy Saving In Cellular Networks</title><link href="http://localhost:4000/blog/paper/2024-09-26-joint-traffic-prediction-and-base-station-sleepiong-for-energy-saving-in-cellular-networks/" rel="alternate" type="text/html" title="Joint Traffic Prediction And Base Station Sleepiong For Energy Saving In Cellular Networks" /><published>2024-09-26T00:00:00+09:00</published><updated>2024-09-26T00:00:00+09:00</updated><id>http://localhost:4000/blog/paper/joint-traffic-prediction-and-base-station-sleepiong-for-energy-saving-in-cellular-networks</id><content type="html" xml:base="http://localhost:4000/blog/paper/2024-09-26-joint-traffic-prediction-and-base-station-sleepiong-for-energy-saving-in-cellular-networks/"><![CDATA[<!--more-->
+<p>위의 과정을 마치게 되면 <code class="language-plaintext highlighter-rouge">AIMLFW</code>를 사용할 수 있는 정말 기초적인 준비가 끝나게 된다.</p>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="aimlfw" /><summary type="html"><![CDATA[O-RAN Software Community 프로젝트 AIMLFW 설치 정리]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Joint Traffic Prediction and Base Station Sleeping for Energy Saving in Cellular Networks</title><link href="http://localhost:4000/blog/paper/2024-09-26-joint-traffic-prediction-and-base-station-sleepiong-for-energy-saving-in-cellular-networks/" rel="alternate" type="text/html" title="Joint Traffic Prediction and Base Station Sleeping for Energy Saving in Cellular Networks" /><published>2024-09-26T00:00:00+09:00</published><updated>2024-09-26T00:00:00+09:00</updated><id>http://localhost:4000/blog/paper/joint-traffic-prediction-and-base-station-sleepiong-for-energy-saving-in-cellular-networks</id><content type="html" xml:base="http://localhost:4000/blog/paper/2024-09-26-joint-traffic-prediction-and-base-station-sleepiong-for-energy-saving-in-cellular-networks/"><![CDATA[<!--more-->
 
 <ul class="large-only" id="markdown-toc">
-  <li><a href="#joint-traffic-prediction-and-base-station-sleeping-for-energy-saving-in-cellular-networks" id="markdown-toc-joint-traffic-prediction-and-base-station-sleeping-for-energy-saving-in-cellular-networks">Joint Traffic Prediction and Base Station Sleeping for Energy Saving in Cellular Networks</a>    <ul>
-      <li><a href="#1-why-this-paper" id="markdown-toc-1-why-this-paper">1. Why this paper?</a></li>
-      <li><a href="#2-paper-summary" id="markdown-toc-2-paper-summary">2. Paper Summary</a>        <ul>
-          <li><a href="#21-introduction" id="markdown-toc-21-introduction">2.1 Introduction</a></li>
-          <li><a href="#22-network-model-and-problem-formulation" id="markdown-toc-22-network-model-and-problem-formulation">2.2 Network Model and Problem Formulation</a>            <ul>
-              <li><a href="#22a-traffic-model" id="markdown-toc-22a-traffic-model">2.2.A Traffic Model</a></li>
-              <li><a href="#22b-problem-model" id="markdown-toc-22b-problem-model">2.2.B Problem Model</a></li>
-              <li><a href="#22c-problem-formulation" id="markdown-toc-22c-problem-formulation">2.2.C Problem Formulation</a></li>
-            </ul>
-          </li>
-          <li><a href="#3-our-proposed-algorithm" id="markdown-toc-3-our-proposed-algorithm">3. Our Proposed Algorithm</a>            <ul>
-              <li><a href="#3a-cellular-traffic-prediction" id="markdown-toc-3a-cellular-traffic-prediction">3.A Cellular traffic prediction</a></li>
-              <li><a href="#3b-base-station-sleeping" id="markdown-toc-3b-base-station-sleeping">3.B Base station sleeping</a></li>
-            </ul>
-          </li>
+  <li><a href="#1-why-this-paper" id="markdown-toc-1-why-this-paper">1. Why this paper?</a></li>
+  <li><a href="#2-paper-summary" id="markdown-toc-2-paper-summary">2. Paper Summary</a>    <ul>
+      <li><a href="#21-introduction" id="markdown-toc-21-introduction">2.1 Introduction</a></li>
+      <li><a href="#22-network-model-and-problem-formulation" id="markdown-toc-22-network-model-and-problem-formulation">2.2 Network Model and Problem Formulation</a>        <ul>
+          <li><a href="#22a-traffic-model" id="markdown-toc-22a-traffic-model">2.2.A Traffic Model</a></li>
+          <li><a href="#22b-problem-model" id="markdown-toc-22b-problem-model">2.2.B Problem Model</a></li>
+          <li><a href="#22c-problem-formulation" id="markdown-toc-22c-problem-formulation">2.2.C Problem Formulation</a></li>
+        </ul>
+      </li>
+      <li><a href="#3-our-proposed-algorithm" id="markdown-toc-3-our-proposed-algorithm">3. Our Proposed Algorithm</a>        <ul>
+          <li><a href="#3a-cellular-traffic-prediction" id="markdown-toc-3a-cellular-traffic-prediction">3.A Cellular traffic prediction</a></li>
+          <li><a href="#3b-base-station-sleeping" id="markdown-toc-3b-base-station-sleeping">3.B Base station sleeping</a></li>
         </ul>
       </li>
     </ul>
   </li>
 </ul>
 
-<h1 id="joint-traffic-prediction-and-base-station-sleeping-for-energy-saving-in-cellular-networks">Joint Traffic Prediction and Base Station Sleeping for Energy Saving in Cellular Networks</h1>
 <h2 id="1-why-this-paper">1. Why this paper?</h2>
 <ul>
   <li>졸업 논문 레퍼런스</li>
@@ -353,7 +543,7 @@ sudo pip3 install influxdb_client
 
 <p>만약 식 (13)에 대한 실현 가능한 해가 존재한다면, 선택된 기지국 집합 (\(N_s = \{ n \mid x_{n}=1 \}\)) 이 bandwidth 및 power 제한 이내에서 TDA의 속도 요구사항을 충족할 수 있다 말할 수 있다. 식 (13)은 <code class="language-plaintext highlighter-rouge">convex optimization algorithm</code>으로 해결할 수 있다. 또한 이와 동일한 방식으로 (8) 식도 해결할 수 있다.</p>
 
-<p>이후, <code class="language-plaintext highlighter-rouge">Local search</code> 알고리즘을 통해 최적의 기지국 하위 집합을 찾는다. 알고리즘은 <code class="language-plaintext highlighter-rouge">Open</code>, <code class="language-plaintext highlighter-rouge">Close</code>, <code class="language-plaintext highlighter-rouge">Exchange</code> 이 세가지 단계로 이루어져 있으며, 각각의 단계에서 시스템의 power 소비를 업데이트하여 기지국을 추가하거나 제거하거나 교환하는 방식으로 최적의 구성을 찾는다.</p>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="paper" /><summary type="html"><![CDATA[This feature release adds new social media icons for 2024 and makes dark mode available to everyone.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Introducing Hydejack 9</title><link href="http://localhost:4000/blog/example/2020-07-03-introducing-hydejack-9/" rel="alternate" type="text/html" title="Introducing Hydejack 9" /><published>2020-07-03T00:00:00+09:00</published><updated>2020-07-03T00:00:00+09:00</updated><id>http://localhost:4000/blog/example/introducing-hydejack-9</id><content type="html" xml:base="http://localhost:4000/blog/example/2020-07-03-introducing-hydejack-9/"><![CDATA[<p class="lead">Version 9 is the most complete version of Hydejack yet.</p>
+<p>이후, <code class="language-plaintext highlighter-rouge">Local search</code> 알고리즘을 통해 최적의 기지국 하위 집합을 찾는다. 알고리즘은 <code class="language-plaintext highlighter-rouge">Open</code>, <code class="language-plaintext highlighter-rouge">Close</code>, <code class="language-plaintext highlighter-rouge">Exchange</code> 이 세가지 단계로 이루어져 있으며, 각각의 단계에서 시스템의 power 소비를 업데이트하여 기지국을 추가하거나 제거하거나 교환하는 방식으로 최적의 구성을 찾는다.</p>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="paper" /><summary type="html"><![CDATA[**Date**: 2021.08.06, **Tag**: [Base station sleeping], [Long short-term memory], [Traffic prediction]]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/prediction_sleep/Prediction_Sleep.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/prediction_sleep/Prediction_Sleep.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Introducing Hydejack 9</title><link href="http://localhost:4000/blog/example/2020-07-03-introducing-hydejack-9/" rel="alternate" type="text/html" title="Introducing Hydejack 9" /><published>2020-07-03T00:00:00+09:00</published><updated>2020-07-03T00:00:00+09:00</updated><id>http://localhost:4000/blog/example/introducing-hydejack-9</id><content type="html" xml:base="http://localhost:4000/blog/example/2020-07-03-introducing-hydejack-9/"><![CDATA[<p class="lead">Version 9 is the most complete version of Hydejack yet.</p>
 
 <p><a href="#linking-in-style">Modernized</a> <a href="#whats-in-the-cards">design</a>, <a href="#ready-for-the-big-screen">big headlines</a>, big new features: <a href="#built-in-search">Built-In Search</a>, <a href="#sticky-table-of-contents">Sticky Table of Contents</a>, and <a href="#auto-hiding-navbar">Auto-Hiding Navbar</a>. That <a href="#and-much-more">and more</a> is Hydejack 9.</p>
 
