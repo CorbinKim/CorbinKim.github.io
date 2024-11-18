@@ -1,5 +1,6 @@
 ---
 layout: post
+title: OSC AIMLFW Installation
 description: > 
   O-RAN Software Community 프로젝트 AIMLFW 설치 정리
 image: 

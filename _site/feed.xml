@@ -1,5 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-11-12T20:24:05+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Geon Kim</title><subtitle>Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
-</subtitle><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><entry><title type="html">Osc Aimlfw Installation</title><link href="http://localhost:4000/blog/aimlfw/2024-10-04-OSC-AIMLFW-Installation/" rel="alternate" type="text/html" title="Osc Aimlfw Installation" /><published>2024-10-04T00:00:00+09:00</published><updated>2024-10-04T00:00:00+09:00</updated><id>http://localhost:4000/blog/aimlfw/OSC-AIMLFW-Installation</id><content type="html" xml:base="http://localhost:4000/blog/aimlfw/2024-10-04-OSC-AIMLFW-Installation/"><![CDATA[<!--more-->
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-11-18T12:13:37+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Geon Kim</title><subtitle>Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
+</subtitle><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><entry><title type="html">AI-Ready Energy Modelling for Next Generation RAN</title><link href="http://localhost:4000/blog/paper/2024-11-15-AI-ready-Energy-Modeling-for-Next-Generation-RAN-copy/" rel="alternate" type="text/html" title="AI-Ready Energy Modelling for Next Generation RAN" /><published>2024-11-15T00:00:00+09:00</published><updated>2024-11-15T00:00:00+09:00</updated><id>http://localhost:4000/blog/paper/AI-ready-Energy-Modeling-for-Next-Generation-RAN%20copy</id><content type="html" xml:base="http://localhost:4000/blog/paper/2024-11-15-AI-ready-Energy-Modeling-for-Next-Generation-RAN-copy/"><![CDATA[<!--more-->
+<ul class="large-only" id="markdown-toc">
+  <li><a href="#1-why-this-paper" id="markdown-toc-1-why-this-paper">1. Why this paper</a></li>
+  <li><a href="#2-paper-summarization" id="markdown-toc-2-paper-summarization">2. Paper Summarization</a>    <ul>
+      <li><a href="#21-introduction" id="markdown-toc-21-introduction">2.1 Introduction</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="1-why-this-paper">1. Why this paper</h1>
+
+<ol>
+  <li>AIMM 시뮬레이터 이해</li>
+  <li>기지국 환경에서 사용할 수 있는 파라미터들 숙지</li>
+</ol>
+
+<h1 id="2-paper-summarization">2. Paper Summarization</h1>
+
+<h2 id="21-introduction">2.1 Introduction</h2>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="paper" /><summary type="html"><![CDATA[**Date**: 2024.11.04, **Tag**: [AIMM], [System Level Simulator]]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">OSC AIMLFW Installation</title><link href="http://localhost:4000/blog/aimlfw/2024-10-04-OSC-AIMLFW-Installation/" rel="alternate" type="text/html" title="OSC AIMLFW Installation" /><published>2024-10-04T00:00:00+09:00</published><updated>2024-10-04T00:00:00+09:00</updated><id>http://localhost:4000/blog/aimlfw/OSC-AIMLFW-Installation</id><content type="html" xml:base="http://localhost:4000/blog/aimlfw/2024-10-04-OSC-AIMLFW-Installation/"><![CDATA[<!--more-->
 <ul class="large-only" id="markdown-toc">
   <li><a href="#o-ran-aimlfw-installation" id="markdown-toc-o-ran-aimlfw-installation">O-RAN AIMLFW Installation</a>    <ul>
       <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a>        <ul>
