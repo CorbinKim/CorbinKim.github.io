@@ -130,6 +130,8 @@ $$P_{BB}$$: 베이스밴드 처리 전력(논문에서는 29.6W 사용)
 
 ## 2.4 Results and Discussion
 
+![Result](/assets/img/blog/aimm/graph.png)
+
 ### 2.4.1 송신 전력과 네트워크 성능
 
 - 송신 전력 감소는 간섭을 줄여 SINR을 향상시킬 수 있으며, 일부 시나리오에서 네트워크 throughput이 증가하였다.

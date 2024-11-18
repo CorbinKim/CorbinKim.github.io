@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-11-18T17:12:36+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Geon Kim</title><subtitle>Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-11-18T17:45:04+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Geon Kim</title><subtitle>Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
 </subtitle><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><entry><title type="html">AI-Ready Energy Modelling for Next Generation RAN</title><link href="http://localhost:4000/blog/paper/2024-11-15-AI-ready-Energy-Modeling-for-Next-Generation-RAN/" rel="alternate" type="text/html" title="AI-Ready Energy Modelling for Next Generation RAN" /><published>2024-11-15T00:00:00+09:00</published><updated>2024-11-15T00:00:00+09:00</updated><id>http://localhost:4000/blog/paper/AI-ready-Energy-Modeling-for-Next-Generation-RAN</id><content type="html" xml:base="http://localhost:4000/blog/paper/2024-11-15-AI-ready-Energy-Modeling-for-Next-Generation-RAN/"><![CDATA[<!--more-->
 <ul class="large-only" id="markdown-toc">
   <li><a href="#1-why-this-paper" id="markdown-toc-1-why-this-paper">1. Why this paper</a></li>
@@ -156,6 +156,8 @@
 </p>
 
 <h2 id="24-results-and-discussion">2.4 Results and Discussion</h2>
+
+<p><img src="/assets/img/blog/aimm/graph.png" alt="Result" /></p>
 
 <h3 id="241-송신-전력과-네트워크-성능">2.4.1 송신 전력과 네트워크 성능</h3>
 
