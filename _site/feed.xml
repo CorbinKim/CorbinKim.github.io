@@ -1,5 +1,173 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-11-18T17:45:04+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Geon Kim</title><subtitle>Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
-</subtitle><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><entry><title type="html">AI-Ready Energy Modelling for Next Generation RAN</title><link href="http://localhost:4000/blog/paper/2024-11-15-AI-ready-Energy-Modeling-for-Next-Generation-RAN/" rel="alternate" type="text/html" title="AI-Ready Energy Modelling for Next Generation RAN" /><published>2024-11-15T00:00:00+09:00</published><updated>2024-11-15T00:00:00+09:00</updated><id>http://localhost:4000/blog/paper/AI-ready-Energy-Modeling-for-Next-Generation-RAN</id><content type="html" xml:base="http://localhost:4000/blog/paper/2024-11-15-AI-ready-Energy-Modeling-for-Next-Generation-RAN/"><![CDATA[<!--more-->
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-11-20T16:36:24+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Geon Kim</title><subtitle>Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
+</subtitle><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><entry><title type="html">AIMM 시뮬레이터 개선 - Phase 1</title><link href="http://localhost:4000/blog/sim/2024-11-20-aimm-phase-1/" rel="alternate" type="text/html" title="AIMM 시뮬레이터 개선 - Phase 1" /><published>2024-11-20T00:00:00+09:00</published><updated>2024-11-20T00:00:00+09:00</updated><id>http://localhost:4000/blog/sim/aimm-phase-1</id><content type="html" xml:base="http://localhost:4000/blog/sim/2024-11-20-aimm-phase-1/"><![CDATA[<!--more-->
+
+<ul class="large-only" id="markdown-toc">
+  <li><a href="#phase-1---다중-주파수-셀-모델링" id="markdown-toc-phase-1---다중-주파수-셀-모델링">Phase 1 - 다중 주파수 셀 모델링</a>    <ul>
+      <li><a href="#aimm_simulatorpy-수정" id="markdown-toc-aimm_simulatorpy-수정">AIMM_simulator.py 수정</a>        <ul>
+          <li><a href="#tasks" id="markdown-toc-tasks">Tasks</a></li>
+        </ul>
+      </li>
+      <li><a href="#task-개선" id="markdown-toc-task-개선">Task 개선</a>        <ul>
+          <li><a href="#1-다중-주파수-기반의-cell-클래스-구현" id="markdown-toc-1-다중-주파수-기반의-cell-클래스-구현">1. 다중 주파수 기반의 Cell 클래스 구현</a>            <ul>
+              <li><a href="#1-다중-주파수800mhz-18ghz-35ghz-지원" id="markdown-toc-1-다중-주파수800mhz-18ghz-35ghz-지원">1) 다중 주파수(800MHz, 1.8GHz, 3.5GHz) 지원</a></li>
+              <li><a href="#2-주파수별-대역폭-및-rb-설정-구현" id="markdown-toc-2-주파수별-대역폭-및-rb-설정-구현">2) 주파수별 대역폭 및 RB 설정 구현</a></li>
+              <li><a href="#3-주파수-activationsleep-메커니즘-구현" id="markdown-toc-3-주파수-activationsleep-메커니즘-구현">3) 주파수 activation/sleep 메커니즘 구현</a></li>
+            </ul>
+          </li>
+          <li><a href="#2-다중-주파수별-차등화된-에너지-소비-모델-구현" id="markdown-toc-2-다중-주파수별-차등화된-에너지-소비-모델-구현">2. 다중 주파수별 차등화된 에너지 소비 모델 구현</a>            <ul>
+              <li><a href="#1-다중-주파수별-차등화된-전력-소비-모델-구현" id="markdown-toc-1-다중-주파수별-차등화된-전력-소비-모델-구현">1) 다중 주파수별 차등화된 전력 소비 모델 구현</a></li>
+              <li><a href="#2-복수-주파수-동시-운영-시의-총-에너지-소비-계산" id="markdown-toc-2-복수-주파수-동시-운영-시의-총-에너지-소비-계산">2) 복수 주파수 동시 운영 시의 총 에너지 소비 계산</a></li>
+              <li><a href="#3-주파수별-sleep-모드-전환-시-에너지-소비-모델링" id="markdown-toc-3-주파수별-sleep-모드-전환-시-에너지-소비-모델링">3) 주파수별 sleep 모드 전환 시 에너지 소비 모델링</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#결론" id="markdown-toc-결론">결론</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="phase-1---다중-주파수-셀-모델링">Phase 1 - 다중 주파수 셀 모델링</h1>
+
+<h2 id="aimm_simulatorpy-수정">AIMM_simulator.py 수정</h2>
+
+<h3 id="tasks">Tasks</h3>
+
+<ul>
+  <li><strong>Legacy 1</strong>: 단일 주파수(2GHz) 기반으로 Cell 클래스가 구현되어 있음</li>
+  <li>개선 사항
+    <ul>
+      <li>Cell 클래스를 다중 주파수(800MHz, 1.8GHz, 3.5GHz) 기반으로 구현</li>
+      <li>주파수별 대역폭, 서브밴드 설정 구현</li>
+      <li>주파수 activation/sleep 메커니즘 구현</li>
+    </ul>
+  </li>
+  <li><strong>Legacy 2</strong>: 단일 주파수 기반 에너지 모델이 구현되어 있음</li>
+  <li>개선 사항
+    <ul>
+      <li>다중 주파수별 차등화된 전력 소비 모델 구현</li>
+      <li>복수 주파수 동시 운영 시의 총 에너지 소비 계산</li>
+      <li>주파수별 sleep 모드 전환 시 에너지 소비 모델링</li>
+    </ul>
+  </li>
+  <li><strong>참고 표준</strong>:
+    <ul>
+      <li>TS 38.104: NR Base Station radio transmission and reception</li>
+      <li>TS 21.866: Study on Energy Efficiency Aspects of 3GPP standards</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="task-개선">Task 개선</h2>
+
+<h3 id="1-다중-주파수-기반의-cell-클래스-구현">1. 다중 주파수 기반의 Cell 클래스 구현</h3>
+
+<h4 id="1-다중-주파수800mhz-18ghz-35ghz-지원">1) 다중 주파수(800MHz, 1.8GHz, 3.5GHz) 지원</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">s</span><span class="p">.</span><span class="n">freq_config</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="mi">800</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">'bandwidth'</span><span class="p">:</span> <span class="mf">10.0</span><span class="p">,</span>
+        <span class="s">'n_RBs'</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+        <span class="s">'active'</span><span class="p">:</span> <span class="bp">False</span>
+    <span class="p">},</span>
+    <span class="mi">1800</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">'bandwidth'</span><span class="p">:</span> <span class="mf">20.0</span><span class="p">,</span>
+        <span class="s">'n_RBs'</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+        <span class="s">'active'</span><span class="p">:</span> <span class="bp">False</span>
+    <span class="p">},</span>
+    <span class="mi">3500</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">'bandwidth'</span><span class="p">:</span> <span class="mf">100.0</span><span class="p">,</span>
+        <span class="s">'n_RBs'</span><span class="p">:</span> <span class="mi">250</span><span class="p">,</span>
+        <span class="s">'active'</span><span class="p">:</span> <span class="bp">False</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<ul>
+  <li>각 주파수 대역에 대역폭(<code class="language-plaintext highlighter-rouge">bandwidth</code>), Resource Block 수(<code class="language-plaintext highlighter-rouge">n_RBs</code>), 활성화 여부(<code class="language-plaintext highlighter-rouge">active</code>)를 설정한다.</li>
+</ul>
+
+<h4 id="2-주파수별-대역폭-및-rb-설정-구현">2) 주파수별 대역폭 및 RB 설정 구현</h4>
+
+<p>주파수별로 대역폭과 RB 수를 설정하여, 주파수 대역마다 다른 용량과 전송 특성을 시뮬레이션 할 수 있게 커스터마이징 하였다.</p>
+
+<p class="note">위의 코드에서 사용한 RB수와 주파수 대역은 현재 SKT 상용망 주파수 현황을 기준으로 작성하였다.</p>
+
+<p><img src="/assets/img/blog/sim/phase1/freq_band.webp" alt="Frequency_Band" /></p>
+
+<h4 id="3-주파수-activationsleep-메커니즘-구현">3) 주파수 activation/sleep 메커니즘 구현</h4>
+
+<p>주파수 대역의 activation/sleep을 동적으로 관리할 수 있도록 메서드를 구현하였다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">activate_frequency</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">freq</span><span class="p">):</span>
+    <span class="s">"""주파수 대역 활성화."""</span>
+    <span class="k">if</span> <span class="n">freq</span> <span class="ow">in</span> <span class="n">s</span><span class="p">.</span><span class="n">freq_config</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">s</span><span class="p">.</span><span class="n">freq_config</span><span class="p">[</span><span class="n">freq</span><span class="p">][</span><span class="s">'active'</span><span class="p">]:</span>
+        <span class="n">s</span><span class="p">.</span><span class="n">freq_config</span><span class="p">[</span><span class="n">freq</span><span class="p">][</span><span class="s">'active'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="n">s</span><span class="p">.</span><span class="n">active_freqs</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">freq</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">True</span>
+    <span class="k">return</span> <span class="bp">False</span>
+
+<span class="k">def</span> <span class="nf">deactivate_frequency</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">freq</span><span class="p">):</span>
+    <span class="s">"""주파수 대역 비활성화."""</span>
+    <span class="k">if</span> <span class="n">freq</span> <span class="ow">in</span> <span class="n">s</span><span class="p">.</span><span class="n">freq_config</span> <span class="ow">and</span> <span class="n">s</span><span class="p">.</span><span class="n">freq_config</span><span class="p">[</span><span class="n">freq</span><span class="p">][</span><span class="s">'active'</span><span class="p">]:</span>
+        <span class="n">s</span><span class="p">.</span><span class="n">freq_config</span><span class="p">[</span><span class="n">freq</span><span class="p">][</span><span class="s">'active'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="n">s</span><span class="p">.</span><span class="n">active_freqs</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">freq</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">True</span>
+    <span class="k">return</span> <span class="bp">False</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">activate_frequency</code> 메서드를 통해 특정 주파수 대역을 활성화할 수 있으며, <code class="language-plaintext highlighter-rouge">deactivate_frequency</code> 메서드를 통해 비활성화할 수 있다.</li>
+  <li>활성화된 주파수 대역은 <code class="language-plaintext highlighter-rouge">s.active_freqs</code> 집합에 추가되어 관리된다.</li>
+</ul>
+
+<h3 id="2-다중-주파수별-차등화된-에너지-소비-모델-구현">2. 다중 주파수별 차등화된 에너지 소비 모델 구현</h3>
+
+<h4 id="1-다중-주파수별-차등화된-전력-소비-모델-구현">1) 다중 주파수별 차등화된 전력 소비 모델 구현</h4>
+<p>기존의 단일 전력 소비 모델에서 벗어나, 주파수별로 전력 소비를 차등화하여 모델링하였다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">s</span><span class="p">.</span><span class="n">base_power_W</span> <span class="o">=</span> <span class="mf">130.0</span>  <span class="c1"># 상시 전력 (W)
+</span><span class="n">s</span><span class="p">.</span><span class="n">frequency_power_W</span> <span class="o">=</span> <span class="mf">100.0</span>  <span class="c1"># 주파수당 추가 전력 (W)
+</span><span class="n">s</span><span class="p">.</span><span class="n">total_energy_consumed</span> <span class="o">=</span> <span class="mf">0.0</span>  <span class="c1"># 총 에너지 소비량 (Wh)
+</span></code></pre></div></div>
+
+<ul>
+  <li>기지국은 기본적으로 130\(W\)의 전력을 소비하며, 활성화된 주파수당 추가로 100\(W\)의 전력을 소비한다.</li>
+</ul>
+
+<h4 id="2-복수-주파수-동시-운영-시의-총-에너지-소비-계산">2) 복수 주파수 동시 운영 시의 총 에너지 소비 계산</h4>
+<p><code class="language-plaintext highlighter-rouge">Cell</code> 클래스의 <code class="language-plaintext highlighter-rouge">loop</code> 메서드에서 활성화된 주파수의 수를 고려하여 총 에너지 소비를 계산한다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">loop</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="n">num_active_freqs</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">active_freqs</span><span class="p">)</span>
+        <span class="n">total_power_W</span> <span class="o">=</span> <span class="n">s</span><span class="p">.</span><span class="n">base_power_W</span> <span class="o">+</span> <span class="n">s</span><span class="p">.</span><span class="n">frequency_power_W</span> <span class="o">*</span> <span class="n">num_active_freqs</span>
+        <span class="n">energy_consumed</span> <span class="o">=</span> <span class="n">total_power_W</span> <span class="o">*</span> <span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">interval</span> <span class="o">/</span> <span class="mi">3600</span><span class="p">)</span>
+        <span class="n">s</span><span class="p">.</span><span class="n">total_energy_consumed</span> <span class="o">+=</span> <span class="n">energy_consumed</span>
+
+        <span class="c1"># Callback
+</span>        <span class="k">if</span> <span class="n">s</span><span class="p">.</span><span class="n">f_callback</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">s</span><span class="p">.</span><span class="n">f_callback</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="o">**</span><span class="n">s</span><span class="p">.</span><span class="n">f_callback_kwargs</span><span class="p">)</span>
+        <span class="k">yield</span> <span class="n">s</span><span class="p">.</span><span class="n">sim</span><span class="p">.</span><span class="n">env</span><span class="p">.</span><span class="n">timeout</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">interval</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>활성화된 주파수의 수(<code class="language-plaintext highlighter-rouge">num_active_freqs</code>)를 계산하고, 이를 기반으로 총 전력 소비(<code class="language-plaintext highlighter-rouge">total_power_W</code>)를 계산한다.</li>
+  <li>해당 시간 간격(<code class="language-plaintext highlighter-rouge">s.interval</code>) 동안 소비된 에너지(<code class="language-plaintext highlighter-rouge">energy_consumed</code>)를 계산하여 누적한다.</li>
+</ul>
+
+<h4 id="3-주파수별-sleep-모드-전환-시-에너지-소비-모델링">3) 주파수별 sleep 모드 전환 시 에너지 소비 모델링</h4>
+<p>주파수별로 activation 및 deactivation을 통해 슬립 모드 전환이 가능하며, 이에 따른 에너지 소비가 정확하게 반영된다.</p>
+<ul>
+  <li>비활성화된 주파수 대역은 에너지 소비 계산에서 제외되므로, 슬립 모드로 간주된다.</li>
+</ul>
+
+<hr />
+
+<h2 id="결론">결론</h2>
+
+<p>Phase 1의 개선을 통해 단일 주파수 기반의 제한된 시뮬레이션에서 벗어나, 다중 주파수 대역을 지원하고 주파수별 에너지 소비를 정확하게 모델링할 수 있게 되었다. 보다 더 현실적인 네트워크 환경을 시뮬레이션을 위해 표준을 추가적으로 조사할 예정이다.</p>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="sim" /><summary type="html"><![CDATA[**Date**: 2024.11.20, **Tag**: [Offloading], [Patent], [Multi Frequency Band]]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/prediction_sleep/Prediction_Sleep.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/prediction_sleep/Prediction_Sleep.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">AI-Ready Energy Modelling for Next Generation RAN</title><link href="http://localhost:4000/blog/paper/2024-11-15-AI-ready-Energy-Modeling-for-Next-Generation-RAN/" rel="alternate" type="text/html" title="AI-Ready Energy Modelling for Next Generation RAN" /><published>2024-11-15T00:00:00+09:00</published><updated>2024-11-15T00:00:00+09:00</updated><id>http://localhost:4000/blog/paper/AI-ready-Energy-Modeling-for-Next-Generation-RAN</id><content type="html" xml:base="http://localhost:4000/blog/paper/2024-11-15-AI-ready-Energy-Modeling-for-Next-Generation-RAN/"><![CDATA[<!--more-->
 <ul class="large-only" id="markdown-toc">
   <li><a href="#1-why-this-paper" id="markdown-toc-1-why-this-paper">1. Why this paper</a></li>
   <li><a href="#2-paper-summarization" id="markdown-toc-2-paper-summarization">2. Paper Summarization</a>    <ul>
@@ -188,7 +356,8 @@
 <p class="note">송신 전력 감소 초기에는 SE가 증가하지만, 송신 전력이 너무 낮아지면 데이터 전송량 감소로 인해 SE가 감소</p>
 
 <ul>
-  <li>최적의 송신 전력 설정이 필요</li>
+  <li>최적의 송신 전력 설정이 필요
+s</li>
 </ul>
 
 <h3 id="244-미래-네트워크-설계-시-주의할-점">2.4.4 미래 네트워크 설계 시 주의할 점</h3>
