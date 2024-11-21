@@ -106,7 +106,7 @@
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2024-11-20T19:57:24+09:00',
+    INDEX_KEY: 'index--2024-11-21T14:43:30+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -296,14 +296,25 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
       <li><a href="#task-개선" id="markdown-toc-task-개선">Task 개선</a>        <ul>
           <li><a href="#1-다중-주파수-기반의-cell-클래스-구현" id="markdown-toc-1-다중-주파수-기반의-cell-클래스-구현">1. 다중 주파수 기반의 Cell 클래스 구현</a>            <ul>
               <li><a href="#1-다중-주파수800mhz-18ghz-35ghz-지원" id="markdown-toc-1-다중-주파수800mhz-18ghz-35ghz-지원">1) 다중 주파수(800MHz, 1.8GHz, 3.5GHz) 지원</a></li>
-              <li><a href="#2-주파수별-대역폭-및-rb-설정-구현" id="markdown-toc-2-주파수별-대역폭-및-rb-설정-구현">2) 주파수별 대역폭 및 RB 설정 구현</a></li>
-              <li><a href="#3-주파수-activationsleep-메커니즘-구현" id="markdown-toc-3-주파수-activationsleep-메커니즘-구현">3) 주파수 activation/sleep 메커니즘 구현</a></li>
+              <li><a href="#2-주파수별-관리-기능" id="markdown-toc-2-주파수별-관리-기능">2) 주파수별 관리 기능</a></li>
+              <li><a href="#3-주파수별-대역폭-및-rb-설정-구현" id="markdown-toc-3-주파수별-대역폭-및-rb-설정-구현">3) 주파수별 대역폭 및 RB 설정 구현</a></li>
+              <li><a href="#4-주파수-activationsleep-메커니즘-구현" id="markdown-toc-4-주파수-activationsleep-메커니즘-구현">4) 주파수 activation/sleep 메커니즘 구현</a></li>
             </ul>
           </li>
           <li><a href="#2-다중-주파수별-차등화된-에너지-소비-모델-구현" id="markdown-toc-2-다중-주파수별-차등화된-에너지-소비-모델-구현">2. 다중 주파수별 차등화된 에너지 소비 모델 구현</a>            <ul>
               <li><a href="#1-다중-주파수별-차등화된-전력-소비-모델-구현" id="markdown-toc-1-다중-주파수별-차등화된-전력-소비-모델-구현">1) 다중 주파수별 차등화된 전력 소비 모델 구현</a></li>
               <li><a href="#2-복수-주파수-동시-운영-시의-총-에너지-소비-계산" id="markdown-toc-2-복수-주파수-동시-운영-시의-총-에너지-소비-계산">2) 복수 주파수 동시 운영 시의 총 에너지 소비 계산</a></li>
               <li><a href="#3-주파수별-sleep-모드-전환-시-에너지-소비-모델링" id="markdown-toc-3-주파수별-sleep-모드-전환-시-에너지-소비-모델링">3) 주파수별 sleep 모드 전환 시 에너지 소비 모델링</a></li>
+            </ul>
+          </li>
+          <li><a href="#3-주요-메소드-개선" id="markdown-toc-3-주요-메소드-개선">3. 주요 메소드 개선</a>            <ul>
+              <li><a href="#1-qos-기반-주파수-선택" id="markdown-toc-1-qos-기반-주파수-선택">1) QoS 기반 주파수 선택</a></li>
+              <li><a href="#2-에너지-효율성-계산" id="markdown-toc-2-에너지-효율성-계산">2) 에너지 효율성 계산</a></li>
+            </ul>
+          </li>
+          <li><a href="#4-성능-지표" id="markdown-toc-4-성능-지표">4. 성능 지표</a>            <ul>
+              <li><a href="#1-주파수별-메트릭-생성" id="markdown-toc-1-주파수별-메트릭-생성">1) 주파수별 메트릭 생성</a></li>
+              <li><a href="#2-주파수-사용률-모니터링" id="markdown-toc-2-주파수-사용률-모니터링">2) 주파수 사용률 모니터링</a></li>
             </ul>
           </li>
         </ul>
@@ -374,7 +385,14 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
   <li>각 주파수 대역에 대역폭(<code class="language-plaintext highlighter-rouge">bandwidth</code>), Resource Block 수(<code class="language-plaintext highlighter-rouge">n_RBs</code>), 활성화 여부(<code class="language-plaintext highlighter-rouge">active</code>)를 설정한다.</li>
 </ul>
 
-<h4 id="2-주파수별-대역폭-및-rb-설정-구현">2) 주파수별 대역폭 및 RB 설정 구현</h4>
+<h4 id="2-주파수별-관리-기능">2) 주파수별 관리 기능</h4>
+<ul>
+  <li>활성화 된 주파수 추적: <code class="language-plaintext highlighter-rouge">s.active_freqs = set()</code></li>
+  <li>주파수별 연결 UE 관리: <code class="language-plaintext highlighter-rouge">s.freq_users = {freq: set() for freq in s.freq_config}</code></li>
+  <li>주파수별 RB 마스크: <code class="language-plaintext highlighter-rouge">s.rb_masks = {freq: np.ones(config['n_RBs']) for freq, config in s.freq_config.items()}</code></li>
+</ul>
+
+<h4 id="3-주파수별-대역폭-및-rb-설정-구현">3) 주파수별 대역폭 및 RB 설정 구현</h4>
 
 <p>주파수별로 대역폭과 RB 수를 설정하여, 주파수 대역마다 다른 용량과 전송 특성을 시뮬레이션 할 수 있게 커스터마이징 하였다.</p>
 
@@ -382,7 +400,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 
 <p><img src="/assets/img/blog/sim/phase1/freq_band.webp" alt="Frequency_Band" /></p>
 
-<h4 id="3-주파수-activationsleep-메커니즘-구현">3) 주파수 activation/sleep 메커니즘 구현</h4>
+<h4 id="4-주파수-activationsleep-메커니즘-구현">4) 주파수 activation/sleep 메커니즘 구현</h4>
 
 <p>주파수 대역의 activation/sleep을 동적으로 관리할 수 있도록 메서드를 구현하였다.</p>
 
@@ -449,6 +467,57 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
   <li>비활성화된 주파수 대역은 에너지 소비 계산에서 제외되므로, 슬립 모드로 간주된다.</li>
 </ul>
 
+<h3 id="3-주요-메소드-개선">3. 주요 메소드 개선</h3>
+<h4 id="1-qos-기반-주파수-선택">1) QoS 기반 주파수 선택</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">select_frequency_by_qos</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ue</span><span class="p">,</span> <span class="n">service_type</span><span class="p">,</span> <span class="n">qos_requirement</span><span class="p">):</span>
+    <span class="s">"""
+    QoS 요구사항을 고려한 주파수 선택
+    """</span>
+    <span class="n">priorities</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">get_frequency_priority</span><span class="p">(</span><span class="n">service_type</span><span class="p">)</span>
+    
+    <span class="k">for</span> <span class="n">freq</span> <span class="ow">in</span> <span class="n">priorities</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="p">.</span><span class="n">freq_config</span><span class="p">[</span><span class="n">freq</span><span class="p">][</span><span class="s">'active'</span><span class="p">]:</span>
+            <span class="k">continue</span>
+            
+        <span class="c1"># 해당 주파수 대역의 현재 로드 확인
+</span>        <span class="n">current_load</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">get_frequency_load</span><span class="p">(</span><span class="n">freq</span><span class="p">)</span>
+        
+        <span class="c1"># QoS 만족 가능 여부 체크
+</span>        <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">can_satisfy_qos</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="n">current_load</span><span class="p">,</span> <span class="n">qos_requirement</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">freq</span>
+            
+    <span class="k">return</span> <span class="bp">None</span>  <span class="c1"># 적절한 주파수를 찾지 못한 경우
+</span></code></pre></div></div>
+
+<h4 id="2-에너지-효율성-계산">2) 에너지 효율성 계산</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">calculate_energy_efficiency</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">freq</span><span class="p">):</span>
+    <span class="n">total_throughput</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">calculate_avg_throughput</span><span class="p">(</span><span class="n">freq</span><span class="p">)</span>
+    <span class="n">energy_consumed</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">freq_config</span><span class="p">[</span><span class="n">freq</span><span class="p">][</span><span class="s">'energy_consumed'</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">total_throughput</span> <span class="o">/</span> <span class="n">energy_consumed</span>
+</code></pre></div></div>
+
+<h3 id="4-성능-지표">4. 성능 지표</h3>
+
+<h4 id="1-주파수별-메트릭-생성">1) 주파수별 메트릭 생성</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">generate_frequency_metrics</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">metrics</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s">'capacity_utilization'</span><span class="p">,</span>
+        <span class="s">'connected_users'</span><span class="p">,</span> 
+        <span class="s">'average_throughput'</span><span class="p">,</span>
+        <span class="s">'energy_efficiency'</span>
+    <span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="2-주파수-사용률-모니터링">2) 주파수 사용률 모니터링</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get_frequency_load</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">freq</span><span class="p">):</span>
+    <span class="n">total_rbs</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">freq_config</span><span class="p">[</span><span class="n">freq</span><span class="p">][</span><span class="s">'n_RBs'</span><span class="p">]</span>
+    <span class="n">used_rbs</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">rb</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">rb_masks</span><span class="p">[</span><span class="n">freq</span><span class="p">]</span> <span class="k">if</span> <span class="n">rb</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">used_rbs</span> <span class="o">/</span> <span class="n">total_rbs</span>
+</code></pre></div></div>
 <hr />
 
 <h2 id="결론">결론</h2>
@@ -591,7 +660,7 @@ Additionally, I am passionate about cloud-native Radio Access Networks (RAN) and
     
 
 
-  <aside class="related mb4" role="complementary">  <h2 class="hr-bottom">Random Posts</h2>  <ul class="related-posts">          <li class="h4">  <a href="/blog/paper/2024-09-26-joint-traffic-prediction-and-base-station-sleepiong-for-energy-saving-in-cellular-networks/" class="flip-title"><span>Joint Traffic Prediction and Base Station Sleeping for Energy Saving in Cellular Networks</span></a>  <time class="faded fine" datetime="2024-09-26T00:00:00+09:00">26 Sep 2024</time></li>          <li class="h4">  <a href="/blog/example/2018-06-01-example-content-iii/" class="flip-title"><span>Example Content III</span></a>  <time class="faded fine" datetime="2018-06-01T00:00:00+09:00">01 Jun 2018</time></li>          <li class="h4">  <a href="/blog/paper/2024-11-20-game-theoretic-solutions-for-data-offloading-in-next-generation-networks/" class="flip-title"><span>Game-Theoretic Solutions for Data Offloading in Next Generation Networks</span></a>  <time class="faded fine" datetime="2024-11-20T00:00:00+09:00">20 Nov 2024</time></li>      </ul></aside>
+  <aside class="related mb4" role="complementary">  <h2 class="hr-bottom">Random Posts</h2>  <ul class="related-posts">          <li class="h4">  <a href="/blog/paper/2024-11-20-game-theoretic-solutions-for-data-offloading-in-next-generation-networks/" class="flip-title"><span>Game-Theoretic Solutions for Data Offloading in Next Generation Networks</span></a>  <time class="faded fine" datetime="2024-11-20T00:00:00+09:00">20 Nov 2024</time></li>          <li class="h4">  <a href="/blog/paper/2024-09-26-joint-traffic-prediction-and-base-station-sleepiong-for-energy-saving-in-cellular-networks/" class="flip-title"><span>Joint Traffic Prediction and Base Station Sleeping for Energy Saving in Cellular Networks</span></a>  <time class="faded fine" datetime="2024-09-26T00:00:00+09:00">26 Sep 2024</time></li>          <li class="h4">  <a href="/blog/example/2018-06-01-example-content-iii/" class="flip-title"><span>Example Content III</span></a>  <time class="faded fine" datetime="2018-06-01T00:00:00+09:00">01 Jun 2018</time></li>      </ul></aside>
 
   
 
