@@ -1,21 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-11-24T20:19:26+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Geon Kim</title><subtitle>Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
-</subtitle><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><entry><title type="html">Game-Theoretic Solutions for Data Offloading in Next Generation Networks</title><link href="http://localhost:4000/blog/paper/2024-11-20-game-theoretic-solutions-for-data-offloading-in-next-generation-networks/" rel="alternate" type="text/html" title="Game-Theoretic Solutions for Data Offloading in Next Generation Networks" /><published>2024-11-20T00:00:00+09:00</published><updated>2024-11-20T00:00:00+09:00</updated><id>http://localhost:4000/blog/paper/game-theoretic-solutions-for-data-offloading-in-next-generation-networks</id><content type="html" xml:base="http://localhost:4000/blog/paper/2024-11-20-game-theoretic-solutions-for-data-offloading-in-next-generation-networks/"><![CDATA[<!--more-->
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-11-25T15:58:42+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Geon Kim</title><subtitle>Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
+</subtitle><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><entry><title type="html">AIMM 시뮬레이터 개선 - Phase 1</title><link href="http://localhost:4000/blog/sim/2024-11-25-traffic-prediction/" rel="alternate" type="text/html" title="AIMM 시뮬레이터 개선 - Phase 1" /><published>2024-11-25T00:00:00+09:00</published><updated>2024-11-25T00:00:00+09:00</updated><id>http://localhost:4000/blog/sim/traffic-prediction</id><content type="html" xml:base="http://localhost:4000/blog/sim/2024-11-25-traffic-prediction/"><![CDATA[<!--more-->
+
 <ul class="large-only" id="markdown-toc">
-  <li><a href="#1-why-this-paper" id="markdown-toc-1-why-this-paper">1. Why this paper</a></li>
-  <li><a href="#2-paper-summarization" id="markdown-toc-2-paper-summarization">2. Paper Summarization</a></li>
-  <li><a href="#3-take-away" id="markdown-toc-3-take-away">3. Take Away</a></li>
+  <li><a href="#디렉토리-구조" id="markdown-toc-디렉토리-구조">디렉토리 구조</a></li>
+  <li><a href="#1-postgresql-비밀번호" id="markdown-toc-1-postgresql-비밀번호">1. PostgreSQL 비밀번호</a></li>
 </ul>
 
-<h1 id="1-why-this-paper">1. Why this paper</h1>
+<h3 id="디렉토리-구조">디렉토리 구조</h3>
 
-<ol>
-  <li>게임 이론 이해</li>
-  <li>게임 이론을 활용한 데이터 오프로딩 튜토리얼</li>
-</ol>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>timeseries-predictor/
+├── src/
+│   └── main.py (아직 작성 안 됨)
+├── kubernetes/
+│   ├── configmap.yaml      (완료)
+│   ├── secret.yaml         (완료)
+│   ├── deployment.yaml     (완료)
+│   ├── cronjob.yaml        (완료)
+│   └── pvc.yaml           (추가 필요)
+├── Dockerfile              (완료)
+└── requirements.txt        (완료)
+</code></pre></div></div>
 
-<h1 id="2-paper-summarization">2. Paper Summarization</h1>
+<h3 id="1-postgresql-비밀번호">1. PostgreSQL 비밀번호</h3>
 
-<h1 id="3-take-away">3. Take Away</h1>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="paper" /><summary type="html"><![CDATA[**Date**: 2017.11.29, **Tag**: [Mobile Network Operator(MNO)], [access point], [Stackelberg approach], [game theory], [quality of service], [Nash equilibrium]]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/game-theory/game-theory.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/game-theory/game-theory.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">AIMM 시뮬레이터 개선 - Phase 1</title><link href="http://localhost:4000/blog/sim/2024-11-20-aimm-phase-1/" rel="alternate" type="text/html" title="AIMM 시뮬레이터 개선 - Phase 1" /><published>2024-11-20T00:00:00+09:00</published><updated>2024-11-20T00:00:00+09:00</updated><id>http://localhost:4000/blog/sim/aimm-phase-1</id><content type="html" xml:base="http://localhost:4000/blog/sim/2024-11-20-aimm-phase-1/"><![CDATA[<!--more-->
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export POSTGRES_PASSWORD=$(kubectl get secret --namespace database postgresql -o jsonpath="{.data.postgres-password}" | base64 -d)
+
+echo $POSTGRES_PASSWORD
+</code></pre></div></div>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="sim" /><summary type="html"><![CDATA[**Date**: 2024.11.25, **Tag**: [Traffic Prediction], [Carbon Emission], [Graduation]]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/green_ai/green-ai.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/green_ai/green-ai.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">AIMM 시뮬레이터 개선 - Phase 1</title><link href="http://localhost:4000/blog/sim/2024-11-20-aimm-phase-1/" rel="alternate" type="text/html" title="AIMM 시뮬레이터 개선 - Phase 1" /><published>2024-11-20T00:00:00+09:00</published><updated>2024-11-20T00:00:00+09:00</updated><id>http://localhost:4000/blog/sim/aimm-phase-1</id><content type="html" xml:base="http://localhost:4000/blog/sim/2024-11-20-aimm-phase-1/"><![CDATA[<!--more-->
 
 <ul class="large-only" id="markdown-toc">
   <li><a href="#phase-1---다중-주파수-셀-모델링" id="markdown-toc-phase-1---다중-주파수-셀-모델링">Phase 1 - 다중 주파수 셀 모델링</a>    <ul>
@@ -252,7 +263,23 @@
 
 <h2 id="결론">결론</h2>
 
-<p>Phase 1의 개선을 통해 단일 주파수 기반의 제한된 시뮬레이션에서 벗어나, 다중 주파수 대역을 지원하고 주파수별 에너지 소비를 정확하게 모델링할 수 있게 되었다. 보다 더 현실적인 네트워크 환경을 시뮬레이션을 위해 표준을 추가적으로 조사할 예정이다.</p>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="sim" /><summary type="html"><![CDATA[**Date**: 2024.11.20, **Tag**: [Offloading], [Patent], [Multi Frequency Band]]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/sim/phase1/sim.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/sim/phase1/sim.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">AI-Ready Energy Modelling for Next Generation RAN</title><link href="http://localhost:4000/blog/paper/2024-11-15-AI-ready-Energy-Modeling-for-Next-Generation-RAN/" rel="alternate" type="text/html" title="AI-Ready Energy Modelling for Next Generation RAN" /><published>2024-11-15T00:00:00+09:00</published><updated>2024-11-15T00:00:00+09:00</updated><id>http://localhost:4000/blog/paper/AI-ready-Energy-Modeling-for-Next-Generation-RAN</id><content type="html" xml:base="http://localhost:4000/blog/paper/2024-11-15-AI-ready-Energy-Modeling-for-Next-Generation-RAN/"><![CDATA[<!--more-->
+<p>Phase 1의 개선을 통해 단일 주파수 기반의 제한된 시뮬레이션에서 벗어나, 다중 주파수 대역을 지원하고 주파수별 에너지 소비를 정확하게 모델링할 수 있게 되었다. 보다 더 현실적인 네트워크 환경을 시뮬레이션을 위해 표준을 추가적으로 조사할 예정이다.</p>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="sim" /><summary type="html"><![CDATA[**Date**: 2024.11.20, **Tag**: [Offloading], [Patent], [Multi Frequency Band]]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/sim/phase1/sim.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/sim/phase1/sim.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Game-Theoretic Solutions for Data Offloading in Next Generation Networks</title><link href="http://localhost:4000/blog/paper/2024-11-20-game-theoretic-solutions-for-data-offloading-in-next-generation-networks/" rel="alternate" type="text/html" title="Game-Theoretic Solutions for Data Offloading in Next Generation Networks" /><published>2024-11-20T00:00:00+09:00</published><updated>2024-11-20T00:00:00+09:00</updated><id>http://localhost:4000/blog/paper/game-theoretic-solutions-for-data-offloading-in-next-generation-networks</id><content type="html" xml:base="http://localhost:4000/blog/paper/2024-11-20-game-theoretic-solutions-for-data-offloading-in-next-generation-networks/"><![CDATA[<!--more-->
+<ul class="large-only" id="markdown-toc">
+  <li><a href="#1-why-this-paper" id="markdown-toc-1-why-this-paper">1. Why this paper</a></li>
+  <li><a href="#2-paper-summarization" id="markdown-toc-2-paper-summarization">2. Paper Summarization</a></li>
+  <li><a href="#3-take-away" id="markdown-toc-3-take-away">3. Take Away</a></li>
+</ul>
+
+<h1 id="1-why-this-paper">1. Why this paper</h1>
+
+<ol>
+  <li>게임 이론 이해</li>
+  <li>게임 이론을 활용한 데이터 오프로딩 튜토리얼</li>
+</ol>
+
+<h1 id="2-paper-summarization">2. Paper Summarization</h1>
+
+<h1 id="3-take-away">3. Take Away</h1>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="paper" /><summary type="html"><![CDATA[**Date**: 2017.11.29, **Tag**: [Mobile Network Operator(MNO)], [access point], [Stackelberg approach], [game theory], [quality of service], [Nash equilibrium]]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/game-theory/game-theory.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/game-theory/game-theory.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">AI-Ready Energy Modelling for Next Generation RAN</title><link href="http://localhost:4000/blog/paper/2024-11-15-AI-ready-Energy-Modeling-for-Next-Generation-RAN/" rel="alternate" type="text/html" title="AI-Ready Energy Modelling for Next Generation RAN" /><published>2024-11-15T00:00:00+09:00</published><updated>2024-11-15T00:00:00+09:00</updated><id>http://localhost:4000/blog/paper/AI-ready-Energy-Modeling-for-Next-Generation-RAN</id><content type="html" xml:base="http://localhost:4000/blog/paper/2024-11-15-AI-ready-Energy-Modeling-for-Next-Generation-RAN/"><![CDATA[<!--more-->
 <ul class="large-only" id="markdown-toc">
   <li><a href="#1-why-this-paper" id="markdown-toc-1-why-this-paper">1. Why this paper</a></li>
   <li><a href="#2-paper-summarization" id="markdown-toc-2-paper-summarization">2. Paper Summarization</a>    <ul>
