@@ -21,7 +21,7 @@ sitemap: false
 {:toc .large-only}
 
 
-# 5G 셀 시뮬레이터 구현 가이드: `ric.py`
+# 5G 셀 시뮬레이터 구현 가이드: `components/ric.py`
 
 ## 아키텍쳐 개요
 
