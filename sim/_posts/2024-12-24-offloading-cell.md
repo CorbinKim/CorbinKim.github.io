@@ -20,7 +20,7 @@ sitemap: false
 * toc
 {:toc .large-only}
 
-# 5G 셀 시뮬레이터 구현 가이드: `cell.py`
+# 5G 셀 시뮬레이터 구현 가이드: `components/cell.py`
 
 ## 1. 아키텍쳐 개요
 

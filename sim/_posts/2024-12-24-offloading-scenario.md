@@ -20,7 +20,7 @@ sitemap: false
 * toc
 {:toc .large-only}
 
-# 5G 셀 시뮬레이터 구현 가이드: `scenario.py`
+# 5G 셀 시뮬레이터 구현 가이드: `components/scenario.py`
 
 ## 아키텍쳐 개요
 Scenario 모듈은 시뮬레이션 시나리오의 생성, 관리 및 실행을 담당함. 이 모듈은 두 개의 중 데이터 클래스(UEConfig, CellConfig)와 하나의 메인 클래스(Scenario)로 구성되어 있으며, YAML 또는 Json 형식의 설정 파일을 통해 시나리오를 정의하고 관리한다.
