@@ -1,3 +1,50 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-01-14T15:39:36+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Geon Kim</title><subtitle>Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
+</subtitle><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><entry><title type="html">Analyzing and Modeling Spatio-Temporal Dependence of Cellular Traffic at City Scale</title><link href="http://localhost:4000/blog/paper/2025-01-13-analyzing-and-modeling-spatil-temporal-dependence-of-cellular-traffic-at-city-scale/" rel="alternate" type="text/html" title="Analyzing and Modeling Spatio-Temporal Dependence of Cellular Traffic at City Scale" /><published>2025-01-13T00:00:00+09:00</published><updated>2025-01-13T00:00:00+09:00</updated><id>http://localhost:4000/blog/paper/analyzing-and-modeling-spatil-temporal-dependence-of-cellular-traffic-at-city-scale</id><content type="html" xml:base="http://localhost:4000/blog/paper/2025-01-13-analyzing-and-modeling-spatil-temporal-dependence-of-cellular-traffic-at-city-scale/"><![CDATA[<!--more-->
+<ul class="large-only" id="markdown-toc">
+  <li><a href="#1-why-this-paper" id="markdown-toc-1-why-this-paper">1. Why this paper</a></li>
+  <li><a href="#2-paper-summarization" id="markdown-toc-2-paper-summarization">2. Paper Summarization</a>    <ul>
+      <li><a href="#21-연구-주제는" id="markdown-toc-21-연구-주제는">2.1 연구 주제는?</a>        <ul>
+          <li><a href="#211-연구-주제" id="markdown-toc-211-연구-주제">2.1.1 연구 주제</a></li>
+          <li><a href="#212-contribution" id="markdown-toc-212-contribution">2.1.2 Contribution</a></li>
+          <li><a href="#213-주제-선택-이유" id="markdown-toc-213-주제-선택-이유">2.1.3 주제 선택 이유</a></li>
+        </ul>
+      </li>
+      <li><a href="#22-연구의-목표는" id="markdown-toc-22-연구의-목표는">2.2 연구의 목표는?</a></li>
+      <li><a href="#23-연구-수행-방법은" id="markdown-toc-23-연구-수행-방법은">2.3 연구 수행 방법은?</a>        <ul>
+          <li><a href="#231-셀룰러-네트워크-구조" id="markdown-toc-231-셀룰러-네트워크-구조">2.3.1 셀룰러 네트워크 구조</a></li>
+          <li><a href="#232-사용-데이터셋" id="markdown-toc-232-사용-데이터셋">2.3.2 사용 데이터셋</a>            <ul>
+              <li><a href="#233a-spatio-temporal-foundation-of-cellular-traffic" id="markdown-toc-233a-spatio-temporal-foundation-of-cellular-traffic">2.3.3.A Spatio-Temporal Foundation of Cellular Traffic</a></li>
+              <li><a href="#233b-modeling-spatio-temporal-dependence" id="markdown-toc-233b-modeling-spatio-temporal-dependence">2.3.3.B Modeling Spatio-Temporal Dependence</a></li>
+            </ul>
+          </li>
+          <li><a href="#234-exploratory-dependence-analysis" id="markdown-toc-234-exploratory-dependence-analysis">2.3.4 Exploratory Dependence Analysis</a></li>
+          <li><a href="#235-modeling-spatial-temporal-dependence" id="markdown-toc-235-modeling-spatial-temporal-dependence">2.3.5 Modeling Spatial-Temporal Dependence</a>            <ul>
+              <li><a href="#235a-estimation-of-model-parameters" id="markdown-toc-235a-estimation-of-model-parameters">2.3.5.A Estimation of Model Parameters</a></li>
+              <li><a href="#235b-evaluation-of-prediction-performance" id="markdown-toc-235b-evaluation-of-prediction-performance">2.3.5.B Evaluation of Prediction Performance</a>                <ul>
+                  <li><a href="#예측-방식" id="markdown-toc-예측-방식">예측 방식</a></li>
+                  <li><a href="#성능-평가-지표-rmse" id="markdown-toc-성능-평가-지표-rmse">성능 평가 지표: RMSE</a></li>
+                </ul>
+              </li>
+              <li><a href="#235c-discussions" id="markdown-toc-235c-discussions">2.3.5.C Discussions</a>                <ul>
+                  <li><a href="#separable-모델" id="markdown-toc-separable-모델">Separable 모델</a></li>
+                  <li><a href="#non-separable-모델" id="markdown-toc-non-separable-모델">Non-Separable 모델</a></li>
+                  <li><a href="#한계-극복-방안" id="markdown-toc-한계-극복-방안">한계 극복 방안</a></li>
+                  <li><a href="#주요-시사점-및-결론" id="markdown-toc-주요-시사점-및-결론">주요 시사점 및 결론</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#236-conclusion" id="markdown-toc-236-conclusion">2.3.6 Conclusion</a>            <ul>
+              <li><a href="#연구-개요" id="markdown-toc-연구-개요">연구 개요</a></li>
+              <li><a href="#주요-발견" id="markdown-toc-주요-발견">주요 발견</a></li>
+              <li><a href="#future-work" id="markdown-toc-future-work">Future Work</a></li>
+            </ul>
+          </li>
+          <li><a href="#3-take-away" id="markdown-toc-3-take-away">3. Take Away</a></li>
+        </ul>
+      </li>
+=======
 <?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-12-27T14:12:18+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Geon Kim</title><subtitle>Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
 </subtitle><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><entry><title type="html">오프로딩 시뮬레이터 - Pathloss</title><link href="http://localhost:4000/blog/sim/2024-12-26-offloading-pathloss-copy/" rel="alternate" type="text/html" title="오프로딩 시뮬레이터 - Pathloss" /><published>2024-12-26T00:00:00+09:00</published><updated>2024-12-26T00:00:00+09:00</updated><id>http://localhost:4000/blog/sim/offloading-pathloss%20copy</id><content type="html" xml:base="http://localhost:4000/blog/sim/2024-12-26-offloading-pathloss-copy/"><![CDATA[<!--more-->
 
@@ -13,10 +60,293 @@
           <li><a href="#7-참고문헌" id="markdown-toc-7-참고문헌">7. 참고문헌</a></li>
         </ul>
       </li>
+>>>>>>> c9b4b85b73d42fdc5a945dcab7b288650d40921f
     </ul>
   </li>
 </ul>
 
+<<<<<<< HEAD
+<h1 id="1-why-this-paper">1. Why this paper</h1>
+
+<ol>
+  <li>SKT 트래픽 예측 논문 레퍼런스 조사</li>
+  <li>트래픽 시/공간 관계 조사</li>
+</ol>
+
+<h1 id="2-paper-summarization">2. Paper Summarization</h1>
+
+<h2 id="21-연구-주제는">2.1 연구 주제는?</h2>
+
+<h3 id="211-연구-주제">2.1.1 연구 주제</h3>
+<ul>
+  <li>도시 규모의 셀룰러 네트워크에서 트래픽의 시공간 의존성을 분석하과 이를 모델링함으로써 트래픽 특성을 정량적으로 파악하는 것</li>
+</ul>
+
+<h3 id="212-contribution">2.1.2 Contribution</h3>
+<ul>
+  <li>최초로 실제 상용 데이터에서 셀룰러 트래픽의 시공간 의존성을 이해하기 위한 노력을 함</li>
+  <li>트래픽 의존성에 대한 몇 가지 특성을 발견함</li>
+</ul>
+
+<h3 id="213-주제-선택-이유">2.1.3 주제 선택 이유</h3>
+<ul>
+  <li>셀룰러 네트워크는 사용자 이동성과 비선형 트래픽 분포 특성으로 인해 비균질성과 시간적 변동성을 보임. 기존 연구는 시간적 특성이나 공간적 특성 중 하나에만 집중하거나 두 특성을 독립적으로 다루는 경우가 많았음. 그러나 셀룰러 트래픽은 시간과 공간 간 상호작용을 반영해야 더 정확한 네트워크 모델링 및 자원 최적화가 가능함. 본 연구는 도시의 대규모 데이터를 통해 이러한 상호작용을 분석하고, 네트워크 설계와 관리에 필요한 인사이트를 제공하기 위해 주제를 선택</li>
+</ul>
+
+<h2 id="22-연구의-목표는">2.2 연구의 목표는?</h2>
+<ol>
+  <li>도시 규모의 셀룰러 트래픽 데이터를 분석하여 시공간 의존성을 파악</li>
+  <li>공간적 비균질성과 시간적 의존성을 통합적으로 고려한 모델을 개발하여 트래픽 패턴을 정밀하게 설명하고 예측 성능을 향상</li>
+  <li>개발된 모델을 통해 네트워크 자원 관리 및 최적화를 위한 실질적인 통찰 제공</li>
+</ol>
+
+<h2 id="23-연구-수행-방법은">2.3 연구 수행 방법은?</h2>
+
+<h3 id="231-셀룰러-네트워크-구조">2.3.1 셀룰러 네트워크 구조</h3>
+
+<div align="center">
+  <img src="/assets/img/blog/0113/fig/fig_1.png" alt="Figure 1" />
+</div>
+
+<ul>
+  <li>셀룰러 네트워크는 3개의 주요 부분으로 구성됨
+    <ul>
+      <li>RAN: 사용자 장치(UE)와 기지국(BTS) 간 통신 담당</li>
+      <li>Core Network: 데이터 패킷 라우팅(BSC \(\rightarrow\) SGSN \(\rightarrow\) GGSN)을 통해 모바일 네트워크와 인터넷 연결</li>
+      <li>Public Network: 외부 인터넷 연결 제공</li>
+    </ul>
+  </li>
+  <li>데이터는 Network Traffic Mining Platform(NTMP)에서 DPI를 통해 HTTP 로그를 추출 후 분석됨</li>
+</ul>
+
+<h3 id="232-사용-데이터셋">2.3.2 사용 데이터셋</h3>
+<ul>
+  <li>데이터셋 정보
+    <ul>
+      <li>수집 기간: 2012.08.20 - 2021.08.26, 7일간의 트래픽 데이터</li>
+      <li>수집 범위: 28 km x 35 km, 도시 중심 및 교외 포함</li>
+      <li>수집량:
+        <ul>
+          <li>13,000개 기지국에서 생성된 트래픽</li>
+          <li>452,000명의 사용자가 생성한 총 379백만 건의 HTTP 기록</li>
+        </ul>
+      </li>
+      <li>데이터 특성:
+        <ul>
+          <li>각 사용자 활동은 기지국 좌표(위도, 경도)와 함께 기록됨</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="233a-spatio-temporal-foundation-of-cellular-traffic">2.3.3.A Spatio-Temporal Foundation of Cellular Traffic</h4>
+<ul>
+  <li>셀룰러 트래픽의 시공간 모델링
+    <ul>
+      <li>셀룰러 트래픽은 시공간 확률 과정으로 표현됨</li>
+      <li>특정 시공간 점에서의 트래픽:</li>
+    </ul>
+  </li>
+</ul>
+
+\[y(s, t) \sim Y(s, t) \tag{1}\]
+
+<ul>
+  <li>\(s\): 공간 인덱스</li>
+  <li>
+    <p>\(t\): 시간 인덱스</p>
+  </li>
+  <li>확률적 과정 정의:</li>
+</ul>
+
+\[\{Y(s, t) : s \in \mathcal{D}_{s}, t \in \mathcal{D}_{t}\}\]
+
+<ul>
+  <li>\(\mathcal{D}_{s}\): 공간 도메인으로 상호 배타적인 지역으로 나뉨</li>
+  <li>
+    <p>\(\mathcal{D}_{t}\): 시간 도메인으로, 동일 간격의 시간 구간으로 분할됨</p>
+  </li>
+  <li>Spatio Temporal Covariance Function(STCF)
+    <ul>
+      <li>\(E[Y(s, t) = \mu]\), 이고 \(Var[Y(s, t) = \sigma^2]  \leq \infty\)일 때 공간적 차이 \(h\)와 시간적 차이 \(u\)에 따른 공분산 함수</li>
+    </ul>
+
+\[C(s_i, s_j; t_i, t_j) = Cov[Y(s_i, t_i), Y(s_j, t_j)] = C(h, u)\]
+
+    <ul>
+      <li>\(h = s_j - s_i\): 공간적 차이</li>
+      <li>
+        <p>\(u = t_j = t_i\): 시간적 차이</p>
+      </li>
+      <li>공간적 및 시간적 공분산 함수의 특별한 경우
+        <ul>
+          <li>순수 공간 공분산: \(C(\mathbf{h}, 0)\)</li>
+          <li>순수 시간 공분산: \(C(0, u)\)</li>
+          <li>Correlation 함수: \(\rho(\mathbf{h}, u) = C(\mathbf{h}, u) / \sigma^2\)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Emperical STCF</li>
+</ul>
+
+\[\hat{C}(h, u) = \frac{1}{|N_h|} \frac{1}{|N_u|} \sum_{N_h} \sum_{N_u} \big( Y(s_i, t_i) - \hat{\mu}(s_i) \big) \big( Y(s_j, t_j) - \hat{\mu}(s_j) \big)\]
+
+<h4 id="233b-modeling-spatio-temporal-dependence">2.3.3.B Modeling Spatio-Temporal Dependence</h4>
+
+<p>시공간 데이터를 설명하기 위해 두 가지 모델링 전략이 제안됨</p>
+
+<ul>
+  <li>
+    <p><strong>독립적 모델 (Separable Model)</strong></p>
+  </li>
+  <li>
+    <p>공간적 의존성과 시간적 의존성을 독립적으로 계산함</p>
+  </li>
+  <li>공분산 함수: \(C(\mathbf{h}, u) = \sigma^s \rho(\mathbf{h}) \rho(u)\)
+    <ul>
+      <li>\(\sigma^s\): 전체 트래픽 변동성을 나타내는 분산</li>
+      <li>\(\rho(\mathbf{h})\): pure 공간적 공분산 함수</li>
+      <li>\(\rho(u)\): pure 시간적 공분산 함수</li>
+    </ul>
+  </li>
+  <li>
+    <p>공간적/시간적 공분산 함수 예시</p>
+
+    <ul>
+      <li>지수 함수(Exponential)</li>
+    </ul>
+  </li>
+</ul>
+
+\[\rho(x) = e^{-x}, x \ge 0\]
+
+<ul>
+  <li>
+    <p>거리 또는 시간 차이에 따라 상관성이 지수적으로 감소</p>
+
+    <ul>
+      <li>Cauchy 클래스(Cauchy)</li>
+    </ul>
+  </li>
+</ul>
+
+\[\rho(x) = (1 + x^{\alpha})^{-{\beta} \over {\alpha}}\]
+
+<ul>
+  <li>\(\alpha, \beta\): 파라미터로,상관성 감소 속도를 조정</li>
+  <li>
+    <p>더 유연하게 상관성 감소 패턴 설명 가능</p>
+  </li>
+  <li><strong>비독립적 모델 (Non-Separable Model)</strong>
+    <ul>
+      <li>
+        <p>공간-시간 상호작용을 포함하여 복잡한 의존성을 설명</p>
+
+        <ol>
+          <li>\(\phi(x)\) - 완전 단조 함수 (Completely Monotonic Function) 정의
+            <ul>
+              <li>정의: 모든 차수의 도함수가 존재</li>
+              <li>조건: \((-1)^{n} \phi^{n} (r) \ge 0\)</li>
+            </ul>
+          </li>
+          <li>\(\psi(x)\) - 시간 효과 함수 (Tempoeral Effect Function) 정의
+            <ul>
+              <li>정의: 모든 시간 차수의 도함수가 존재</li>
+            </ul>
+          </li>
+          <li>\(\rho(mathbf{h}, u)\) - 공분산 함수 도출
+            <ul>
+              <li>\(\phi(x)와 \psi(x)\)를 결합하여 비독립적 공분산 함수 정의</li>
+            </ul>
+
+\[\rho(h, u) = \frac{1}{\psi(u^2)^{d/2}} \phi\left(\frac{\|h\|^2}{\psi(u^2)}\right), \quad d &gt; 0\]
+          </li>
+        </ol>
+
+        <ul>
+          <li>\(\phi(x)\): 공간-시간 상호작용 설명</li>
+          <li>\(\psi(x)\): 시간 효과 반영</li>
+          <li>\(d\): 차원 스케일링 파라미터로 모델이 공간-시간 의존성을 조정</li>
+          <li>해석: 시간적 효과(\(\psi(u^2)\))가 공분산의 스케일을 조정하고, 공간적 차이(\(\lVert h^2 \rVert\))를 통해 공간-시간 간 상호작용 포착</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Gneting-Class 모델의 주요 특징</li>
+</ul>
+
+<ol>
+  <li>유연성:
+    <ul>
+      <li>기존 지수 함수 기반 공분산 함수보다 더 다양한 공간-시간 상호작용 패턴 설명 가능</li>
+      <li>특정 시간대 또는 거리에서 상관성이 급격히 감소하거나 완만히 감소하는 상황 모두 포착 가능</li>
+    </ul>
+  </li>
+  <li>파라미터 추정:
+    <ul>
+      <li>모델 파라미터 \(\Theta\)는 log-likelihood 함수 \(L(\Theta \lvert \mathbf{O})\)를 최대화하여 추정</li>
+    </ul>
+  </li>
+</ol>
+
+<ul>
+  <li>\(\Theta\): 모델 파라미터 집합</li>
+  <li>\(\mathbf{O}\): Spatio-Temporal observations</li>
+</ul>
+
+<h3 id="234-exploratory-dependence-analysis">2.3.4 Exploratory Dependence Analysis</h3>
+
+<ol>
+  <li>공간 분석 (Spatial Analysis)</li>
+</ol>
+
+<div align="center">
+  <img src="/assets/img/blog/0113/fig/fig_2.png" alt="Figure 2" />
+</div>
+
+<ul>
+  <li>
+    <p>목적: 셀룰러 네트워크 트래픽의 공간적 의존성을 분석하여 기지국 간 거리와 트래픽의 상관성을 평가 후 공간적 비균질성(Spatial Inhormogeneity)를 이해</p>
+  </li>
+  <li>
+    <p>분석 과정:</p>
+
+    <ol>
+      <li>기지국 단위 트래픽의 공간 밀도 분포를 분석하여 분포 특성을 파악</li>
+      <li>공간적 공분산 함수 \(\rho(h, 0)\)를 계산해 거리 \(h\)에 따른 상관성 감소 패턴 분석</li>
+    </ol>
+  </li>
+  <li>
+    <p>Figure 4a: 기지국 단위 트래픽의 공간 밀도 분포</p>
+
+    <ul>
+      <li>내용:
+        <ul>
+          <li>각 기지국의 트래픽 용량(로그 스케일)과 해당 빈도를 나타냄</li>
+          <li>대부분의 기지국이 낮거나 중간 트래픽을 처리하지만, 소수의 기지국에서 long tail로 나타나는 높은 트래픽 처리</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Figure 4b: 분포 모델 적합도 평가</p>
+
+    <ul>
+      <li>내용:
+        <ul>
+          <li>Weibull, Log-normal, Log-normal mixture 분포를 데이터에 피팅하고 K-S 통계를 통해 적합도 비교</li>
+        </ul>
+      </li>
+      <li>결과:
+        <ul>
+          <li>Log-normal mixture 분포가 가장 적합하며, Weibull과 Log-normal은 상대적으로 덜 적합</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+=======
 <h1 id="5g-셀-시뮬레이터-구현-가이드-utilspathlosspy">5G 셀 시뮬레이터 구현 가이드: <code class="language-plaintext highlighter-rouge">utils/pathloss.py</code></h1>
 
 <h2 id="1-아키텍쳐-개요">1. 아키텍쳐 개요</h2>
@@ -27,9 +357,1047 @@
   <li>도시 환경(Urban Macro/Micro) 지원</li>
   <li>LOS/NLOS 시나리오 고려</li>
   <li>정확한 전파 특성 예측</li>
+>>>>>>> c9b4b85b73d42fdc5a945dcab7b288650d40921f
 </ul>
 
 <h2 id="2-코드-설명">2. 코드 설명</h2>
+
+<<<<<<< HEAD
+<div align="center">
+  <img src="/assets/img/blog/0113/fig/fig_3.png" alt="Figure 3" />
+</div>
+
+<ul>
+  <li>
+    <p>Figure 5: 분포 모델 적합도 평가</p>
+
+    <ul>
+      <li>내용:
+        <ul>
+          <li>시간대(7AM, 2PM, 9PM)로 공간적 공분산 함수 \(\rho(\mathbf{h},0) \sim h^{\gamma_t}\)를 계산</li>
+          <li>각 시간대에 따라 상관성이 거리 \(\mathbf{h}\)에 따라 감소하는 패턴 시각화</li>
+        </ul>
+      </li>
+      <li>결과:
+        <ul>
+          <li>피크 시간대(2PM): 상관성은 약 5km까지 유지되며 이후 급격히 감소</li>
+          <li>비피크 시간대(7AM, 9PM): 상관성은 약 10km까지 유지되며 더 완만히 감소
+            <ul>
+              <li>이는 출퇴근 및 점심시간과 같은 인간 활동 패턴에 의해 영향을 받음</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<ol>
+  <li>시간 분석 (Temporal Analysis)</li>
+</ol>
+
+<ul>
+  <li>목적: 시간에 따른 트래픽 변화와 의존성을 분석하여 도심과 교외 지역의 트래픽 패턴 차이를 파악</li>
+  <li>분석 과정:
+    <ol>
+      <li>특정 지역(도심/교외)에서의 시간별 트래픽 변화를 관찰</li>
+      <li>시간적 공분산 함수 \(\rho(0, u)\)를 계산해 시간 간격 \(u\)에 따른 상관성 분석</li>
+    </ol>
+  </li>
+</ul>
+
+<div align="center">
+  <img src="/assets/img/blog/0113/fig/fig_4.png" alt="Figure 4" />
+</div>
+
+<ul>
+  <li>
+    <p>Figure 6a: 지역 구분</p>
+
+    <ul>
+      <li>내용:
+        <ul>
+          <li>분석 지역을 도심(Region A)와 교외(Region B, C)로 나눔</li>
+          <li>도심은 상업 및 업무 지구, 교외는 주거 지역으로 정의</li>
+          <li>이 구분을 통해 각 지역의 트래픽 패턴 차이를 분석</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Figure 6b: 시간대별 트래픽 변화</p>
+
+    <ul>
+      <li>내용:
+        <ul>
+          <li>도심(Region A)와 교외(Region B, C)의 시간대별 트래픽 변화 비교</li>
+          <li>도심: 점심시간에 트래픽 최고치 도달</li>
+          <li>교외: 하루 종일 트래픽이 꾸준히 증가</li>
+          <li>이 차이는 인간의 이동 패턴과 밀접히 연결(출퇴근과 같은 “Tide Effect”)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Figure 6c &amp; 6d: 시간적 공분산 함수(\(\rho(0, u)\))</p>
+
+    <ul>
+      <li>내용:
+    - 시간 간격 u에 따른 트래픽 상관성을 계산하여 도심(6c)와 교외(6d)의 패턴 비교
+    - 도심: 점심시간에 상관성이 강하며, 12시간 주기에서 반복적인 상관성 관찰
+    - 교외: 24시간 주기에서 강한 상관성이 유지되며, 도심보다 장기적인 패턴이 뚜렷</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="235-modeling-spatial-temporal-dependence">2.3.5 Modeling Spatial-Temporal Dependence</h3>
+
+<p>본 파트에서는 시공간 의존성을 모델링하는 방법과, 실험을 통해 각 모델의 성능을 평가한 결과를 다룬다. 특히, 공간적-시간적 상호작용을 효과적으로 반영하기 위해 독립적(Separable) 모델과 비독립적(Non-Separable) 모델을 비교하며, 각 모델의 특징 및 성능 차이를 분석한다.
+ 주요 내용은 아래와 같다.</p>
+<ul>
+  <li>모델 파라미터 추정 (Estimation of Model Parameters)</li>
+  <li>모델 예측 성능 평가 (Evaluation of Prediction Performance)</li>
+  <li>모델링 결과 논의 (Discussions)</li>
+</ul>
+
+<h4 id="235a-estimation-of-model-parameters">2.3.5.A Estimation of Model Parameters</h4>
+
+<ul>
+  <li>지역별 의존성 모델을 사용하여 트래픽 특성의 차이를 반영</li>
+  <li>Maximum-Likelihood Estimation(MLE)으로 모델 파라미터를 학습</li>
+  <li>계산 복잡성을 줄이기 위해 다음과 같은 제약을 설정
+    <ul>
+      <li><strong>공간적 제한</strong>: 최대 5km 거리까지의 상관성만 반영</li>
+      <li><strong>시간적 제한</strong>: 최대 6시간 이전의 데이터만 예측에 활용</li>
+    </ul>
+  </li>
+  <li>이 제한은 <strong>피크 시간대에 상관성이 급격히 감소</strong>하는 경향을 반영</li>
+</ul>
+
+<div align="center">
+  <img src="/assets/img/blog/0113/fig/fig_5.png" alt="Figure 5" />
+</div>
+
+<ul>
+  <li>세 가지 공분산 모델(Exponential, Cauchy-class, Gneting-class)를 교외 및 도심 지역에서 비교</li>
+  <li>결과 해석
+    <ul>
+      <li>교외 지역:
+        <ul>
+          <li>공간적 거리 1km, 시간적 간격 2시간 이내에서는 세 모델 모두 높은 상관성을 보임</li>
+          <li>거리 및 시간 증가 시 모델 간 상관성 감소 속도가 다름
+            <ul>
+              <li>Exponential, Gneting-class 모델: 완만한 감소</li>
+              <li>Cauchy-class 모델: 급격한 감소</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>도심 지역:
+        <ul>
+          <li>시간적 상관성에서 세 모델의 차이가 두드러짐
+            <ul>
+              <li>Gneting-class 모델: 완만한 감소, 가장 현실적</li>
+              <li>Exponential 모델: 급격한 감소</li>
+              <li>Cauchy-class 모델: 보수적 감소 성향</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="235b-evaluation-of-prediction-performance">2.3.5.B Evaluation of Prediction Performance</h4>
+
+<h5 id="예측-방식">예측 방식</h5>
+
+<ul>
+  <li>모델 파라미터는 하루 데이터를 기반으로 학습 후, 다음 6시간 동안의 트래픽을 예측</li>
+  <li>공간적으로는 지역을 10x10 그리드로 나누어 N = 100 블록을 사용</li>
+  <li>시간적으로는 T = 144(10분 단위)로 데이터를 분할하여 활용</li>
+</ul>
+
+<h5 id="성능-평가-지표-rmse">성능 평가 지표: RMSE</h5>
+
+<div align="center">
+  <img src="/assets/img/blog/0113/fig/fig_6.png" alt="Figure 6" />
+</div>
+
+<ul>
+  <li>교외 지역
+    <ul>
+      <li>Gneting-class 모델의 RMSE가 2.8% - 25.2% 감소</li>
+      <li>화요일과 주말은 Separable 모델이 약간 더 우수</li>
+    </ul>
+  </li>
+  <li>도심 지역
+    <ul>
+      <li>Non-separable 모델이 대부분의 요일에서 RMSE를 3.7% - 23.6% 감소</li>
+      <li>Non-separable 모델의 성능 우위가 더 뚜렷</li>
+    </ul>
+  </li>
+</ul>
+
+<div align="center">
+  <img src="/assets/img/blog/0113/fig/fig_7.png" alt="Figure 7" />
+</div>
+
+<ul>
+  <li>도심과 교외에서 Gneting-class 모델을 사용하여 예측한 셀룰러 트래픽과 실제 관측된 트래픽 간의 관계를 나타낸 산점도
+    <ul>
+      <li>점들이 대각선에 가까울수록 예측값과 실제값의 일치도가 높음을 의미</li>
+    </ul>
+  </li>
+  <li>분석 내용
+    <ul>
+      <li>도심 지역
+        <ul>
+          <li>도심 지역의 트래픽은 중간 트래픽(0.5 - 0.75)에서 집중적으로 분포</li>
+          <li>산점도가 대각선에 가까운 점들이 밀집되어 있어 예측 정확도가 높음을 확인</li>
+        </ul>
+      </li>
+      <li>원인 및 해석
+        <ul>
+          <li>도심 지역의 트래픽은 공간적 밀도가 높고, 정규화된 값의 중간 범위에 데이터가 집중됨</li>
+          <li>이는 Gneting-class 모델이 중간 트래픽 값에서 더 정확한 예측을 제공한다는 점을 시사</li>
+        </ul>
+      </li>
+      <li>RMSE 결과
+        <ul>
+          <li>도심 지역에서 Gneting-class 모델의 RMSE는 0.137로 교외 지역보다 낮음</li>
+          <li>이는 도심 지역의 트래픽 분포가 모델 학습에 유리하게 작용했음을 나타냄</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<ul>
+  <li>주요 발견
+    <ul>
+      <li>부드러운 예측(Smoothing Effect)
+        <ul>
+          <li>Gneting-class 모델은 트래픽 값의 극단적인 변동을 부드럽게 조정</li>
+          <li>실제값이 낮은 경우(\(x &lt; 0.25\))에는 예측값이 약간 높게 나타나고, 높은 경우 (\(x &gt; 0.75\))에는 예측값이 약간 낮아짐</li>
+          <li>이는 비독립적 모델의 구조적 특성에서 기인하며 극단적인 변동성을 완화함으로써 안정적인 예측을 제공</li>
+        </ul>
+      </li>
+      <li>도심 vs. 교외 비교:
+        <ul>
+          <li>도심 지역:
+            <ul>
+              <li>중간 트래픽 값 구간(0.5 - 0.75)에 데이터가 집중되어 모델 성능이 더 우수</li>
+              <li>RMSE가 0.137로 교외보다 낮음</li>
+            </ul>
+          </li>
+          <li>교외 지역:
+            <ul>
+              <li>낮은 트래픽 밀도와 넓은 공간적 범위로 인해 예측의 어려움이 더 큼</li>
+              <li>RMSE가 0.154로 도심보다 약간 높음
+-음</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Gneting-class 모델의 강점:
+        <ul>
+          <li>공간-시간 상호작용을 효과적으로 반영하여 예측 정확도 개선</li>
+          <li>교외 및 도심 지역 모두에서 독립적 모델(Exponential, Cauchy-class)보다 더 낮은 RMSE를 기록</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="235c-discussions">2.3.5.C Discussions</h4>
+
+<h5 id="separable-모델">Separable 모델</h5>
+
+<ul>
+  <li>장점
+    <ul>
+      <li>수학적 간결성
+        <ul>
+          <li>공간적 공분산 함수(\(\rho(h)\))와 시간적 공분산 함수(\(\rho(u)\))를 분리하여 계산하므로 구현이 단순하고 계산 효율적</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>한계
+    <ul>
+      <li>상호작용 부족
+        <ul>
+          <li>공간과 시간 간의 상호작용을 반영하지 못함</li>
+          <li>서로 다른 시간대에서 공간적 상관성이 동일한 형태를 가지는 등 비현실적인 가정</li>
+        </ul>
+      </li>
+      <li>조건부 상관성의 초기값 설정 문제
+        <ul>
+          <li>공분산 함수의 초기 조건(ex. \(\rho(h, 0)\)) 선택이 부정확할 경우, 모델링 결과가 왜곡될 가능성 존재</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h5 id="non-separable-모델">Non-Separable 모델</h5>
+
+<ul>
+  <li>장점
+    <ul>
+      <li>복잡한 상호작용 반영
+        <ul>
+          <li>공간-시간 간의 상호작용 정보를 통합하여 현실적인 셀룰러 트래픽 패턴을 포착</li>
+          <li>더 복잡하고 다양한 의존성 설명 가능</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>한계
+    <ul>
+      <li>계산 비용
+        <ul>
+          <li>모델 파라미터가 많고 구조가 복잡하여 학습 시간이 더 오래 걸림</li>
+        </ul>
+      </li>
+      <li>과적합 위험
+        <ul>
+          <li>모델이 역사적 데이터에 지나치게 적합할 경우, 급격한 트래픽 변화에 대응하지 못할 가능성 존재</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h5 id="한계-극복-방안">한계 극복 방안</h5>
+
+<ol>
+  <li>크로스벨리데이션 및 부트스트랩
+    <ul>
+      <li>과적합 문제를 해결하고 모델의 견고성을 높이기 위한 일반적인 방법</li>
+      <li>다양한 데이터 샘플에 대해 반복적으로 학습 및 검증하여 모델의 신뢰성을 개선</li>
+    </ul>
+  </li>
+  <li>클러스터 기반 의존성 모델링
+    <ul>
+      <li>지역별 또는 시간대 별로 서로 다른 모델을 설계
+        <ul>
+          <li>예: 도심과 교외 지역, 주간과 야간 시간대에 맞는 개별 모델 사용</li>
+        </ul>
+      </li>
+      <li>이를 통해 복잡한 트래픽 패턴을 더 효과적으로 설명하며, 정확도와 견고성 간의 균형을 유지</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h5 id="주요-시사점-및-결론">주요 시사점 및 결론</h5>
+
+<ol>
+  <li>모델 선택의 중요성
+    <ul>
+      <li>독립적 모델은 단순성과 효율성을 제공하지만, 공간과 시간의 상호작용이 중요한 환경에서는 비독립적 모델이 필요</li>
+    </ul>
+  </li>
+  <li>모델링 복잡성과 성능 간 균형
+    <ul>
+      <li>비독립적 모델은 더 높은 성능을 제공하지만, 계산 비용 증가 및 과적합 위험이 단점으로 작용</li>
+      <li>크로스밸리데이션 또는 클러스터 기반 접근 방식으로 한계 보완</li>
+    </ul>
+  </li>
+  <li>맞춤형 모델링의 필요성
+    <ul>
+      <li>지역 또는 시간대의 특성을 반영한 맞춤형 모델을 활용하여 정확도와 견고성을 동시에 달성</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h3 id="236-conclusion">2.3.6 Conclusion</h3>
+
+<h4 id="연구-개요">연구 개요</h4>
+
+<ul>
+  <li>본 연구는 도시 규모의 셀룰러 트래픽 데이터를 분석하여 시공간 의존성(spatio-temporal dependence)을 탐구</li>
+  <li>기존 연구가 강조했던 시간적 역학(temporal dynamics) 및 공간적 비균질성(spatial inhomogeneity)을 넘어, 두 요소 간의 상호작용을 포함한 새로운 관점을 제시</li>
+</ul>
+
+<h4 id="주요-발견">주요 발견</h4>
+<ol>
+  <li>공간적 관점</li>
+</ol>
+
+<ul>
+  <li>셀룰러 트래픽은 이전 연구에서 가정한 uniformity을 위반</li>
+  <li>이로 인해 네트워크 자원 활용에 불균형이 발생할 수 있음</li>
+  <li>네트워크 시스템 설계 시 이러한 특성을 고려해야 대규모 시스템 장애를 방지 가능</li>
+</ul>
+
+<ol>
+  <li>시간적 관점</li>
+</ol>
+
+<ul>
+  <li>시공간 의존성을 반영한 네트워크 모듈은 혼잡을 사전에 완화할 수 있음</li>
+  <li>이는 네트워크 안정성을 높이고, 운영 효율성을 개선하는 데 기여</li>
+</ul>
+
+<ol>
+  <li>시공간 통합 정보의 중요성
+    <ul>
+      <li>공간적 및 시간적 데이터를 결합하여 상호작용 정보를 활용하면, 네트워크 시스템이 더 견고해지고 현실적인 시나리오에서 효과적으로 작동할 수 있음</li>
+    </ul>
+  </li>
+</ol>
+
+<h4 id="future-work">Future Work</h4>
+
+<ul>
+  <li>인간 이동성과 셀룰러 트래픽 간 연관성 연구
+    <ul>
+      <li>도시 내 집단적 인간 이동 패턴을 모델링</li>
+      <li>트래픽의 공간적 변화와 인간 활동 간 상호작용을 정량화</li>
+    </ul>
+  </li>
+  <li>시공간 의존성 모델 혼합
+    <ul>
+      <li>목표:
+        <ul>
+          <li>서로 다른 지역 또는 시간대의 트래픽 특성을 반영하기 위해 모델 혼합(mixture models)을 도입</li>
+        </ul>
+      </li>
+      <li>도전과제:
+        <ul>
+          <li>효율적인 경계 탐지 알고리즘 개발
+            <ul>
+              <li>특정 모델 파라미터를 추정할 수 있는 시공간 경계를 자동으로 감지</li>
+            </ul>
+          </li>
+          <li>효율적인 모델 결합 알고리즘
+            <ul>
+              <li>여러 모델을 통합하여 계산 비용을 줄이고, 높은 성능을 유지</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="3-take-away">3. Take Away</h3>
+<ul>
+  <li>셀룰러 트래픽은 공간적 및 시간적 특성이 복잡하게 얽혀 있으며, 이를 반영한 네트워크 모델링이 필수적</li>
+  <li>인간 이동 패턴과 결합한 분석, 또는 지역별 맞춤형 모델링이 향후 연구의 중요한 방향으로 제시됨</li>
+  <li>시공간 경계 탐지 및 효율적인 모델 결합 알고리즘은 이렇나 연구를 뒷받침하는 핵심 기술이 될 것</li>
+</ul>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="paper" /><summary type="html"><![CDATA[**Date**: 2015.06.12, **Tag**: [Spatil-temporal dependence], [Traffic modeling], [Model measurement], [Correlation analysis], [Tide effects]]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/0113/thumbnail/c2tm.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/0113/thumbnail/c2tm.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">오프로딩 시뮬레이터 - UE.py</title><link href="http://localhost:4000/blog/sim/2024-12-24-offloading-ue/" rel="alternate" type="text/html" title="오프로딩 시뮬레이터 - UE.py" /><published>2024-12-24T00:00:00+09:00</published><updated>2024-12-24T00:00:00+09:00</updated><id>http://localhost:4000/blog/sim/offloading-ue</id><content type="html" xml:base="http://localhost:4000/blog/sim/2024-12-24-offloading-ue/"><![CDATA[<!--more-->
+
+<ul class="large-only" id="markdown-toc">
+  <li><a href="#5g-셀-시뮬레이터-구현-가이드-uepy" id="markdown-toc-5g-셀-시뮬레이터-구현-가이드-uepy">5G 셀 시뮬레이터 구현 가이드: <code class="language-plaintext highlighter-rouge">ue.py</code></a>    <ul>
+      <li><a href="#1-아키텍쳐-개요" id="markdown-toc-1-아키텍쳐-개요">1. 아키텍쳐 개요</a>        <ul>
+          <li><a href="#11-설계-철학" id="markdown-toc-11-설계-철학">1.1 설계 철학</a>            <ul>
+              <li><a href="#1-클래스-초기화" id="markdown-toc-1-클래스-초기화">1. 클래스 초기화</a></li>
+              <li><a href="#2-트래픽-생성기-초기화" id="markdown-toc-2-트래픽-생성기-초기화">2. 트래픽 생성기 초기화</a></li>
+              <li><a href="#3-위치-업데이트-메커니즘" id="markdown-toc-3-위치-업데이트-메커니즘">3. 위치 업데이트 메커니즘</a></li>
+              <li><a href="#4-무선-환경-측정" id="markdown-toc-4-무선-환경-측정">4. 무선 환경 측정</a></li>
+              <li><a href="#5-sinr-계산" id="markdown-toc-5-sinr-계산">5. SINR 계산</a></li>
+              <li><a href="#6-qos-만족도-평가" id="markdown-toc-6-qos-만족도-평가">6. QoS 만족도 평가</a></li>
+              <li><a href="#7-메인-루프" id="markdown-toc-7-메인-루프">7. 메인 루프</a></li>
+              <li><a href="#8-참고-문헌" id="markdown-toc-8-참고-문헌">8. 참고 문헌</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="5g-셀-시뮬레이터-구현-가이드-uepy">5G 셀 시뮬레이터 구현 가이드: <code class="language-plaintext highlighter-rouge">ue.py</code></h1>
+
+<h2 id="1-아키텍쳐-개요">1. 아키텍쳐 개요</h2>
+
+<h3 id="11-설계-철학">1.1 설계 철학</h3>
+<ul>
+  <li><strong>3GPP 표준 준수</strong>: 실제 5G UE의 동작을 충실히 반영하여 시뮬레이션의 현실성을 보장한다. 특히 핸드오버, QoS 관리, 무선 환경 측정 등에서 표준 기반 구현을 중요시한다.</li>
+  <li><strong>모듈화된 구조</strong>: 이동성, 트래픽 생성, 성능 모니터링 등의 기능을 독립적인 모듈로 분리하여 유지보수성과 확장성을 높인다.</li>
+  <li><strong>효율적인 상태 관리</strong>: 시뮬레이션의 안정성을 위해 UE의 상태(위치, 연결, 성능 지표 등)를 일관되고 효율적으로 관리한다.</li>
+  <li><strong>데이터 중심 설계</strong>: 성능 분석과 최적화를 위해 필요한 모든 메트릭을 체계적으로 수집하고 관리한다.</li>
+  <li><strong>자원 효율성</strong>: 대규모 시뮬레이션을 고려하여 메모리 사용과 연산 비용을 최적화한다.</li>
+</ul>
+
+<h4 id="1-클래스-초기화">1. 클래스 초기화</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sim</span><span class="p">,</span> <span class="n">i</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">xyz</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="n">ndarray</span><span class="p">,</span>
+             <span class="n">movement_pattern</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span>
+             <span class="n">traffic_pattern</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span>
+             <span class="n">service_requirements</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span><span class="p">):</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">sim</span> <span class="o">=</span> <span class="n">sim</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">i</span> <span class="o">=</span> <span class="n">i</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">xyz</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="n">xyz</span><span class="p">)</span>
+    
+    <span class="c1"># 이동성 설정
+</span>    <span class="bp">self</span><span class="p">.</span><span class="n">movement_pattern</span> <span class="o">=</span> <span class="n">movement_pattern</span> <span class="ow">or</span> <span class="p">{</span>
+        <span class="s">'type'</span><span class="p">:</span> <span class="s">'random_walk'</span><span class="p">,</span>
+        <span class="s">'velocity'</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>  <span class="c1"># m/s
+</span>        <span class="s">'direction_change_interval'</span><span class="p">:</span> <span class="mf">30.0</span>  <span class="c1"># 초
+</span>    <span class="p">}</span>
+    
+    <span class="c1"># 트래픽 설정
+</span>    <span class="bp">self</span><span class="p">.</span><span class="n">traffic_pattern</span> <span class="o">=</span> <span class="n">traffic_pattern</span> <span class="ow">or</span> <span class="p">{</span>
+        <span class="s">'type'</span><span class="p">:</span> <span class="s">'constant'</span><span class="p">,</span>
+        <span class="s">'data_rate'</span><span class="p">:</span> <span class="mf">1.0</span>  <span class="c1"># Mbps
+</span>    <span class="p">}</span>
+    
+    <span class="c1"># QoS 요구사항
+</span>    <span class="bp">self</span><span class="p">.</span><span class="n">service_requirements</span> <span class="o">=</span> <span class="n">service_requirements</span> <span class="ow">or</span> <span class="p">{</span>
+        <span class="s">'min_throughput'</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>  <span class="c1"># Mbps
+</span>        <span class="s">'max_latency'</span><span class="p">:</span> <span class="mf">100.0</span>    <span class="c1"># ms
+</span>    <span class="p">}</span>
+</code></pre></div></div>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">sim</code>: 시뮬레이터 인스턴스 참조</li>
+  <li><code class="language-plaintext highlighter-rouge">i</code>: UE 식별자</li>
+  <li><code class="language-plaintext highlighter-rouge">xyz</code>: 3차원 공간에서의 초기 위치</li>
+  <li><code class="language-plaintext highlighter-rouge">movement_pattern</code>: 이동 패턴 (기본값: random walk)</li>
+  <li><code class="language-plaintext highlighter-rouge">traffic_pattern</code>: 트래픽 생성 패턴 (기본값: constant rate)</li>
+  <li><code class="language-plaintext highlighter-rouge">service_requirements</code>: QoS 요구사항(throughput, latency 등)</li>
+</ul>
+
+<h4 id="2-트래픽-생성기-초기화">2. 트래픽 생성기 초기화</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">initialize_traffic_generator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="s">"""트래픽 생성기 초기화"""</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">traffic_pattern</span><span class="p">[</span><span class="s">'type'</span><span class="p">]</span> <span class="o">==</span> <span class="s">'constant'</span><span class="p">:</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">generate_traffic</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">_generate_constant_traffic</span>
+    <span class="k">elif</span> <span class="bp">self</span><span class="p">.</span><span class="n">traffic_pattern</span><span class="p">[</span><span class="s">'type'</span><span class="p">]</span> <span class="o">==</span> <span class="s">'poisson'</span><span class="p">:</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">generate_traffic</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">_generate_poisson_traffic</span>
+    <span class="k">elif</span> <span class="bp">self</span><span class="p">.</span><span class="n">traffic_pattern</span><span class="p">[</span><span class="s">'type'</span><span class="p">]</span> <span class="o">==</span> <span class="s">'bursty'</span><span class="p">:</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">generate_traffic</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">_generate_bursty_traffic</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="nb">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s">"Unknown traffic pattern: </span><span class="si">{</span><span class="bp">self</span><span class="p">.</span><span class="n">traffic_pattern</span><span class="p">[</span><span class="s">'type'</span><span class="p">]</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+</code></pre></div></div>
+<ul>
+  <li>패턴 타입에 따라 적절한 생성 함수가 동적으로 할당됨</li>
+  <li>지원되지 않는 패턴 타입 사용시 <code class="language-plaintext highlighter-rouge">ValueError</code> 발생</li>
+  <li>패턴 변경 시 반드시 이 method를 다시 호출해야 함</li>
+</ul>
+
+<h4 id="3-위치-업데이트-메커니즘">3. 위치 업데이트 메커니즘</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">update_position</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="s">"""위치 업데이트"""</span>
+    <span class="n">current_time</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">sim</span><span class="p">.</span><span class="n">env</span><span class="p">.</span><span class="n">now</span>
+    
+    <span class="c1"># 방향 변경 체크
+</span>    <span class="k">if</span> <span class="p">(</span><span class="n">current_time</span> <span class="o">-</span> <span class="bp">self</span><span class="p">.</span><span class="n">last_direction_change</span> <span class="o">&gt;</span> 
+        <span class="bp">self</span><span class="p">.</span><span class="n">movement_pattern</span><span class="p">[</span><span class="s">'direction_change_interval'</span><span class="p">]):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">update_direction</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">last_direction_change</span> <span class="o">=</span> <span class="n">current_time</span>
+    
+    <span class="c1"># 속도 계산
+</span>    <span class="bp">self</span><span class="p">.</span><span class="n">velocity</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">direction</span> <span class="o">*</span> <span class="bp">self</span><span class="p">.</span><span class="n">movement_pattern</span><span class="p">[</span><span class="s">'velocity'</span><span class="p">]</span>
+    
+    <span class="c1"># 위치 업데이트
+</span>    <span class="bp">self</span><span class="p">.</span><span class="n">xyz</span> <span class="o">+=</span> <span class="bp">self</span><span class="p">.</span><span class="n">velocity</span> <span class="o">*</span> <span class="bp">self</span><span class="p">.</span><span class="n">sim</span><span class="p">.</span><span class="n">interval</span>
+    
+    <span class="c1"># 시뮬레이션 영역 내 제한
+</span>    <span class="bp">self</span><span class="p">.</span><span class="n">xyz</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">clip</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">xyz</span><span class="p">,</span> 
+                      <span class="bp">self</span><span class="p">.</span><span class="n">sim</span><span class="p">.</span><span class="n">area_bounds</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> 
+                      <span class="bp">self</span><span class="p">.</span><span class="n">sim</span><span class="p">.</span><span class="n">area_bounds</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</code></pre></div></div>
+<ul>
+  <li>방향 변경은 설정된 간격마다 수행</li>
+  <li>속도는 방향 벡터와 설정된 속도값의 곱으로 계산</li>
+  <li>시뮬레이션 영역을 벗어나지 않도록 위치를 제한</li>
+  <li><code class="language-plaintext highlighter-rouge">sim.interval</code>을 통해 시뮬레이션 시간 스텝 반영</li>
+</ul>
+
+<h4 id="4-무선-환경-측정">4. 무선 환경 측정</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">measure_radio_conditions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="s">"""무선 환경 측정"""</span>
+    <span class="n">current_time</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">sim</span><span class="p">.</span><span class="n">env</span><span class="p">.</span><span class="n">now</span>
+    <span class="k">if</span> <span class="n">current_time</span> <span class="o">-</span> <span class="bp">self</span><span class="p">.</span><span class="n">last_measurement</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="p">.</span><span class="n">measurement_interval</span><span class="p">:</span>
+        <span class="k">return</span>
+    
+    <span class="bp">self</span><span class="p">.</span><span class="n">last_measurement</span> <span class="o">=</span> <span class="n">current_time</span>
+    
+    <span class="c1"># 모든 셀에 대한 RSRP 측정
+</span>    <span class="n">best_rsrp</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s">'-inf'</span><span class="p">)</span>
+    <span class="n">best_cell</span> <span class="o">=</span> <span class="bp">None</span>
+    
+    <span class="k">for</span> <span class="n">cell</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">sim</span><span class="p">.</span><span class="n">cells</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">freq</span> <span class="ow">in</span> <span class="n">cell</span><span class="p">.</span><span class="n">freq_config</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">cell</span><span class="p">.</span><span class="n">freq_config</span><span class="p">[</span><span class="n">freq</span><span class="p">][</span><span class="s">'active'</span><span class="p">]:</span>
+                <span class="k">continue</span>
+            
+            <span class="n">rsrp</span> <span class="o">=</span> <span class="n">cell</span><span class="p">.</span><span class="n">get_rsrp</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">i</span><span class="p">,</span> <span class="n">freq</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">rsrp</span> <span class="o">&gt;</span> <span class="n">best_rsrp</span><span class="p">:</span>
+                <span class="n">best_rsrp</span> <span class="o">=</span> <span class="n">rsrp</span>
+                <span class="n">best_cell</span> <span class="o">=</span> <span class="n">cell</span>
+</code></pre></div></div>
+
+<ul>
+  <li>측정은 설정된 간격(<code class="language-plaintext highlighter-rouge">meaurement_interval</code>)마다 수행</li>
+  <li>활성화된 주파수에 대해서만 RSRP 측정</li>
+  <li>최적의 셀 선택을 위해 모든 가능한 셀과 주파수 조합 검사</li>
+  <li>RSRP 값이 가장 높은 셀을 최적 셀로 선정</li>
+</ul>
+
+<h4 id="5-sinr-계산">5. SINR 계산</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">calculate_sinr</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="s">"""SINR 계산"""</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="p">.</span><span class="n">serving_cell</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="s">'-inf'</span><span class="p">)</span>
+    
+    <span class="c1"># 서빙 셀로부터의 신호 전력
+</span>    <span class="n">serving_power</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">serving_cell</span><span class="p">.</span><span class="n">get_rsrp</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">i</span><span class="p">)</span><span class="o">/</span><span class="mi">10</span><span class="p">)</span>
+    
+    <span class="c1"># 간섭 전력 계산
+</span>    <span class="n">interference</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">cell</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">sim</span><span class="p">.</span><span class="n">cells</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">cell</span> <span class="o">!=</span> <span class="bp">self</span><span class="p">.</span><span class="n">serving_cell</span><span class="p">:</span>
+            <span class="n">interference</span> <span class="o">+=</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="n">cell</span><span class="p">.</span><span class="n">get_rsrp</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">i</span><span class="p">)</span><span class="o">/</span><span class="mi">10</span><span class="p">)</span>
+    
+    <span class="c1"># 노이즈 파워 (-174 dBm/Hz + 대역폭)
+</span>    <span class="n">noise_power</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">174</span><span class="o">/</span><span class="mi">10</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="p">.</span><span class="n">serving_cell</span><span class="p">.</span><span class="n">bandwidth</span>
+    
+    <span class="c1"># SINR 계산
+</span>    <span class="n">sinr</span> <span class="o">=</span> <span class="n">serving_power</span> <span class="o">/</span> <span class="p">(</span><span class="n">interference</span> <span class="o">+</span> <span class="n">noise_power</span><span class="p">)</span>
+    <span class="k">return</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">log10</span><span class="p">(</span><span class="n">sinr</span><span class="p">)</span>
+</code></pre></div></div>
+<ul>
+  <li>dBm 단위의 RSRP를 선형 전력값으로 변환하여 계산</li>
+  <li>모든 non-serving 셀로부터의 간섭을 고려</li>
+  <li>열잡음 전력은 -174dBm/Hz를 기준으로 대역폭 고려</li>
+  <li>최종 결과는 dB 단위로 반환</li>
+</ul>
+
+<h4 id="6-qos-만족도-평가">6. QoS 만족도 평가</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get_qos_satisfaction</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]:</span>
+    <span class="s">"""QoS 만족도 확인"""</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="p">.</span><span class="n">metrics</span><span class="p">[</span><span class="s">'throughput'</span><span class="p">]</span> <span class="ow">or</span> <span class="ow">not</span> <span class="bp">self</span><span class="p">.</span><span class="n">metrics</span><span class="p">[</span><span class="s">'latency'</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s">'throughput'</span><span class="p">:</span> <span class="bp">False</span><span class="p">,</span> <span class="s">'latency'</span><span class="p">:</span> <span class="bp">False</span><span class="p">}</span>
+    
+    <span class="n">avg_throughput</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">metrics</span><span class="p">[</span><span class="s">'throughput'</span><span class="p">])</span>
+    <span class="n">avg_latency</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">metrics</span><span class="p">[</span><span class="s">'latency'</span><span class="p">])</span>
+    
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s">'throughput'</span><span class="p">:</span> <span class="n">avg_throughput</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="p">.</span><span class="n">service_requirements</span><span class="p">[</span><span class="s">'min_throughput'</span><span class="p">],</span>
+        <span class="s">'latency'</span><span class="p">:</span> <span class="n">avg_latency</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="p">.</span><span class="n">service_requirements</span><span class="p">[</span><span class="s">'max_latency'</span><span class="p">]</span>
+    <span class="p">}</span>
+</code></pre></div></div>
+<ul>
+  <li>측정된 메트릭이 없는 경우 모든 항목 불만족으로 처리</li>
+  <li>Throughput과 latency에 대해 평균값 기준으로 평가</li>
+  <li>설정된 요구사항과 비교하여 만족 여부 판단</li>
+  <li>Boolean 값으로 각 항목의 만족 여부 반환</li>
+</ul>
+
+<h4 id="7-메인-루프">7. 메인 루프</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">loop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="s">"""메인 루프"""</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="bp">self</span><span class="p">.</span><span class="n">sim</span><span class="p">.</span><span class="n">wait</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">sim</span><span class="p">.</span><span class="n">interval</span><span class="p">)</span>
+        
+        <span class="c1"># 위치 업데이트
+</span>        <span class="bp">self</span><span class="p">.</span><span class="n">update_position</span><span class="p">()</span>
+        
+        <span class="c1"># 무선 환경 측정
+</span>        <span class="bp">self</span><span class="p">.</span><span class="n">measure_radio_conditions</span><span class="p">()</span>
+        
+        <span class="c1"># 성능 메트릭 업데이트
+</span>        <span class="bp">self</span><span class="p">.</span><span class="n">update_metrics</span><span class="p">()</span>
+</code></pre></div></div>
+
+<ul>
+  <li>SimPy 환경에서 동작하는 Generator 함수로 구현</li>
+  <li>시뮬레이터의 시간 간격에 따라 주기적으로 실행</li>
+  <li>위치, 무선 환경, 성능 메트릭을 순차적으로 업데이트</li>
+  <li>무한 루프로 구현되어 시뮬레이션 종료까지 계속 실행</li>
+</ul>
+
+<h4 id="8-참고-문헌">8. 참고 문헌</h4>
+<ul>
+  <li>3GPP TS 38.133: “NR; Reqeuirements for Support of Radio Resource Management”</li>
+  <li>3GPP TR 38.901: “Study on Channel Model for Frequents from 0.5 to 100 GHz”</li>
+  <li>3GPP TS 38.300: “NR; Overall description; Stage-2”</li>
+</ul>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="sim" /><summary type="html"><![CDATA[**Date**: 2024.11.25, **Tag**: [Traffic Prediction], [Carbon Emission], [Graduation]]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/green_ai/green-ai.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/green_ai/green-ai.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">오프로딩 시뮬레이터 - Scenario</title><link href="http://localhost:4000/blog/sim/2024-12-24-offloading-scenario/" rel="alternate" type="text/html" title="오프로딩 시뮬레이터 - Scenario" /><published>2024-12-24T00:00:00+09:00</published><updated>2024-12-24T00:00:00+09:00</updated><id>http://localhost:4000/blog/sim/offloading-scenario</id><content type="html" xml:base="http://localhost:4000/blog/sim/2024-12-24-offloading-scenario/"><![CDATA[<!--more-->
+
+<ul class="large-only" id="markdown-toc">
+  <li><a href="#5g-셀-시뮬레이터-구현-가이드-scenariopy" id="markdown-toc-5g-셀-시뮬레이터-구현-가이드-scenariopy">5G 셀 시뮬레이터 구현 가이드: <code class="language-plaintext highlighter-rouge">scenario.py</code></a>    <ul>
+      <li><a href="#아키텍쳐-개요" id="markdown-toc-아키텍쳐-개요">아키텍쳐 개요</a></li>
+      <li><a href="#코드-설명" id="markdown-toc-코드-설명">코드 설명</a>        <ul>
+          <li><a href="#1-데이터-클래스" id="markdown-toc-1-데이터-클래스">1. 데이터 클래스</a></li>
+          <li><a href="#2-시나리오-클래스-초기화" id="markdown-toc-2-시나리오-클래스-초기화">2. 시나리오 클래스 초기화</a></li>
+          <li><a href="#3-설정-파일-처리" id="markdown-toc-3-설정-파일-처리">3. 설정 파일 처리</a></li>
+          <li><a href="#4-설정-검증" id="markdown-toc-4-설정-검증">4. 설정 검증</a></li>
+          <li><a href="#5-이벤트-관리" id="markdown-toc-5-이벤트-관리">5. 이벤트 관리</a></li>
+          <li><a href="#6-참고-문헌" id="markdown-toc-6-참고-문헌">6. 참고 문헌</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="5g-셀-시뮬레이터-구현-가이드-scenariopy">5G 셀 시뮬레이터 구현 가이드: <code class="language-plaintext highlighter-rouge">scenario.py</code></h1>
+
+<h2 id="아키텍쳐-개요">아키텍쳐 개요</h2>
+<p>Scenario 모듈은 시뮬레이션 시나리오의 생성, 관리 및 실행을 담당함. 이 모듈은 두 개의 중 데이터 클래스(UEConfig, CellConfig)와 하나의 메인 클래스(Scenario)로 구성되어 있으며, YAML 또는 Json 형식의 설정 파일을 통해 시나리오를 정의하고 관리한다.</p>
+
+<h2 id="코드-설명">코드 설명</h2>
+
+<h3 id="1-데이터-클래스">1. 데이터 클래스</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">@</span><span class="n">dataclass</span>
+<span class="k">class</span> <span class="nc">UEConfig</span><span class="p">:</span>
+    <span class="n">initial_positions</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="n">ndarray</span>
+    <span class="n">movement_patterns</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Dict</span><span class="p">]</span>
+    <span class="n">traffic_patterns</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Dict</span><span class="p">]</span>
+    <span class="n">service_requirements</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span>
+
+<span class="o">@</span><span class="n">dataclass</span>
+<span class="k">class</span> <span class="nc">CellConfig</span><span class="p">:</span>
+    <span class="n">positions</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="n">ndarray</span>
+    <span class="n">frequencies</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Dict</span><span class="p">]</span>
+    <span class="n">coverage_patterns</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Dict</span><span class="p">]</span>
+    <span class="n">power_configs</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span>
+</code></pre></div></div>
+<ul>
+  <li>UEConfig
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">initial_positions</code>: UE의 초기 위치를 (N, 3) 형태의 NumPy 배열로 저장</li>
+      <li><code class="language-plaintext highlighter-rouge">movement_patterns</code>: 각 UE의 이동 패턴을 정의(예: 랜덤 워크, 정해진 경로 등)</li>
+      <li><code class="language-plaintext highlighter-rouge">traffic_patterns</code>: UE별 트래픽 생성 패턴 정의(예: 일정 속도, 포아송 분포 등)</li>
+      <li><code class="language-plaintext highlighter-rouge">service_requirements</code>: 처리량, 지연시간 등 QoS 요구사항 정의</li>
+    </ul>
+  </li>
+  <li>CellConfig
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">positions</code>: 기지국들의 위치를 (M, 3) 형태의 NumPy 배열로 저장</li>
+      <li><code class="language-plaintext highlighter-rouge">frequencies</code>: 각 셀의 주파수 대역 설정 (대역폭, RB 수 등)</li>
+      <li><code class="language-plaintext highlighter-rouge">coverage_patterns</code>: 셀 커버리지 패턴 정의 (섹터, 옴니 등)</li>
+      <li><code class="language-plaintext highlighter-rouge">power_configs</code>: 송신 전력 관련 설정 저장</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="2-시나리오-클래스-초기화">2. 시나리오 클래스 초기화</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">duration</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">config_path</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span><span class="p">):</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">duration</span> <span class="o">=</span> <span class="n">duration</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">config_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">config_path</span><span class="p">)</span> <span class="k">if</span> <span class="n">config_path</span> <span class="k">else</span> <span class="bp">None</span>
+    
+    <span class="c1"># 기본 설정
+</span>    <span class="bp">self</span><span class="p">.</span><span class="n">ue_config</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">cell_config</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">network_params</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">events</span> <span class="o">=</span> <span class="p">[]</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">name</code>: 시나리오의 식별자 역할</li>
+  <li><code class="language-plaintext highlighter-rouge">duration</code>: 시뮬레이션 실행 시간 (초 단위)</li>
+  <li><code class="language-plaintext highlighter-rouge">config_path</code>: 설정 파일의 경로</li>
+</ul>
+
+<h3 id="3-설정-파일-처리">3. 설정 파일 처리</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">load_config</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s">"""설정 파일 로드"""</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="p">.</span><span class="n">config_path</span><span class="p">.</span><span class="n">suffix</span> <span class="o">==</span> <span class="s">'.json'</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="nb">ValueError</span><span class="p">(</span><span class="s">"Only .json config files are supported"</span><span class="p">)</span>
+            
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">config_path</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">config</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+            
+        <span class="bp">self</span><span class="p">.</span><span class="n">_parse_config</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+</code></pre></div></div>
+<ul>
+  <li>JSON 형식의 config 파일 지원</li>
+  <li>지원하지 않는 형식에 대한 예외 처리</li>
+</ul>
+
+<h3 id="4-설정-검증">4. 설정 검증</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">validate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="s">"""시나리오 유효성 검증"""</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="p">.</span><span class="n">ue_configs</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="nb">ValueError</span><span class="p">(</span><span class="s">"No UE configurations"</span><span class="p">)</span>
+                
+            <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">cell_config</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="nb">ValueError</span><span class="p">(</span><span class="s">"No cell configuration"</span><span class="p">)</span>
+            
+            <span class="c1"># UE 위치 검증
+</span>            <span class="k">for</span> <span class="n">ue_cfg</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">ue_configs</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">np</span><span class="p">.</span><span class="nb">any</span><span class="p">(</span><span class="n">ue_cfg</span><span class="p">.</span><span class="n">initial_positions</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> \
+                   <span class="n">np</span><span class="p">.</span><span class="nb">any</span><span class="p">(</span><span class="n">ue_cfg</span><span class="p">.</span><span class="n">initial_positions</span><span class="p">[:,:</span><span class="mi">2</span><span class="p">]</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="p">.</span><span class="n">area_size</span><span class="p">):</span>
+                    <span class="k">raise</span> <span class="nb">ValueError</span><span class="p">(</span><span class="s">"UE positions out of bounds"</span><span class="p">)</span>
+            
+                <span class="c1"># 서비스 타입 검증
+</span>                <span class="k">if</span> <span class="n">ue_cfg</span><span class="p">.</span><span class="n">service_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">default_service_requirements</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="nb">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s">"Invalid service type: </span><span class="si">{</span><span class="n">ue_cfg</span><span class="p">.</span><span class="n">service_type</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+            
+            <span class="c1"># 셀 위치 검증
+</span>            <span class="k">if</span> <span class="n">np</span><span class="p">.</span><span class="nb">any</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">cell_config</span><span class="p">.</span><span class="n">positions</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> \
+               <span class="n">np</span><span class="p">.</span><span class="nb">any</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">cell_config</span><span class="p">.</span><span class="n">positions</span><span class="p">[:,:</span><span class="mi">2</span><span class="p">]</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="p">.</span><span class="n">area_size</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="nb">ValueError</span><span class="p">(</span><span class="s">"Cell positions out of bounds"</span><span class="p">)</span>
+            
+            <span class="c1"># 이벤트 시간 검증
+</span>            <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">events</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">event</span><span class="p">.</span><span class="n">time</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">event</span><span class="p">.</span><span class="n">time</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="p">.</span><span class="n">duration</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="nb">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s">"Event time </span><span class="si">{</span><span class="n">event</span><span class="p">.</span><span class="n">time</span><span class="si">}</span><span class="s"> out of range"</span><span class="p">)</span>
+            
+            <span class="k">return</span> <span class="bp">True</span>
+            
+        <span class="k">except</span> <span class="nb">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Scenario validation failed: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+            <span class="k">return</span> <span class="bp">False</span>
+</code></pre></div></div>
+
+<ul>
+  <li>필수 설정 요소들의 존재 여부 확인</li>
+  <li>데이터 형식과 값의 유효성 검사</li>
+  <li>시간 범위를 벗어난 이벤트 감지</li>
+  <li>오류 발생 시 상세한 메세지 제공</li>
+</ul>
+
+<h3 id="5-이벤트-관리">5. 이벤트 관리</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">add_event</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">event_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">params</span><span class="p">:</span> <span class="n">Dict</span><span class="p">):</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">events</span><span class="p">.</span><span class="n">append</span><span class="p">({</span>
+        <span class="s">'time'</span><span class="p">:</span> <span class="n">time</span><span class="p">,</span>
+        <span class="s">'type'</span><span class="p">:</span> <span class="n">event_type</span><span class="p">,</span>
+        <span class="s">'params'</span><span class="p">:</span> <span class="n">params</span>
+    <span class="p">})</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">events</span><span class="p">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s">'time'</span><span class="p">])</span>
+</code></pre></div></div>
+<ul>
+  <li>시뮬레이션 중 발생할 이벤트 정의</li>
+  <li>이벤트 발생 시간 기준 자동 정렬</li>
+  <li>이벤트 타입과 파라미터를 유연하게 정의</li>
+</ul>
+
+<h3 id="6-참고-문헌">6. 참고 문헌</h3>
+<ul>
+  <li>3GPP TS 38.300: 전반적인 네트워크 구성과 아키텍쳐</li>
+</ul>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="sim" /><summary type="html"><![CDATA[**Date**: 2024.12.24, **Tag**: [Offloading], [Patent], [Multi Frequency Band]]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/sim/phase1/sim.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/sim/phase1/sim.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">오프로딩 시뮬레이터 - MME</title><link href="http://localhost:4000/blog/sim/2024-12-24-offloading-mme/" rel="alternate" type="text/html" title="오프로딩 시뮬레이터 - MME" /><published>2024-12-24T00:00:00+09:00</published><updated>2024-12-24T00:00:00+09:00</updated><id>http://localhost:4000/blog/sim/offloading-mme</id><content type="html" xml:base="http://localhost:4000/blog/sim/2024-12-24-offloading-mme/"><![CDATA[<!--more-->
+
+<ul class="large-only" id="markdown-toc">
+  <li><a href="#5g-셀-시뮬레이터-구현-가이드-ricpy" id="markdown-toc-5g-셀-시뮬레이터-구현-가이드-ricpy">5G 셀 시뮬레이터 구현 가이드: <code class="language-plaintext highlighter-rouge">ric.py</code></a>    <ul>
+      <li><a href="#아키텍쳐-개요" id="markdown-toc-아키텍쳐-개요">아키텍쳐 개요</a></li>
+      <li><a href="#코드-설명" id="markdown-toc-코드-설명">코드 설명</a>        <ul>
+          <li><a href="#1-storage-manager" id="markdown-toc-1-storage-manager">1. Storage Manager</a></li>
+          <li><a href="#2-experience-collector" id="markdown-toc-2-experience-collector">2. Experience Collector</a></li>
+          <li><a href="#3-priority-calculator" id="markdown-toc-3-priority-calculator">3. Priority Calculator</a></li>
+          <li><a href="#4-batch-generator" id="markdown-toc-4-batch-generator">4. Batch Generator</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="5g-셀-시뮬레이터-구현-가이드-ricpy">5G 셀 시뮬레이터 구현 가이드: <code class="language-plaintext highlighter-rouge">ric.py</code></h1>
+
+<h2 id="아키텍쳐-개요">아키텍쳐 개요</h2>
+
+<p>RIC.py는 강화학습을 위한 경험 수집기(Experience Collector) 역할을 한다. 이 모듈은 다음과 같은 주요 컴포넌트들로 구성되어 있다.</p>
+
+<ul>
+  <li><strong>Storage Manager</strong>: 경험 데이터의 저장과 관리를 담당하는 컴포넌트</li>
+  <li><strong>Experience Collector</strong>: 에이전트의 행동과 환경으로부터의 피드백을 수집하는 핵심 컴포넌트</li>
+  <li><strong>Priority Calculator</strong>: 경험의 중요도를 계산하고 우선수위를 결정하는 컴포넌트</li>
+  <li><strong>Batch Generator</strong>: 학습을 위한 미니배치를 생성하는 컴포넌트</li>
+</ul>
+
+<h2 id="코드-설명">코드 설명</h2>
+
+<h3 id="1-storage-manager">1. Storage Manager</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">StorageManager</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">capacity</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">capacity</span> <span class="o">=</span> <span class="n">capacity</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">memory</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">position</span> <span class="o">=</span> <span class="mi">0</span>
+        
+    <span class="k">def</span> <span class="nf">push</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">experience</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">memory</span><span class="p">)</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="p">.</span><span class="n">capacity</span><span class="p">:</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">memory</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="bp">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">memory</span><span class="p">[</span><span class="bp">self</span><span class="p">.</span><span class="n">position</span><span class="p">]</span> <span class="o">=</span> <span class="n">experience</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">position</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">position</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="bp">self</span><span class="p">.</span><span class="n">capacity</span>
+        
+    <span class="k">def</span> <span class="nf">sample</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">random</span><span class="p">.</span><span class="n">sample</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">memory</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">)</span>
+</code></pre></div></div>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">__init__</code>: 저장소 초기화
+    <ul>
+      <li>capacity 파라미터로 최대 저장 용량을 설정</li>
+      <li>memory 리스트로 실제 경험 데이터를 저장</li>
+      <li>position은 circular buffer에서 현재 위치를 추적</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">push</code>: 새로운 경험 저장
+    <ul>
+      <li>용량이 남아있으면 새로운 공간 할당</li>
+      <li>circular buffer 방식으로 오래된 데이터를 새로운 데이터로 대체</li>
+      <li>position을 순환적으로 업데이트</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">sample</code>: 배치 샘플링
+    <ul>
+      <li>random.sample을 사용하여 무작위로 배치 크기만큼의 경험을 추출</li>
+      <li>중복 없는 샘플링 보장</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="2-experience-collector">2. Experience Collector</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ExperienceCollector</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">storage_manager</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">storage</span> <span class="o">=</span> <span class="n">storage_manager</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">current_episode</span> <span class="o">=</span> <span class="p">[]</span>
+        
+    <span class="k">def</span> <span class="nf">add_experience</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="n">action</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">next_state</span><span class="p">,</span> <span class="n">done</span><span class="p">):</span>
+        <span class="n">experience</span> <span class="o">=</span> <span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">action</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">next_state</span><span class="p">,</span> <span class="n">done</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">current_episode</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">experience</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">episode_end</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">exp</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">current_episode</span><span class="p">:</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">storage</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">exp</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">current_episode</span> <span class="o">=</span> <span class="p">[]</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">__init__</code>: 컬렉터 초기화
+    <ul>
+      <li>storage_manager 참조를 저장</li>
+      <li>current_episode 리스트로 현재 에피소드의 경험을 임시 저장</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">add_experience</code>: 새로운 경험 추가
+    <ul>
+      <li>state, action, reward, next_state, done 정보를 튜플로 패키징</li>
+      <li>현재 에피소드 리스트에 임시 저장</li>
+      <li>메모리 효율을 위해 numpy 배열 사용 권장</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">episode_end</code>: 에피소드 종료 처리
+    <ul>
+      <li>현재 에피소드의 모든 경험을 storage에 저장</li>
+      <li>current_episode 리스트 초기화</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="3-priority-calculator">3. Priority Calculator</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">PriorityCalculator</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">beta</span><span class="o">=</span><span class="mf">0.4</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">alpha</span> <span class="o">=</span> <span class="n">alpha</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">beta</span> <span class="o">=</span> <span class="n">beta</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">priorities</span> <span class="o">=</span> <span class="p">[]</span>
+        
+    <span class="k">def</span> <span class="nf">update_priorities</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">indices</span><span class="p">,</span> <span class="n">errors</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">error</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">indices</span><span class="p">,</span> <span class="n">errors</span><span class="p">):</span>
+            <span class="n">priority</span> <span class="o">=</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="o">+</span> <span class="mf">1e-5</span><span class="p">)</span> <span class="o">**</span> <span class="bp">self</span><span class="p">.</span><span class="n">alpha</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">priorities</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">priority</span>
+            
+    <span class="k">def</span> <span class="nf">get_sampling_probabilities</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">probs</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">priorities</span><span class="p">)</span> <span class="o">**</span> <span class="bp">self</span><span class="p">.</span><span class="n">alpha</span>
+        <span class="n">probs</span> <span class="o">=</span> <span class="n">probs</span> <span class="o">/</span> <span class="nb">sum</span><span class="p">(</span><span class="n">probs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">probs</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">__init__</code>: 우선순위 계산기 초기화
+    <ul>
+      <li>alpha: 우선숭뉘 계산에 사용되는 지수 파라미터</li>
+      <li>beta: 중요도 샘플링 보정에 사용되는 파라미터</li>
+      <li>priorities: 각 경험의 우선순위를 저장하는 리스트</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">update_priorities</code>: 우선순위 업데이트
+    <ul>
+      <li>TD-error를 기반으로 우선순위 계산</li>
+      <li>작은 상수를 더해 0 우선순위 방지</li>
+      <li>alpha 파라미터로 우선순위 스케일 조정</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">get_sampling_probabilities</code>: 샘플링 확률 계산
+    <ul>
+      <li>우선순위를 확률로 변환</li>
+      <li>전체 합이 1이 되도록 정규화</li>
+      <li>numpy 배열 사용으로 계산 효율성 확보</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="4-batch-generator">4. Batch Generator</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">BatchGenerator</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">storage_manager</span><span class="p">,</span> <span class="n">priority_calculator</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">storage</span> <span class="o">=</span> <span class="n">storage_manager</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">priority_calc</span> <span class="o">=</span> <span class="n">priority_calculator</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">batch_size</span> <span class="o">=</span> <span class="n">batch_size</span>
+        
+    <span class="k">def</span> <span class="nf">generate_batch</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">probss</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">priority_calc</span><span class="p">.</span><span class="n">get_sampling_probabilities</span><span class="p">()</span>
+        <span class="n">indices</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">choice</span><span class="p">(</span>
+            <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">storage</span><span class="p">.</span><span class="n">memory</span><span class="p">),</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">batch_size</span><span class="p">,</span>
+            <span class="n">p</span><span class="o">=</span><span class="n">probs</span>
+        <span class="p">)</span>
+        <span class="n">experiences</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="p">.</span><span class="n">storage</span><span class="p">.</span><span class="n">memory</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">indices</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">experiences</span><span class="p">,</span> <span class="n">indices</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">__init__</code>: 배치 생성기 초기화
+    <ul>
+      <li>storage_manager: 경험 저장소 참조</li>
+      <li>priority_calculator: 우선순위 계산기 참조</li>
+      <li>batch_size: 생성할 배치의 크기</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">generate_batch</code>: 배치 생성
+    <ul>
+      <li>우선순위 기반 확률 계산</li>
+      <li>numpy.random.choice로 우선순위에 따른 샘플링</li>
+      <li>선택된 인덱스의 경험들을 배치로 구성</li>
+      <li>인덱스도 함께 반환하여 우선순위 업데이트 가능</li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="sim" /><summary type="html"><![CDATA[**Date**: 2024.11.25, **Tag**: [Traffic Prediction], [Carbon Emission], [Graduation]]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/green_ai/green-ai.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/green_ai/green-ai.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">오프로딩 시뮬레이터 - Cell</title><link href="http://localhost:4000/blog/sim/2024-12-24-offloading-cell/" rel="alternate" type="text/html" title="오프로딩 시뮬레이터 - Cell" /><published>2024-12-24T00:00:00+09:00</published><updated>2024-12-24T00:00:00+09:00</updated><id>http://localhost:4000/blog/sim/offloading-cell</id><content type="html" xml:base="http://localhost:4000/blog/sim/2024-12-24-offloading-cell/"><![CDATA[<!--more-->
+
+<ul class="large-only" id="markdown-toc">
+  <li><a href="#5g-셀-시뮬레이터-구현-가이드-cellpy" id="markdown-toc-5g-셀-시뮬레이터-구현-가이드-cellpy">5G 셀 시뮬레이터 구현 가이드: <code class="language-plaintext highlighter-rouge">cell.py</code></a>    <ul>
+      <li><a href="#1-아키텍쳐-개요" id="markdown-toc-1-아키텍쳐-개요">1. 아키텍쳐 개요</a>        <ul>
+          <li><a href="#11-설계-철학" id="markdown-toc-11-설계-철학">1.1 설계 철학</a>            <ul>
+              <li><a href="#1-클래스-초기화" id="markdown-toc-1-클래스-초기화">1. 클래스 초기화</a></li>
+              <li><a href="#2-주파수-설정" id="markdown-toc-2-주파수-설정">2. 주파수 설정</a></li>
+              <li><a href="#3-트래픽-예측" id="markdown-toc-3-트래픽-예측">3. 트래픽 예측</a></li>
+              <li><a href="#4-에너지-소비-관리" id="markdown-toc-4-에너지-소비-관리">4. 에너지 소비 관리</a></li>
+              <li><a href="#5-셀-상태-관리" id="markdown-toc-5-셀-상태-관리">5. 셀 상태 관리</a></li>
+              <li><a href="#6-성능-측정-및-보고" id="markdown-toc-6-성능-측정-및-보고">6. 성능 측정 및 보고</a></li>
+              <li><a href="#7-참고문헌" id="markdown-toc-7-참고문헌">7. 참고문헌</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="5g-셀-시뮬레이터-구현-가이드-cellpy">5G 셀 시뮬레이터 구현 가이드: <code class="language-plaintext highlighter-rouge">cell.py</code></h1>
+
+<h2 id="1-아키텍쳐-개요">1. 아키텍쳐 개요</h2>
+
+<h3 id="11-설계-철학">1.1 설계 철학</h3>
+<ul>
+  <li>실제 5G 기지국의 동작을 최대한 유사하게 모사</li>
+  <li>트래픽 예측을 통한 선제적 자원 관리</li>
+  <li>에너지 효율적인 운영</li>
+  <li>다중 주파수 대역 지원</li>
+  <li>QoS 기반 사용자 관리</li>
+</ul>
+
+<h4 id="1-클래스-초기화">1. 클래스 초기화</h4>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sim</span><span class="p">,</span> <span class="n">interval</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">xyz</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">h_BS</span><span class="o">=</span><span class="mf">20.0</span><span class="p">,</span> 
              <span class="n">MIMO_gain_dB</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">pattern</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">f_callback</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> 
@@ -58,6 +1426,35 @@
   <li>ProphetPredictor는 별도의 클래스로 구현되어 있으며, 시계열 예측을 담당한다.</li>
 </ul>
 
+=======
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sim</span><span class="p">,</span> <span class="n">interval</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">xyz</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">h_BS</span><span class="o">=</span><span class="mf">20.0</span><span class="p">,</span> 
+             <span class="n">MIMO_gain_dB</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">pattern</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">f_callback</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> 
+             <span class="n">f_callback_kwargs</span><span class="o">=</span><span class="p">{},</span> <span class="n">verbosity</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">i</span> <span class="o">=</span> <span class="n">Cell</span><span class="p">.</span><span class="n">i</span>
+    <span class="n">Cell</span><span class="p">.</span><span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">sim</span> <span class="o">=</span> <span class="n">sim</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">interval</span> <span class="o">=</span> <span class="n">interval</span>
+    
+    <span class="c1"># 트래픽 예측 관련 설정
+</span>    <span class="bp">self</span><span class="p">.</span><span class="n">traffic_predictor</span> <span class="o">=</span> <span class="n">ProphetPredictor</span><span class="p">()</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">traffic_db</span> <span class="o">=</span> <span class="n">TimeseriesDB</span><span class="p">()</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">prediction_horizon</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># 10초 (1초 * 10)
+</span></code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">sim</code>: 메인 시뮬레이터 인스턴스를 전달받음. 이를 통해 전체 시뮬레이션 환경에 접근할 수 있음</li>
+  <li><code class="language-plaintext highlighter-rouge">interval</code>: 셀의 상태 업데이트 주기를 설정. 기본값은 1초</li>
+  <li><code class="language-plaintext highlighter-rouge">traffic_predictor</code>: 트래픽 예측기를 초기화</li>
+  <li><code class="language-plaintext highlighter-rouge">prediction_horizon</code>: 10으로 설정하여 10초 앞의 트래픽을 예측</li>
+</ul>
+
+<p class="note">중요 포인트</p>
+<ul>
+  <li>Cell.i는 셀 식별자로 사용되며, 생성될 때마다 자동으로 증가한다.</li>
+  <li>ProphetPredictor는 별도의 클래스로 구현되어 있으며, 시계열 예측을 담당한다.</li>
+</ul>
+
+>>>>>>> c9b4b85b73d42fdc5a945dcab7b288650d40921f
 <h4 id="2-주파수-설정">2. 주파수 설정</h4>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 주파수 설정
 </span><span class="bp">self</span><span class="p">.</span><span class="n">freq_config</span> <span class="o">=</span> <span class="p">{</span>
@@ -214,6 +1611,16 @@
   <li>현재값과 평균값을 함께 제공</li>
   <li>주파수별 세부 통계를 포함</li>
 </ul>
+<<<<<<< HEAD
+
+<p class="note">중요 포인트</p>
+<ul>
+  <li>처리량은 가장 최근값과 평균값을 제공</li>
+  <li>에너지 통계는 총 소비량과 주파수별 소비량 포함</li>
+  <li>부하는 각 주파수 대역별로 계산</li>
+</ul>
+
+=======
 
 <p class="note">중요 포인트</p>
 <ul>
@@ -1908,6 +3315,7 @@
   <li>부하는 각 주파수 대역별로 계산</li>
 </ul>
 
+>>>>>>> c9b4b85b73d42fdc5a945dcab7b288650d40921f
 <h4 id="7-참고문헌">7. 참고문헌</h4>
 <ol>
   <li>Path Loss Models: 3GPP TR 38.901</li>
@@ -1929,4 +3337,644 @@
 
 <h1 id="2-paper-summarization">2. Paper Summarization</h1>
 
+<<<<<<< HEAD
+<h1 id="3-take-away">3. Take Away</h1>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="paper" /><summary type="html"><![CDATA[**Date**: 2017.11.29, **Tag**: [Mobile Network Operator(MNO)], [access point], [Stackelberg approach], [game theory], [quality of service], [Nash equilibrium]]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/game-theory/game-theory.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/game-theory/game-theory.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">AI-Ready Energy Modelling for Next Generation RAN</title><link href="http://localhost:4000/blog/paper/2024-11-15-AI-ready-Energy-Modeling-for-Next-Generation-RAN/" rel="alternate" type="text/html" title="AI-Ready Energy Modelling for Next Generation RAN" /><published>2024-11-15T00:00:00+09:00</published><updated>2024-11-15T00:00:00+09:00</updated><id>http://localhost:4000/blog/paper/AI-ready-Energy-Modeling-for-Next-Generation-RAN</id><content type="html" xml:base="http://localhost:4000/blog/paper/2024-11-15-AI-ready-Energy-Modeling-for-Next-Generation-RAN/"><![CDATA[<!--more-->
+<ul class="large-only" id="markdown-toc">
+  <li><a href="#1-why-this-paper" id="markdown-toc-1-why-this-paper">1. Why this paper</a></li>
+  <li><a href="#2-paper-summarization" id="markdown-toc-2-paper-summarization">2. Paper Summarization</a>    <ul>
+      <li><a href="#21-introduction" id="markdown-toc-21-introduction">2.1 Introduction</a>        <ul>
+          <li><a href="#211-문제-정의" id="markdown-toc-211-문제-정의">2.1.1 문제 정의</a></li>
+          <li><a href="#212-aimm-시뮬레이터" id="markdown-toc-212-aimm-시뮬레이터">2.1.2 AIMM 시뮬레이터</a></li>
+          <li><a href="#213-핵심-목표" id="markdown-toc-213-핵심-목표">2.1.3 핵심 목표</a></li>
+        </ul>
+      </li>
+      <li><a href="#22-backgroud" id="markdown-toc-22-backgroud">2.2 Backgroud</a>        <ul>
+          <li><a href="#221-5g-네트워크의-에너지-소비-문제" id="markdown-toc-221-5g-네트워크의-에너지-소비-문제">2.2.1 5G 네트워크의 에너지 소비 문제</a></li>
+          <li><a href="#222-디지털트윈과-aimm-시뮬레이터" id="markdown-toc-222-디지털트윈과-aimm-시뮬레이터">2.2.2 디지털트윈과 AIMM 시뮬레이터</a></li>
+        </ul>
+      </li>
+      <li><a href="#23-methods" id="markdown-toc-23-methods">2.3 Methods</a>        <ul>
+          <li><a href="#231-aimm-시뮬레이터-구성" id="markdown-toc-231-aimm-시뮬레이터-구성">2.3.1 AIMM 시뮬레이터 구성</a></li>
+          <li><a href="#232-기지국-전력-소비-모델" id="markdown-toc-232-기지국-전력-소비-모델">2.3.2 기지국 전력 소비 모델</a></li>
+          <li><a href="#233-실험-설정" id="markdown-toc-233-실험-설정">2.3.3 실험 설정</a></li>
+        </ul>
+      </li>
+      <li><a href="#24-results-and-discussion" id="markdown-toc-24-results-and-discussion">2.4 Results and Discussion</a>        <ul>
+          <li><a href="#241-송신-전력과-네트워크-성능" id="markdown-toc-241-송신-전력과-네트워크-성능">2.4.1 송신 전력과 네트워크 성능</a></li>
+          <li><a href="#242-에너지-효율성ee" id="markdown-toc-242-에너지-효율성ee">2.4.2 에너지 효율성(EE)</a></li>
+          <li><a href="#243-스펙트럼-효율성se됨" id="markdown-toc-243-스펙트럼-효율성se됨">2.4.3 스펙트럼 효율성(SE)됨</a></li>
+          <li><a href="#244-미래-네트워크-설계-시-주의할-점" id="markdown-toc-244-미래-네트워크-설계-시-주의할-점">2.4.4 미래 네트워크 설계 시 주의할 점</a></li>
+        </ul>
+      </li>
+      <li><a href="#25-conclusion" id="markdown-toc-25-conclusion">2.5 Conclusion</a></li>
+    </ul>
+  </li>
+  <li><a href="#3-take-away" id="markdown-toc-3-take-away">3. Take Away</a></li>
+</ul>
+
+<h1 id="1-why-this-paper">1. Why this paper</h1>
+
+<ol>
+  <li>AIMM 시뮬레이터 이해</li>
+  <li>기지국 환경에서 사용할 수 있는 파라미터들 숙지</li>
+</ol>
+
+<h1 id="2-paper-summarization">2. Paper Summarization</h1>
+
+<h2 id="21-introduction">2.1 Introduction</h2>
+
+<h3 id="211-문제-정의">2.1.1 문제 정의</h3>
+<p>차세대 RAN 설계에서는 에너지 소비가 중요한 설계 기준이 되었으며 AI와 ML을 활용하여 네트워크 에너지 효율성과 성능 간의 트레이드오프를 최적화하려는 연구가 진행되고 있다.</p>
+
+<h3 id="212-aimm-시뮬레이터">2.1.2 AIMM 시뮬레이터</h3>
+<p>AIMM(AI-enabled Massive MIMO) 시뮬레이터는 5G 네트워크를 가상으로 재현하며, 송신 전력 감소 시나리오를 통해 에너지 효율성(EE)과 스펙트럼 효율성(SE)를 분석할 수 있는 오픈소스 시뮬레이터이다.</p>
+
+<h3 id="213-핵심-목표">2.1.3 핵심 목표</h3>
+<ol>
+  <li>송신 전력 조정을 통해 EE와 SE간의 관계를 파악</li>
+  <li>네트워크 성능을 저하하지 않으면서 에너지 소비를 최적화</li>
+</ol>
+
+<h2 id="22-backgroud">2.2 Backgroud</h2>
+
+<h3 id="221-5g-네트워크의-에너지-소비-문제">2.2.1 5G 네트워크의 에너지 소비 문제</h3>
+<ul>
+  <li>기지국(Base Station, BS)이 전체 에너지 소비의 70%를 차지하며 지속적으로 증가할 전망이다.
+    <ul>
+      <li>주요 원인: Massive MIMO와 같은 기술은 데이터 처리량을 증가시키지만, 더 많은 전력을 요구</li>
+      <li>기존 최적화 방법: Sleep mode, Lean Carrier Design, ML 기반 에너지 모델링 등</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="222-디지털트윈과-aimm-시뮬레이터">2.2.2 디지털트윈과 AIMM 시뮬레이터</h3>
+<ul>
+  <li>
+    <p>디지털 트윈은 실제 네트워크를 복제한 가상 환경으로, AI/ML 모델을 안전하게 학습하고 테스트할 수 있게 한다.</p>
+  </li>
+  <li>
+    <p>AIMM 시뮬레이터의 강원</p>
+    <ul>
+      <li>기지국과 사용자 장치 간의 상호작용을 정밀히 재현</li>
+      <li>빠른 실행 속도(평균 2초 실행 시간)로 ML 모델 훈련과 테스트 지원</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="23-methods">2.3 Methods</h2>
+
+<h3 id="231-aimm-시뮬레이터-구성">2.3.1 AIMM 시뮬레이터 구성</h3>
+<ul>
+  <li>시뮬레이터의 특징
+    <ul>
+      <li>3D 모델링: 기지국과 UE를 공간적으로 배치하고, Pathloss를 계산</li>
+      <li>SINR 및 CQI 계산: 신호 품질을 정밀히 추정하여 사용자 데이터 전송 품질 분석</li>
+      <li>Spectral Efficiency(SE) 및 처리량(\(T_{i,j}\)) 계산</li>
+    </ul>
+  </li>
+  <li>주요 수식</li>
+</ul>
+
+<p><strong>SINR 계산</strong></p>
+
+\[SINR_{i,j} = \frac{P_{Rx,i,j}}{P_{inter,i} + P_{noise,i}}\]
+
+<p>\(P_{R_{x_{i,j}}}\): 사용자 \(i\)가 기지국 \(j\)로부터 받은 신호 전력</p>
+
+<p>\(P_{inter_{i}}\): 사용자 \(i\)가 경험하는 간섭 전력</p>
+
+<p>\(P_{noise_{i}}\): 사용자 \(i\)가 경험하는 잡음 전력</p>
+
+<p><strong>Throughput 계산</strong></p>
+
+\[T_{i,j} = SE_{i,j} \times B\]
+
+<p>\(SE_{i,j}\): 사용자와 기지국 간의 Spectral Efficiency</p>
+
+<p>\(B\): 사용 가능한 대역폭(논문에서는 10MHz 사용)</p>
+
+<h3 id="232-기지국-전력-소비-모델">2.3.2 기지국 전력 소비 모델</h3>
+
+<ul>
+  <li>AIMM 시뮬레이터는 기존 전력 소비 모델을 확장하여 기지국의 에너지 소비를 정밀히 계산한다.</li>
+</ul>
+
+<p><strong>전력 소비 수식</strong></p>
+
+\[P_{BS} = N_{TRX} \times N_{ant} \times (P_0 + f(P_{T_{x}}))\]
+
+<p>\(P_{BS}\): 기지국의 총 전력 소비량(\(W\))</p>
+
+<p>\(f(P_{T_{x}})\): 송신 전력에 따른 동적 전력 소비</p>
+
+<p><strong>송신 전력 소비 함수</strong></p>
+
+\[f(P_{Tx}) = \frac{P_{Tx}}{\eta P_{PA} \cdot (1 - \sigma_{feed})} + P_{RF} + P_{BB}\]
+
+<p>\(\eta_{PA}\): 전력 증폭기 효율(논문에서는 0.311 사용)</p>
+
+<p>\(\sigma_{feed}\): Feeder loss, 송신신호가 기지국 안테나로 전달되는 동안 발생하는 전력 손실(논문에서는 0.5 사용)</p>
+
+<p>\(P_{RF}\): RF 처리 전력, RF 신호를 처리학 위해 필요한 전력(논문에서는 12.9W 사용)</p>
+
+<p>\(P_{BB}\): 베이스밴드 처리 전력(논문에서는 29.6W 사용)</p>
+
+<h3 id="233-실험-설정">2.3.3 실험 설정</h3>
+<ul>
+  <li>시나리오 구성
+    <ul>
+      <li>19개의 기지국을 기반으로 아래의 그림과 같이 네 가지 주요 시나리오를 설정하였다.</li>
+      <li>송신 전력을 0 - 20W로 조정하여 에너지 소비와 네트워크 성능을 분석하였다.</li>
+    </ul>
+  </li>
+</ul>
+
+<p align="center">
+  <img src="/assets/img/blog/aimm/network-topology.png" alt="Topology of this paper" width="50%" />
+  <img src="/assets/img/blog/aimm/scenario-table.png" alt="BS Scenario Definitions" width="40%" />
+</p>
+
+<h2 id="24-results-and-discussion">2.4 Results and Discussion</h2>
+
+<p><img src="/assets/img/blog/aimm/graph.png" alt="Result" /></p>
+
+<h3 id="241-송신-전력과-네트워크-성능">2.4.1 송신 전력과 네트워크 성능</h3>
+
+<ul>
+  <li>송신 전력 감소는 간섭을 줄여 SINR을 향상시킬 수 있으며, 일부 시나리오에서 네트워크 throughput이 증가하였다.
+    <ul>
+      <li>간섭 감소로 인해 네트워크 성능이 특정 송신 전력에서 최적화되는 결과를 확인할 수 있었다.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="242-에너지-효율성ee">2.4.2 에너지 효율성(EE)</h3>
+
+<ul>
+  <li>에너지 효율성 계산:</li>
+</ul>
+
+\[EE = \frac{T_s \cdot \tau}{P_{Cs}}\]
+
+<p>\(T_s\): 네트워크의 총 처리량</p>
+
+<p>\(PC_{s}\): 네트워크 평균 전력 소비</p>
+
+<p class="note">송신 전력 조정 및 기지국 sleep 모드를 통해 EE가 최대 14.8% 향상</p>
+
+<h3 id="243-스펙트럼-효율성se됨">2.4.3 스펙트럼 효율성(SE)됨</h3>
+
+<p class="note">송신 전력 감소 초기에는 SE가 증가하지만, 송신 전력이 너무 낮아지면 데이터 전송량 감소로 인해 SE가 감소</p>
+
+<ul>
+  <li>최적의 송신 전력 설정이 필요
+s</li>
+</ul>
+
+<h3 id="244-미래-네트워크-설계-시-주의할-점">2.4.4 미래 네트워크 설계 시 주의할 점</h3>
+
+<ul>
+  <li>EE와 SE 간 트레이드오프를 고려한 최적화 전략이 중요</li>
+  <li>AIMM 시뮬레이터는 디지털 트윈 환경에서 빠르고 정밀한 실험을 지원하며, 차세대 네트워크 설계에 중요한 도구로 평가됨</li>
+</ul>
+
+<h2 id="25-conclusion">2.5 Conclusion</h2>
+
+<ul>
+  <li>AIMM 시뮬레이터는 에너지 소비와 성능 간 trade-off를 분석하고 최적화를 지원하는 강력한 시뮬레이터임</li>
+  <li>디지털 트윈 환경에서 AI 및 ML 모델의 학습과 테스트를 안전하고 효율적으로 수행할 수 있음</li>
+  <li>본 논문에서는 에너지 소비와 성능을 동시에 고려한 차세대 네트워크 설계의 중요성을 강조</li>
+</ul>
+
+<hr />
+
+<h1 id="3-take-away">3. Take Away</h1>
+
+<ul>
+  <li>AIMM 시뮬레이터 구현 파라미터 현황</li>
+  <li>본 논문에서 임의로 정한 파라미터들(예. \(\sigma_{feed}\) 등)을 고려하여 후속 연구 진행</li>
+</ul>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="paper" /><summary type="html"><![CDATA[**Date**: 2024.11.04, **Tag**: [AIMM], [System Level Simulator]]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">OSC AIMLFW Installation</title><link href="http://localhost:4000/blog/aimlfw/2024-10-04-OSC-AIMLFW-Installation/" rel="alternate" type="text/html" title="OSC AIMLFW Installation" /><published>2024-10-04T00:00:00+09:00</published><updated>2024-10-04T00:00:00+09:00</updated><id>http://localhost:4000/blog/aimlfw/OSC-AIMLFW-Installation</id><content type="html" xml:base="http://localhost:4000/blog/aimlfw/2024-10-04-OSC-AIMLFW-Installation/"><![CDATA[<!--more-->
+<ul class="large-only" id="markdown-toc">
+  <li><a href="#o-ran-aimlfw-installation" id="markdown-toc-o-ran-aimlfw-installation">O-RAN AIMLFW Installation</a>    <ul>
+      <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a>        <ul>
+          <li><a href="#installation" id="markdown-toc-installation">Installation</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="o-ran-aimlfw-installation">O-RAN AIMLFW Installation</h1>
+
+<h2 id="introduction">Introduction</h2>
+
+<h3 id="installation">Installation</h3>
+
+<ul>
+  <li>설치 스크립트 실행</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bin/install_traininghost.sh
+</code></pre></div></div>
+
+<p><img src="/assets/img/blog/aimlfw_installation/installation_1.png" alt="Fig 1" /></p>
+
+<hr />
+
+<ul>
+  <li>10 - 20분 정도 기다린 후 파드가 잘 설치되어 있는지 확인</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl get pod -A
+</code></pre></div></div>
+
+<p><img src="/assets/img/blog/aimlfw_installation/installation_2.png" alt="Fig 2" /></p>
+
+<hr />
+
+<ul>
+  <li>서비스를 확인하여 어떤 포트들이 열려있는지 확인</li>
+</ul>
+
+<p><img src="/assets/img/blog/aimlfw_installation/installation_3.png" alt="Fig 3" /></p>
+
+<hr />
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">32005</code> 포트로 대시보드 들어가보기</li>
+</ul>
+
+<p><img src="/assets/img/blog/aimlfw_installation/installation_4.png" alt="Fig 4" /></p>
+
+<hr />
+
+<ul>
+  <li>Install Influx DB as datalake</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>helm repo add bitnami https://charts.bitnami.com/bitnami
+helm install my-release bitnami/influxdb --version 5.13.5
+kubectl exec -it &lt;pod name&gt; bash
+</code></pre></div></div>
+
+<p><img src="/assets/img/blog/aimlfw_installation/installation_5.png" alt="Fig 5" /></p>
+
+<hr />
+
+<ul>
+  <li>커맨드를 입력하여 <code class="language-plaintext highlighter-rouge">username</code>, <code class="language-plaintext highlighter-rouge">org name</code>, <code class="language-plaintext highlighter-rouge">org id</code> 그리고 <code class="language-plaintext highlighter-rouge">access token</code> 얻기</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cat bitnami/influxdb/influxd.bolt | tr -cd "[:print:]"
+</code></pre></div></div>
+
+<p><img src="/assets/img/blog/aimlfw_installation/installation_6.png" alt="Fig 6" /></p>
+
+<p><img src="/assets/img/blog/aimlfw_installation/installation_7.png" alt="Fig 7" /></p>
+
+<hr />
+
+<ul>
+  <li>원활한 코드 진행을 위해 별도의 모듈들을 설치해준다.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install pip
+sudo pip3 install pandas
+sudo pip3 install influxdb_client
+</code></pre></div></div>
+
+<p><img src="/assets/img/blog/aimlfw_installation/installation_8.png" alt="Fig 8" /></p>
+
+<hr />
+
+<p>위의 과정을 마치게 되면 <code class="language-plaintext highlighter-rouge">AIMLFW</code>를 사용할 수 있는 정말 기초적인 준비가 끝나게 된다.</p>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="aimlfw" /><summary type="html"><![CDATA[O-RAN Software Community 프로젝트 AIMLFW 설치 정리]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Joint Traffic Prediction and Base Station Sleeping for Energy Saving in Cellular Networks</title><link href="http://localhost:4000/blog/paper/2024-09-26-joint-traffic-prediction-and-base-station-sleepiong-for-energy-saving-in-cellular-networks/" rel="alternate" type="text/html" title="Joint Traffic Prediction and Base Station Sleeping for Energy Saving in Cellular Networks" /><published>2024-09-26T00:00:00+09:00</published><updated>2024-09-26T00:00:00+09:00</updated><id>http://localhost:4000/blog/paper/joint-traffic-prediction-and-base-station-sleepiong-for-energy-saving-in-cellular-networks</id><content type="html" xml:base="http://localhost:4000/blog/paper/2024-09-26-joint-traffic-prediction-and-base-station-sleepiong-for-energy-saving-in-cellular-networks/"><![CDATA[<!--more-->
+
+<ul class="large-only" id="markdown-toc">
+  <li><a href="#1-why-this-paper" id="markdown-toc-1-why-this-paper">1. Why this paper?</a></li>
+  <li><a href="#2-paper-summary" id="markdown-toc-2-paper-summary">2. Paper Summary</a>    <ul>
+      <li><a href="#21-introduction" id="markdown-toc-21-introduction">2.1 Introduction</a></li>
+      <li><a href="#22-network-model-and-problem-formulation" id="markdown-toc-22-network-model-and-problem-formulation">2.2 Network Model and Problem Formulation</a>        <ul>
+          <li><a href="#22a-traffic-model" id="markdown-toc-22a-traffic-model">2.2.A Traffic Model</a></li>
+          <li><a href="#22b-problem-model" id="markdown-toc-22b-problem-model">2.2.B Problem Model</a></li>
+          <li><a href="#22c-problem-formulation" id="markdown-toc-22c-problem-formulation">2.2.C Problem Formulation</a></li>
+        </ul>
+      </li>
+      <li><a href="#3-our-proposed-algorithm" id="markdown-toc-3-our-proposed-algorithm">3. Our Proposed Algorithm</a>        <ul>
+          <li><a href="#3a-cellular-traffic-prediction" id="markdown-toc-3a-cellular-traffic-prediction">3.A Cellular traffic prediction</a></li>
+          <li><a href="#3b-base-station-sleeping" id="markdown-toc-3b-base-station-sleeping">3.B Base station sleeping</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="1-why-this-paper">1. Why this paper?</h2>
+<ul>
+  <li>졸업 논문 레퍼런스</li>
+  <li>트래픽 예측을 발전시킬 수 있는 연구</li>
+  <li>MINLP 문제 연습</li>
+</ul>
+
+<hr />
+
+<h2 id="2-paper-summary">2. Paper Summary</h2>
+
+<h3 id="21-introduction">2.1 Introduction</h3>
+<p>대부분의 기지국들은 미리 정해둔 threshold 값보다 traffic load가 작아지게 되면 Sleep mode로 전환하는 방식으로 에너지를 절약하고 있다. 논문에 따르면 17% 정도의 기지국들이 하루에 50-99% 정도 low traffic을 가지고 있다.</p>
+
+<p>기지국 Sleeping 알고리즘의 key point는 다음과 같다.</p>
+<ol>
+  <li>어떤 기지국들이 Sleep mode로 전환되어야 하는가?</li>
+  <li>언제 Sleep mode로 전환되어야 하는가?</li>
+</ol>
+
+<p>기지국 traffic load의 변동성을 파악할 때, 견고한 traffic prediction은 중요한 역할을 한다.</p>
+
+<p>본 논문에서는 에너지 소비를 최소화하면서 bandwidth budget, spectral efficiency 요구사항 그리고 특히 traffic 요구사항을 만족시키기 위해 traffic load가 적은 기지국을 적절한 간격으로 종료하는 방법을 찾는 것을 목표로 한다.</p>
+
+<ul>
+  <li>Traffic prediction
+    <ul>
+      <li>LSTM 사용</li>
+    </ul>
+  </li>
+  <li>BS Sleeping Problem 최적화
+    <ul>
+      <li>MINLP 문제 사용</li>
+      <li>3-step local search 알고리즘 사용</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="22-network-model-and-problem-formulation">2.2 Network Model and Problem Formulation</h3>
+
+<h4 id="22a-traffic-model">2.2.A Traffic Model</h4>
+<p><img src="/assets/img/blog/0926/Figure_1.png" alt="Figure1" /></p>
+
+<ul>
+  <li>Region: \(\mathcal{D} \in R^2\)</li>
+  <li>기지국: \(\mathcal{N} - \{1,2,...,N\}\)</li>
+  <li>Traffic Demand Areas(TDA): \(\mathcal{K} - \{1,2,...,K\}\)
+    <ul>
+      <li>각 TDA는 서로 다른 트래픽 요구사항을 가진 여러명의 사용자들을 포함
+        <ul>
+          <li>서비스 지역: \(x \in \mathcal{D}\)
+            <ul>
+              <li>\(\mathcal{D}_{k}\): TDA \(k\)의 서비스 지역</li>
+            </ul>
+          </li>
+          <li>서비스 지역에서 요구하는 트래픽: \(\Phi (x)\)
+            <ul>
+              <li>\(R_{k}\): TDA \(k\)의 트래픽 요구사항</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+\[\iint_{D_k} \Phi(x) \, d\sigma = R_k
+\tag{1}\]
+
+<ul>
+  <li>\(h_{k,n}\): BS \(n\)과 TDA \(k\) 사이의 channel gain</li>
+  <li>\(b_{k,n}\): TDA \(k\)에 있는 BS \(n\)의 bandwidth</li>
+  <li>\(p_{k,n}\): TDA \(k\)에 있는 BS \(n\)의 power</li>
+</ul>
+
+<p>이를 이용해서 BS \(n\)과 TDA \(k\) 사이의 transmission rate는 다음과 같이 계산할 수 있다.</p>
+
+\[r_{k,n} = b_{k,n} \log_2 \left[ 1 + \frac{p_{k,n} |h_{k,n}|^2}{b_{k,n} (N_0 + I_{k,n})} \right]
+\tag{2}\]
+
+<ul>
+  <li>\(N_0\): noise power</li>
+  <li>\(I_{k,n}\): interference power
+    <ul>
+      <li>본 논문에서는 signal processing 기술을 사용하여 \(I_{k,n}\)을 0으로 만들었다 가정</li>
+    </ul>
+  </li>
+</ul>
+
+<p>따라서 \(p_{k.n}\)은 아래와 같이 다시 정리할 수 있다.</p>
+
+\[p_{k,n} = \frac{N_0 b_{k,n}}{|h_{k,n}|^2} \cdot \left(2^{\frac{r_{k,n}}{b_{k,n}}} - 1\right)
+\tag{3}\]
+
+<ul>
+  <li>\mathcal{K}_{n}: BS \(n\)에 의해 서비스 되는 TDA들의 집합</li>
+  <li>Region \(D\)의 총 트래픽 요구사항은 모든 TDA의 트래픽 요구사항의 합과 같다.</li>
+</ul>
+
+\[R_D = \sum_{k \in \mathcal{K}} R_k = \sum_{n \in \mathcal{N}} \sum_{k \in \mathcal{K}_n} r_{k,n} = \sum_{n \in \mathcal{N}} r_n
+\tag{4}\]
+
+<ul>
+  <li>\(r_n\): BS \(n\)에 의해 서비스되는 총 트래픽 요구사항</li>
+</ul>
+
+<h4 id="22b-problem-model">2.2.B Problem Model</h4>
+
+<p>밀집된 네트워크에서 총 전력 소모량 \(P_{total}\)은 아래와 같이 나타낼 수 있다.</p>
+
+\[P_{\text{total}} = \sum_{n \in \mathcal{N}} P_f^n + \sum_{n \in \mathcal{N}} P_t^n
+\tag{5}\]
+
+<ul>
+  <li>\(P_f^n\): BS \(n\)의 fixed power consumption</li>
+  <li>\(P_t^n\): BS \(n\)의 transmission power consumption</li>
+</ul>
+
+<p>이 때, binary 변수 \(x_n\)을 사용하여 BS \(n\)의 sleep 여부를 나타낸다.</p>
+
+\[x_n =
+\begin{cases}
+1, &amp; \text{BS } n \text{ is active}, \\
+0, &amp; \text{BS } n \text{ is inactive}.
+\end{cases}
+\tag{6}\]
+
+<p>\(P_f^{n}\)은 BS의 상태에 영향을 받지만 BS가 sleep 상태일 떄엔 무시할 수 있다. 즉, BS가 sleep 모드에서 꺠어나는 데 전력을 소모하더라도, BS가 활성화된 경우에 비해 그 전력은 무시할 수 있을 정도로 작다.</p>
+
+<p>따라서 총 전력 소비량 \(P_{total}\)은 다음과 같이 변환된다.</p>
+
+\[P_{\text{total}} = \sum_{n \in \mathcal{N}} P_f^n x_n + \sum_{n \in \mathcal{N}} \frac{x_n}{\eta_n} \sum_{k \in \mathcal{K}} p_{k,n},
+\tag{7}\]
+
+<ul>
+  <li>\(\eta_{n}\): Power amplifier efficiency factor</li>
+</ul>
+
+<h4 id="22c-problem-formulation">2.2.C Problem Formulation</h4>
+
+<p>우리의 목적은 전체 전력 소모를 최소화하며 practical한 제약사항들을 만족하는 일련의 BS들을 골라내는 것이다.</p>
+
+<ul>
+  <li>\(p_n^{max}\): BS n의 최대 transmission power</li>
+  <li>\(b_n^{max}\): BS n의 사용 가능한 bandwidth</li>
+</ul>
+
+<p>풀어야 할 <code class="language-plaintext highlighter-rouge">최적화 문제</code>는 아래와 같이 나타낼 수 있다.</p>
+
+\[\begin{align}
+    \text{minimize} \quad &amp; P_{\text{total}} \\
+    \text{s.t.} \quad &amp; C_1: \sum_{k \in \mathcal{K}} p_{k,n} \leq x_n p_n^{\text{max}}, \quad \forall n \in \mathcal{N}, \\
+    &amp; C_2: \sum_{k \in \mathcal{K}} b_{k,n} \leq x_n b_n^{\text{max}}, \quad \forall n \in \mathcal{N}, \\
+    &amp; C_3: \sum_{n \in \mathcal{N}} r_{k,n} \geq R_k, \quad \forall k \in \mathcal{K}, \\
+    &amp; C_4: p_{k,n} \geq \Delta_{k,n} b_{k,n}, \quad \forall k \in \mathcal{K}, \forall n \in \mathcal{N}, \\
+    &amp; C_5: \vec{x} \in X, \quad \vec{b} \in \mathbb{R}_+^{K \times N}, \quad \vec{p} \in \mathbb{R}_+^{K \times N}.
+\end{align}\]
+
+<ul>
+  <li>\(P_{total}\)을 최소화하는 것이 목적
+    <ul>
+      <li>\(C_1\): 각 BS \(n\)에 대해 사용자 \(k\)의 전력 \(p_{k,n}\)의 합이 BS \(n\)의 최대 전력 $ㅔp_n^{max}\(를 초과하지 않아야 하며, 이는\)x_n$$의 활성화 여부에 따라 달라짐</li>
+      <li>\(C_2\): 각 BS \(n\)에 대해 사용자 \(k\)의 bandwidth \(b_{k.n}\)의 합이 노드 \(n\)의 최대 bandwidth \(b_n^{max}\)을 초과하지 않아야 하며, 이는 \(x_n\)의 활성화 여부에 따라 달라짐</li>
+      <li>\(C_3\): 각 사용자 \(k\)의 총 데이터 전송 속도 \(r_{k,n}\)은 사용자 요구 rate \(R_k\) 이상이여야 함</li>
+      <li>\(C_4\): 각 사용자 \(k\)와 노드 \(n\)에서 할당된 전력 \(p_{k,n}\)은 할당된 대역폭 \(b_{k,n}\)에 비례하여 \(\delta_{k,n}\)으로 제한됨</li>
+      <li>\(C_5\): \(\overrightarrow{x}\)는 정의된 집합 \(\mathbb{X}\)에 속하고, \(\overrightarrow{b}\)와 \(\overrightarrow{p}\)는 음수가 아닌 실수 공간에 속해야 함</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Service area의 트래픽 요구사항 distribution은 인구 이동에 따라 하루에도 수십번씩 바뀌게 된다. 따라서 식 (8)에 정의되어 있는 문제를 풀기 위해선 각 TDA의 future rate requirement를 예측해야 한다. 이를 위해 단일 BS에 모두 시계열 예측을 사용하게 된다.</p>
+
+<ul>
+  <li>수집된 데이터
+    <ul>
+      <li>주어진 데이터셋은 \(R_{BS} = \{R_{B1}, R_{B2}, ..., R_{BN}\}\)로, 여기서 각 \(R_{B_{n}} = \{r_1^{n}, r_2^{n}, ..., r_t^{n}\}\)는 기지국 \(n\)의 트래픽 데이터를 저장</li>
+      <li>\(delta\)는 데이터가 수집된 시간 간격을 의미</li>
+    </ul>
+  </li>
+  <li>One-step 예측
+    <ul>
+      <li>$가\delta$$ 간격에서의 트래픽을 예측하는 것은 one-step 예측으로 간주</li>
+    </ul>
+  </li>
+  <li>Multi-step 예측
+    <ul>
+      <li>기지국의 on/off switching에 관련된 예측에서는 multi-step 예측이 필요함. 이는 일반적으로 트래픽 데이터의 시간 간격 \(\delta\)가 기지국을 켜고 끄는 허용 가능한 시간 간격보다 훨씬 작기 때문</li>
+    </ul>
+  </li>
+  <li>예측 시간 간격:
+    <ul>
+      <li>Multi-step 예측에서는 \(z\)개의 time step을 예측해야 하며, 이 때 예측 간격은 \(T_{pred} = \delta z\)로 정의</li>
+    </ul>
+  </li>
+  <li>전체 트래픽 수요 계산:
+    <ul>
+      <li>시간 구간 \([t, t+T_{pred}]\) 동안 지역 전체의 트래픽 수요는 다음과 같이 계산</li>
+    </ul>
+
+\[R_D = \sum_{n \in \mathcal{N}} \sum_{j=t+1}^{t+z} \frac{r_j^n}{z}\]
+  </li>
+</ul>
+
+<h3 id="3-our-proposed-algorithm">3. Our Proposed Algorithm</h3>
+<h4 id="3a-cellular-traffic-prediction">3.A Cellular traffic prediction</h4>
+<h4 id="3b-base-station-sleeping">3.B Base station sleeping</h4>
+<p>Power와 bandwidth allocation 문제를 먼저 풀어야 한다. 주어진 기지국 집합에서 정의된 \(TDA_{k}\)의 기본 속도 요구사항보다 마진을 더해 더 높은 \(R'_{k}\)를 만족시켜야 한다. 이 문제는 식 (13)으로 수식화되며, 이를 통해 power와 bandwidth 할당을 수행하게 된다.</p>
+
+\[\begin{aligned}
+\text{find} &amp; \quad \overrightarrow{b}, \overrightarrow{p} \\
+\text{s.t.} &amp; \quad \sum_{n \in \mathcal{N}'} b_n T_{k,n} = R_k', \quad \forall k \in \mathcal{K}, \\
+&amp; \quad C_1, C_2, C_1 \text{ in (8)}.
+\end{aligned},
+\tag{13}\]
+
+<p>만약 식 (13)에 대한 실현 가능한 해가 존재한다면, 선택된 기지국 집합 (\(N_s = \{ n \mid x_{n}=1 \}\)) 이 bandwidth 및 power 제한 이내에서 TDA의 속도 요구사항을 충족할 수 있다 말할 수 있다. 식 (13)은 <code class="language-plaintext highlighter-rouge">convex optimization algorithm</code>으로 해결할 수 있다. 또한 이와 동일한 방식으로 (8) 식도 해결할 수 있다.</p>
+
+<p>이후, <code class="language-plaintext highlighter-rouge">Local search</code> 알고리즘을 통해 최적의 기지국 하위 집합을 찾는다. 알고리즘은 <code class="language-plaintext highlighter-rouge">Open</code>, <code class="language-plaintext highlighter-rouge">Close</code>, <code class="language-plaintext highlighter-rouge">Exchange</code> 이 세가지 단계로 이루어져 있으며, 각각의 단계에서 시스템의 power 소비를 업데이트하여 기지국을 추가하거나 제거하거나 교환하는 방식으로 최적의 구성을 찾는다.</p>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="paper" /><summary type="html"><![CDATA[**Date**: 2021.08.06, **Tag**: [Base station sleeping], [Long short-term memory], [Traffic prediction]]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/prediction_sleep/Prediction_Sleep.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/prediction_sleep/Prediction_Sleep.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Introducing Hydejack 9</title><link href="http://localhost:4000/blog/example/2020-07-03-introducing-hydejack-9/" rel="alternate" type="text/html" title="Introducing Hydejack 9" /><published>2020-07-03T00:00:00+09:00</published><updated>2020-07-03T00:00:00+09:00</updated><id>http://localhost:4000/blog/example/introducing-hydejack-9</id><content type="html" xml:base="http://localhost:4000/blog/example/2020-07-03-introducing-hydejack-9/"><![CDATA[<p class="lead">Version 9 is the most complete version of Hydejack yet.</p>
+
+<p><a href="#linking-in-style">Modernized</a> <a href="#whats-in-the-cards">design</a>, <a href="#ready-for-the-big-screen">big headlines</a>, big new features: <a href="#built-in-search">Built-In Search</a>, <a href="#sticky-table-of-contents">Sticky Table of Contents</a>, and <a href="#auto-hiding-navbar">Auto-Hiding Navbar</a>. That <a href="#and-much-more">and more</a> is Hydejack 9.</p>
+
+<ul class="large-only" id="markdown-toc">
+  <li><a href="#linking-in-style" id="markdown-toc-linking-in-style">Linking in Style</a></li>
+  <li><a href="#ready-for-the-big-screen" id="markdown-toc-ready-for-the-big-screen">Ready for the Big Screen</a></li>
+  <li><a href="#whats-in-the-cards" id="markdown-toc-whats-in-the-cards">What’s in the Cards?</a></li>
+  <li><a href="#built-in-search" id="markdown-toc-built-in-search">Built-In Search</a></li>
+  <li><a href="#auto-hiding-navbar" id="markdown-toc-auto-hiding-navbar">Auto-Hiding Navbar</a></li>
+  <li><a href="#sticky-table-of-contents" id="markdown-toc-sticky-table-of-contents">Sticky Table of Contents</a></li>
+  <li><a href="#and-much-more" id="markdown-toc-and-much-more">…and much more</a></li>
+  <li><a href="#even-more-to-come" id="markdown-toc-even-more-to-come">Even More to Come</a></li>
+  <li><a href="#get-it-now" id="markdown-toc-get-it-now">Get It Now</a></li>
+</ul>
+
+<h2 id="linking-in-style">Linking in Style</h2>
+
+<p>Ever since the introduction of Dark Mode, link styles have been a bit of an issue. Specifically, finding an accent color that worked on both light and dark backgrounds was the problem. With Hydejack 9, the <a href="#linking-in-style">link style</a> has been revamped so that legibility is no longer tied to the choice of accent_color, giving you much more freedom in creating a unique design flavor for your site.</p>
+
+<h2 id="ready-for-the-big-screen">Ready for the Big Screen</h2>
+
+<p>The theme on which Hydejack is based was designed for a different era of the web. Hydejack has inherited many of its limitations, but over time I’ve made adjustments, such as centering the content column for better reading ergonomics.</p>
+
+<p>With version 9, Hydejack takes full advantage of large displays. Whether it’s design indulgences such as oversized headlines, or quality of life improvements such as a floating table of contents, Hydejack now finds use for all that extra screen real estate<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</p>
+
+<h2 id="whats-in-the-cards">What’s in the Cards?</h2>
+
+<p>Hydejack 9 now lets you use content cards for both projects and posts. 
+The cards have been redesigned with a new hover style and drop shadows and they retain their unique transition-to-next-page animations, which now also work on the <code class="language-plaintext highlighter-rouge">blog</code> layout. The new <code class="language-plaintext highlighter-rouge">grid</code> layout lets you do that.</p>
+
+<p>Good images are key to making the most out of content cards. For that reason, a <a href="/docs/basics/#adding-images">chapter on images</a> has been added to the documentation.</p>
+
+<h2 id="built-in-search">Built-In Search</h2>
+
+<p>Hydejack now has Built-In Search. It even works offline. I’ve been prototyping many approaches and eventually settled on a fully client-side, off-the-main thread solution that perfectly fits the use case of personal sites and shows surprisingly good results<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>.</p>
+
+<p>The new search UI is custom made for Hydejack and shows beautiful previews of your posts and pages, right on top of your regular content.</p>
+
+<p>Together with the Auto-Hiding Navbar, your entire content library is now only a couple of keystrokes away.</p>
+
+<h2 id="auto-hiding-navbar">Auto-Hiding Navbar</h2>
+
+<p>A navbar that’s there when you need it, and disappears when you don’t. Simple as that.</p>
+
+<h2 id="sticky-table-of-contents">Sticky Table of Contents</h2>
+
+<p>Already a staple on so many sites on the web, this pattern is now also available in Hydejack. 
+What’s unique about it is that it simply picks up the table of contents already created by kramdown’s <code class="language-plaintext highlighter-rouge">{:toc}</code> tag and transparently upgrades it to a fully dynamic version.</p>
+
+<h2 id="and-much-more">…and much more</h2>
+
+<p>Other noteworthy changes include:</p>
+<ul>
+  <li>Support for Jekyll 4</li>
+  <li>Choice between MathJax and KaTeX for math rendering</li>
+  <li>Use of <code class="language-plaintext highlighter-rouge">jekyll-include-cache</code> for drastically improved page building speeds</li>
+  <li>New variables configuration file — adjust content width, sidebar width, font size, etc…</li>
+  <li>…and the option to disable grouping projects by year.</li>
+</ul>
+
+<p>Read the the <a href="/CHANGELOG/" class="heading flip-title">CHANGELOG</a> for the full scope of features and improvements made in Hydejack 9.
+Maybe just glance at it to confirm that it is indeed a pretty long list.</p>
+
+<h2 id="even-more-to-come">Even More to Come</h2>
+
+<p>New features for 9.1 are already lined up. Code block headers and code line highlights for even better technical blogging, as well as download buttons on the resume page for PDF, vCard, and Resume JSON are just around the corner.</p>
+
+<h2 id="get-it-now">Get It Now</h2>
+<p>The Free Version of Hydejack is now availabe on <a href="https://rubygems.org/gems/jekyll-theme-hydejack">RubyGems</a>
+and for the first time also on <a href="https://github.com/hydecorp/hydejack/packages">GitHub Packages</a>. 
+The source code is available on <a href="https://github.com/hydecorp/hydejack">GitHub</a> as always.</p>
+
+<p>The PRO Version is scheduled to release on July 7th on Gumroad. Pre-Orders are open now:</p>
+
+<div class="gumroad-product-embed" data-gumroad-product-id="nuOluY"><a href="https://gumroad.com/l/nuOluY">Loading…</a></div>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>If you are a fan of the old two-column layout, or don’t like modern design tropes such as mega headlines, Hydejack lets you revert these changes on a case-by-case basis via configuration options. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+
+      <p>Search was mainly tested for English and German. Please let me know about issues in other languages. 
+  While I’ve tried to find a multi-language solution, most showed drastically worse  results for the English base case.
+  If you’re technically inclined, you can adopt the code located in <code class="language-plaintext highlighter-rouge">_includes/js/search-worker.js</code> to your needs. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="example" /><summary type="html"><![CDATA[Version 9 is the most complete version of Hydejack yet. Modernized design, big headlines, and big new features.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/jeremy-bishop@0,5x.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/jeremy-bishop@0,5x.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+=======
 <h1 id="3-take-away">3. Take Away</h1>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="paper" /><summary type="html"><![CDATA[**Date**: 2017.11.29, **Tag**: [Mobile Network Operator(MNO)], [access point], [Stackelberg approach], [game theory], [quality of service], [Nash equilibrium]]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/game-theory/game-theory.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/game-theory/game-theory.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+>>>>>>> c9b4b85b73d42fdc5a945dcab7b288650d40921f
