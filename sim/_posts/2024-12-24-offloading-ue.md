@@ -2,8 +2,13 @@
 layout: post
 title: 오프로딩 시뮬레이터 - UE.py
 description: >
+<<<<<<< HEAD
   **Date**: 2024.11.25, 
   **Tag**: [Traffic Prediction], [Carbon Emission], [Graduation]
+=======
+  **Date**: 2024.12.24, 
+  **Tag**: [Offloading], [Patent], [Multi Frequency Band]
+>>>>>>> c9b4b85b73d42fdc5a945dcab7b288650d40921f
 image: 
   path: /assets/img/blog/green_ai/green-ai.png 
   srcset: 
@@ -21,7 +26,11 @@ sitemap: false
 {:toc .large-only}
 
 
+<<<<<<< HEAD
 # 5G 셀 시뮬레이터 구현 가이드: `ue.py`
+=======
+# 5G 셀 시뮬레이터 구현 가이드: `components/ue.py`
+>>>>>>> c9b4b85b73d42fdc5a945dcab7b288650d40921f
 
 ## 1. 아키텍쳐 개요
 

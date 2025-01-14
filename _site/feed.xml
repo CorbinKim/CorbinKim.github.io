@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-01-14T15:39:36+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Geon Kim</title><subtitle>Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
 </subtitle><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><entry><title type="html">Analyzing and Modeling Spatio-Temporal Dependence of Cellular Traffic at City Scale</title><link href="http://localhost:4000/blog/paper/2025-01-13-analyzing-and-modeling-spatil-temporal-dependence-of-cellular-traffic-at-city-scale/" rel="alternate" type="text/html" title="Analyzing and Modeling Spatio-Temporal Dependence of Cellular Traffic at City Scale" /><published>2025-01-13T00:00:00+09:00</published><updated>2025-01-13T00:00:00+09:00</updated><id>http://localhost:4000/blog/paper/analyzing-and-modeling-spatil-temporal-dependence-of-cellular-traffic-at-city-scale</id><content type="html" xml:base="http://localhost:4000/blog/paper/2025-01-13-analyzing-and-modeling-spatil-temporal-dependence-of-cellular-traffic-at-city-scale/"><![CDATA[<!--more-->
 <ul class="large-only" id="markdown-toc">
@@ -43,10 +44,28 @@
           <li><a href="#3-take-away" id="markdown-toc-3-take-away">3. Take Away</a></li>
         </ul>
       </li>
+=======
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-12-27T14:12:18+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Geon Kim</title><subtitle>Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
+</subtitle><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><entry><title type="html">오프로딩 시뮬레이터 - Pathloss</title><link href="http://localhost:4000/blog/sim/2024-12-26-offloading-pathloss-copy/" rel="alternate" type="text/html" title="오프로딩 시뮬레이터 - Pathloss" /><published>2024-12-26T00:00:00+09:00</published><updated>2024-12-26T00:00:00+09:00</updated><id>http://localhost:4000/blog/sim/offloading-pathloss%20copy</id><content type="html" xml:base="http://localhost:4000/blog/sim/2024-12-26-offloading-pathloss-copy/"><![CDATA[<!--more-->
+
+<ul class="large-only" id="markdown-toc">
+  <li><a href="#5g-셀-시뮬레이터-구현-가이드-utilspathlosspy" id="markdown-toc-5g-셀-시뮬레이터-구현-가이드-utilspathlosspy">5G 셀 시뮬레이터 구현 가이드: <code class="language-plaintext highlighter-rouge">utils/pathloss.py</code></a>    <ul>
+      <li><a href="#1-아키텍쳐-개요" id="markdown-toc-1-아키텍쳐-개요">1. 아키텍쳐 개요</a></li>
+      <li><a href="#2-코드-설명" id="markdown-toc-2-코드-설명">2. 코드 설명</a>        <ul>
+          <li><a href="#2-주파수-설정" id="markdown-toc-2-주파수-설정">2. 주파수 설정</a></li>
+          <li><a href="#3-트래픽-예측" id="markdown-toc-3-트래픽-예측">3. 트래픽 예측</a></li>
+          <li><a href="#4-에너지-소비-관리" id="markdown-toc-4-에너지-소비-관리">4. 에너지 소비 관리</a></li>
+          <li><a href="#5-셀-상태-관리" id="markdown-toc-5-셀-상태-관리">5. 셀 상태 관리</a></li>
+          <li><a href="#6-성능-측정-및-보고" id="markdown-toc-6-성능-측정-및-보고">6. 성능 측정 및 보고</a></li>
+          <li><a href="#7-참고문헌" id="markdown-toc-7-참고문헌">7. 참고문헌</a></li>
+        </ul>
+      </li>
+>>>>>>> c9b4b85b73d42fdc5a945dcab7b288650d40921f
     </ul>
   </li>
 </ul>
 
+<<<<<<< HEAD
 <h1 id="1-why-this-paper">1. Why this paper</h1>
 
 <ol>
@@ -327,10 +346,23 @@
       </li>
     </ul>
   </li>
+=======
+<h1 id="5g-셀-시뮬레이터-구현-가이드-utilspathlosspy">5G 셀 시뮬레이터 구현 가이드: <code class="language-plaintext highlighter-rouge">utils/pathloss.py</code></h1>
+
+<h2 id="1-아키텍쳐-개요">1. 아키텍쳐 개요</h2>
+
+<ul>
+  <li>3GPP 표준에 정의된 경로손실 모델 구현</li>
+  <li>주파수 대역별 최적 모델 선택</li>
+  <li>도시 환경(Urban Macro/Micro) 지원</li>
+  <li>LOS/NLOS 시나리오 고려</li>
+  <li>정확한 전파 특성 예측</li>
+>>>>>>> c9b4b85b73d42fdc5a945dcab7b288650d40921f
 </ul>
 
-<hr />
+<h2 id="2-코드-설명">2. 코드 설명</h2>
 
+<<<<<<< HEAD
 <div align="center">
   <img src="/assets/img/blog/0113/fig/fig_3.png" alt="Figure 3" />
 </div>
@@ -1394,6 +1426,1731 @@
   <li>ProphetPredictor는 별도의 클래스로 구현되어 있으며, 시계열 예측을 담당한다.</li>
 </ul>
 
+=======
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sim</span><span class="p">,</span> <span class="n">interval</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">xyz</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">h_BS</span><span class="o">=</span><span class="mf">20.0</span><span class="p">,</span> 
+             <span class="n">MIMO_gain_dB</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">pattern</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">f_callback</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> 
+             <span class="n">f_callback_kwargs</span><span class="o">=</span><span class="p">{},</span> <span class="n">verbosity</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">i</span> <span class="o">=</span> <span class="n">Cell</span><span class="p">.</span><span class="n">i</span>
+    <span class="n">Cell</span><span class="p">.</span><span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">sim</span> <span class="o">=</span> <span class="n">sim</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">interval</span> <span class="o">=</span> <span class="n">interval</span>
+    
+    <span class="c1"># 트래픽 예측 관련 설정
+</span>    <span class="bp">self</span><span class="p">.</span><span class="n">traffic_predictor</span> <span class="o">=</span> <span class="n">ProphetPredictor</span><span class="p">()</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">traffic_db</span> <span class="o">=</span> <span class="n">TimeseriesDB</span><span class="p">()</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">prediction_horizon</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># 10초 (1초 * 10)
+</span></code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">sim</code>: 메인 시뮬레이터 인스턴스를 전달받음. 이를 통해 전체 시뮬레이션 환경에 접근할 수 있음</li>
+  <li><code class="language-plaintext highlighter-rouge">interval</code>: 셀의 상태 업데이트 주기를 설정. 기본값은 1초</li>
+  <li><code class="language-plaintext highlighter-rouge">traffic_predictor</code>: 트래픽 예측기를 초기화</li>
+  <li><code class="language-plaintext highlighter-rouge">prediction_horizon</code>: 10으로 설정하여 10초 앞의 트래픽을 예측</li>
+</ul>
+
+<p class="note">중요 포인트</p>
+<ul>
+  <li>Cell.i는 셀 식별자로 사용되며, 생성될 때마다 자동으로 증가한다.</li>
+  <li>ProphetPredictor는 별도의 클래스로 구현되어 있으며, 시계열 예측을 담당한다.</li>
+</ul>
+
+>>>>>>> c9b4b85b73d42fdc5a945dcab7b288650d40921f
+<h4 id="2-주파수-설정">2. 주파수 설정</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 주파수 설정
+</span><span class="bp">self</span><span class="p">.</span><span class="n">freq_config</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="mi">800</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">'bandwidth'</span><span class="p">:</span> <span class="mf">10.0</span><span class="p">,</span>  <span class="c1"># MHz
+</span>        <span class="s">'n_RBs'</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>       <span class="c1"># Resource Blocks
+</span>        <span class="s">'active'</span><span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
+        <span class="s">'energy_consumed'</span><span class="p">:</span> <span class="mf">0.0</span>
+    <span class="p">},</span>
+    <span class="mi">1800</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">'bandwidth'</span><span class="p">:</span> <span class="mf">20.0</span><span class="p">,</span>
+        <span class="s">'n_RBs'</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+        <span class="s">'active'</span><span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
+        <span class="s">'energy_consumed'</span><span class="p">:</span> <span class="mf">0.0</span>
+    <span class="p">},</span>
+    <span class="mi">3600</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">'bandwidth'</span><span class="p">:</span> <span class="mf">100.0</span><span class="p">,</span>
+        <span class="s">'n_RBs'</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
+        <span class="s">'active'</span><span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
+        <span class="s">'energy_consumed'</span><span class="p">:</span> <span class="mf">0.0</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>각 주파수 대역별로 다음 파라미터를 설정
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">bandwidth</code>: MHz</li>
+      <li><code class="language-plaintext highlighter-rouge">n_RBs</code>: Resource Block 수</li>
+      <li><code class="language-plaintext highlighter-rouge">active</code>: 활성화 여부</li>
+      <li><code class="language-plaintext highlighter-rouge">energy_consumed</code>: 에너지 소비량</li>
+    </ul>
+  </li>
+</ul>
+
+<p class="note">중요 포인트</p>
+<ul>
+  <li>800MHz: 커버리지가 넓지만 용량이 적음</li>
+  <li>1800MHz: 중간 대역으로 커버리지와 용량의 균형을 제공</li>
+  <li>3600MHz: mmWave 대역으로 높은 용량을 제공하지만 커버리지가 제한적</li>
+</ul>
+
+<h4 id="3-트래픽-예측">3. 트래픽 예측</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">predict_traffic</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">freq</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">traffic_history</span><span class="p">[</span><span class="n">freq</span><span class="p">])</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>  <span class="c1"># 최소 10초의 데이터 필요
+</span>        <span class="k">return</span> <span class="bp">None</span>
+        
+    <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span>
+        <span class="s">'ds'</span><span class="p">:</span> <span class="n">pd</span><span class="p">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">end</span><span class="o">=</span><span class="n">pd</span><span class="p">.</span><span class="n">Timestamp</span><span class="p">.</span><span class="n">now</span><span class="p">(),</span> 
+                          <span class="n">periods</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">traffic_history</span><span class="p">[</span><span class="n">freq</span><span class="p">]),</span> 
+                          <span class="n">freq</span><span class="o">=</span><span class="s">'15T'</span><span class="p">),</span>
+        <span class="s">'y'</span><span class="p">:</span> <span class="bp">self</span><span class="p">.</span><span class="n">traffic_history</span><span class="p">[</span><span class="n">freq</span><span class="p">]</span>
+    <span class="p">})</span>
+    
+    <span class="bp">self</span><span class="p">.</span><span class="n">traffic_predictor</span><span class="p">.</span><span class="n">train</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">forecast</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">traffic_predictor</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">prediction_horizon</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">forecast</span><span class="p">[</span><span class="s">'yhat'</span><span class="p">].</span><span class="n">values</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">traffic_history</code>: 각 주파수별 트래픽 이력을 저장</li>
+  <li>최소 10초(10개의 샘플)의 데이터가 필요</li>
+  <li>Prophet 모델의 입력 형식에 맞게 DataFrame을 구성</li>
+  <li>예측 결과의 마지막 값을 반환</li>
+</ul>
+
+<p class="note">중요 포인트</p>
+<ul>
+  <li>Prophet 모델은 <code class="language-plaintext highlighter-rouge">ds</code>와 <code class="language-plaintext highlighter-rouge">y</code> 컬럼을 필요로 함</li>
+  <li>10초 간격으로 데이터를 샘플링</li>
+  <li>예측값이 없는 경우 None을 반환</li>
+</ul>
+
+<h4 id="4-에너지-소비-관리">4. 에너지 소비 관리</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">update_energy_consumption</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">interval_hours</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">interval</span> <span class="o">/</span> <span class="mi">3600</span>  <span class="c1"># 초를 시간으로 변환
+</span>    <span class="n">energy</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">base_power_W</span> <span class="o">*</span> <span class="n">interval_hours</span>
+    
+    <span class="k">for</span> <span class="n">freq</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">freq_config</span><span class="p">:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">freq_config</span><span class="p">[</span><span class="n">freq</span><span class="p">][</span><span class="s">'active'</span><span class="p">]:</span>
+            <span class="n">freq_energy</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">frequency_power_W</span> <span class="o">*</span> <span class="n">interval_hours</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">freq_config</span><span class="p">[</span><span class="n">freq</span><span class="p">][</span><span class="s">'energy_consumed'</span><span class="p">]</span> <span class="o">+=</span> <span class="n">freq_energy</span>
+            <span class="n">energy</span> <span class="o">+=</span> <span class="n">freq_energy</span>
+            
+    <span class="bp">self</span><span class="p">.</span><span class="n">total_energy_consumed</span> <span class="o">+=</span> <span class="n">energy</span>
+</code></pre></div></div>
+<ul>
+  <li>기본 전력 소비(<code class="language-plaintext highlighter-rouge">base_power_W</code>)와 주파수별 추가 전력 소비를 계산</li>
+  <li>시간 단위로 변환하여 에너지 소비량을 계산</li>
+  <li>각 주파수 대역별 에너지 소비를 누적하여 기록</li>
+</ul>
+
+<p class="note">중요 포인트</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">interval_hours</code>: 초 단위를 시간 단위로 변환</li>
+  <li><code class="language-plaintext highlighter-rouge">base_power_W</code>: 기본 소비 전력 (130W)</li>
+  <li><code class="language-plaintext highlighter-rouge">frequency_power_W</code>: 주파수 당 추가 소비 전력 (100W)</li>
+</ul>
+
+<h4 id="5-셀-상태-관리">5. 셀 상태 관리</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">manage_cell_state</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">freq</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">freq_config</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="p">.</span><span class="n">freq_config</span><span class="p">[</span><span class="n">freq</span><span class="p">][</span><span class="s">'active'</span><span class="p">]:</span>
+            <span class="k">continue</span>
+            
+        <span class="n">current_load</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">get_frequency_load</span><span class="p">(</span><span class="n">freq</span><span class="p">)</span>
+        <span class="n">predicted_load</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">predict_traffic</span><span class="p">(</span><span class="n">freq</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="n">predicted_load</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">continue</span>
+            
+        <span class="k">if</span> <span class="p">(</span><span class="n">current_load</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="p">.</span><span class="n">traffic_thresholds</span><span class="p">[</span><span class="n">freq</span><span class="p">][</span><span class="s">'low'</span><span class="p">]</span> <span class="ow">and</span> 
+            <span class="n">predicted_load</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="p">.</span><span class="n">traffic_thresholds</span><span class="p">[</span><span class="n">freq</span><span class="p">][</span><span class="s">'low'</span><span class="p">]):</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">can_shift_traffic</span><span class="p">(</span><span class="n">freq</span><span class="p">):</span>
+                <span class="bp">self</span><span class="p">.</span><span class="n">deactivate_frequency</span><span class="p">(</span><span class="n">freq</span><span class="p">)</span>
+                <span class="bp">self</span><span class="p">.</span><span class="n">redistribute_traffic</span><span class="p">(</span><span class="n">freq</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="p">(</span><span class="n">current_load</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="p">.</span><span class="n">traffic_thresholds</span><span class="p">[</span><span class="n">freq</span><span class="p">][</span><span class="s">'high'</span><span class="p">]</span> <span class="ow">or</span> 
+              <span class="n">predicted_load</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="p">.</span><span class="n">traffic_thresholds</span><span class="p">[</span><span class="n">freq</span><span class="p">][</span><span class="s">'high'</span><span class="p">]):</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">activate_frequency</span><span class="p">(</span><span class="n">freq</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>각 주파수 대역의 현재 부하와 예측 부하를 확인</li>
+  <li>트래픽 임계값을 기준으로 주파수 활성화/비활성화를 결정</li>
+  <li>트래픽 재분배 가능 여부를 확인 후 실행</li>
+</ul>
+
+<ul class="note">
+  <li><code class="language-plaintext highlighter-rouge">traffic_thresholds</code>: 주파수별 저부하/고부하 임계값</li>
+  <li><code class="language-plaintext highlighter-rouge">can_shift_traffic</code>: 트래픽 재분배 가능 여부를 확인하고, 분배 가능 여부을 반환</li>
+  <li><code class="language-plaintext highlighter-rouge">redistribute_traffic</code>: 실제 트래픽 재분배를 수행</li>
+</ul>
+
+<h4 id="6-성능-측정-및-보고">6. 성능 측정 및 보고</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get_metrics</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s">'throughput'</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s">'current'</span><span class="p">:</span> <span class="bp">self</span><span class="p">.</span><span class="n">metrics</span><span class="p">[</span><span class="s">'throughput'</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">metrics</span><span class="p">[</span><span class="s">'throughput'</span><span class="p">]</span> <span class="k">else</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s">'average'</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">metrics</span><span class="p">[</span><span class="s">'throughput'</span><span class="p">])</span> <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">metrics</span><span class="p">[</span><span class="s">'throughput'</span><span class="p">]</span> <span class="k">else</span> <span class="mi">0</span>
+        <span class="p">},</span>
+        <span class="s">'energy'</span><span class="p">:</span> <span class="bp">self</span><span class="p">.</span><span class="n">get_energy_stats</span><span class="p">(),</span>
+        <span class="s">'load'</span><span class="p">:</span> <span class="p">{</span>
+            <span class="n">freq</span><span class="p">:</span> <span class="bp">self</span><span class="p">.</span><span class="n">get_frequency_load</span><span class="p">(</span><span class="n">freq</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">freq</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">freq_config</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>처리량, 에너지 소비, 부하 등의 주요 성능 지표를 수집</li>
+  <li>현재값과 평균값을 함께 제공</li>
+  <li>주파수별 세부 통계를 포함</li>
+</ul>
+<<<<<<< HEAD
+
+<p class="note">중요 포인트</p>
+<ul>
+  <li>처리량은 가장 최근값과 평균값을 제공</li>
+  <li>에너지 통계는 총 소비량과 주파수별 소비량 포함</li>
+  <li>부하는 각 주파수 대역별로 계산</li>
+</ul>
+
+=======
+
+<p class="note">중요 포인트</p>
+<ul>
+  <li>처리량은 가장 최근값과 평균값을 제공</li>
+  <li>에너지 통계는 총 소비량과 주파수별 소비량 포함</li>
+  <li>부하는 각 주파수 대역별로 계산</li>
+</ul>
+
+<h4 id="7-참고문헌">7. 참고문헌</h4>
+<ol>
+  <li>Path Loss Models: 3GPP TR 38.901</li>
+  <li>QoS 관리: 3GPP TS 23.501</li>
+  <li>주파수 자원 관리: TS 38.211</li>
+</ol>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="sim" /><summary type="html"><![CDATA[**Date**: 2024.12.26, **Tag**: [Offloading], [Patent], [Multi Frequency Band]]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/sim/phase1/sim.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/sim/phase1/sim.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">오프로딩 시뮬레이터 - Logger</title><link href="http://localhost:4000/blog/sim/2024-12-26-offloading-logger/" rel="alternate" type="text/html" title="오프로딩 시뮬레이터 - Logger" /><published>2024-12-26T00:00:00+09:00</published><updated>2024-12-26T00:00:00+09:00</updated><id>http://localhost:4000/blog/sim/offloading-logger</id><content type="html" xml:base="http://localhost:4000/blog/sim/2024-12-26-offloading-logger/"><![CDATA[<!--more-->
+
+<ul class="large-only" id="markdown-toc">
+  <li><a href="#5g-셀-시뮬레이터-구현-가이드-utilsloggerpy" id="markdown-toc-5g-셀-시뮬레이터-구현-가이드-utilsloggerpy">5G 셀 시뮬레이터 구현 가이드: <code class="language-plaintext highlighter-rouge">utils/logger.py</code></a>    <ul>
+      <li><a href="#1-아키텍쳐-개요" id="markdown-toc-1-아키텍쳐-개요">1. 아키텍쳐 개요</a></li>
+      <li><a href="#2-코드-설명" id="markdown-toc-2-코드-설명">2. 코드 설명</a>        <ul>
+          <li><a href="#1-기본-로깅-기능" id="markdown-toc-1-기본-로깅-기능">1. 기본 로깅 기능</a></li>
+          <li><a href="#2-이벤트-로깅" id="markdown-toc-2-이벤트-로깅">2. 이벤트 로깅</a></li>
+          <li><a href="#3-메트릭-관리" id="markdown-toc-3-메트릭-관리">3. 메트릭 관리</a></li>
+          <li><a href="#4-네트워크-상태-로깅" id="markdown-toc-4-네트워크-상태-로깅">4. 네트워크 상태 로깅</a></li>
+          <li><a href="#5-메트릭-시각화" id="markdown-toc-5-메트릭-시각화">5. 메트릭 시각화</a></li>
+          <li><a href="#6-유틸리티-함수" id="markdown-toc-6-유틸리티-함수">6. 유틸리티 함수</a></li>
+          <li><a href="#7-네트워크-시각화" id="markdown-toc-7-네트워크-시각화">7. 네트워크 시각화</a>            <ul>
+              <li><a href="#71-주파수-대역별-커버리지-시각화" id="markdown-toc-71-주파수-대역별-커버리지-시각화">7.1 주파수 대역별 커버리지 시각화</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="5g-셀-시뮬레이터-구현-가이드-utilsloggerpy">5G 셀 시뮬레이터 구현 가이드: <code class="language-plaintext highlighter-rouge">utils/logger.py</code></h1>
+
+<h2 id="1-아키텍쳐-개요">1. 아키텍쳐 개요</h2>
+
+<p><code class="language-plaintext highlighter-rouge">logger.py</code>는 시뮬레이션 중 발생하는 이벤트, 메트릭, 디버그 정보를 체계적으로 기록하고 관리하는 부분임. 주요 컴포넌트는 아래와 같음.</p>
+
+<ul>
+  <li>파일/콘솔 로깅 지원</li>
+  <li>로그 파일 자동 순환</li>
+  <li>시계열 메트릭 저장</li>
+  <li>메트릭 시각화</li>
+  <li>다양한 로깅 레벨</li>
+</ul>
+
+<hr />
+
+<h2 id="2-코드-설명">2. 코드 설명</h2>
+
+<h3 id="1-기본-로깅-기능">1. 기본 로깅 기능</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+             <span class="n">log_dir</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s">'logs'</span><span class="p">,</span>
+             <span class="n">level</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s">'INFO'</span><span class="p">,</span>
+             <span class="n">console_output</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span>
+             <span class="n">file_output</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span>
+             <span class="n">rotation</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s">'size'</span><span class="p">,</span>
+             <span class="n">max_bytes</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span><span class="o">*</span><span class="mi">1024</span><span class="o">*</span><span class="mi">1024</span><span class="p">,</span>  <span class="c1"># 10MB
+</span>             <span class="n">backup_count</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span><span class="p">):</span>
+    <span class="s">"""
+    Parameters
+    ----------
+    name : str
+        로거 이름
+    log_dir : str
+        로그 파일 저장 디렉토리
+    level : str
+        로깅 레벨 ('DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL')
+    console_output : bool
+        콘솔 출력 여부
+    file_output : bool
+        파일 출력 여부
+    rotation : str
+        로그 순환 방식 ('size' 또는 'time')
+    max_bytes : int
+        최대 로그 파일 크기
+    backup_count : int
+        보관할 백업 파일 수
+    """</span>
+</code></pre></div></div>
+
+<ul>
+  <li>핵심 초기화 파라미터
+    <ul>
+      <li>name: logger 식별자</li>
+      <li>log_dir: 로그 저장 위치</li>
+      <li>level: 로깅 상세도</li>
+      <li>rotation: 파일 순환 방식</li>
+      <li>max_bytes: 파일 크기 제한</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="2-이벤트-로깅">2. 이벤트 로깅</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">log_event</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">details</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]):</span>
+    <span class="s">"""이벤트 기록
+    
+    Parameters
+    ----------
+    event_type : str
+        이벤트 유형
+    details : dict
+        이벤트 상세 정보
+    """</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">logger</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s">"Event: </span><span class="si">{</span><span class="n">event_type</span><span class="si">}</span><span class="s"> - </span><span class="si">{</span><span class="n">json</span><span class="p">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">details</span><span class="p">)</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>시뮬레이션 이벤트 로깅
+    <ul>
+      <li>이벤트 유형 분류</li>
+      <li>JSON 형식 상세 정보</li>
+      <li>시간 자동 기록</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="3-메트릭-관리">3. 메트릭 관리</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">log_metric</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> 
+               <span class="n">timestamp</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span><span class="p">):</span>
+    <span class="s">"""메트릭 기록
+    
+    Parameters
+    ----------
+    name : str
+        메트릭 이름
+    value : any
+        메트릭 값
+    timestamp : float, optional
+        타임스탬프 (기본값: 현재 시간)
+    """</span>
+    <span class="k">if</span> <span class="n">timestamp</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">timestamp</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">.</span><span class="n">now</span><span class="p">().</span><span class="n">timestamp</span><span class="p">()</span>
+        
+    <span class="k">if</span> <span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">metrics</span><span class="p">:</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">metrics</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        
+    <span class="bp">self</span><span class="p">.</span><span class="n">metrics</span><span class="p">[</span><span class="n">name</span><span class="p">].</span><span class="n">append</span><span class="p">({</span>
+        <span class="s">'timestamp'</span><span class="p">:</span> <span class="n">timestamp</span><span class="p">,</span>
+        <span class="s">'value'</span><span class="p">:</span> <span class="n">value</span>
+    <span class="p">})</span>
+</code></pre></div></div>
+
+<ul>
+  <li>시계열 메트릭 저장
+    <ul>
+      <li>이름 기반 분류</li>
+      <li>시간 정보 포함</li>
+      <li>메모리 내 저장</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="4-네트워크-상태-로깅">4. 네트워크 상태 로깅</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">log_network_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cells</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">ues</span><span class="p">:</span> <span class="nb">list</span><span class="p">):</span>
+    <span class="s">"""네트워크 상태 기록
+    
+    Parameters
+    ----------
+    cells : list
+        셀 객체 리스트
+    ues : list
+        UE 객체 리스트
+    """</span>
+    <span class="n">state</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s">'timestamp'</span><span class="p">:</span> <span class="n">datetime</span><span class="p">.</span><span class="n">now</span><span class="p">().</span><span class="n">timestamp</span><span class="p">(),</span>
+        <span class="s">'cells'</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s">'id'</span><span class="p">:</span> <span class="n">cell</span><span class="p">.</span><span class="n">i</span><span class="p">,</span>
+            <span class="s">'position'</span><span class="p">:</span> <span class="n">cell</span><span class="p">.</span><span class="n">xyz</span><span class="p">.</span><span class="n">tolist</span><span class="p">(),</span>
+            <span class="s">'active_freqs'</span><span class="p">:</span> <span class="p">[</span><span class="n">f</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">cell</span><span class="p">.</span><span class="n">freq_config</span> 
+                           <span class="k">if</span> <span class="n">cell</span><span class="p">.</span><span class="n">freq_config</span><span class="p">[</span><span class="n">f</span><span class="p">][</span><span class="s">'active'</span><span class="p">]],</span>
+            <span class="s">'load'</span><span class="p">:</span> <span class="n">cell</span><span class="p">.</span><span class="n">get_cell_load</span><span class="p">(),</span>
+            <span class="s">'energy'</span><span class="p">:</span> <span class="n">cell</span><span class="p">.</span><span class="n">get_energy_stats</span><span class="p">()</span>
+        <span class="p">}</span> <span class="k">for</span> <span class="n">cell</span> <span class="ow">in</span> <span class="n">cells</span><span class="p">],</span>
+        <span class="s">'ues'</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s">'id'</span><span class="p">:</span> <span class="n">ue</span><span class="p">.</span><span class="n">i</span><span class="p">,</span>
+            <span class="s">'position'</span><span class="p">:</span> <span class="n">ue</span><span class="p">.</span><span class="n">xyz</span><span class="p">.</span><span class="n">tolist</span><span class="p">(),</span>
+            <span class="s">'serving_cell'</span><span class="p">:</span> <span class="n">ue</span><span class="p">.</span><span class="n">serving_cell</span><span class="p">.</span><span class="n">i</span> <span class="k">if</span> <span class="n">ue</span><span class="p">.</span><span class="n">serving_cell</span> <span class="k">else</span> <span class="bp">None</span><span class="p">,</span>
+            <span class="s">'metrics'</span><span class="p">:</span> <span class="n">ue</span><span class="p">.</span><span class="n">get_metrics</span><span class="p">()</span>
+        <span class="p">}</span> <span class="k">for</span> <span class="n">ue</span> <span class="ow">in</span> <span class="n">ues</span><span class="p">]</span>
+    <span class="p">}</span>
+    
+    <span class="bp">self</span><span class="p">.</span><span class="n">logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s">"Network State: </span><span class="si">{</span><span class="n">json</span><span class="p">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">state</span><span class="p">)</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>전체 네트워크 상태 스냅샷
+    <ul>
+      <li>셀 상태 정보</li>
+      <li>UE 연결 정보</li>
+      <li>JSON 형식 저장</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="5-메트릭-시각화">5. 메트릭 시각화</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">plot_metrics</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">metric_names</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">list</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span><span class="p">):</span>
+    <span class="s">"""메트릭 플롯 생성
+    
+    Parameters
+    ----------
+    metric_names : list, optional
+        플롯할 메트릭 이름 리스트 (기본값: 모든 메트릭)
+    """</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+        
+        <span class="k">if</span> <span class="n">metric_names</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">metric_names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">metrics</span><span class="p">.</span><span class="n">keys</span><span class="p">())</span>
+            
+        <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">metric_names</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">metrics</span><span class="p">:</span>
+                <span class="k">continue</span>
+                
+            <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">metrics</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+            <span class="n">timestamps</span> <span class="o">=</span> <span class="p">[</span><span class="n">d</span><span class="p">[</span><span class="s">'timestamp'</span><span class="p">]</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">data</span><span class="p">]</span>
+            <span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="n">d</span><span class="p">[</span><span class="s">'value'</span><span class="p">]</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">data</span><span class="p">]</span>
+            
+            <span class="n">plt</span><span class="p">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+            <span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">timestamps</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span>
+            <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s">'Metric: </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+            <span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'Timestamp'</span><span class="p">)</span>
+            <span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'Value'</span><span class="p">)</span>
+            <span class="n">plt</span><span class="p">.</span><span class="n">grid</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+            
+            <span class="n">plot_file</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">log_dir</span> <span class="o">/</span> <span class="sa">f</span><span class="s">"metric_</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s">_</span><span class="si">{</span><span class="n">datetime</span><span class="p">.</span><span class="n">now</span><span class="p">()</span><span class="si">:</span><span class="o">%</span><span class="n">Y</span><span class="o">%</span><span class="n">m</span><span class="o">%</span><span class="n">d_</span><span class="o">%</span><span class="n">H</span><span class="o">%</span><span class="n">M</span><span class="o">%</span><span class="n">S</span><span class="si">}</span><span class="s">.png"</span>
+            <span class="n">plt</span><span class="p">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">plot_file</span><span class="p">)</span>
+            <span class="n">plt</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+            
+    <span class="k">except</span> <span class="nb">ImportError</span><span class="p">:</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">warning</span><span class="p">(</span><span class="s">"matplotlib is required for plotting metrics"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>메트릭 시각화 도구
+    <ul>
+      <li>matplotlib 기반 그래프</li>
+      <li>시계열 플롯 생성</li>
+      <li>PNG 파일 저장</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="6-유틸리티-함수">6. 유틸리티 함수</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get_logger</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">logging</span><span class="p">.</span><span class="n">Logger</span><span class="p">:</span>
+    <span class="s">"""로거 인스턴스 반환"""</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">logger</span>
+
+<span class="k">def</span> <span class="nf">clear_metrics</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="s">"""메트릭 초기화"""</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">metrics</span><span class="p">.</span><span class="n">clear</span><span class="p">()</span>
+</code></pre></div></div>
+
+<ul>
+  <li>logger 인스턴스 접근</li>
+  <li>메트릭 데이터 관리</li>
+</ul>
+
+<h3 id="7-네트워크-시각화">7. 네트워크 시각화</h3>
+
+<h4 id="71-주파수-대역별-커버리지-시각화">7.1 주파수 대역별 커버리지 시각화</h4>
+
+<p>네트워크 상태를 시각적으로 표현하기 위해 <code class="language-plaintext highlighter-rouge">plot_frequency_band_coverage</code> 함수를 구현</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">plot_frequency_band_coverage</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                               <span class="n">cells</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span>
+                               <span class="n">ues</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span>
+                               <span class="n">grid_size</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span>
+                               <span class="n">save_path</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span><span class="p">):</span>
+    <span class="s">"""주파수 대역별 커버리지 및 UE 연결 상태 시각화
+    
+    Parameters
+    ----------
+    cells : list
+        셀 객체 리스트
+    ues : list
+        UE 객체 리스트
+    grid_size : tuple
+        그리드 해상도 (기본값: 200x200)
+    save_path : str, optional
+        저장 경로 (기본값: logs/freq_band_coverage_YYYYMMDD_HHMMSS.png)
+    """</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>주요 컴포넌트</p>
+
+    <ul>
+      <li>주파수 대역 설정</li>
+    </ul>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1"># 주파수 대역별 설정
+</span>  <span class="n">frequency_bands</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="mi">800</span><span class="p">:</span> <span class="p">{</span><span class="s">'color'</span><span class="p">:</span> <span class="s">'RdYlBu_r'</span><span class="p">,</span> <span class="s">'title'</span><span class="p">:</span> <span class="s">'800 MHz Coverage'</span><span class="p">},</span>
+      <span class="mi">1800</span><span class="p">:</span> <span class="p">{</span><span class="s">'color'</span><span class="p">:</span> <span class="s">'RdYlBu_r'</span><span class="p">,</span> <span class="s">'title'</span><span class="p">:</span> <span class="s">'1800 MHz Coverage'</span><span class="p">},</span>
+      <span class="mi">3600</span><span class="p">:</span> <span class="p">{</span><span class="s">'color'</span><span class="p">:</span> <span class="s">'RdYlBu_r'</span><span class="p">,</span> <span class="s">'title'</span><span class="p">:</span> <span class="s">'3600 MHz Coverage'</span><span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="c1"># 셀별 색상 할당
+</span>  <span class="n">cell_colors</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">cm</span><span class="p">.</span><span class="n">Set3</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">cells</span><span class="p">)))</span>
+  <span class="n">cell_color_dict</span> <span class="o">=</span> <span class="p">{</span><span class="n">cell</span><span class="p">.</span><span class="n">i</span><span class="p">:</span> <span class="n">cell_colors</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">cell</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">cells</span><span class="p">)}</span>
+</code></pre></div>    </div>
+
+    <ul>
+      <li>커버리지 맵 생성</li>
+    </ul>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1"># RSRP 계산
+</span>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">grid_size</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+      <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">grid_size</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+          <span class="n">point</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">],</span> <span class="n">Y</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">],</span> <span class="mi">0</span><span class="p">])</span>
+          <span class="n">max_rsrp</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s">'-inf'</span><span class="p">)</span>
+            
+          <span class="k">for</span> <span class="n">cell</span> <span class="ow">in</span> <span class="n">cells</span><span class="p">:</span>
+              <span class="k">if</span> <span class="p">(</span><span class="n">freq</span> <span class="ow">in</span> <span class="n">cell</span><span class="p">.</span><span class="n">freq_config</span> <span class="ow">and</span> 
+                  <span class="n">cell</span><span class="p">.</span><span class="n">freq_config</span><span class="p">[</span><span class="n">freq</span><span class="p">][</span><span class="s">'active'</span><span class="p">]):</span>
+                  <span class="n">rsrp</span> <span class="o">=</span> <span class="n">cell</span><span class="p">.</span><span class="n">calculate_rsrp</span><span class="p">(</span><span class="n">point</span><span class="p">,</span> <span class="n">freq</span><span class="p">)</span>
+                  <span class="n">max_rsrp</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">max_rsrp</span><span class="p">,</span> <span class="n">rsrp</span><span class="p">)</span>
+            
+          <span class="n">Z</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">max_rsrp</span>
+
+  <span class="c1"># 커버리지 맵 플로팅
+</span>  <span class="n">coverage</span> <span class="o">=</span> <span class="n">ax</span><span class="p">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span>
+                      <span class="n">shading</span><span class="o">=</span><span class="s">'auto'</span><span class="p">,</span>
+                      <span class="n">cmap</span><span class="o">=</span><span class="n">freq_info</span><span class="p">[</span><span class="s">'color'</span><span class="p">],</span>
+                      <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+                      <span class="n">vmin</span><span class="o">=-</span><span class="mi">120</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=-</span><span class="mi">60</span><span class="p">)</span>
+  <span class="n">plt</span><span class="p">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">coverage</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'RSRP (dBm)'</span><span class="p">)</span>
+</code></pre></div>    </div>
+
+    <ul>
+      <li>셀과 UE 시각화</li>
+    </ul>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1"># 셀 표시
+</span>  <span class="n">ax</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">pos</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pos</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+        <span class="n">c</span><span class="o">=</span><span class="p">[</span><span class="n">color</span><span class="p">],</span>
+        <span class="n">marker</span><span class="o">=</span><span class="s">'^'</span><span class="p">,</span>
+        <span class="n">s</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span>
+        <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s">'Cell </span><span class="si">{</span><span class="n">cell</span><span class="p">.</span><span class="n">i</span><span class="si">}</span><span class="s">'</span><span class="p">,</span>
+        <span class="n">edgecolors</span><span class="o">=</span><span class="s">'black'</span><span class="p">,</span>
+        <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+
+  <span class="c1"># UE 표시
+</span>  <span class="n">ax</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">pos</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pos</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+          <span class="n">c</span><span class="o">=</span><span class="p">[</span><span class="n">color</span><span class="p">],</span>
+          <span class="n">marker</span><span class="o">=</span><span class="s">'o'</span><span class="p">,</span>
+          <span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+          <span class="n">edgecolors</span><span class="o">=</span><span class="s">'black'</span><span class="p">,</span>
+          <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+          <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+</ul>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="sim" /><summary type="html"><![CDATA[**Date**: 2024.12.26, **Tag**: [Offloading], [Patent], [Multi Frequency Band]]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/sim/phase1/sim.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/sim/phase1/sim.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">오프로딩 시뮬레이터 - Helper</title><link href="http://localhost:4000/blog/sim/2024-12-26-offloading-helper/" rel="alternate" type="text/html" title="오프로딩 시뮬레이터 - Helper" /><published>2024-12-26T00:00:00+09:00</published><updated>2024-12-26T00:00:00+09:00</updated><id>http://localhost:4000/blog/sim/offloading-helper</id><content type="html" xml:base="http://localhost:4000/blog/sim/2024-12-26-offloading-helper/"><![CDATA[<!--more-->
+
+<ul class="large-only" id="markdown-toc">
+  <li><a href="#5g-셀-시뮬레이터-구현-가이드-utilshleperpy" id="markdown-toc-5g-셀-시뮬레이터-구현-가이드-utilshleperpy">5G 셀 시뮬레이터 구현 가이드: <code class="language-plaintext highlighter-rouge">utils/hleper.py</code></a>    <ul>
+      <li><a href="#1-아키텍쳐-개요" id="markdown-toc-1-아키텍쳐-개요">1. 아키텍쳐 개요</a></li>
+      <li><a href="#2-코드-설명" id="markdown-toc-2-코드-설명">2. 코드 설명</a>        <ul>
+          <li><a href="#1-logger-setup" id="markdown-toc-1-logger-setup">1. Logger Setup</a></li>
+          <li><a href="#2-geometric-utilities" id="markdown-toc-2-geometric-utilities">2. Geometric Utilities</a></li>
+          <li><a href="#3-signal-processing" id="markdown-toc-3-signal-processing">3. Signal Processing</a></li>
+          <li><a href="#4-data-management" id="markdown-toc-4-data-management">4. Data Management</a></li>
+          <li><a href="#5-network-analysis" id="markdown-toc-5-network-analysis">5. Network Analysis</a></li>
+          <li><a href="#6-grid-generation" id="markdown-toc-6-grid-generation">6. Grid Generation</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="5g-셀-시뮬레이터-구현-가이드-utilshleperpy">5G 셀 시뮬레이터 구현 가이드: <code class="language-plaintext highlighter-rouge">utils/hleper.py</code></h1>
+
+<h2 id="1-아키텍쳐-개요">1. 아키텍쳐 개요</h2>
+
+<p>helpers.py는 시뮬레이터 전반에서 사용되는 유틸리티 함수들을 제공함. 이 모듈은 다음과 같은 주요 컴포넌트들로 구성되어 있음.</p>
+
+<ul>
+  <li>Logger Setup: 로깅 시스템 설정 및 관리</li>
+  <li>Geometric Utilities: 3D 공간에서의 기하학적 계산</li>
+  <li>Signal Processing: 신호 처리 관련 유틸리티</li>
+  <li>Data Management: 데이터 저장 및 로드 기능</li>
+  <li>Network Analysis: 네트워크 성능 분석 도구</li>
+  <li>Grid Generation: 시뮬레이션 영역 내 위치 생성</li>
+</ul>
+
+<h2 id="2-코드-설명">2. 코드 설명</h2>
+
+<h3 id="1-logger-setup">1. Logger Setup</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">setup_logger</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">level</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s">'INFO'</span><span class="p">,</span>
+                <span class="n">log_file</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">logging</span><span class="p">.</span><span class="n">Logger</span><span class="p">:</span>
+    <span class="s">"""로깅 설정
+    
+    Parameters
+    ----------
+    name : str
+        로거 이름
+    level : str
+        로깅 레벨 ('DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL')
+    log_file : str, optional
+        로그 파일 경로
+        
+    Returns
+    -------
+    logging.Logger
+        설정된 로거 인스턴스
+    """</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">setup_logger</code>: 로깅 시스템 초기화
+    <ul>
+      <li>name: logger 이름 지정</li>
+      <li>level: logging 레벨 설정</li>
+      <li>log_fie: 파일 출력 설정</li>
+      <li>파일과 콘솔 동시 출력 지원</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="2-geometric-utilities">2. Geometric Utilities</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">calculate_distance</span><span class="p">(</span><span class="n">point1</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="n">ndarray</span><span class="p">,</span>
+                      <span class="n">point2</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">np</span><span class="p">.</span><span class="n">linalg</span><span class="p">.</span><span class="n">norm</span><span class="p">(</span><span class="n">point1</span> <span class="o">-</span> <span class="n">point2</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">calculate_angle</span><span class="p">(</span><span class="n">point1</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="n">ndarray</span><span class="p">,</span>
+                   <span class="n">point2</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
+    <span class="n">diff</span> <span class="o">=</span> <span class="n">point2</span> <span class="o">-</span> <span class="n">point1</span>
+    <span class="n">azimuth</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">diff</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">diff</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">r_xy</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">diff</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">diff</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">elevation</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">diff</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">r_xy</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">azimuth</span><span class="p">,</span> <span class="n">elevation</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">calculate_distance</code>: 3D 유클리드 거리 계산
+    <ul>
+      <li>numpy 배열 기반 효율적 계산</li>
+      <li>벡터화 연산 지원</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">calculate_angle</code>: 방위각과 고도각 계산
+    <ul>
+      <li>azimuth: XY평면에서의 각도</li>
+      <li>elevation: XY평면과 Z축 사이의 각도</li>
+      <li>라디안 단위 변환</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="3-signal-processing">3. Signal Processing</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">db_to_linear</span><span class="p">(</span><span class="n">db_value</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="k">return</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="n">db_value</span><span class="o">/</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">linear_to_db</span><span class="p">(</span><span class="n">linear_value</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="k">return</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">log10</span><span class="p">(</span><span class="n">linear_value</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">calculate_throughput</span><span class="p">(</span><span class="n">sinr</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+                        <span class="n">bandwidth</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+                        <span class="n">efficiency</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="n">capacity</span> <span class="o">=</span> <span class="n">bandwidth</span> <span class="o">*</span> <span class="n">efficiency</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">log2</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">db_to_linear</span><span class="p">(</span><span class="n">sinr</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">capacity</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">db_to_linear</code>, <code class="language-plaintext highlighter-rouge">linear_to_db</code>: 단위 변환
+    <ul>
+      <li>dB 값과 선형 값 사이의 변환</li>
+      <li>로그 스케일 처리</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">calculate_throughput</code>: 처리량 계산
+    <ul>
+      <li>SINR: Signal-to-Interference-and-Noise Ratio (dB)</li>
+      <li>bandwidth: 대역폭 (Hz)</li>
+      <li>efficiency: 스펙트럼 효율성 (0-1)</li>
+      <li>Shannon capacity formula 이용</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="4-data-management">4. Data Management</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">save_results</span><span class="p">(</span><span class="n">results</span><span class="p">:</span> <span class="n">Dict</span><span class="p">,</span>
+                <span class="n">filepath</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="s">"""시뮬레이션 결과를 JSON 형식으로 저장
+    
+    Parameters
+    ----------
+    results : dict
+        저장할 결과 데이터
+    filepath : str
+        저장 경로. '.json' 확장자가 없으면 자동으로 추가
+    """</span>
+    <span class="k">def</span> <span class="nf">convert_numpy</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">np</span><span class="p">.</span><span class="n">ndarray</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">obj</span><span class="p">.</span><span class="n">tolist</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="k">return</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">convert_numpy</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">obj</span><span class="p">.</span><span class="n">items</span><span class="p">()}</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+            <span class="k">return</span> <span class="p">[</span><span class="n">convert_numpy</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">obj</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">obj</span>
+    
+    <span class="c1"># NumPy 배열을 리스트로 변환
+</span>    <span class="n">results</span> <span class="o">=</span> <span class="n">convert_numpy</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+    
+    <span class="c1"># 파일 경로 처리
+</span>    <span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">path</span><span class="p">.</span><span class="n">suffix</span> <span class="o">!=</span> <span class="s">'.json'</span><span class="p">:</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="n">path</span><span class="p">.</span><span class="n">with_suffix</span><span class="p">(</span><span class="s">'.json'</span><span class="p">)</span>
+    
+    <span class="c1"># 부모 디렉토리 생성
+</span>    <span class="n">path</span><span class="p">.</span><span class="n">parent</span><span class="p">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    
+    <span class="c1"># JSON 파일로 저장
+</span>    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s">'w'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">'utf-8'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">json</span><span class="p">.</span><span class="n">dump</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">load_results</span><span class="p">(</span><span class="n">filepath</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
+    <span class="s">"""JSON 형식의 시뮬레이션 결과 로드
+    
+    Parameters
+    ----------
+    filepath : str
+        로드할 파일 경로
+        
+    Returns
+    -------
+    dict
+        결과 데이터
+    """</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">path</span><span class="p">.</span><span class="n">suffix</span> <span class="o">!=</span> <span class="s">'.json'</span><span class="p">:</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="n">path</span><span class="p">.</span><span class="n">with_suffix</span><span class="p">(</span><span class="s">'.json'</span><span class="p">)</span>
+        
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">path</span><span class="p">.</span><span class="n">exists</span><span class="p">():</span>
+        <span class="k">raise</span> <span class="nb">FileNotFoundError</span><span class="p">(</span><span class="sa">f</span><span class="s">"결과 파일을 찾을 수 없습니다: </span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+        
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s">'r'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">'utf-8'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">json</span><span class="p">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">save_results</code>: 시뮬레이션 결과 저장</p>
+
+    <ul>
+      <li>NumPy 배열 자동 변환</li>
+      <li>JSON 형식으로 저장</li>
+      <li>디렉토리 자동 생성</li>
+    </ul>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">load_results</code>: 저장된 결과 로드</p>
+
+    <ul>
+      <li>JSON 파일 로드</li>
+      <li>파일 존재 여부 검증</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="5-network-analysis">5. Network Analysis</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">calculate_network_metrics</span><span class="p">(</span><span class="n">cells</span><span class="p">:</span> <span class="n">List</span><span class="p">,</span>
+                            <span class="n">ues</span><span class="p">:</span> <span class="n">List</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
+    <span class="n">metrics</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s">'network_load'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s">'total_throughput'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s">'average_latency'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s">'energy_consumption'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s">'user_satisfaction'</span><span class="p">:</span> <span class="mi">0</span>
+    <span class="p">}</span>
+    
+    <span class="n">active_cells</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">cell</span> <span class="ow">in</span> <span class="n">cells</span><span class="p">:</span>
+        <span class="n">cell_metrics</span> <span class="o">=</span> <span class="n">cell</span><span class="p">.</span><span class="n">get_metrics</span><span class="p">()</span>
+        <span class="n">metrics</span><span class="p">[</span><span class="s">'network_load'</span><span class="p">]</span> <span class="o">+=</span> <span class="n">cell_metrics</span><span class="p">[</span><span class="s">'load'</span><span class="p">]</span>
+        <span class="n">metrics</span><span class="p">[</span><span class="s">'total_throughput'</span><span class="p">]</span> <span class="o">+=</span> <span class="n">cell_metrics</span><span class="p">[</span><span class="s">'throughput'</span><span class="p">]</span>
+        <span class="n">metrics</span><span class="p">[</span><span class="s">'energy_consumption'</span><span class="p">]</span> <span class="o">+=</span> <span class="n">cell_metrics</span><span class="p">[</span><span class="s">'energy'</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">cell_metrics</span><span class="p">[</span><span class="s">'load'</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">active_cells</span> <span class="o">+=</span> <span class="mi">1</span>
+            
+    <span class="k">if</span> <span class="n">active_cells</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">metrics</span><span class="p">[</span><span class="s">'network_load'</span><span class="p">]</span> <span class="o">/=</span> <span class="n">active_cells</span>
+
+    <span class="n">satisfied_users</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">ue</span> <span class="ow">in</span> <span class="n">ues</span> <span class="k">if</span> <span class="n">ue</span><span class="p">.</span><span class="n">get_qos_satisfaction</span><span class="p">()[</span><span class="s">'throughput'</span><span class="p">])</span>
+    <span class="k">if</span> <span class="n">ues</span><span class="p">:</span>
+        <span class="n">metrics</span><span class="p">[</span><span class="s">'user_satisfaction'</span><span class="p">]</span> <span class="o">=</span> <span class="n">satisfied_users</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">ues</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">metrics</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">calculate_network_metrics</code>: 네트워크 전체 성능 분석</p>
+
+    <ul>
+      <li>전체 네타워크 부하 계산</li>
+      <li>처리량 및 에너지 소비 분석</li>
+      <li>QoS 만족도 평가</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="6-grid-generation">6. Grid Generation</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">generate_grid_positions</span><span class="p">(</span><span class="n">area_bounds</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">np</span><span class="p">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">np</span><span class="p">.</span><span class="n">ndarray</span><span class="p">],</span>
+                          <span class="n">n_points</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="p">.</span><span class="n">ndarray</span><span class="p">:</span>
+    <span class="n">n_per_dim</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n_points</span><span class="p">)))</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">area_bounds</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">area_bounds</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">n_per_dim</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">area_bounds</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">area_bounds</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">n_per_dim</span><span class="p">)</span>
+    
+    <span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+    <span class="n">positions</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">stack</span><span class="p">([</span><span class="n">X</span><span class="p">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="n">Y</span><span class="p">.</span><span class="n">flatten</span><span class="p">(),</span> 
+                         <span class="n">np</span><span class="p">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">X</span><span class="p">.</span><span class="n">flatten</span><span class="p">())],</span> <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">positions</span><span class="p">[:</span><span class="n">n_points</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">generate_timestamp</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">datetime</span><span class="p">.</span><span class="n">now</span><span class="p">().</span><span class="n">strftime</span><span class="p">(</span><span class="s">'%Y%m%d_%H%M%S'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">generate_grid_positions</code>: 균일 그리드 위치 생성
+    <ul>
+      <li>area_bounds: 시뮬레이션 영역 경계</li>
+      <li>n_points: 생성할 포인트 수</li>
+      <li>2D 평면에 균일하게 분포된 위치 생성</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">generate_timestamp</code>: 타임스탬프 생성
+    <ul>
+      <li>YYYYMMDD_HHMMSS 형식</li>
+      <li>파일명이나 로그에 사용</li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="sim" /><summary type="html"><![CDATA[**Date**: 2024.12.26, **Tag**: [Offloading], [Patent], [Multi Frequency Band]]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/sim/phase1/sim.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/sim/phase1/sim.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">오프로딩 시뮬레이터 - Collector</title><link href="http://localhost:4000/blog/sim/2024-12-26-offloading-pathloss/" rel="alternate" type="text/html" title="오프로딩 시뮬레이터 - Collector" /><published>2024-12-26T00:00:00+09:00</published><updated>2024-12-26T00:00:00+09:00</updated><id>http://localhost:4000/blog/sim/offloading-pathloss</id><content type="html" xml:base="http://localhost:4000/blog/sim/2024-12-26-offloading-pathloss/"><![CDATA[<!--more-->
+
+<ul class="large-only" id="markdown-toc">
+  <li><a href="#5g-셀-시뮬레이터-구현-가이드-trafficcollectorsfrequency_collectorpy" id="markdown-toc-5g-셀-시뮬레이터-구현-가이드-trafficcollectorsfrequency_collectorpy">5G 셀 시뮬레이터 구현 가이드: <code class="language-plaintext highlighter-rouge">traffic/collectors/frequency_collector.py</code></a>    <ul>
+      <li><a href="#1-아키텍쳐-개요" id="markdown-toc-1-아키텍쳐-개요">1. 아키텍쳐 개요</a>        <ul>
+          <li><a href="#11-핵심-구조" id="markdown-toc-11-핵심-구조">1.1 핵심 구조</a></li>
+          <li><a href="#12-주요-컴포넌트" id="markdown-toc-12-주요-컴포넌트">1.2 주요 컴포넌트</a></li>
+          <li><a href="#13-데이터-흐름" id="markdown-toc-13-데이터-흐름">1.3 데이터 흐름</a></li>
+        </ul>
+      </li>
+      <li><a href="#2-코드-설명" id="markdown-toc-2-코드-설명">2. 코드 설명</a>        <ul>
+          <li><a href="#21-basecollector-클래스" id="markdown-toc-21-basecollector-클래스">2.1 BaseCollector 클래스</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="5g-셀-시뮬레이터-구현-가이드-trafficcollectorsfrequency_collectorpy">5G 셀 시뮬레이터 구현 가이드: <code class="language-plaintext highlighter-rouge">traffic/collectors/frequency_collector.py</code></h1>
+
+<h2 id="1-아키텍쳐-개요">1. 아키텍쳐 개요</h2>
+
+<h3 id="11-핵심-구조">1.1 핵심 구조</h3>
+<ul>
+  <li>추상 기본 클래스(BaseCollector)를 중심으로 한 계층적 설계</li>
+  <li>구체적인 수집기들이 BaseCollector를 상속받아 구현</li>
+  <li>모듈식 구조로 새로운 수집기 타입 확장 용이</li>
+</ul>
+
+<h3 id="12-주요-컴포넌트">1.2 주요 컴포넌트</h3>
+<ul>
+  <li>BaseCollector: 데이터 수집의 기본 프레임워크 제공
+    <ul>
+      <li>공통 속성 및 메서드 정의</li>
+      <li>데이터 버퍼링 메커니즘 구현</li>
+      <li>수집 주기 관리 기능</li>
+    </ul>
+  </li>
+  <li>FrequencyCollector: 주파수 관련 데이터 수집 담당
+    <ul>
+      <li>Resource Block 사용률 모니터링</li>
+      <li>UE 연결 상태 추적</li>
+      <li>처리량 계산 및 기록</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="13-데이터-흐름">1.3 데이터 흐름</h3>
+<ul>
+  <li>실시간 데이터 수집 $\rightarrow$ 임시 버퍼 저장 $\rightarrow$ 구조화된 데이터 형태로 변환</li>
+  <li>시계열 데이터 형식으로 타임스탬프 정보 포함</li>
+  <li>주기적인 데이터 수집 및 저장 보장</li>
+</ul>
+
+<h2 id="2-코드-설명">2. 코드 설명</h2>
+
+<h3 id="21-basecollector-클래스">2.1 BaseCollector 클래스</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">BaseCollector</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sampling_interval</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">sampling_interval</span> <span class="o">=</span> <span class="n">sampling_interval</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">last_collection_time</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">_buffer</span> <span class="o">=</span> <span class="p">[]</span>
+</code></pre></div></div>
+
+<ul>
+  <li>초기화 부분은 데이터 수집의 기본 설정을 담당</li>
+  <li><code class="language-plaintext highlighter-rouge">sampling_interval</code>: 데이터 수집 주기 설정 (기본값 10초)</li>
+  <li><code class="language-plaintext highlighter-rouge">last_collection_time</code>: 마지막 데이터 수집 시간 추적</li>
+  <li><code class="language-plaintext highlighter-rouge">_buffer</code>: 수집된 데이터를 임시 저장하는 리스트</li>
+</ul>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="sim" /><summary type="html"><![CDATA[**Date**: 2024.12.26, **Tag**: [Offloading], [Patent], [Multi Frequency Band]]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/sim/phase1/sim.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/sim/phase1/sim.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">오프로딩 시뮬레이터 - MME</title><link href="http://localhost:4000/blog/sim/2024-12-24-offloading-mme/" rel="alternate" type="text/html" title="오프로딩 시뮬레이터 - MME" /><published>2024-12-24T00:00:00+09:00</published><updated>2024-12-24T00:00:00+09:00</updated><id>http://localhost:4000/blog/sim/offloading-mme</id><content type="html" xml:base="http://localhost:4000/blog/sim/2024-12-24-offloading-mme/"><![CDATA[<!--more-->
+
+<ul class="large-only" id="markdown-toc">
+  <li><a href="#5g-셀-시뮬레이터-구현-가이드-componentsmmepy" id="markdown-toc-5g-셀-시뮬레이터-구현-가이드-componentsmmepy">5G 셀 시뮬레이터 구현 가이드: <code class="language-plaintext highlighter-rouge">components/mme.py</code></a>    <ul>
+      <li><a href="#1-아키텍쳐-개요" id="markdown-toc-1-아키텍쳐-개요">1. 아키텍쳐 개요</a></li>
+      <li><a href="#2-코드-설명" id="markdown-toc-2-코드-설명">2. 코드 설명</a>        <ul>
+          <li><a href="#1-클래스-초기화" id="markdown-toc-1-클래스-초기화">1. 클래스 초기화</a></li>
+          <li><a href="#2-핸드오버-실행-로직" id="markdown-toc-2-핸드오버-실행-로직">2. 핸드오버 실행 로직</a></li>
+          <li><a href="#3-핑퐁-방지-메커니즘" id="markdown-toc-3-핑퐁-방지-메커니즘">3. 핑퐁 방지 메커니즘</a></li>
+          <li><a href="#4-qos-검증" id="markdown-toc-4-qos-검증">4. QoS 검증</a></li>
+          <li><a href="#5-핸드오버-실행-및-기록" id="markdown-toc-5-핸드오버-실행-및-기록">5. 핸드오버 실행 및 기록</a></li>
+          <li><a href="#6-통계-및-분석" id="markdown-toc-6-통계-및-분석">6. 통계 및 분석</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="5g-셀-시뮬레이터-구현-가이드-componentsmmepy">5G 셀 시뮬레이터 구현 가이드: <code class="language-plaintext highlighter-rouge">components/mme.py</code></h1>
+
+<h2 id="1-아키텍쳐-개요">1. 아키텍쳐 개요</h2>
+
+<p>MME(Mobility Management Entity)는 5G 네트워크의 핵심 구성 요소로, 사용자 장비(UE)의 이동성과 연결성을 관리하는 중요한 역할을 담당함. 본 시뮬레이터에서 구현한 MME는 다음과 같은 주요 기능을 제공함</p>
+
+<ul>
+  <li>UE의 핸드오버 관리</li>
+  <li>셀 간 이동성 최적화</li>
+  <li>핸드오버 이력 추적 및 분석</li>
+  <li>핑퐁 효과 방지</li>
+  <li>QoS(Quality of Service) 보장</li>
+</ul>
+
+<h2 id="2-코드-설명">2. 코드 설명</h2>
+
+<h3 id="1-클래스-초기화">1. 클래스 초기화</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sim</span><span class="p">,</span> <span class="n">interval</span><span class="o">=</span><span class="mf">10.0</span><span class="p">,</span> 
+             <span class="n">strategy</span><span class="o">=</span><span class="s">'strongest_cell_simple_pathloss_model'</span><span class="p">,</span>
+             <span class="n">anti_pingpong</span><span class="o">=</span><span class="mf">30.0</span><span class="p">,</span> <span class="n">verbosity</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">sim</span> <span class="o">=</span> <span class="n">sim</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">interval</span> <span class="o">=</span> <span class="n">interval</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">strategy</span> <span class="o">=</span> <span class="n">strategy</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">anti_pingpong</span> <span class="o">=</span> <span class="n">anti_pingpong</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">verbosity</span> <span class="o">=</span> <span class="n">verbosity</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">handover_history</span> <span class="o">=</span> <span class="p">{}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>sim: 시뮬레이터 인스턴스를 참조하여 전체 네트워크 상태에 접근</li>
+  <li>interval: 핸드오버 체크 주기를 결정(기본값 10초)</li>
+  <li>strategy: 핸드오버 결정 전략 선택</li>
+  <li>anti_pingpong: 핑퐁 현상 방지를 위한 시간 간격</li>
+  <li>handover_history: UE별 핸드오버 이력 저장용 딕셔너리</li>
+</ul>
+
+<h3 id="2-핸드오버-실행-로직">2. 핸드오버 실행 로직</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">do_handovers</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">ue</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">sim</span><span class="p">.</span><span class="n">U직s</span><span class="p">:</span>
+        <span class="n">current_cell</span> <span class="o">=</span> <span class="n">ue</span><span class="p">.</span><span class="n">get_serving_cell</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">current_cell</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">continue</span>
+            
+        <span class="n">target_cell_i</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">sim</span><span class="p">.</span><span class="n">get_strongest_cell_simple_pathloss_model</span><span class="p">(</span><span class="n">ue</span><span class="p">.</span><span class="n">xyz</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">target_cell_i</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">continue</span>
+            
+        <span class="n">target_cell</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">sim</span><span class="p">.</span><span class="n">cells</span><span class="p">[</span><span class="n">target_cell_i</span><span class="p">]</span>
+        
+        <span class="k">if</span> <span class="n">target_cell</span><span class="p">.</span><span class="n">i</span> <span class="o">!=</span> <span class="n">current_cell</span><span class="p">.</span><span class="n">i</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">check_pingpong</span><span class="p">(</span><span class="n">ue</span><span class="p">.</span><span class="n">i</span><span class="p">,</span> <span class="n">current_cell</span><span class="p">.</span><span class="n">i</span><span class="p">,</span> <span class="n">target_cell</span><span class="p">.</span><span class="n">i</span><span class="p">):</span>
+                <span class="k">continue</span>
+                
+            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="p">.</span><span class="n">check_target_cell_quality</span><span class="p">(</span><span class="n">target_cell</span><span class="p">,</span> <span class="n">ue</span><span class="p">):</span>
+                <span class="k">continue</span>
+                
+            <span class="bp">self</span><span class="p">.</span><span class="n">execute_handover</span><span class="p">(</span><span class="n">ue</span><span class="p">,</span> <span class="n">current_cell</span><span class="p">,</span> <span class="n">target_cell</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>모든 UE에 대해 주기적으로 핸드오버 필요성 검사</li>
+  <li>현재 셀과 잠재적 타겟 셀의 신호 강도 비교</li>
+  <li>핑퐁 현상 방지를 위한 검증 수행</li>
+  <li>타겟 셀의 QoS 제공 능력 확인</li>
+  <li>모든 조건 만족 시 핸드오버 실행</li>
+</ul>
+
+<h3 id="3-핑퐁-방지-메커니즘">3. 핑퐁 방지 메커니즘</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">check_pingpong</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ue_id</span><span class="p">,</span> <span class="n">current_cell_i</span><span class="p">,</span> <span class="n">target_cell_i</span><span class="p">):</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">anti_pingpong</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">False</span>
+            
+    <span class="k">if</span> <span class="n">ue_id</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">handover_history</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">False</span>
+            
+    <span class="n">history</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">handover_history</span><span class="p">[</span><span class="n">ue_id</span><span class="p">]</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">history</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">False</span>
+            
+    <span class="n">last_time</span><span class="p">,</span> <span class="n">from_cell</span><span class="p">,</span> <span class="n">to_cell</span> <span class="o">=</span> <span class="n">history</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">current_time</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">sim</span><span class="p">.</span><span class="n">env</span><span class="p">.</span><span class="n">now</span>
+        
+    <span class="k">if</span> <span class="p">(</span><span class="n">current_time</span> <span class="o">-</span> <span class="n">last_time</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="p">.</span><span class="n">anti_pingpong</span> <span class="ow">and</span>
+        <span class="p">((</span><span class="n">from_cell</span> <span class="o">==</span> <span class="n">target_cell_i</span> <span class="ow">and</span> <span class="n">to_cell</span> <span class="o">==</span> <span class="n">current_cell_i</span><span class="p">)</span> <span class="ow">or</span>
+         <span class="p">(</span><span class="n">from_cell</span> <span class="o">==</span> <span class="n">current_cell_i</span> <span class="ow">and</span> <span class="n">to_cell</span> <span class="o">==</span> <span class="n">target_cell_i</span><span class="p">))):</span>
+        <span class="k">return</span> <span class="bp">True</span>
+            
+    <span class="k">return</span> <span class="bp">False</span>
+</code></pre></div></div>
+
+<ul>
+  <li>최근 핸드오버 이력 확인</li>
+  <li>anti_pingpong 시간 내의 역방향 핸드오버 방지</li>
+  <li>UE별 개별 이력 관리</li>
+  <li>시간 기반의 핑퐁 방지 로직 구현</li>
+</ul>
+
+<h3 id="4-qos-검증">4. QoS 검증</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">check_target_cell_quality</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target_cell</span><span class="p">,</span> <span class="n">ue</span><span class="p">):</span>
+    <span class="n">target_rsrp</span> <span class="o">=</span> <span class="n">target_cell</span><span class="p">.</span><span class="n">get_rsrp</span><span class="p">(</span><span class="n">ue</span><span class="p">.</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">target_rsrp</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">110</span><span class="p">:</span>  <span class="c1"># -110 dBm 임계값
+</span>        <span class="k">return</span> <span class="bp">False</span>
+            
+    <span class="k">for</span> <span class="n">freq</span> <span class="ow">in</span> <span class="n">target_cell</span><span class="p">.</span><span class="n">freq_config</span><span class="p">:</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">target_cell</span><span class="p">.</span><span class="n">freq_config</span><span class="p">[</span><span class="n">freq</span><span class="p">][</span><span class="s">'active'</span><span class="p">]</span> <span class="ow">and</span> 
+            <span class="n">target_cell</span><span class="p">.</span><span class="n">get_frequency_load</span><span class="p">(</span><span class="n">freq</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">0.9</span><span class="p">):</span>
+            <span class="k">return</span> <span class="bp">True</span>
+                
+    <span class="k">return</span> <span class="bp">False</span>
+</code></pre></div></div>
+
+<ul>
+  <li>타겟 셀의 RSRP(Reference Signal Received Power) 검사</li>
+  <li>주파수별 부하 상태 확인</li>
+  <li>QoS 임계값 기반 검증</li>
+  <li>리소스 가용성 확인</li>
+</ul>
+
+<h3 id="5-핸드오버-실행-및-기록">5. 핸드오버 실행 및 기록</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">execute_handover</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ue</span><span class="p">,</span> <span class="n">source_cell</span><span class="p">,</span> <span class="n">target_cell</span><span class="p">):</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">verbosity</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'Handover UE[</span><span class="si">{</span><span class="n">ue</span><span class="p">.</span><span class="n">i</span><span class="si">}</span><span class="s">] from Cell[</span><span class="si">{</span><span class="n">source_cell</span><span class="p">.</span><span class="n">i</span><span class="si">}</span><span class="s">] to Cell[</span><span class="si">{</span><span class="n">target_cell</span><span class="p">.</span><span class="n">i</span><span class="si">}</span><span class="s">]'</span><span class="p">,</span>
+              <span class="nb">file</span><span class="o">=</span><span class="n">stderr</span><span class="p">)</span>
+            
+    <span class="n">ue</span><span class="p">.</span><span class="n">detach</span><span class="p">()</span>
+    <span class="n">ue</span><span class="p">.</span><span class="n">attach</span><span class="p">(</span><span class="n">target_cell</span><span class="p">)</span>
+        
+    <span class="k">if</span> <span class="n">ue</span><span class="p">.</span><span class="n">i</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">handover_history</span><span class="p">:</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">handover_history</span><span class="p">[</span><span class="n">ue</span><span class="p">.</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">deque</span><span class="p">(</span><span class="n">maxlen</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">handover_history</span><span class="p">[</span><span class="n">ue</span><span class="p">.</span><span class="n">i</span><span class="p">].</span><span class="n">append</span><span class="p">(</span>
+        <span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">sim</span><span class="p">.</span><span class="n">env</span><span class="p">.</span><span class="n">now</span><span class="p">,</span> <span class="n">source_cell</span><span class="p">.</span><span class="n">i</span><span class="p">,</span> <span class="n">target_cell</span><span class="p">.</span><span class="n">i</span><span class="p">)</span>
+    <span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>UE의 현재 셀 연결 해제</li>
+  <li>새로운 셀에 UE 연결</li>
+  <li>핸드오버 이력 기록</li>
+  <li>디버깅 정보 출력 (verbosity 설정 시)
+석
+    <h3 id="6-통계-및-분석">6. 통계 및 분석</h3>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get_handover_stats</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="n">stats</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">ue_id</span><span class="p">,</span> <span class="n">history</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">handover_history</span><span class="p">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">stats</span><span class="p">[</span><span class="n">ue_id</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s">'total_handovers'</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">history</span><span class="p">),</span>
+            <span class="s">'last_handover_time'</span><span class="p">:</span> <span class="n">history</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="n">history</span> <span class="k">else</span> <span class="bp">None</span><span class="p">,</span>
+            <span class="s">'frequent_transitions'</span><span class="p">:</span> <span class="bp">self</span><span class="p">.</span><span class="n">get_frequent_transitions</span><span class="p">(</span><span class="n">history</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="k">return</span> <span class="n">stats</span>
+</code></pre></div></div>
+
+<ul>
+  <li>UE별 총 핸드오버 횟수 집계</li>
+  <li>마지막 핸드오버 시간 기록</li>
+  <li>빈번한 전환 패턴 분석</li>
+  <li>네트워크 최적화를 위한 통계 데이터 제공</li>
+</ul>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="sim" /><summary type="html"><![CDATA[**Date**: 2024.12.24, **Tag**: [Offloading], [Patent], [Multi Frequency Band]]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/green_ai/green-ai.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/green_ai/green-ai.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">오프로딩 시뮬레이터 - RIC</title><link href="http://localhost:4000/blog/sim/2024-12-24-offloading-ric/" rel="alternate" type="text/html" title="오프로딩 시뮬레이터 - RIC" /><published>2024-12-24T00:00:00+09:00</published><updated>2024-12-24T00:00:00+09:00</updated><id>http://localhost:4000/blog/sim/offloading-ric</id><content type="html" xml:base="http://localhost:4000/blog/sim/2024-12-24-offloading-ric/"><![CDATA[<!--more-->
+
+<ul class="large-only" id="markdown-toc">
+  <li><a href="#5g-셀-시뮬레이터-구현-가이드-componentsricpy" id="markdown-toc-5g-셀-시뮬레이터-구현-가이드-componentsricpy">5G 셀 시뮬레이터 구현 가이드: <code class="language-plaintext highlighter-rouge">components/ric.py</code></a>    <ul>
+      <li><a href="#아키텍쳐-개요" id="markdown-toc-아키텍쳐-개요">아키텍쳐 개요</a></li>
+      <li><a href="#코드-설명" id="markdown-toc-코드-설명">코드 설명</a>        <ul>
+          <li><a href="#1-storage-manager" id="markdown-toc-1-storage-manager">1. Storage Manager</a></li>
+          <li><a href="#2-experience-collector" id="markdown-toc-2-experience-collector">2. Experience Collector</a></li>
+          <li><a href="#3-priority-calculator" id="markdown-toc-3-priority-calculator">3. Priority Calculator</a></li>
+          <li><a href="#4-batch-generator" id="markdown-toc-4-batch-generator">4. Batch Generator</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="5g-셀-시뮬레이터-구현-가이드-componentsricpy">5G 셀 시뮬레이터 구현 가이드: <code class="language-plaintext highlighter-rouge">components/ric.py</code></h1>
+
+<h2 id="아키텍쳐-개요">아키텍쳐 개요</h2>
+
+<p>RIC.py는 강화학습을 위한 경험 수집기(Experience Collector) 역할을 한다. 이 모듈은 다음과 같은 주요 컴포넌트들로 구성되어 있다.</p>
+
+<ul>
+  <li><strong>Storage Manager</strong>: 경험 데이터의 저장과 관리를 담당하는 컴포넌트</li>
+  <li><strong>Experience Collector</strong>: 에이전트의 행동과 환경으로부터의 피드백을 수집하는 핵심 컴포넌트</li>
+  <li><strong>Priority Calculator</strong>: 경험의 중요도를 계산하고 우선수위를 결정하는 컴포넌트</li>
+  <li><strong>Batch Generator</strong>: 학습을 위한 미니배치를 생성하는 컴포넌트</li>
+</ul>
+
+<h2 id="코드-설명">코드 설명</h2>
+
+<h3 id="1-storage-manager">1. Storage Manager</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">StorageManager</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">capacity</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">capacity</span> <span class="o">=</span> <span class="n">capacity</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">memory</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">position</span> <span class="o">=</span> <span class="mi">0</span>
+        
+    <span class="k">def</span> <span class="nf">push</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">experience</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">memory</span><span class="p">)</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="p">.</span><span class="n">capacity</span><span class="p">:</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">memory</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="bp">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">memory</span><span class="p">[</span><span class="bp">self</span><span class="p">.</span><span class="n">position</span><span class="p">]</span> <span class="o">=</span> <span class="n">experience</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">position</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">position</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="bp">self</span><span class="p">.</span><span class="n">capacity</span>
+        
+    <span class="k">def</span> <span class="nf">sample</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">random</span><span class="p">.</span><span class="n">sample</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">memory</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">)</span>
+</code></pre></div></div>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">__init__</code>: 저장소 초기화
+    <ul>
+      <li>capacity 파라미터로 최대 저장 용량을 설정</li>
+      <li>memory 리스트로 실제 경험 데이터를 저장</li>
+      <li>position은 circular buffer에서 현재 위치를 추적</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">push</code>: 새로운 경험 저장
+    <ul>
+      <li>용량이 남아있으면 새로운 공간 할당</li>
+      <li>circular buffer 방식으로 오래된 데이터를 새로운 데이터로 대체</li>
+      <li>position을 순환적으로 업데이트</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">sample</code>: 배치 샘플링
+    <ul>
+      <li>random.sample을 사용하여 무작위로 배치 크기만큼의 경험을 추출</li>
+      <li>중복 없는 샘플링 보장</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="2-experience-collector">2. Experience Collector</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ExperienceCollector</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">storage_manager</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">storage</span> <span class="o">=</span> <span class="n">storage_manager</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">current_episode</span> <span class="o">=</span> <span class="p">[]</span>
+        
+    <span class="k">def</span> <span class="nf">add_experience</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="n">action</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">next_state</span><span class="p">,</span> <span class="n">done</span><span class="p">):</span>
+        <span class="n">experience</span> <span class="o">=</span> <span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">action</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">next_state</span><span class="p">,</span> <span class="n">done</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">current_episode</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">experience</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">episode_end</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">exp</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">current_episode</span><span class="p">:</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">storage</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">exp</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">current_episode</span> <span class="o">=</span> <span class="p">[]</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">__init__</code>: 컬렉터 초기화
+    <ul>
+      <li>storage_manager 참조를 저장</li>
+      <li>current_episode 리스트로 현재 에피소드의 경험을 임시 저장</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">add_experience</code>: 새로운 경험 추가
+    <ul>
+      <li>state, action, reward, next_state, done 정보를 튜플로 패키징</li>
+      <li>현재 에피소드 리스트에 임시 저장</li>
+      <li>메모리 효율을 위해 numpy 배열 사용 권장</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">episode_end</code>: 에피소드 종료 처리
+    <ul>
+      <li>현재 에피소드의 모든 경험을 storage에 저장</li>
+      <li>current_episode 리스트 초기화</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="3-priority-calculator">3. Priority Calculator</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">PriorityCalculator</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">beta</span><span class="o">=</span><span class="mf">0.4</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">alpha</span> <span class="o">=</span> <span class="n">alpha</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">beta</span> <span class="o">=</span> <span class="n">beta</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">priorities</span> <span class="o">=</span> <span class="p">[]</span>
+        
+    <span class="k">def</span> <span class="nf">update_priorities</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">indices</span><span class="p">,</span> <span class="n">errors</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">error</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">indices</span><span class="p">,</span> <span class="n">errors</span><span class="p">):</span>
+            <span class="n">priority</span> <span class="o">=</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="o">+</span> <span class="mf">1e-5</span><span class="p">)</span> <span class="o">**</span> <span class="bp">self</span><span class="p">.</span><span class="n">alpha</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">priorities</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">priority</span>
+            
+    <span class="k">def</span> <span class="nf">get_sampling_probabilities</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">probs</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">priorities</span><span class="p">)</span> <span class="o">**</span> <span class="bp">self</span><span class="p">.</span><span class="n">alpha</span>
+        <span class="n">probs</span> <span class="o">=</span> <span class="n">probs</span> <span class="o">/</span> <span class="nb">sum</span><span class="p">(</span><span class="n">probs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">probs</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">__init__</code>: 우선순위 계산기 초기화
+    <ul>
+      <li>alpha: 우선숭뉘 계산에 사용되는 지수 파라미터</li>
+      <li>beta: 중요도 샘플링 보정에 사용되는 파라미터</li>
+      <li>priorities: 각 경험의 우선순위를 저장하는 리스트</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">update_priorities</code>: 우선순위 업데이트
+    <ul>
+      <li>TD-error를 기반으로 우선순위 계산</li>
+      <li>작은 상수를 더해 0 우선순위 방지</li>
+      <li>alpha 파라미터로 우선순위 스케일 조정</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">get_sampling_probabilities</code>: 샘플링 확률 계산
+    <ul>
+      <li>우선순위를 확률로 변환</li>
+      <li>전체 합이 1이 되도록 정규화</li>
+      <li>numpy 배열 사용으로 계산 효율성 확보</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="4-batch-generator">4. Batch Generator</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">BatchGenerator</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">storage_manager</span><span class="p">,</span> <span class="n">priority_calculator</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">storage</span> <span class="o">=</span> <span class="n">storage_manager</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">priority_calc</span> <span class="o">=</span> <span class="n">priority_calculator</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">batch_size</span> <span class="o">=</span> <span class="n">batch_size</span>
+        
+    <span class="k">def</span> <span class="nf">generate_batch</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">probss</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">priority_calc</span><span class="p">.</span><span class="n">get_sampling_probabilities</span><span class="p">()</span>
+        <span class="n">indices</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">choice</span><span class="p">(</span>
+            <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">storage</span><span class="p">.</span><span class="n">memory</span><span class="p">),</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">batch_size</span><span class="p">,</span>
+            <span class="n">p</span><span class="o">=</span><span class="n">probs</span>
+        <span class="p">)</span>
+        <span class="n">experiences</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="p">.</span><span class="n">storage</span><span class="p">.</span><span class="n">memory</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">indices</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">experiences</span><span class="p">,</span> <span class="n">indices</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">__init__</code>: 배치 생성기 초기화
+    <ul>
+      <li>storage_manager: 경험 저장소 참조</li>
+      <li>priority_calculator: 우선순위 계산기 참조</li>
+      <li>batch_size: 생성할 배치의 크기</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">generate_batch</code>: 배치 생성
+    <ul>
+      <li>우선순위 기반 확률 계산</li>
+      <li>numpy.random.choice로 우선순위에 따른 샘플링</li>
+      <li>선택된 인덱스의 경험들을 배치로 구성</li>
+      <li>인덱스도 함께 반환하여 우선순위 업데이트 가능</li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="sim" /><summary type="html"><![CDATA[**Date**: 2024.12.24, **Tag**: [Offloading], [Patent], [Multi Frequency Band]]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/green_ai/green-ai.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/green_ai/green-ai.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">오프로딩 시뮬레이터 - Scenario</title><link href="http://localhost:4000/blog/sim/2024-12-24-offloading-scenario/" rel="alternate" type="text/html" title="오프로딩 시뮬레이터 - Scenario" /><published>2024-12-24T00:00:00+09:00</published><updated>2024-12-24T00:00:00+09:00</updated><id>http://localhost:4000/blog/sim/offloading-scenario</id><content type="html" xml:base="http://localhost:4000/blog/sim/2024-12-24-offloading-scenario/"><![CDATA[<!--more-->
+
+<ul class="large-only" id="markdown-toc">
+  <li><a href="#5g-셀-시뮬레이터-구현-가이드-componentsscenariopy" id="markdown-toc-5g-셀-시뮬레이터-구현-가이드-componentsscenariopy">5G 셀 시뮬레이터 구현 가이드: <code class="language-plaintext highlighter-rouge">components/scenario.py</code></a>    <ul>
+      <li><a href="#아키텍쳐-개요" id="markdown-toc-아키텍쳐-개요">아키텍쳐 개요</a></li>
+      <li><a href="#코드-설명" id="markdown-toc-코드-설명">코드 설명</a>        <ul>
+          <li><a href="#1-데이터-클래스" id="markdown-toc-1-데이터-클래스">1. 데이터 클래스</a></li>
+          <li><a href="#2-시나리오-클래스-초기화" id="markdown-toc-2-시나리오-클래스-초기화">2. 시나리오 클래스 초기화</a></li>
+          <li><a href="#3-설정-파일-처리" id="markdown-toc-3-설정-파일-처리">3. 설정 파일 처리</a></li>
+          <li><a href="#4-설정-검증" id="markdown-toc-4-설정-검증">4. 설정 검증</a></li>
+          <li><a href="#5-이벤트-관리" id="markdown-toc-5-이벤트-관리">5. 이벤트 관리</a></li>
+          <li><a href="#6-참고-문헌" id="markdown-toc-6-참고-문헌">6. 참고 문헌</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="5g-셀-시뮬레이터-구현-가이드-componentsscenariopy">5G 셀 시뮬레이터 구현 가이드: <code class="language-plaintext highlighter-rouge">components/scenario.py</code></h1>
+
+<h2 id="아키텍쳐-개요">아키텍쳐 개요</h2>
+<p>Scenario 모듈은 시뮬레이션 시나리오의 생성, 관리 및 실행을 담당함. 이 모듈은 두 개의 중 데이터 클래스(UEConfig, CellConfig)와 하나의 메인 클래스(Scenario)로 구성되어 있으며, YAML 또는 Json 형식의 설정 파일을 통해 시나리오를 정의하고 관리한다.</p>
+
+<h2 id="코드-설명">코드 설명</h2>
+
+<h3 id="1-데이터-클래스">1. 데이터 클래스</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">@</span><span class="n">dataclass</span>
+<span class="k">class</span> <span class="nc">UEConfig</span><span class="p">:</span>
+    <span class="n">initial_positions</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="n">ndarray</span>
+    <span class="n">movement_patterns</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Dict</span><span class="p">]</span>
+    <span class="n">traffic_patterns</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Dict</span><span class="p">]</span>
+    <span class="n">service_requirements</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span>
+
+<span class="o">@</span><span class="n">dataclass</span>
+<span class="k">class</span> <span class="nc">CellConfig</span><span class="p">:</span>
+    <span class="n">positions</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="n">ndarray</span>
+    <span class="n">frequencies</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Dict</span><span class="p">]</span>
+    <span class="n">coverage_patterns</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Dict</span><span class="p">]</span>
+    <span class="n">power_configs</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span>
+</code></pre></div></div>
+<ul>
+  <li>UEConfig
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">initial_positions</code>: UE의 초기 위치를 (N, 3) 형태의 NumPy 배열로 저장</li>
+      <li><code class="language-plaintext highlighter-rouge">movement_patterns</code>: 각 UE의 이동 패턴을 정의(예: 랜덤 워크, 정해진 경로 등)</li>
+      <li><code class="language-plaintext highlighter-rouge">traffic_patterns</code>: UE별 트래픽 생성 패턴 정의(예: 일정 속도, 포아송 분포 등)</li>
+      <li><code class="language-plaintext highlighter-rouge">service_requirements</code>: 처리량, 지연시간 등 QoS 요구사항 정의</li>
+    </ul>
+  </li>
+  <li>CellConfig
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">positions</code>: 기지국들의 위치를 (M, 3) 형태의 NumPy 배열로 저장</li>
+      <li><code class="language-plaintext highlighter-rouge">frequencies</code>: 각 셀의 주파수 대역 설정 (대역폭, RB 수 등)</li>
+      <li><code class="language-plaintext highlighter-rouge">coverage_patterns</code>: 셀 커버리지 패턴 정의 (섹터, 옴니 등)</li>
+      <li><code class="language-plaintext highlighter-rouge">power_configs</code>: 송신 전력 관련 설정 저장</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="2-시나리오-클래스-초기화">2. 시나리오 클래스 초기화</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">duration</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">config_path</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span><span class="p">):</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">duration</span> <span class="o">=</span> <span class="n">duration</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">config_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">config_path</span><span class="p">)</span> <span class="k">if</span> <span class="n">config_path</span> <span class="k">else</span> <span class="bp">None</span>
+    
+    <span class="c1"># 기본 설정
+</span>    <span class="bp">self</span><span class="p">.</span><span class="n">ue_config</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">cell_config</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">network_params</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">events</span> <span class="o">=</span> <span class="p">[]</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">name</code>: 시나리오의 식별자 역할</li>
+  <li><code class="language-plaintext highlighter-rouge">duration</code>: 시뮬레이션 실행 시간 (초 단위)</li>
+  <li><code class="language-plaintext highlighter-rouge">config_path</code>: 설정 파일의 경로</li>
+</ul>
+
+<h3 id="3-설정-파일-처리">3. 설정 파일 처리</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">load_config</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s">"""설정 파일 로드"""</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="p">.</span><span class="n">config_path</span><span class="p">.</span><span class="n">suffix</span> <span class="o">==</span> <span class="s">'.json'</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="nb">ValueError</span><span class="p">(</span><span class="s">"Only .json config files are supported"</span><span class="p">)</span>
+            
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">config_path</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">config</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+            
+        <span class="bp">self</span><span class="p">.</span><span class="n">_parse_config</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+</code></pre></div></div>
+<ul>
+  <li>JSON 형식의 config 파일 지원</li>
+  <li>지원하지 않는 형식에 대한 예외 처리</li>
+</ul>
+
+<h3 id="4-설정-검증">4. 설정 검증</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">validate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="s">"""시나리오 유효성 검증"""</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="p">.</span><span class="n">ue_configs</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="nb">ValueError</span><span class="p">(</span><span class="s">"No UE configurations"</span><span class="p">)</span>
+                
+            <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">cell_config</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="nb">ValueError</span><span class="p">(</span><span class="s">"No cell configuration"</span><span class="p">)</span>
+            
+            <span class="c1"># UE 위치 검증
+</span>            <span class="k">for</span> <span class="n">ue_cfg</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">ue_configs</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">np</span><span class="p">.</span><span class="nb">any</span><span class="p">(</span><span class="n">ue_cfg</span><span class="p">.</span><span class="n">initial_positions</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> \
+                   <span class="n">np</span><span class="p">.</span><span class="nb">any</span><span class="p">(</span><span class="n">ue_cfg</span><span class="p">.</span><span class="n">initial_positions</span><span class="p">[:,:</span><span class="mi">2</span><span class="p">]</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="p">.</span><span class="n">area_size</span><span class="p">):</span>
+                    <span class="k">raise</span> <span class="nb">ValueError</span><span class="p">(</span><span class="s">"UE positions out of bounds"</span><span class="p">)</span>
+            
+                <span class="c1"># 서비스 타입 검증
+</span>                <span class="k">if</span> <span class="n">ue_cfg</span><span class="p">.</span><span class="n">service_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">default_service_requirements</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="nb">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s">"Invalid service type: </span><span class="si">{</span><span class="n">ue_cfg</span><span class="p">.</span><span class="n">service_type</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+            
+            <span class="c1"># 셀 위치 검증
+</span>            <span class="k">if</span> <span class="n">np</span><span class="p">.</span><span class="nb">any</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">cell_config</span><span class="p">.</span><span class="n">positions</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> \
+               <span class="n">np</span><span class="p">.</span><span class="nb">any</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">cell_config</span><span class="p">.</span><span class="n">positions</span><span class="p">[:,:</span><span class="mi">2</span><span class="p">]</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="p">.</span><span class="n">area_size</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="nb">ValueError</span><span class="p">(</span><span class="s">"Cell positions out of bounds"</span><span class="p">)</span>
+            
+            <span class="c1"># 이벤트 시간 검증
+</span>            <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">events</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">event</span><span class="p">.</span><span class="n">time</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">event</span><span class="p">.</span><span class="n">time</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="p">.</span><span class="n">duration</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="nb">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s">"Event time </span><span class="si">{</span><span class="n">event</span><span class="p">.</span><span class="n">time</span><span class="si">}</span><span class="s"> out of range"</span><span class="p">)</span>
+            
+            <span class="k">return</span> <span class="bp">True</span>
+            
+        <span class="k">except</span> <span class="nb">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Scenario validation failed: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+            <span class="k">return</span> <span class="bp">False</span>
+</code></pre></div></div>
+
+<ul>
+  <li>필수 설정 요소들의 존재 여부 확인</li>
+  <li>데이터 형식과 값의 유효성 검사</li>
+  <li>시간 범위를 벗어난 이벤트 감지</li>
+  <li>오류 발생 시 상세한 메세지 제공</li>
+</ul>
+
+<h3 id="5-이벤트-관리">5. 이벤트 관리</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">add_event</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">event_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">params</span><span class="p">:</span> <span class="n">Dict</span><span class="p">):</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">events</span><span class="p">.</span><span class="n">append</span><span class="p">({</span>
+        <span class="s">'time'</span><span class="p">:</span> <span class="n">time</span><span class="p">,</span>
+        <span class="s">'type'</span><span class="p">:</span> <span class="n">event_type</span><span class="p">,</span>
+        <span class="s">'params'</span><span class="p">:</span> <span class="n">params</span>
+    <span class="p">})</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">events</span><span class="p">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s">'time'</span><span class="p">])</span>
+</code></pre></div></div>
+<ul>
+  <li>시뮬레이션 중 발생할 이벤트 정의</li>
+  <li>이벤트 발생 시간 기준 자동 정렬</li>
+  <li>이벤트 타입과 파라미터를 유연하게 정의</li>
+</ul>
+
+<h3 id="6-참고-문헌">6. 참고 문헌</h3>
+<ul>
+  <li>3GPP TS 38.300: 전반적인 네트워크 구성과 아키텍쳐</li>
+</ul>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="sim" /><summary type="html"><![CDATA[**Date**: 2024.12.24, **Tag**: [Offloading], [Patent], [Multi Frequency Band]]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/sim/phase1/sim.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/sim/phase1/sim.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">오프로딩 시뮬레이터 - UE.py</title><link href="http://localhost:4000/blog/sim/2024-12-24-offloading-ue/" rel="alternate" type="text/html" title="오프로딩 시뮬레이터 - UE.py" /><published>2024-12-24T00:00:00+09:00</published><updated>2024-12-24T00:00:00+09:00</updated><id>http://localhost:4000/blog/sim/offloading-ue</id><content type="html" xml:base="http://localhost:4000/blog/sim/2024-12-24-offloading-ue/"><![CDATA[<!--more-->
+
+<ul class="large-only" id="markdown-toc">
+  <li><a href="#5g-셀-시뮬레이터-구현-가이드-componentsuepy" id="markdown-toc-5g-셀-시뮬레이터-구현-가이드-componentsuepy">5G 셀 시뮬레이터 구현 가이드: <code class="language-plaintext highlighter-rouge">components/ue.py</code></a>    <ul>
+      <li><a href="#1-아키텍쳐-개요" id="markdown-toc-1-아키텍쳐-개요">1. 아키텍쳐 개요</a>        <ul>
+          <li><a href="#11-설계-철학" id="markdown-toc-11-설계-철학">1.1 설계 철학</a>            <ul>
+              <li><a href="#1-클래스-초기화" id="markdown-toc-1-클래스-초기화">1. 클래스 초기화</a></li>
+              <li><a href="#2-트래픽-생성기-초기화" id="markdown-toc-2-트래픽-생성기-초기화">2. 트래픽 생성기 초기화</a></li>
+              <li><a href="#3-위치-업데이트-메커니즘" id="markdown-toc-3-위치-업데이트-메커니즘">3. 위치 업데이트 메커니즘</a></li>
+              <li><a href="#4-무선-환경-측정" id="markdown-toc-4-무선-환경-측정">4. 무선 환경 측정</a></li>
+              <li><a href="#5-sinr-계산" id="markdown-toc-5-sinr-계산">5. SINR 계산</a></li>
+              <li><a href="#6-qos-만족도-평가" id="markdown-toc-6-qos-만족도-평가">6. QoS 만족도 평가</a></li>
+              <li><a href="#7-메인-루프" id="markdown-toc-7-메인-루프">7. 메인 루프</a></li>
+              <li><a href="#8-참고-문헌" id="markdown-toc-8-참고-문헌">8. 참고 문헌</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="5g-셀-시뮬레이터-구현-가이드-componentsuepy">5G 셀 시뮬레이터 구현 가이드: <code class="language-plaintext highlighter-rouge">components/ue.py</code></h1>
+
+<h2 id="1-아키텍쳐-개요">1. 아키텍쳐 개요</h2>
+
+<h3 id="11-설계-철학">1.1 설계 철학</h3>
+<ul>
+  <li><strong>3GPP 표준 준수</strong>: 실제 5G UE의 동작을 충실히 반영하여 시뮬레이션의 현실성을 보장한다. 특히 핸드오버, QoS 관리, 무선 환경 측정 등에서 표준 기반 구현을 중요시한다.</li>
+  <li><strong>모듈화된 구조</strong>: 이동성, 트래픽 생성, 성능 모니터링 등의 기능을 독립적인 모듈로 분리하여 유지보수성과 확장성을 높인다.</li>
+  <li><strong>효율적인 상태 관리</strong>: 시뮬레이션의 안정성을 위해 UE의 상태(위치, 연결, 성능 지표 등)를 일관되고 효율적으로 관리한다.</li>
+  <li><strong>데이터 중심 설계</strong>: 성능 분석과 최적화를 위해 필요한 모든 메트릭을 체계적으로 수집하고 관리한다.</li>
+  <li><strong>자원 효율성</strong>: 대규모 시뮬레이션을 고려하여 메모리 사용과 연산 비용을 최적화한다.</li>
+</ul>
+
+<h4 id="1-클래스-초기화">1. 클래스 초기화</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sim</span><span class="p">,</span> <span class="n">i</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">xyz</span><span class="p">:</span> <span class="n">np</span><span class="p">.</span><span class="n">ndarray</span><span class="p">,</span>
+             <span class="n">movement_pattern</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span>
+             <span class="n">traffic_pattern</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span>
+             <span class="n">service_requirements</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span><span class="p">):</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">sim</span> <span class="o">=</span> <span class="n">sim</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">i</span> <span class="o">=</span> <span class="n">i</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">xyz</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="n">xyz</span><span class="p">)</span>
+    
+    <span class="c1"># 이동성 설정
+</span>    <span class="bp">self</span><span class="p">.</span><span class="n">movement_pattern</span> <span class="o">=</span> <span class="n">movement_pattern</span> <span class="ow">or</span> <span class="p">{</span>
+        <span class="s">'type'</span><span class="p">:</span> <span class="s">'random_walk'</span><span class="p">,</span>
+        <span class="s">'velocity'</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>  <span class="c1"># m/s
+</span>        <span class="s">'direction_change_interval'</span><span class="p">:</span> <span class="mf">30.0</span>  <span class="c1"># 초
+</span>    <span class="p">}</span>
+    
+    <span class="c1"># 트래픽 설정
+</span>    <span class="bp">self</span><span class="p">.</span><span class="n">traffic_pattern</span> <span class="o">=</span> <span class="n">traffic_pattern</span> <span class="ow">or</span> <span class="p">{</span>
+        <span class="s">'type'</span><span class="p">:</span> <span class="s">'constant'</span><span class="p">,</span>
+        <span class="s">'data_rate'</span><span class="p">:</span> <span class="mf">1.0</span>  <span class="c1"># Mbps
+</span>    <span class="p">}</span>
+    
+    <span class="c1"># QoS 요구사항
+</span>    <span class="bp">self</span><span class="p">.</span><span class="n">service_requirements</span> <span class="o">=</span> <span class="n">service_requirements</span> <span class="ow">or</span> <span class="p">{</span>
+        <span class="s">'min_throughput'</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>  <span class="c1"># Mbps
+</span>        <span class="s">'max_latency'</span><span class="p">:</span> <span class="mf">100.0</span>    <span class="c1"># ms
+</span>    <span class="p">}</span>
+</code></pre></div></div>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">sim</code>: 시뮬레이터 인스턴스 참조</li>
+  <li><code class="language-plaintext highlighter-rouge">i</code>: UE 식별자</li>
+  <li><code class="language-plaintext highlighter-rouge">xyz</code>: 3차원 공간에서의 초기 위치</li>
+  <li><code class="language-plaintext highlighter-rouge">movement_pattern</code>: 이동 패턴 (기본값: random walk)</li>
+  <li><code class="language-plaintext highlighter-rouge">traffic_pattern</code>: 트래픽 생성 패턴 (기본값: constant rate)</li>
+  <li><code class="language-plaintext highlighter-rouge">service_requirements</code>: QoS 요구사항(throughput, latency 등)</li>
+</ul>
+
+<h4 id="2-트래픽-생성기-초기화">2. 트래픽 생성기 초기화</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">initialize_traffic_generator</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="s">"""트래픽 생성기 초기화"""</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">traffic_pattern</span><span class="p">[</span><span class="s">'type'</span><span class="p">]</span> <span class="o">==</span> <span class="s">'constant'</span><span class="p">:</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">generate_traffic</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">_generate_constant_traffic</span>
+    <span class="k">elif</span> <span class="bp">self</span><span class="p">.</span><span class="n">traffic_pattern</span><span class="p">[</span><span class="s">'type'</span><span class="p">]</span> <span class="o">==</span> <span class="s">'poisson'</span><span class="p">:</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">generate_traffic</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">_generate_poisson_traffic</span>
+    <span class="k">elif</span> <span class="bp">self</span><span class="p">.</span><span class="n">traffic_pattern</span><span class="p">[</span><span class="s">'type'</span><span class="p">]</span> <span class="o">==</span> <span class="s">'bursty'</span><span class="p">:</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">generate_traffic</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">_generate_bursty_traffic</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="nb">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s">"Unknown traffic pattern: </span><span class="si">{</span><span class="bp">self</span><span class="p">.</span><span class="n">traffic_pattern</span><span class="p">[</span><span class="s">'type'</span><span class="p">]</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+</code></pre></div></div>
+<ul>
+  <li>패턴 타입에 따라 적절한 생성 함수가 동적으로 할당됨</li>
+  <li>지원되지 않는 패턴 타입 사용시 <code class="language-plaintext highlighter-rouge">ValueError</code> 발생</li>
+  <li>패턴 변경 시 반드시 이 method를 다시 호출해야 함</li>
+</ul>
+
+<h4 id="3-위치-업데이트-메커니즘">3. 위치 업데이트 메커니즘</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">update_position</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="s">"""위치 업데이트"""</span>
+    <span class="n">current_time</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">sim</span><span class="p">.</span><span class="n">env</span><span class="p">.</span><span class="n">now</span>
+    
+    <span class="c1"># 방향 변경 체크
+</span>    <span class="k">if</span> <span class="p">(</span><span class="n">current_time</span> <span class="o">-</span> <span class="bp">self</span><span class="p">.</span><span class="n">last_direction_change</span> <span class="o">&gt;</span> 
+        <span class="bp">self</span><span class="p">.</span><span class="n">movement_pattern</span><span class="p">[</span><span class="s">'direction_change_interval'</span><span class="p">]):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">update_direction</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">last_direction_change</span> <span class="o">=</span> <span class="n">current_time</span>
+    
+    <span class="c1"># 속도 계산
+</span>    <span class="bp">self</span><span class="p">.</span><span class="n">velocity</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">direction</span> <span class="o">*</span> <span class="bp">self</span><span class="p">.</span><span class="n">movement_pattern</span><span class="p">[</span><span class="s">'velocity'</span><span class="p">]</span>
+    
+    <span class="c1"># 위치 업데이트
+</span>    <span class="bp">self</span><span class="p">.</span><span class="n">xyz</span> <span class="o">+=</span> <span class="bp">self</span><span class="p">.</span><span class="n">velocity</span> <span class="o">*</span> <span class="bp">self</span><span class="p">.</span><span class="n">sim</span><span class="p">.</span><span class="n">interval</span>
+    
+    <span class="c1"># 시뮬레이션 영역 내 제한
+</span>    <span class="bp">self</span><span class="p">.</span><span class="n">xyz</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">clip</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">xyz</span><span class="p">,</span> 
+                      <span class="bp">self</span><span class="p">.</span><span class="n">sim</span><span class="p">.</span><span class="n">area_bounds</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> 
+                      <span class="bp">self</span><span class="p">.</span><span class="n">sim</span><span class="p">.</span><span class="n">area_bounds</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</code></pre></div></div>
+<ul>
+  <li>방향 변경은 설정된 간격마다 수행</li>
+  <li>속도는 방향 벡터와 설정된 속도값의 곱으로 계산</li>
+  <li>시뮬레이션 영역을 벗어나지 않도록 위치를 제한</li>
+  <li><code class="language-plaintext highlighter-rouge">sim.interval</code>을 통해 시뮬레이션 시간 스텝 반영</li>
+</ul>
+
+<h4 id="4-무선-환경-측정">4. 무선 환경 측정</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">measure_radio_conditions</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="s">"""무선 환경 측정"""</span>
+    <span class="n">current_time</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">sim</span><span class="p">.</span><span class="n">env</span><span class="p">.</span><span class="n">now</span>
+    <span class="k">if</span> <span class="n">current_time</span> <span class="o">-</span> <span class="bp">self</span><span class="p">.</span><span class="n">last_measurement</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="p">.</span><span class="n">measurement_interval</span><span class="p">:</span>
+        <span class="k">return</span>
+    
+    <span class="bp">self</span><span class="p">.</span><span class="n">last_measurement</span> <span class="o">=</span> <span class="n">current_time</span>
+    
+    <span class="c1"># 모든 셀에 대한 RSRP 측정
+</span>    <span class="n">best_rsrp</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s">'-inf'</span><span class="p">)</span>
+    <span class="n">best_cell</span> <span class="o">=</span> <span class="bp">None</span>
+    
+    <span class="k">for</span> <span class="n">cell</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">sim</span><span class="p">.</span><span class="n">cells</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">freq</span> <span class="ow">in</span> <span class="n">cell</span><span class="p">.</span><span class="n">freq_config</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">cell</span><span class="p">.</span><span class="n">freq_config</span><span class="p">[</span><span class="n">freq</span><span class="p">][</span><span class="s">'active'</span><span class="p">]:</span>
+                <span class="k">continue</span>
+            
+            <span class="n">rsrp</span> <span class="o">=</span> <span class="n">cell</span><span class="p">.</span><span class="n">get_rsrp</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">i</span><span class="p">,</span> <span class="n">freq</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">rsrp</span> <span class="o">&gt;</span> <span class="n">best_rsrp</span><span class="p">:</span>
+                <span class="n">best_rsrp</span> <span class="o">=</span> <span class="n">rsrp</span>
+                <span class="n">best_cell</span> <span class="o">=</span> <span class="n">cell</span>
+</code></pre></div></div>
+
+<ul>
+  <li>측정은 설정된 간격(<code class="language-plaintext highlighter-rouge">meaurement_interval</code>)마다 수행</li>
+  <li>활성화된 주파수에 대해서만 RSRP 측정</li>
+  <li>최적의 셀 선택을 위해 모든 가능한 셀과 주파수 조합 검사</li>
+  <li>RSRP 값이 가장 높은 셀을 최적 셀로 선정</li>
+</ul>
+
+<h4 id="5-sinr-계산">5. SINR 계산</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">calculate_sinr</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="s">"""SINR 계산"""</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="p">.</span><span class="n">serving_cell</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="s">'-inf'</span><span class="p">)</span>
+    
+    <span class="c1"># 서빙 셀로부터의 신호 전력
+</span>    <span class="n">serving_power</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">serving_cell</span><span class="p">.</span><span class="n">get_rsrp</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">i</span><span class="p">)</span><span class="o">/</span><span class="mi">10</span><span class="p">)</span>
+    
+    <span class="c1"># 간섭 전력 계산
+</span>    <span class="n">interference</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">cell</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">sim</span><span class="p">.</span><span class="n">cells</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">cell</span> <span class="o">!=</span> <span class="bp">self</span><span class="p">.</span><span class="n">serving_cell</span><span class="p">:</span>
+            <span class="n">interference</span> <span class="o">+=</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="n">cell</span><span class="p">.</span><span class="n">get_rsrp</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">i</span><span class="p">)</span><span class="o">/</span><span class="mi">10</span><span class="p">)</span>
+    
+    <span class="c1"># 노이즈 파워 (-174 dBm/Hz + 대역폭)
+</span>    <span class="n">noise_power</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">174</span><span class="o">/</span><span class="mi">10</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="p">.</span><span class="n">serving_cell</span><span class="p">.</span><span class="n">bandwidth</span>
+    
+    <span class="c1"># SINR 계산
+</span>    <span class="n">sinr</span> <span class="o">=</span> <span class="n">serving_power</span> <span class="o">/</span> <span class="p">(</span><span class="n">interference</span> <span class="o">+</span> <span class="n">noise_power</span><span class="p">)</span>
+    <span class="k">return</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">log10</span><span class="p">(</span><span class="n">sinr</span><span class="p">)</span>
+</code></pre></div></div>
+<ul>
+  <li>dBm 단위의 RSRP를 선형 전력값으로 변환하여 계산</li>
+  <li>모든 non-serving 셀로부터의 간섭을 고려</li>
+  <li>열잡음 전력은 -174dBm/Hz를 기준으로 대역폭 고려</li>
+  <li>최종 결과는 dB 단위로 반환</li>
+</ul>
+
+<h4 id="6-qos-만족도-평가">6. QoS 만족도 평가</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get_qos_satisfaction</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]:</span>
+    <span class="s">"""QoS 만족도 확인"""</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="p">.</span><span class="n">metrics</span><span class="p">[</span><span class="s">'throughput'</span><span class="p">]</span> <span class="ow">or</span> <span class="ow">not</span> <span class="bp">self</span><span class="p">.</span><span class="n">metrics</span><span class="p">[</span><span class="s">'latency'</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s">'throughput'</span><span class="p">:</span> <span class="bp">False</span><span class="p">,</span> <span class="s">'latency'</span><span class="p">:</span> <span class="bp">False</span><span class="p">}</span>
+    
+    <span class="n">avg_throughput</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">metrics</span><span class="p">[</span><span class="s">'throughput'</span><span class="p">])</span>
+    <span class="n">avg_latency</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">metrics</span><span class="p">[</span><span class="s">'latency'</span><span class="p">])</span>
+    
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s">'throughput'</span><span class="p">:</span> <span class="n">avg_throughput</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="p">.</span><span class="n">service_requirements</span><span class="p">[</span><span class="s">'min_throughput'</span><span class="p">],</span>
+        <span class="s">'latency'</span><span class="p">:</span> <span class="n">avg_latency</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="p">.</span><span class="n">service_requirements</span><span class="p">[</span><span class="s">'max_latency'</span><span class="p">]</span>
+    <span class="p">}</span>
+</code></pre></div></div>
+<ul>
+  <li>측정된 메트릭이 없는 경우 모든 항목 불만족으로 처리</li>
+  <li>Throughput과 latency에 대해 평균값 기준으로 평가</li>
+  <li>설정된 요구사항과 비교하여 만족 여부 판단</li>
+  <li>Boolean 값으로 각 항목의 만족 여부 반환</li>
+</ul>
+
+<h4 id="7-메인-루프">7. 메인 루프</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">loop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="s">"""메인 루프"""</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="bp">self</span><span class="p">.</span><span class="n">sim</span><span class="p">.</span><span class="n">wait</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">sim</span><span class="p">.</span><span class="n">interval</span><span class="p">)</span>
+        
+        <span class="c1"># 위치 업데이트
+</span>        <span class="bp">self</span><span class="p">.</span><span class="n">update_position</span><span class="p">()</span>
+        
+        <span class="c1"># 무선 환경 측정
+</span>        <span class="bp">self</span><span class="p">.</span><span class="n">measure_radio_conditions</span><span class="p">()</span>
+        
+        <span class="c1"># 성능 메트릭 업데이트
+</span>        <span class="bp">self</span><span class="p">.</span><span class="n">update_metrics</span><span class="p">()</span>
+</code></pre></div></div>
+
+<ul>
+  <li>SimPy 환경에서 동작하는 Generator 함수로 구현</li>
+  <li>시뮬레이터의 시간 간격에 따라 주기적으로 실행</li>
+  <li>위치, 무선 환경, 성능 메트릭을 순차적으로 업데이트</li>
+  <li>무한 루프로 구현되어 시뮬레이션 종료까지 계속 실행</li>
+</ul>
+
+<h4 id="8-참고-문헌">8. 참고 문헌</h4>
+<ul>
+  <li>3GPP TS 38.133: “NR; Reqeuirements for Support of Radio Resource Management”</li>
+  <li>3GPP TR 38.901: “Study on Channel Model for Frequents from 0.5 to 100 GHz”</li>
+  <li>3GPP TS 38.300: “NR; Overall description; Stage-2”</li>
+</ul>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="sim" /><summary type="html"><![CDATA[**Date**: 2024.12.24, **Tag**: [Offloading], [Patent], [Multi Frequency Band]]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/green_ai/green-ai.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/green_ai/green-ai.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">오프로딩 시뮬레이터 - Cell</title><link href="http://localhost:4000/blog/sim/2024-12-24-offloading-cell/" rel="alternate" type="text/html" title="오프로딩 시뮬레이터 - Cell" /><published>2024-12-24T00:00:00+09:00</published><updated>2024-12-24T00:00:00+09:00</updated><id>http://localhost:4000/blog/sim/offloading-cell</id><content type="html" xml:base="http://localhost:4000/blog/sim/2024-12-24-offloading-cell/"><![CDATA[<!--more-->
+
+<ul class="large-only" id="markdown-toc">
+  <li><a href="#5g-셀-시뮬레이터-구현-가이드-componentscellpy" id="markdown-toc-5g-셀-시뮬레이터-구현-가이드-componentscellpy">5G 셀 시뮬레이터 구현 가이드: <code class="language-plaintext highlighter-rouge">components/cell.py</code></a>    <ul>
+      <li><a href="#1-아키텍쳐-개요" id="markdown-toc-1-아키텍쳐-개요">1. 아키텍쳐 개요</a>        <ul>
+          <li><a href="#11-설계-철학" id="markdown-toc-11-설계-철학">1.1 설계 철학</a>            <ul>
+              <li><a href="#1-클래스-초기화" id="markdown-toc-1-클래스-초기화">1. 클래스 초기화</a></li>
+              <li><a href="#2-주파수-설정" id="markdown-toc-2-주파수-설정">2. 주파수 설정</a></li>
+              <li><a href="#3-트래픽-예측" id="markdown-toc-3-트래픽-예측">3. 트래픽 예측</a></li>
+              <li><a href="#4-에너지-소비-관리" id="markdown-toc-4-에너지-소비-관리">4. 에너지 소비 관리</a></li>
+              <li><a href="#5-셀-상태-관리" id="markdown-toc-5-셀-상태-관리">5. 셀 상태 관리</a></li>
+              <li><a href="#6-성능-측정-및-보고" id="markdown-toc-6-성능-측정-및-보고">6. 성능 측정 및 보고</a></li>
+              <li><a href="#7-참고문헌" id="markdown-toc-7-참고문헌">7. 참고문헌</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="5g-셀-시뮬레이터-구현-가이드-componentscellpy">5G 셀 시뮬레이터 구현 가이드: <code class="language-plaintext highlighter-rouge">components/cell.py</code></h1>
+
+<h2 id="1-아키텍쳐-개요">1. 아키텍쳐 개요</h2>
+
+<h3 id="11-설계-철학">1.1 설계 철학</h3>
+<ul>
+  <li>실제 5G 기지국의 동작을 최대한 유사하게 모사</li>
+  <li>트래픽 예측을 통한 선제적 자원 관리</li>
+  <li>에너지 효율적인 운영</li>
+  <li>다중 주파수 대역 지원</li>
+  <li>QoS 기반 사용자 관리</li>
+</ul>
+
+<h4 id="1-클래스-초기화">1. 클래스 초기화</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sim</span><span class="p">,</span> <span class="n">interval</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">xyz</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">h_BS</span><span class="o">=</span><span class="mf">20.0</span><span class="p">,</span> 
+             <span class="n">MIMO_gain_dB</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">pattern</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">f_callback</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> 
+             <span class="n">f_callback_kwargs</span><span class="o">=</span><span class="p">{},</span> <span class="n">verbosity</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">i</span> <span class="o">=</span> <span class="n">Cell</span><span class="p">.</span><span class="n">i</span>
+    <span class="n">Cell</span><span class="p">.</span><span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">sim</span> <span class="o">=</span> <span class="n">sim</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">interval</span> <span class="o">=</span> <span class="n">interval</span>
+    
+    <span class="c1"># 트래픽 예측 관련 설정
+</span>    <span class="bp">self</span><span class="p">.</span><span class="n">traffic_predictor</span> <span class="o">=</span> <span class="n">ProphetPredictor</span><span class="p">()</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">traffic_db</span> <span class="o">=</span> <span class="n">TimeseriesDB</span><span class="p">()</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">prediction_horizon</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># 10초 (1초 * 10)
+</span></code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">sim</code>: 메인 시뮬레이터 인스턴스를 전달받음. 이를 통해 전체 시뮬레이션 환경에 접근할 수 있음</li>
+  <li><code class="language-plaintext highlighter-rouge">interval</code>: 셀의 상태 업데이트 주기를 설정. 기본값은 1초</li>
+  <li><code class="language-plaintext highlighter-rouge">traffic_predictor</code>: 트래픽 예측기를 초기화</li>
+  <li><code class="language-plaintext highlighter-rouge">prediction_horizon</code>: 10으로 설정하여 10초 앞의 트래픽을 예측</li>
+</ul>
+
+<p class="note">중요 포인트</p>
+<ul>
+  <li>Cell.i는 셀 식별자로 사용되며, 생성될 때마다 자동으로 증가한다.</li>
+  <li>ProphetPredictor는 별도의 클래스로 구현되어 있으며, 시계열 예측을 담당한다.</li>
+</ul>
+
 <h4 id="2-주파수-설정">2. 주파수 설정</h4>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 주파수 설정
 </span><span class="bp">self</span><span class="p">.</span><span class="n">freq_config</span> <span class="o">=</span> <span class="p">{</span>
@@ -1558,6 +3315,7 @@
   <li>부하는 각 주파수 대역별로 계산</li>
 </ul>
 
+>>>>>>> c9b4b85b73d42fdc5a945dcab7b288650d40921f
 <h4 id="7-참고문헌">7. 참고문헌</h4>
 <ol>
   <li>Path Loss Models: 3GPP TR 38.901</li>
@@ -1579,6 +3337,7 @@
 
 <h1 id="2-paper-summarization">2. Paper Summarization</h1>
 
+<<<<<<< HEAD
 <h1 id="3-take-away">3. Take Away</h1>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="paper" /><summary type="html"><![CDATA[**Date**: 2017.11.29, **Tag**: [Mobile Network Operator(MNO)], [access point], [Stackelberg approach], [game theory], [quality of service], [Nash equilibrium]]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/game-theory/game-theory.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/game-theory/game-theory.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">AI-Ready Energy Modelling for Next Generation RAN</title><link href="http://localhost:4000/blog/paper/2024-11-15-AI-ready-Energy-Modeling-for-Next-Generation-RAN/" rel="alternate" type="text/html" title="AI-Ready Energy Modelling for Next Generation RAN" /><published>2024-11-15T00:00:00+09:00</published><updated>2024-11-15T00:00:00+09:00</updated><id>http://localhost:4000/blog/paper/AI-ready-Energy-Modeling-for-Next-Generation-RAN</id><content type="html" xml:base="http://localhost:4000/blog/paper/2024-11-15-AI-ready-Energy-Modeling-for-Next-Generation-RAN/"><![CDATA[<!--more-->
 <ul class="large-only" id="markdown-toc">
   <li><a href="#1-why-this-paper" id="markdown-toc-1-why-this-paper">1. Why this paper</a></li>
@@ -2216,3 +3975,6 @@ The source code is available on <a href="https://github.com/hydecorp/hydejack">G
     </li>
   </ol>
 </div>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="example" /><summary type="html"><![CDATA[Version 9 is the most complete version of Hydejack yet. Modernized design, big headlines, and big new features.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/jeremy-bishop@0,5x.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/jeremy-bishop@0,5x.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+=======
+<h1 id="3-take-away">3. Take Away</h1>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="paper" /><summary type="html"><![CDATA[**Date**: 2017.11.29, **Tag**: [Mobile Network Operator(MNO)], [access point], [Stackelberg approach], [game theory], [quality of service], [Nash equilibrium]]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/game-theory/game-theory.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/game-theory/game-theory.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+>>>>>>> c9b4b85b73d42fdc5a945dcab7b288650d40921f

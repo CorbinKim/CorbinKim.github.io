@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+
+
+<head>
+  
+
+
+
+
+  <meta name="robots" content="noindex">
+
+
+
+  
+    
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>오프로딩 시뮬레이터 - Logger | Geon Kim</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="오프로딩 시뮬레이터 - Logger" />
+<meta name="author" content="<firstname> <lastname>" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="Date: 2024.12.26, Tag: [Offloading], [Patent], [Multi Frequency Band]" />
+<meta property="og:description" content="Date: 2024.12.26, Tag: [Offloading], [Patent], [Multi Frequency Band]" />
+<link rel="canonical" href="http://localhost:4000/blog/sim/2024-12-26-offloading-logger/" />
+<meta property="og:url" content="http://localhost:4000/blog/sim/2024-12-26-offloading-logger/" />
+<meta property="og:site_name" content="Geon Kim" />
+<meta property="og:image" content="http://localhost:4000/assets/img/blog/sim/phase1/sim.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-12-26T00:00:00+09:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/assets/img/blog/sim/phase1/sim.png" />
+<meta property="twitter:title" content="오프로딩 시뮬레이터 - Logger" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"<firstname> <lastname>"},"dateModified":"2024-12-26T00:00:00+09:00","datePublished":"2024-12-26T00:00:00+09:00","description":"Date: 2024.12.26, Tag: [Offloading], [Patent], [Multi Frequency Band]","headline":"오프로딩 시뮬레이터 - Logger","image":{"srcset":{"1920w":"/assets/img/blog/sim/phase1/sim.png","960w":"/assets/img/blog/sim/phase1/sim@0,5x.png","480w":"/assets/img/blog/sim/phase1/sim@0,25x.png"},"url":"http://localhost:4000/assets/img/blog/sim/phase1/sim.png","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/sim/2024-12-26-offloading-logger/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/logo.png"},"name":"<firstname> <lastname>"},"url":"http://localhost:4000/blog/sim/2024-12-26-offloading-logger/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  
+
+
+
+  <meta name="color-scheme" content="dark light">
+
+
+
+  <meta name="theme-color" content="rgb(25,55,71)">
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Geon Kim">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+<meta name="application-name" content="Geon Kim">
+
+<meta name="generator" content="Hydejack v9.2.0" />
+
+
+<link rel="alternate" href="http://localhost:4000/blog/sim/2024-12-26-offloading-logger/" hreflang="en">
+
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Geon Kim" />
+
+
+<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+
+<link rel="manifest" href="/assets/site.webmanifest">
+
+
+
+
+
+<link rel="preload" href="/assets/img/swipe.svg" as="image" id="_hrefSwipeSVG">
+
+<link rel="dns-prefetch" href="/assets/js/search-worker-9.2.0.js" as="worker" id="_hrefSearch">
+
+
+
+
+
+<script>((r,a)=>{function d(e,t,n,o){e.addEventListener?e.addEventListener(t,n,o):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n}r.loadJS=function(e,t){var n=a.createElement("script"),e=(n.src=e,t&&d(n,"load",t,{once:!0}),a.scripts[0]);return e.parentNode.insertBefore(n,e),n},r._loaded=!1,r.loadJSDeferred=function(e,t){var n=a.createElement("script");function o(){r._loaded=!0,t&&d(n,"load",t,{once:!0});var e=a.scripts[0];e.parentNode.insertBefore(n,e)}return n.src=e,r._loaded?o():d(r,"load",o,{once:!0}),n},r.setRel=r.setRelStylesheet=function(e){d(a.getElementById(e),"load",function(){this.rel="stylesheet"},{once:!0})}})(window,document);
+!function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
+!function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
+!function(w) {
+  w._baseURL = '/';
+  w._publicPath = '/assets/js/';
+  w._noPushState = false;
+  w._noDrawer = false;
+  w._noNavbar = false;
+  w._noToc = false;
+  w._noSearch = false;
+  w._advertise = false;
+  w._search = {
+    DATA_URL: '/assets/sitedata.json?no-cache',
+    STORAGE_KEY: 'mini-search/',
+    INDEX_KEY: 'index--2024-12-27T14:12:18+09:00',
+  };
+  w._clapButton = true;
+}(window);</script>
+
+
+<script async src="/assets/bower_components/MathJax/es5/tex-mml-chtml.js" id="_MathJax"></script>
+
+
+<!--[if gt IE 8]><!---->
+
+  
+
+
+
+
+<link rel="stylesheet" href="/assets/css/hydejack-9.2.0.css" id="_stylePreload">
+<link rel="stylesheet" href="/assets/icomoon/style.css" id="_iconsPreload">
+
+
+
+
+  <style id="_pageStyle">
+
+html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);--accent-color-highlight: rgba(79,177,186,0.1);--accent-color-darkened: #409ba3;--theme-color: rgb(25,55,71);--dark-mode-body-bg: #2a2d2f;--dark-mode-border-color: #363a3d}
+
+</style>
+
+
+<!--<![endif]-->
+
+
+
+
+
+</head>
+
+<body class="dark-mode no-break-layout">
+  
+<script>
+  window._sunrise = 6;
+  window._sunset =  18;
+  ((e,s)=>{var d="light-mode",a="dark-mode",o=(new Date).getHours();"matchMedia"in e&&e.matchMedia("(prefers-color-scheme)")||(e=(o=o<=e._sunrise||o>=e._sunset?a:d)==a?d:a,s.body.classList.add(o),s.body.classList.remove(e))})(window,document);
+
+</script>
+
+
+
+<hy-push-state
+  id="_pushState"
+  replace-selector="#_main"
+  link-selector="a[href]:not([href^='/assets/']):not(.external):not(.no-push-state)"
+  script-selector="script"
+  duration="500"
+  hashchange
+>
+  
+  
+  <div id="_navbar" class="navbar fixed-top">
+  <div class="content">
+    <span class="sr-only">Jump to:</span>
+    <div class="nav-btn-bar">
+      <a id="_menu" class="nav-btn no-hover" href="#_drawer--opened">
+        <span class="sr-only">Navigation</span>
+        <span class="icon-menu"></span>
+      </a>
+      <div class="nav-span"></div>
+    </div>
+  </div>
+</div>
+<hr class="sr-only" hidden />
+
+  <main
+  id="_main"
+  class="content layout-post"
+  role="main"
+>
+  <nav id="breadcrumbs" class="screen-only"><ul>
+  
+  
+    <li><a href="/">home</a></li>
+    
+      <li>
+        
+          <span>/</span>
+          
+          
+          <a href="/blog/">blog</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          
+          
+          <a href="/blog/sim/">sim</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          <span>2024-12-26-offloading-logger</span>
+        
+      </li>
+    
+  
+</ul></nav>
+  
+
+
+
+
+
+
+
+
+
+
+<article id="post-blog-sim-offloading-logger" class="page post mb6" role="article">
+  <header>
+    <h1 class="post-title flip-project-title">
+      
+        오프로딩 시뮬레이터 - Logger
+      
+    </h1>
+
+    <div class="post-date">
+      
+      <span class="ellipsis mr1">
+        <time datetime="2024-12-26T00:00:00+09:00">26 Dec 2024</time> in <a href="/blog/sim/" class="flip-title">Simulator</a> 
+      </span>
+      
+        
+      
+    </div>
+
+    
+    
+      
+        <div class="img-wrapper lead aspect-ratio sixteen-nine flip-project-img">
+          
+
+
+<img
+  
+    src="/assets/img/blog/sim/phase1/sim.png"
+    srcset="/assets/img/blog/sim/phase1/sim.png 1920w,/assets/img/blog/sim/phase1/sim@0,5x.png 960w,/assets/img/blog/sim/phase1/sim@0,25x.png 480w"
+    
+  
+  alt="오프로딩 시뮬레이터 - Logger"
+  
+  
+  width="864"
+  height="486"
+  loading="lazy"
+/>
+
+        </div>
+      
+      
+    
+
+    
+
+
+
+  
+    <p class="note-sm" >
+      <strong>Date</strong>: 2024.12.26,  <strong>Tag</strong>: [Offloading], [Patent], [Multi Frequency Band]
+
+    </p>
+  
+
+
+  </header>
+
+  
+    <!--more-->
+
+<ul class="large-only" id="markdown-toc">
+  <li><a href="#5g-셀-시뮬레이터-구현-가이드-utilsloggerpy" id="markdown-toc-5g-셀-시뮬레이터-구현-가이드-utilsloggerpy">5G 셀 시뮬레이터 구현 가이드: <code class="language-plaintext highlighter-rouge">utils/logger.py</code></a>    <ul>
+      <li><a href="#1-아키텍쳐-개요" id="markdown-toc-1-아키텍쳐-개요">1. 아키텍쳐 개요</a></li>
+      <li><a href="#2-코드-설명" id="markdown-toc-2-코드-설명">2. 코드 설명</a>        <ul>
+          <li><a href="#1-기본-로깅-기능" id="markdown-toc-1-기본-로깅-기능">1. 기본 로깅 기능</a></li>
+          <li><a href="#2-이벤트-로깅" id="markdown-toc-2-이벤트-로깅">2. 이벤트 로깅</a></li>
+          <li><a href="#3-메트릭-관리" id="markdown-toc-3-메트릭-관리">3. 메트릭 관리</a></li>
+          <li><a href="#4-네트워크-상태-로깅" id="markdown-toc-4-네트워크-상태-로깅">4. 네트워크 상태 로깅</a></li>
+          <li><a href="#5-메트릭-시각화" id="markdown-toc-5-메트릭-시각화">5. 메트릭 시각화</a></li>
+          <li><a href="#6-유틸리티-함수" id="markdown-toc-6-유틸리티-함수">6. 유틸리티 함수</a></li>
+          <li><a href="#7-네트워크-시각화" id="markdown-toc-7-네트워크-시각화">7. 네트워크 시각화</a>            <ul>
+              <li><a href="#71-주파수-대역별-커버리지-시각화" id="markdown-toc-71-주파수-대역별-커버리지-시각화">7.1 주파수 대역별 커버리지 시각화</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="5g-셀-시뮬레이터-구현-가이드-utilsloggerpy">5G 셀 시뮬레이터 구현 가이드: <code class="language-plaintext highlighter-rouge">utils/logger.py</code></h1>
+
+<h2 id="1-아키텍쳐-개요">1. 아키텍쳐 개요</h2>
+
+<p><code class="language-plaintext highlighter-rouge">logger.py</code>는 시뮬레이션 중 발생하는 이벤트, 메트릭, 디버그 정보를 체계적으로 기록하고 관리하는 부분임. 주요 컴포넌트는 아래와 같음.</p>
+
+<ul>
+  <li>파일/콘솔 로깅 지원</li>
+  <li>로그 파일 자동 순환</li>
+  <li>시계열 메트릭 저장</li>
+  <li>메트릭 시각화</li>
+  <li>다양한 로깅 레벨</li>
+</ul>
+
+<hr />
+
+<h2 id="2-코드-설명">2. 코드 설명</h2>
+
+<h3 id="1-기본-로깅-기능">1. 기본 로깅 기능</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+             <span class="n">log_dir</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s">'logs'</span><span class="p">,</span>
+             <span class="n">level</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s">'INFO'</span><span class="p">,</span>
+             <span class="n">console_output</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span>
+             <span class="n">file_output</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span>
+             <span class="n">rotation</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s">'size'</span><span class="p">,</span>
+             <span class="n">max_bytes</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span><span class="o">*</span><span class="mi">1024</span><span class="o">*</span><span class="mi">1024</span><span class="p">,</span>  <span class="c1"># 10MB
+</span>             <span class="n">backup_count</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span><span class="p">):</span>
+    <span class="s">"""
+    Parameters
+    ----------
+    name : str
+        로거 이름
+    log_dir : str
+        로그 파일 저장 디렉토리
+    level : str
+        로깅 레벨 ('DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL')
+    console_output : bool
+        콘솔 출력 여부
+    file_output : bool
+        파일 출력 여부
+    rotation : str
+        로그 순환 방식 ('size' 또는 'time')
+    max_bytes : int
+        최대 로그 파일 크기
+    backup_count : int
+        보관할 백업 파일 수
+    """</span>
+</code></pre></div></div>
+
+<ul>
+  <li>핵심 초기화 파라미터
+    <ul>
+      <li>name: logger 식별자</li>
+      <li>log_dir: 로그 저장 위치</li>
+      <li>level: 로깅 상세도</li>
+      <li>rotation: 파일 순환 방식</li>
+      <li>max_bytes: 파일 크기 제한</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="2-이벤트-로깅">2. 이벤트 로깅</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">log_event</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event_type</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">details</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]):</span>
+    <span class="s">"""이벤트 기록
+    
+    Parameters
+    ----------
+    event_type : str
+        이벤트 유형
+    details : dict
+        이벤트 상세 정보
+    """</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">logger</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s">"Event: </span><span class="si">{</span><span class="n">event_type</span><span class="si">}</span><span class="s"> - </span><span class="si">{</span><span class="n">json</span><span class="p">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">details</span><span class="p">)</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>시뮬레이션 이벤트 로깅
+    <ul>
+      <li>이벤트 유형 분류</li>
+      <li>JSON 형식 상세 정보</li>
+      <li>시간 자동 기록</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="3-메트릭-관리">3. 메트릭 관리</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">log_metric</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> 
+               <span class="n">timestamp</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span><span class="p">):</span>
+    <span class="s">"""메트릭 기록
+    
+    Parameters
+    ----------
+    name : str
+        메트릭 이름
+    value : any
+        메트릭 값
+    timestamp : float, optional
+        타임스탬프 (기본값: 현재 시간)
+    """</span>
+    <span class="k">if</span> <span class="n">timestamp</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">timestamp</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">.</span><span class="n">now</span><span class="p">().</span><span class="n">timestamp</span><span class="p">()</span>
+        
+    <span class="k">if</span> <span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">metrics</span><span class="p">:</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">metrics</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        
+    <span class="bp">self</span><span class="p">.</span><span class="n">metrics</span><span class="p">[</span><span class="n">name</span><span class="p">].</span><span class="n">append</span><span class="p">({</span>
+        <span class="s">'timestamp'</span><span class="p">:</span> <span class="n">timestamp</span><span class="p">,</span>
+        <span class="s">'value'</span><span class="p">:</span> <span class="n">value</span>
+    <span class="p">})</span>
+</code></pre></div></div>
+
+<ul>
+  <li>시계열 메트릭 저장
+    <ul>
+      <li>이름 기반 분류</li>
+      <li>시간 정보 포함</li>
+      <li>메모리 내 저장</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="4-네트워크-상태-로깅">4. 네트워크 상태 로깅</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">log_network_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cells</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">ues</span><span class="p">:</span> <span class="nb">list</span><span class="p">):</span>
+    <span class="s">"""네트워크 상태 기록
+    
+    Parameters
+    ----------
+    cells : list
+        셀 객체 리스트
+    ues : list
+        UE 객체 리스트
+    """</span>
+    <span class="n">state</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s">'timestamp'</span><span class="p">:</span> <span class="n">datetime</span><span class="p">.</span><span class="n">now</span><span class="p">().</span><span class="n">timestamp</span><span class="p">(),</span>
+        <span class="s">'cells'</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s">'id'</span><span class="p">:</span> <span class="n">cell</span><span class="p">.</span><span class="n">i</span><span class="p">,</span>
+            <span class="s">'position'</span><span class="p">:</span> <span class="n">cell</span><span class="p">.</span><span class="n">xyz</span><span class="p">.</span><span class="n">tolist</span><span class="p">(),</span>
+            <span class="s">'active_freqs'</span><span class="p">:</span> <span class="p">[</span><span class="n">f</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">cell</span><span class="p">.</span><span class="n">freq_config</span> 
+                           <span class="k">if</span> <span class="n">cell</span><span class="p">.</span><span class="n">freq_config</span><span class="p">[</span><span class="n">f</span><span class="p">][</span><span class="s">'active'</span><span class="p">]],</span>
+            <span class="s">'load'</span><span class="p">:</span> <span class="n">cell</span><span class="p">.</span><span class="n">get_cell_load</span><span class="p">(),</span>
+            <span class="s">'energy'</span><span class="p">:</span> <span class="n">cell</span><span class="p">.</span><span class="n">get_energy_stats</span><span class="p">()</span>
+        <span class="p">}</span> <span class="k">for</span> <span class="n">cell</span> <span class="ow">in</span> <span class="n">cells</span><span class="p">],</span>
+        <span class="s">'ues'</span><span class="p">:</span> <span class="p">[{</span>
+            <span class="s">'id'</span><span class="p">:</span> <span class="n">ue</span><span class="p">.</span><span class="n">i</span><span class="p">,</span>
+            <span class="s">'position'</span><span class="p">:</span> <span class="n">ue</span><span class="p">.</span><span class="n">xyz</span><span class="p">.</span><span class="n">tolist</span><span class="p">(),</span>
+            <span class="s">'serving_cell'</span><span class="p">:</span> <span class="n">ue</span><span class="p">.</span><span class="n">serving_cell</span><span class="p">.</span><span class="n">i</span> <span class="k">if</span> <span class="n">ue</span><span class="p">.</span><span class="n">serving_cell</span> <span class="k">else</span> <span class="bp">None</span><span class="p">,</span>
+            <span class="s">'metrics'</span><span class="p">:</span> <span class="n">ue</span><span class="p">.</span><span class="n">get_metrics</span><span class="p">()</span>
+        <span class="p">}</span> <span class="k">for</span> <span class="n">ue</span> <span class="ow">in</span> <span class="n">ues</span><span class="p">]</span>
+    <span class="p">}</span>
+    
+    <span class="bp">self</span><span class="p">.</span><span class="n">logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s">"Network State: </span><span class="si">{</span><span class="n">json</span><span class="p">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">state</span><span class="p">)</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>전체 네트워크 상태 스냅샷
+    <ul>
+      <li>셀 상태 정보</li>
+      <li>UE 연결 정보</li>
+      <li>JSON 형식 저장</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="5-메트릭-시각화">5. 메트릭 시각화</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">plot_metrics</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">metric_names</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">list</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span><span class="p">):</span>
+    <span class="s">"""메트릭 플롯 생성
+    
+    Parameters
+    ----------
+    metric_names : list, optional
+        플롯할 메트릭 이름 리스트 (기본값: 모든 메트릭)
+    """</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+        
+        <span class="k">if</span> <span class="n">metric_names</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">metric_names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">metrics</span><span class="p">.</span><span class="n">keys</span><span class="p">())</span>
+            
+        <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">metric_names</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">metrics</span><span class="p">:</span>
+                <span class="k">continue</span>
+                
+            <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">metrics</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+            <span class="n">timestamps</span> <span class="o">=</span> <span class="p">[</span><span class="n">d</span><span class="p">[</span><span class="s">'timestamp'</span><span class="p">]</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">data</span><span class="p">]</span>
+            <span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="n">d</span><span class="p">[</span><span class="s">'value'</span><span class="p">]</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">data</span><span class="p">]</span>
+            
+            <span class="n">plt</span><span class="p">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+            <span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">timestamps</span><span class="p">,</span> <span class="n">values</span><span class="p">)</span>
+            <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s">'Metric: </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+            <span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'Timestamp'</span><span class="p">)</span>
+            <span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'Value'</span><span class="p">)</span>
+            <span class="n">plt</span><span class="p">.</span><span class="n">grid</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+            
+            <span class="n">plot_file</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">log_dir</span> <span class="o">/</span> <span class="sa">f</span><span class="s">"metric_</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s">_</span><span class="si">{</span><span class="n">datetime</span><span class="p">.</span><span class="n">now</span><span class="p">()</span><span class="si">:</span><span class="o">%</span><span class="n">Y</span><span class="o">%</span><span class="n">m</span><span class="o">%</span><span class="n">d_</span><span class="o">%</span><span class="n">H</span><span class="o">%</span><span class="n">M</span><span class="o">%</span><span class="n">S</span><span class="si">}</span><span class="s">.png"</span>
+            <span class="n">plt</span><span class="p">.</span><span class="n">savefig</span><span class="p">(</span><span class="n">plot_file</span><span class="p">)</span>
+            <span class="n">plt</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+            
+    <span class="k">except</span> <span class="nb">ImportError</span><span class="p">:</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">warning</span><span class="p">(</span><span class="s">"matplotlib is required for plotting metrics"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>메트릭 시각화 도구
+    <ul>
+      <li>matplotlib 기반 그래프</li>
+      <li>시계열 플롯 생성</li>
+      <li>PNG 파일 저장</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="6-유틸리티-함수">6. 유틸리티 함수</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get_logger</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">logging</span><span class="p">.</span><span class="n">Logger</span><span class="p">:</span>
+    <span class="s">"""로거 인스턴스 반환"""</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">logger</span>
+
+<span class="k">def</span> <span class="nf">clear_metrics</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="s">"""메트릭 초기화"""</span>
+    <span class="bp">self</span><span class="p">.</span><span class="n">metrics</span><span class="p">.</span><span class="n">clear</span><span class="p">()</span>
+</code></pre></div></div>
+
+<ul>
+  <li>logger 인스턴스 접근</li>
+  <li>메트릭 데이터 관리</li>
+</ul>
+
+<h3 id="7-네트워크-시각화">7. 네트워크 시각화</h3>
+
+<h4 id="71-주파수-대역별-커버리지-시각화">7.1 주파수 대역별 커버리지 시각화</h4>
+
+<p>네트워크 상태를 시각적으로 표현하기 위해 <code class="language-plaintext highlighter-rouge">plot_frequency_band_coverage</code> 함수를 구현</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">plot_frequency_band_coverage</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                               <span class="n">cells</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span>
+                               <span class="n">ues</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span>
+                               <span class="n">grid_size</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span>
+                               <span class="n">save_path</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span><span class="p">):</span>
+    <span class="s">"""주파수 대역별 커버리지 및 UE 연결 상태 시각화
+    
+    Parameters
+    ----------
+    cells : list
+        셀 객체 리스트
+    ues : list
+        UE 객체 리스트
+    grid_size : tuple
+        그리드 해상도 (기본값: 200x200)
+    save_path : str, optional
+        저장 경로 (기본값: logs/freq_band_coverage_YYYYMMDD_HHMMSS.png)
+    """</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>주요 컴포넌트</p>
+
+    <ul>
+      <li>주파수 대역 설정</li>
+    </ul>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1"># 주파수 대역별 설정
+</span>  <span class="n">frequency_bands</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="mi">800</span><span class="p">:</span> <span class="p">{</span><span class="s">'color'</span><span class="p">:</span> <span class="s">'RdYlBu_r'</span><span class="p">,</span> <span class="s">'title'</span><span class="p">:</span> <span class="s">'800 MHz Coverage'</span><span class="p">},</span>
+      <span class="mi">1800</span><span class="p">:</span> <span class="p">{</span><span class="s">'color'</span><span class="p">:</span> <span class="s">'RdYlBu_r'</span><span class="p">,</span> <span class="s">'title'</span><span class="p">:</span> <span class="s">'1800 MHz Coverage'</span><span class="p">},</span>
+      <span class="mi">3600</span><span class="p">:</span> <span class="p">{</span><span class="s">'color'</span><span class="p">:</span> <span class="s">'RdYlBu_r'</span><span class="p">,</span> <span class="s">'title'</span><span class="p">:</span> <span class="s">'3600 MHz Coverage'</span><span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="c1"># 셀별 색상 할당
+</span>  <span class="n">cell_colors</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">cm</span><span class="p">.</span><span class="n">Set3</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">cells</span><span class="p">)))</span>
+  <span class="n">cell_color_dict</span> <span class="o">=</span> <span class="p">{</span><span class="n">cell</span><span class="p">.</span><span class="n">i</span><span class="p">:</span> <span class="n">cell_colors</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">cell</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">cells</span><span class="p">)}</span>
+</code></pre></div>    </div>
+
+    <ul>
+      <li>커버리지 맵 생성</li>
+    </ul>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1"># RSRP 계산
+</span>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">grid_size</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+      <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">grid_size</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+          <span class="n">point</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="n">X</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">],</span> <span class="n">Y</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">],</span> <span class="mi">0</span><span class="p">])</span>
+          <span class="n">max_rsrp</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s">'-inf'</span><span class="p">)</span>
+            
+          <span class="k">for</span> <span class="n">cell</span> <span class="ow">in</span> <span class="n">cells</span><span class="p">:</span>
+              <span class="k">if</span> <span class="p">(</span><span class="n">freq</span> <span class="ow">in</span> <span class="n">cell</span><span class="p">.</span><span class="n">freq_config</span> <span class="ow">and</span> 
+                  <span class="n">cell</span><span class="p">.</span><span class="n">freq_config</span><span class="p">[</span><span class="n">freq</span><span class="p">][</span><span class="s">'active'</span><span class="p">]):</span>
+                  <span class="n">rsrp</span> <span class="o">=</span> <span class="n">cell</span><span class="p">.</span><span class="n">calculate_rsrp</span><span class="p">(</span><span class="n">point</span><span class="p">,</span> <span class="n">freq</span><span class="p">)</span>
+                  <span class="n">max_rsrp</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">max_rsrp</span><span class="p">,</span> <span class="n">rsrp</span><span class="p">)</span>
+            
+          <span class="n">Z</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">max_rsrp</span>
+
+  <span class="c1"># 커버리지 맵 플로팅
+</span>  <span class="n">coverage</span> <span class="o">=</span> <span class="n">ax</span><span class="p">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span>
+                      <span class="n">shading</span><span class="o">=</span><span class="s">'auto'</span><span class="p">,</span>
+                      <span class="n">cmap</span><span class="o">=</span><span class="n">freq_info</span><span class="p">[</span><span class="s">'color'</span><span class="p">],</span>
+                      <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+                      <span class="n">vmin</span><span class="o">=-</span><span class="mi">120</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=-</span><span class="mi">60</span><span class="p">)</span>
+  <span class="n">plt</span><span class="p">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">coverage</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s">'RSRP (dBm)'</span><span class="p">)</span>
+</code></pre></div>    </div>
+
+    <ul>
+      <li>셀과 UE 시각화</li>
+    </ul>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1"># 셀 표시
+</span>  <span class="n">ax</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">pos</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pos</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+        <span class="n">c</span><span class="o">=</span><span class="p">[</span><span class="n">color</span><span class="p">],</span>
+        <span class="n">marker</span><span class="o">=</span><span class="s">'^'</span><span class="p">,</span>
+        <span class="n">s</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span>
+        <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s">'Cell </span><span class="si">{</span><span class="n">cell</span><span class="p">.</span><span class="n">i</span><span class="si">}</span><span class="s">'</span><span class="p">,</span>
+        <span class="n">edgecolors</span><span class="o">=</span><span class="s">'black'</span><span class="p">,</span>
+        <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+
+  <span class="c1"># UE 표시
+</span>  <span class="n">ax</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">pos</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">pos</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+          <span class="n">c</span><span class="o">=</span><span class="p">[</span><span class="n">color</span><span class="p">],</span>
+          <span class="n">marker</span><span class="o">=</span><span class="s">'o'</span><span class="p">,</span>
+          <span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+          <span class="n">edgecolors</span><span class="o">=</span><span class="s">'black'</span><span class="p">,</span>
+          <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+          <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+  
+</article>
+
+
+
+  <hr class="dingbat related mb6" />
+
+
+
+
+
+
+  
+     
+
+
+  <aside class="about related mt4 mb4" role="complementary">
+    
+    
+
+<div class="author mt4">
+  
+
+  
+    
+
+
+<img
+  
+    src="/assets/img/authors/author_128x128.jpeg"
+    srcset="/assets/img/authors/author_128x128.jpeg 1x,/assets/img/authors/author_256x256.jpeg 2x"
+    
+  
+  alt="Geon Kim"
+  class="avatar"
+  
+  width="120"
+  height="120"
+  loading="lazy"
+/>
+
+  
+
+  
+  
+  <h2  class="page-title hr-bottom">
+    About
+  </h2>
+
+  <p>I am a telecom software engineer and a post-graduate student focusing on the optimization of AI models for energy-saving use cases. 
+My research is aimed at enhancing the efficiency of telecom networks, specifically through the application of artificial intelligence to reduce energy consumption. 
+Additionally, I am passionate about cloud-native Radio Access Networks (RAN) and actively contribute to open-source projects in this field.</p>
+
+
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/cor5in" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="mailto:gun@khu.ac.kr" title="Email" class="no-mark-external">
+      <span class="icon-mail"></span>
+      <span class="sr-only">Email</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://www.linkedin.com/in/cor5in" title="LinkedIn" class="no-mark-external">
+      <span class="icon-linkedin2"></span>
+      <span class="sr-only">LinkedIn</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
+</div>
+
+  </aside>
+
+
+  
+
+  
+    
+
+
+  
+
+  
+    
+
+
+  <aside class="other-projects related mb0" role="complementary">  <h2>Related Posts</h2>  <div class="columns">          <div class="column column-1-2">                  <article class="project-card">  <a href="/blog/sim/2024-12-26-offloading-pathloss/" class="no-hover no-print-link flip-project" tabindex="-1">    <div class="project-card-img aspect-ratio sixteen-nine flip-project-img">              <img      src="/assets/img/blog/sim/phase1/sim.png"    srcset="/assets/img/blog/sim/phase1/sim.png 1920w,/assets/img/blog/sim/phase1/sim@0,5x.png 960w,/assets/img/blog/sim/phase1/sim@0,25x.png 480w"    sizes="(min-width:86em)27.5rem,(min-width:54em)24.5rem,(min-width:42em)21.5rem,42rem"    alt="오프로딩 시뮬레이터 - Collector"      width="864"  height="486"  loading="lazy"/>          </div>  </a>  <h3 class="project-card-title flip-project-title">    <a href="/blog/sim/2024-12-26-offloading-pathloss/" class="flip-title">오프로딩 시뮬레이터 - Collector</a>  </h3>      <p class="project-card-text fine" property="disambiguatingDescription">      <strong>Date</strong>: 2024.12.26,  <strong>Tag</strong>: [Offloading], [Patent], [Multi Frequency Band]    </p>      <a class="fill-card no-hover" href="/blog/sim/2024-12-26-offloading-pathloss/" tabindex="-1"><span class="sr-only">Continue reading 오프로딩 시뮬레이터 - Collector</span></a></article>              </div>          <div class="column column-1-2">                  <article class="project-card">  <a href="/blog/sim/2024-12-26-offloading-pathloss-copy/" class="no-hover no-print-link flip-project" tabindex="-1">    <div class="project-card-img aspect-ratio sixteen-nine flip-project-img">              <img      src="/assets/img/blog/sim/phase1/sim.png"    srcset="/assets/img/blog/sim/phase1/sim.png 1920w,/assets/img/blog/sim/phase1/sim@0,5x.png 960w,/assets/img/blog/sim/phase1/sim@0,25x.png 480w"    sizes="(min-width:86em)27.5rem,(min-width:54em)24.5rem,(min-width:42em)21.5rem,42rem"    alt="오프로딩 시뮬레이터 - Pathloss"      width="864"  height="486"  loading="lazy"/>          </div>  </a>  <h3 class="project-card-title flip-project-title">    <a href="/blog/sim/2024-12-26-offloading-pathloss-copy/" class="flip-title">오프로딩 시뮬레이터 - Pathloss</a>  </h3>      <p class="project-card-text fine" property="disambiguatingDescription">      <strong>Date</strong>: 2024.12.26,  <strong>Tag</strong>: [Offloading], [Patent], [Multi Frequency Band]    </p>      <a class="fill-card no-hover" href="/blog/sim/2024-12-26-offloading-pathloss-copy/" tabindex="-1"><span class="sr-only">Continue reading 오프로딩 시뮬레이터 - Pathloss</span></a></article>              </div>      </div></aside>
+
+  
+
+  
+    
+
+
+  <aside class="related mb4" role="complementary">  <h2 class="hr-bottom">Random Posts</h2>  <ul class="related-posts">          <li class="h4">  <a href="/blog/example/2017-11-23-example-content-ii/" class="flip-title"><span>Example Content II</span></a>  <time class="faded fine" datetime="2017-11-23T00:00:00+09:00">23 Nov 2017</time></li>          <li class="h4">  <a href="/blog/sim/2024-12-26-offloading-helper/" class="flip-title"><span>오프로딩 시뮬레이터 - Helper</span></a>  <time class="faded fine" datetime="2024-12-26T00:00:00+09:00">26 Dec 2024</time></li>          <li class="h4">  <a href="/blog/sim/2024-12-24-offloading-scenario/" class="flip-title"><span>오프로딩 시뮬레이터 - Scenario</span></a>  <time class="faded fine" datetime="2024-12-24T00:00:00+09:00">24 Dec 2024</time></li>      </ul></aside>
+
+  
+
+  
+    
+
+  
+
+
+  
+<footer class="content" role="contentinfo">
+  <hr/>
+  
+    <p><small class="copyright">© 2024. All rights reserved.
+</small></p>
+  
+  
+    <nav class="legal"><small>
+    
+      
+      <a class="heading flip-title" href="/LICENSE/">LICENSE</a>
+      |
+    
+      
+      <a class="heading flip-title" href="/NOTICE/">NOTICE</a>
+      |
+    
+      
+      <a class="heading flip-title" href="/CHANGELOG/">CHANGELOG</a>
+      
+    
+    </small></nav>
+  
+  
+  <hr class="sr-only"/>
+</footer>
+
+
+</main>
+
+  <hy-drawer
+  id="_drawer"
+  class=""
+  side="left"
+  threshold="10"
+  noscroll
+  
+>
+  <header id="_sidebar" class="sidebar" role="banner">
+    
+
+
+
+
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+
+    <div class="sidebar-sticky">
+  <div class="sidebar-about">
+    
+      <a class="no-hover" href="/" tabindex="-1">
+        <img src="/assets/img/logo.png" class="avatar" alt="Geon Kim" width="120" height="120" loading="lazy" />
+      </a>
+    
+    <a class="sidebar-title" href="/"><h2 class="h1">Geon Kim</h2></a>
+    
+    
+      <p class="">
+        Telecom Software Engineer
+
+      </p>
+    
+  </div>
+
+  <nav class="sidebar-nav heading" role="navigation">
+    <span class="sr-only">Navigation:</span>
+<ul>
+  
+    
+      
+      <li>
+        <a
+          id="_drawer--opened"
+          href="/blog/"
+          class="sidebar-nav-item "
+          
+        >
+          Blog
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/projects/"
+          class="sidebar-nav-item "
+          
+        >
+          Projects
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/resume/"
+          class="sidebar-nav-item "
+          
+        >
+          CV
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/docs/"
+          class="sidebar-nav-item "
+          
+        >
+          Documentation
+        </a>
+      </li>
+    
+  
+</ul>
+
+  </nav>
+
+  
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/cor5in" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="mailto:gun@khu.ac.kr" title="Email" class="no-mark-external">
+      <span class="icon-mail"></span>
+      <span class="sr-only">Email</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://www.linkedin.com/in/cor5in" title="LinkedIn" class="no-mark-external">
+      <span class="icon-linkedin2"></span>
+      <span class="sr-only">LinkedIn</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
+</div>
+  </header>
+</hy-drawer>
+<hr class="sr-only" hidden />
+
+</hy-push-state>
+
+
+  <!--[if gt IE 10]><!---->
+  <script nomodule>(()=>{var t,n=document.createElement("script");!("noModule"in n)&&"onbeforeload"in n&&(t=!1,document.addEventListener("beforeload",function(e){if(e.target===n)t=!0;else if(!e.target.hasAttribute("nomodule")||!t)return;e.preventDefault()},!0),n.type="module",n.src=".",document.head.appendChild(n),n.remove())})();
+</script>
+  <script src="/assets/js/hydejack-9.2.0.js" type="module"></script>
+  <script src="/assets/js/LEGACY-hydejack-9.2.0.js" nomodule defer></script>
+  
+
+  
+
+  <script type="module">
+    if ('serviceWorker' in navigator) {
+      /**/
+      navigator.serviceWorker.getRegistration()
+        .then(r => r.unregister())
+        .catch(() => {});
+      /**/
+    }
+  </script>
+<!--<![endif]-->
+  
+
+
+
+<div hidden>
+  
+  <h2 class="sr-only">Templates (for web app):</h2>
+
+  <template id="_animation-template">
+  <div class="animation-main fixed-top">
+    <nav id="breadcrumbs" class="screen-only"><ul>
+  
+  
+</ul></nav>
+    <div class="content">
+      <div class="page"></div>
+    </div>
+  </div>
+</template>
+
+  <template id="_loading-template">
+  <div class="loading nav-btn fr">
+    <span class="sr-only">Loading…</span>
+    <span class="icon-cog"></span>
+  </div>
+</template>
+
+  <template id="_error-template">
+  <div class="page">
+    <h1 class="page-title">Error</h1>
+    
+    
+    <p class="lead">
+      Sorry, an error occurred while loading <a class="this-link" href=""></a>.
+
+    </p>
+  </div>
+</template>
+
+  <template id="_permalink-template">
+  <a href="#" class="permalink">
+    <span class="sr-only">Permalink</span>
+    <span class="content-hash"></span>
+  </a>
+</template>
+
+  
+  
+    <template id="_dark-mode-template">
+  <button id="_dark-mode" class="nav-btn no-hover" >
+    <span class="sr-only">Dark Mode</span>
+    <span class="icon-brightness-contrast"></span>
+  </button>
+</template>
+
+  
+  
+    <template id="_search-template">
+  <button id="_search" class="nav-btn no-hover">
+    <label class="sr-only" for="_search-input">Search</label>
+    <span class="icon-search"></span>
+  </button>
+  <div id="_search-box">
+    <div class="nav-btn">
+      <span class="icon-search"></span>
+    </div>
+    <input 
+      id="_search-input"
+      type="search"
+      class="form-control form-control-lg nav-btn"
+      placeholder="Build with JEKYLL_ENV=production to enable search."
+    />
+    <button type="reset" class="nav-btn no-hover">
+      <span class="sr-only">Close</span>
+      <span class="icon-cross"></span>
+    </button>
+  </div>
+  <div id="_hits"></div>
+</template>
+
+  
+</div>
+
+</body>
+</html>

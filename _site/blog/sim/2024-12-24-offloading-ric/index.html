@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+
+
+<head>
+  
+
+
+
+
+  <meta name="robots" content="noindex">
+
+
+
+  
+    
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>오프로딩 시뮬레이터 - RIC | Geon Kim</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="오프로딩 시뮬레이터 - RIC" />
+<meta name="author" content="<firstname> <lastname>" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="Date: 2024.12.24, Tag: [Offloading], [Patent], [Multi Frequency Band]" />
+<meta property="og:description" content="Date: 2024.12.24, Tag: [Offloading], [Patent], [Multi Frequency Band]" />
+<link rel="canonical" href="http://localhost:4000/blog/sim/2024-12-24-offloading-ric/" />
+<meta property="og:url" content="http://localhost:4000/blog/sim/2024-12-24-offloading-ric/" />
+<meta property="og:site_name" content="Geon Kim" />
+<meta property="og:image" content="http://localhost:4000/assets/img/blog/green_ai/green-ai.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-12-24T00:00:00+09:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/assets/img/blog/green_ai/green-ai.png" />
+<meta property="twitter:title" content="오프로딩 시뮬레이터 - RIC" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"<firstname> <lastname>"},"dateModified":"2024-12-24T00:00:00+09:00","datePublished":"2024-12-24T00:00:00+09:00","description":"Date: 2024.12.24, Tag: [Offloading], [Patent], [Multi Frequency Band]","headline":"오프로딩 시뮬레이터 - RIC","image":{"srcset":{"1920w":"/assets/img/blog/green_ai/green-ai.png","960w":"/assets/img/blog/green_ai/green-ai@0,5x.png","480w":"/assets/img/blog/green_ai/green-ai@0,25x.png"},"url":"http://localhost:4000/assets/img/blog/green_ai/green-ai.png","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/sim/2024-12-24-offloading-ric/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/logo.png"},"name":"<firstname> <lastname>"},"url":"http://localhost:4000/blog/sim/2024-12-24-offloading-ric/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  
+
+
+
+  <meta name="color-scheme" content="dark light">
+
+
+
+  <meta name="theme-color" content="rgb(25,55,71)">
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Geon Kim">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+<meta name="application-name" content="Geon Kim">
+
+<meta name="generator" content="Hydejack v9.2.0" />
+
+
+<link rel="alternate" href="http://localhost:4000/blog/sim/2024-12-24-offloading-ric/" hreflang="en">
+
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Geon Kim" />
+
+
+<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+
+<link rel="manifest" href="/assets/site.webmanifest">
+
+
+
+
+
+<link rel="preload" href="/assets/img/swipe.svg" as="image" id="_hrefSwipeSVG">
+
+<link rel="dns-prefetch" href="/assets/js/search-worker-9.2.0.js" as="worker" id="_hrefSearch">
+
+
+
+
+
+<script>((r,a)=>{function d(e,t,n,o){e.addEventListener?e.addEventListener(t,n,o):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n}r.loadJS=function(e,t){var n=a.createElement("script"),e=(n.src=e,t&&d(n,"load",t,{once:!0}),a.scripts[0]);return e.parentNode.insertBefore(n,e),n},r._loaded=!1,r.loadJSDeferred=function(e,t){var n=a.createElement("script");function o(){r._loaded=!0,t&&d(n,"load",t,{once:!0});var e=a.scripts[0];e.parentNode.insertBefore(n,e)}return n.src=e,r._loaded?o():d(r,"load",o,{once:!0}),n},r.setRel=r.setRelStylesheet=function(e){d(a.getElementById(e),"load",function(){this.rel="stylesheet"},{once:!0})}})(window,document);
+!function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
+!function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
+!function(w) {
+  w._baseURL = '/';
+  w._publicPath = '/assets/js/';
+  w._noPushState = false;
+  w._noDrawer = false;
+  w._noNavbar = false;
+  w._noToc = false;
+  w._noSearch = false;
+  w._advertise = false;
+  w._search = {
+    DATA_URL: '/assets/sitedata.json?no-cache',
+    STORAGE_KEY: 'mini-search/',
+    INDEX_KEY: 'index--2024-12-27T14:12:18+09:00',
+  };
+  w._clapButton = true;
+}(window);</script>
+
+
+<script async src="/assets/bower_components/MathJax/es5/tex-mml-chtml.js" id="_MathJax"></script>
+
+
+<!--[if gt IE 8]><!---->
+
+  
+
+
+
+
+<link rel="stylesheet" href="/assets/css/hydejack-9.2.0.css" id="_stylePreload">
+<link rel="stylesheet" href="/assets/icomoon/style.css" id="_iconsPreload">
+
+
+
+
+  <style id="_pageStyle">
+
+html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);--accent-color-highlight: rgba(79,177,186,0.1);--accent-color-darkened: #409ba3;--theme-color: rgb(25,55,71);--dark-mode-body-bg: #2a2d2f;--dark-mode-border-color: #363a3d}
+
+</style>
+
+
+<!--<![endif]-->
+
+
+
+
+
+</head>
+
+<body class="dark-mode no-break-layout">
+  
+<script>
+  window._sunrise = 6;
+  window._sunset =  18;
+  ((e,s)=>{var d="light-mode",a="dark-mode",o=(new Date).getHours();"matchMedia"in e&&e.matchMedia("(prefers-color-scheme)")||(e=(o=o<=e._sunrise||o>=e._sunset?a:d)==a?d:a,s.body.classList.add(o),s.body.classList.remove(e))})(window,document);
+
+</script>
+
+
+
+<hy-push-state
+  id="_pushState"
+  replace-selector="#_main"
+  link-selector="a[href]:not([href^='/assets/']):not(.external):not(.no-push-state)"
+  script-selector="script"
+  duration="500"
+  hashchange
+>
+  
+  
+  <div id="_navbar" class="navbar fixed-top">
+  <div class="content">
+    <span class="sr-only">Jump to:</span>
+    <div class="nav-btn-bar">
+      <a id="_menu" class="nav-btn no-hover" href="#_drawer--opened">
+        <span class="sr-only">Navigation</span>
+        <span class="icon-menu"></span>
+      </a>
+      <div class="nav-span"></div>
+    </div>
+  </div>
+</div>
+<hr class="sr-only" hidden />
+
+  <main
+  id="_main"
+  class="content layout-post"
+  role="main"
+>
+  <nav id="breadcrumbs" class="screen-only"><ul>
+  
+  
+    <li><a href="/">home</a></li>
+    
+      <li>
+        
+          <span>/</span>
+          
+          
+          <a href="/blog/">blog</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          
+          
+          <a href="/blog/sim/">sim</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          <span>2024-12-24-offloading-ric</span>
+        
+      </li>
+    
+  
+</ul></nav>
+  
+
+
+
+
+
+
+
+
+
+
+<article id="post-blog-sim-offloading-ric" class="page post mb6" role="article">
+  <header>
+    <h1 class="post-title flip-project-title">
+      
+        오프로딩 시뮬레이터 - RIC
+      
+    </h1>
+
+    <div class="post-date">
+      
+      <span class="ellipsis mr1">
+        <time datetime="2024-12-24T00:00:00+09:00">24 Dec 2024</time> in <a href="/blog/sim/" class="flip-title">Simulator</a> 
+      </span>
+      
+        
+      
+    </div>
+
+    
+    
+      
+        <div class="img-wrapper lead aspect-ratio sixteen-nine flip-project-img">
+          
+
+
+<img
+  
+    src="/assets/img/blog/green_ai/green-ai.png"
+    srcset="/assets/img/blog/green_ai/green-ai.png 1920w,/assets/img/blog/green_ai/green-ai@0,5x.png 960w,/assets/img/blog/green_ai/green-ai@0,25x.png 480w"
+    
+  
+  alt="오프로딩 시뮬레이터 - RIC"
+  
+  
+  width="864"
+  height="486"
+  loading="lazy"
+/>
+
+        </div>
+      
+      
+    
+
+    
+
+
+
+  
+    <p class="note-sm" >
+      <strong>Date</strong>: 2024.12.24,  <strong>Tag</strong>: [Offloading], [Patent], [Multi Frequency Band]
+
+    </p>
+  
+
+
+  </header>
+
+  
+    <!--more-->
+
+<ul class="large-only" id="markdown-toc">
+  <li><a href="#5g-셀-시뮬레이터-구현-가이드-componentsricpy" id="markdown-toc-5g-셀-시뮬레이터-구현-가이드-componentsricpy">5G 셀 시뮬레이터 구현 가이드: <code class="language-plaintext highlighter-rouge">components/ric.py</code></a>    <ul>
+      <li><a href="#아키텍쳐-개요" id="markdown-toc-아키텍쳐-개요">아키텍쳐 개요</a></li>
+      <li><a href="#코드-설명" id="markdown-toc-코드-설명">코드 설명</a>        <ul>
+          <li><a href="#1-storage-manager" id="markdown-toc-1-storage-manager">1. Storage Manager</a></li>
+          <li><a href="#2-experience-collector" id="markdown-toc-2-experience-collector">2. Experience Collector</a></li>
+          <li><a href="#3-priority-calculator" id="markdown-toc-3-priority-calculator">3. Priority Calculator</a></li>
+          <li><a href="#4-batch-generator" id="markdown-toc-4-batch-generator">4. Batch Generator</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="5g-셀-시뮬레이터-구현-가이드-componentsricpy">5G 셀 시뮬레이터 구현 가이드: <code class="language-plaintext highlighter-rouge">components/ric.py</code></h1>
+
+<h2 id="아키텍쳐-개요">아키텍쳐 개요</h2>
+
+<p>RIC.py는 강화학습을 위한 경험 수집기(Experience Collector) 역할을 한다. 이 모듈은 다음과 같은 주요 컴포넌트들로 구성되어 있다.</p>
+
+<ul>
+  <li><strong>Storage Manager</strong>: 경험 데이터의 저장과 관리를 담당하는 컴포넌트</li>
+  <li><strong>Experience Collector</strong>: 에이전트의 행동과 환경으로부터의 피드백을 수집하는 핵심 컴포넌트</li>
+  <li><strong>Priority Calculator</strong>: 경험의 중요도를 계산하고 우선수위를 결정하는 컴포넌트</li>
+  <li><strong>Batch Generator</strong>: 학습을 위한 미니배치를 생성하는 컴포넌트</li>
+</ul>
+
+<h2 id="코드-설명">코드 설명</h2>
+
+<h3 id="1-storage-manager">1. Storage Manager</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">StorageManager</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">capacity</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">capacity</span> <span class="o">=</span> <span class="n">capacity</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">memory</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">position</span> <span class="o">=</span> <span class="mi">0</span>
+        
+    <span class="k">def</span> <span class="nf">push</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">experience</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">memory</span><span class="p">)</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="p">.</span><span class="n">capacity</span><span class="p">:</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">memory</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="bp">None</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">memory</span><span class="p">[</span><span class="bp">self</span><span class="p">.</span><span class="n">position</span><span class="p">]</span> <span class="o">=</span> <span class="n">experience</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">position</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">position</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="bp">self</span><span class="p">.</span><span class="n">capacity</span>
+        
+    <span class="k">def</span> <span class="nf">sample</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">random</span><span class="p">.</span><span class="n">sample</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">memory</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">)</span>
+</code></pre></div></div>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">__init__</code>: 저장소 초기화
+    <ul>
+      <li>capacity 파라미터로 최대 저장 용량을 설정</li>
+      <li>memory 리스트로 실제 경험 데이터를 저장</li>
+      <li>position은 circular buffer에서 현재 위치를 추적</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">push</code>: 새로운 경험 저장
+    <ul>
+      <li>용량이 남아있으면 새로운 공간 할당</li>
+      <li>circular buffer 방식으로 오래된 데이터를 새로운 데이터로 대체</li>
+      <li>position을 순환적으로 업데이트</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">sample</code>: 배치 샘플링
+    <ul>
+      <li>random.sample을 사용하여 무작위로 배치 크기만큼의 경험을 추출</li>
+      <li>중복 없는 샘플링 보장</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="2-experience-collector">2. Experience Collector</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ExperienceCollector</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">storage_manager</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">storage</span> <span class="o">=</span> <span class="n">storage_manager</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">current_episode</span> <span class="o">=</span> <span class="p">[]</span>
+        
+    <span class="k">def</span> <span class="nf">add_experience</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="n">action</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">next_state</span><span class="p">,</span> <span class="n">done</span><span class="p">):</span>
+        <span class="n">experience</span> <span class="o">=</span> <span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">action</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">next_state</span><span class="p">,</span> <span class="n">done</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">current_episode</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">experience</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">episode_end</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">exp</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">current_episode</span><span class="p">:</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">storage</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">exp</span><span class="p">)</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">current_episode</span> <span class="o">=</span> <span class="p">[]</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">__init__</code>: 컬렉터 초기화
+    <ul>
+      <li>storage_manager 참조를 저장</li>
+      <li>current_episode 리스트로 현재 에피소드의 경험을 임시 저장</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">add_experience</code>: 새로운 경험 추가
+    <ul>
+      <li>state, action, reward, next_state, done 정보를 튜플로 패키징</li>
+      <li>현재 에피소드 리스트에 임시 저장</li>
+      <li>메모리 효율을 위해 numpy 배열 사용 권장</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">episode_end</code>: 에피소드 종료 처리
+    <ul>
+      <li>현재 에피소드의 모든 경험을 storage에 저장</li>
+      <li>current_episode 리스트 초기화</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="3-priority-calculator">3. Priority Calculator</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">PriorityCalculator</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">beta</span><span class="o">=</span><span class="mf">0.4</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">alpha</span> <span class="o">=</span> <span class="n">alpha</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">beta</span> <span class="o">=</span> <span class="n">beta</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">priorities</span> <span class="o">=</span> <span class="p">[]</span>
+        
+    <span class="k">def</span> <span class="nf">update_priorities</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">indices</span><span class="p">,</span> <span class="n">errors</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">error</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">indices</span><span class="p">,</span> <span class="n">errors</span><span class="p">):</span>
+            <span class="n">priority</span> <span class="o">=</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="o">+</span> <span class="mf">1e-5</span><span class="p">)</span> <span class="o">**</span> <span class="bp">self</span><span class="p">.</span><span class="n">alpha</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">priorities</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">priority</span>
+            
+    <span class="k">def</span> <span class="nf">get_sampling_probabilities</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">probs</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">priorities</span><span class="p">)</span> <span class="o">**</span> <span class="bp">self</span><span class="p">.</span><span class="n">alpha</span>
+        <span class="n">probs</span> <span class="o">=</span> <span class="n">probs</span> <span class="o">/</span> <span class="nb">sum</span><span class="p">(</span><span class="n">probs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">probs</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">__init__</code>: 우선순위 계산기 초기화
+    <ul>
+      <li>alpha: 우선숭뉘 계산에 사용되는 지수 파라미터</li>
+      <li>beta: 중요도 샘플링 보정에 사용되는 파라미터</li>
+      <li>priorities: 각 경험의 우선순위를 저장하는 리스트</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">update_priorities</code>: 우선순위 업데이트
+    <ul>
+      <li>TD-error를 기반으로 우선순위 계산</li>
+      <li>작은 상수를 더해 0 우선순위 방지</li>
+      <li>alpha 파라미터로 우선순위 스케일 조정</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">get_sampling_probabilities</code>: 샘플링 확률 계산
+    <ul>
+      <li>우선순위를 확률로 변환</li>
+      <li>전체 합이 1이 되도록 정규화</li>
+      <li>numpy 배열 사용으로 계산 효율성 확보</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="4-batch-generator">4. Batch Generator</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">BatchGenerator</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">storage_manager</span><span class="p">,</span> <span class="n">priority_calculator</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">storage</span> <span class="o">=</span> <span class="n">storage_manager</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">priority_calc</span> <span class="o">=</span> <span class="n">priority_calculator</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">batch_size</span> <span class="o">=</span> <span class="n">batch_size</span>
+        
+    <span class="k">def</span> <span class="nf">generate_batch</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">probss</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">priority_calc</span><span class="p">.</span><span class="n">get_sampling_probabilities</span><span class="p">()</span>
+        <span class="n">indices</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">choice</span><span class="p">(</span>
+            <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">storage</span><span class="p">.</span><span class="n">memory</span><span class="p">),</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">batch_size</span><span class="p">,</span>
+            <span class="n">p</span><span class="o">=</span><span class="n">probs</span>
+        <span class="p">)</span>
+        <span class="n">experiences</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="p">.</span><span class="n">storage</span><span class="p">.</span><span class="n">memory</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">indices</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">experiences</span><span class="p">,</span> <span class="n">indices</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">__init__</code>: 배치 생성기 초기화
+    <ul>
+      <li>storage_manager: 경험 저장소 참조</li>
+      <li>priority_calculator: 우선순위 계산기 참조</li>
+      <li>batch_size: 생성할 배치의 크기</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">generate_batch</code>: 배치 생성
+    <ul>
+      <li>우선순위 기반 확률 계산</li>
+      <li>numpy.random.choice로 우선순위에 따른 샘플링</li>
+      <li>선택된 인덱스의 경험들을 배치로 구성</li>
+      <li>인덱스도 함께 반환하여 우선순위 업데이트 가능</li>
+    </ul>
+  </li>
+</ul>
+
+  
+</article>
+
+
+
+  <hr class="dingbat related mb6" />
+
+
+
+
+
+
+  
+     
+
+
+  <aside class="about related mt4 mb4" role="complementary">
+    
+    
+
+<div class="author mt4">
+  
+
+  
+    
+
+
+<img
+  
+    src="/assets/img/authors/author_128x128.jpeg"
+    srcset="/assets/img/authors/author_128x128.jpeg 1x,/assets/img/authors/author_256x256.jpeg 2x"
+    
+  
+  alt="Geon Kim"
+  class="avatar"
+  
+  width="120"
+  height="120"
+  loading="lazy"
+/>
+
+  
+
+  
+  
+  <h2  class="page-title hr-bottom">
+    About
+  </h2>
+
+  <p>I am a telecom software engineer and a post-graduate student focusing on the optimization of AI models for energy-saving use cases. 
+My research is aimed at enhancing the efficiency of telecom networks, specifically through the application of artificial intelligence to reduce energy consumption. 
+Additionally, I am passionate about cloud-native Radio Access Networks (RAN) and actively contribute to open-source projects in this field.</p>
+
+
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/cor5in" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="mailto:gun@khu.ac.kr" title="Email" class="no-mark-external">
+      <span class="icon-mail"></span>
+      <span class="sr-only">Email</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://www.linkedin.com/in/cor5in" title="LinkedIn" class="no-mark-external">
+      <span class="icon-linkedin2"></span>
+      <span class="sr-only">LinkedIn</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
+</div>
+
+  </aside>
+
+
+  
+
+  
+    
+
+
+  
+
+  
+    
+
+
+  <aside class="other-projects related mb0" role="complementary">  <h2>Related Posts</h2>  <div class="columns">          <div class="column column-1-2">                  <article class="project-card">  <a href="/blog/sim/2024-12-26-offloading-pathloss/" class="no-hover no-print-link flip-project" tabindex="-1">    <div class="project-card-img aspect-ratio sixteen-nine flip-project-img">              <img      src="/assets/img/blog/sim/phase1/sim.png"    srcset="/assets/img/blog/sim/phase1/sim.png 1920w,/assets/img/blog/sim/phase1/sim@0,5x.png 960w,/assets/img/blog/sim/phase1/sim@0,25x.png 480w"    sizes="(min-width:86em)27.5rem,(min-width:54em)24.5rem,(min-width:42em)21.5rem,42rem"    alt="오프로딩 시뮬레이터 - Collector"      width="864"  height="486"  loading="lazy"/>          </div>  </a>  <h3 class="project-card-title flip-project-title">    <a href="/blog/sim/2024-12-26-offloading-pathloss/" class="flip-title">오프로딩 시뮬레이터 - Collector</a>  </h3>      <p class="project-card-text fine" property="disambiguatingDescription">      <strong>Date</strong>: 2024.12.26,  <strong>Tag</strong>: [Offloading], [Patent], [Multi Frequency Band]    </p>      <a class="fill-card no-hover" href="/blog/sim/2024-12-26-offloading-pathloss/" tabindex="-1"><span class="sr-only">Continue reading 오프로딩 시뮬레이터 - Collector</span></a></article>              </div>          <div class="column column-1-2">                  <article class="project-card">  <a href="/blog/sim/2024-12-26-offloading-pathloss-copy/" class="no-hover no-print-link flip-project" tabindex="-1">    <div class="project-card-img aspect-ratio sixteen-nine flip-project-img">              <img      src="/assets/img/blog/sim/phase1/sim.png"    srcset="/assets/img/blog/sim/phase1/sim.png 1920w,/assets/img/blog/sim/phase1/sim@0,5x.png 960w,/assets/img/blog/sim/phase1/sim@0,25x.png 480w"    sizes="(min-width:86em)27.5rem,(min-width:54em)24.5rem,(min-width:42em)21.5rem,42rem"    alt="오프로딩 시뮬레이터 - Pathloss"      width="864"  height="486"  loading="lazy"/>          </div>  </a>  <h3 class="project-card-title flip-project-title">    <a href="/blog/sim/2024-12-26-offloading-pathloss-copy/" class="flip-title">오프로딩 시뮬레이터 - Pathloss</a>  </h3>      <p class="project-card-text fine" property="disambiguatingDescription">      <strong>Date</strong>: 2024.12.26,  <strong>Tag</strong>: [Offloading], [Patent], [Multi Frequency Band]    </p>      <a class="fill-card no-hover" href="/blog/sim/2024-12-26-offloading-pathloss-copy/" tabindex="-1"><span class="sr-only">Continue reading 오프로딩 시뮬레이터 - Pathloss</span></a></article>              </div>      </div></aside>
+
+  
+
+  
+    
+
+
+  <aside class="related mb4" role="complementary">  <h2 class="hr-bottom">Random Posts</h2>  <ul class="related-posts">          <li class="h4">  <a href="/blog/paper/2024-09-26-joint-traffic-prediction-and-base-station-sleepiong-for-energy-saving-in-cellular-networks/" class="flip-title"><span>Joint Traffic Prediction and Base Station Sleeping for Energy Saving in Cellular Networks</span></a>  <time class="faded fine" datetime="2024-09-26T00:00:00+09:00">26 Sep 2024</time></li>          <li class="h4">  <a href="/blog/sim/2024-12-24-offloading-ue/" class="flip-title"><span>오프로딩 시뮬레이터 - UE.py</span></a>  <time class="faded fine" datetime="2024-12-24T00:00:00+09:00">24 Dec 2024</time></li>          <li class="h4">  <a href="/blog/sim/2024-12-24-offloading-scenario/" class="flip-title"><span>오프로딩 시뮬레이터 - Scenario</span></a>  <time class="faded fine" datetime="2024-12-24T00:00:00+09:00">24 Dec 2024</time></li>      </ul></aside>
+
+  
+
+  
+    
+
+  
+
+
+  
+<footer class="content" role="contentinfo">
+  <hr/>
+  
+    <p><small class="copyright">© 2024. All rights reserved.
+</small></p>
+  
+  
+    <nav class="legal"><small>
+    
+      
+      <a class="heading flip-title" href="/LICENSE/">LICENSE</a>
+      |
+    
+      
+      <a class="heading flip-title" href="/NOTICE/">NOTICE</a>
+      |
+    
+      
+      <a class="heading flip-title" href="/CHANGELOG/">CHANGELOG</a>
+      
+    
+    </small></nav>
+  
+  
+  <hr class="sr-only"/>
+</footer>
+
+
+</main>
+
+  <hy-drawer
+  id="_drawer"
+  class=""
+  side="left"
+  threshold="10"
+  noscroll
+  
+>
+  <header id="_sidebar" class="sidebar" role="banner">
+    
+
+
+
+
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+
+    <div class="sidebar-sticky">
+  <div class="sidebar-about">
+    
+      <a class="no-hover" href="/" tabindex="-1">
+        <img src="/assets/img/logo.png" class="avatar" alt="Geon Kim" width="120" height="120" loading="lazy" />
+      </a>
+    
+    <a class="sidebar-title" href="/"><h2 class="h1">Geon Kim</h2></a>
+    
+    
+      <p class="">
+        Telecom Software Engineer
+
+      </p>
+    
+  </div>
+
+  <nav class="sidebar-nav heading" role="navigation">
+    <span class="sr-only">Navigation:</span>
+<ul>
+  
+    
+      
+      <li>
+        <a
+          id="_drawer--opened"
+          href="/blog/"
+          class="sidebar-nav-item "
+          
+        >
+          Blog
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/projects/"
+          class="sidebar-nav-item "
+          
+        >
+          Projects
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/resume/"
+          class="sidebar-nav-item "
+          
+        >
+          CV
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/docs/"
+          class="sidebar-nav-item "
+          
+        >
+          Documentation
+        </a>
+      </li>
+    
+  
+</ul>
+
+  </nav>
+
+  
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/cor5in" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="mailto:gun@khu.ac.kr" title="Email" class="no-mark-external">
+      <span class="icon-mail"></span>
+      <span class="sr-only">Email</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://www.linkedin.com/in/cor5in" title="LinkedIn" class="no-mark-external">
+      <span class="icon-linkedin2"></span>
+      <span class="sr-only">LinkedIn</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
+</div>
+  </header>
+</hy-drawer>
+<hr class="sr-only" hidden />
+
+</hy-push-state>
+
+
+  <!--[if gt IE 10]><!---->
+  <script nomodule>(()=>{var t,n=document.createElement("script");!("noModule"in n)&&"onbeforeload"in n&&(t=!1,document.addEventListener("beforeload",function(e){if(e.target===n)t=!0;else if(!e.target.hasAttribute("nomodule")||!t)return;e.preventDefault()},!0),n.type="module",n.src=".",document.head.appendChild(n),n.remove())})();
+</script>
+  <script src="/assets/js/hydejack-9.2.0.js" type="module"></script>
+  <script src="/assets/js/LEGACY-hydejack-9.2.0.js" nomodule defer></script>
+  
+
+  
+
+  <script type="module">
+    if ('serviceWorker' in navigator) {
+      /**/
+      navigator.serviceWorker.getRegistration()
+        .then(r => r.unregister())
+        .catch(() => {});
+      /**/
+    }
+  </script>
+<!--<![endif]-->
+  
+
+
+
+<div hidden>
+  
+  <h2 class="sr-only">Templates (for web app):</h2>
+
+  <template id="_animation-template">
+  <div class="animation-main fixed-top">
+    <nav id="breadcrumbs" class="screen-only"><ul>
+  
+  
+</ul></nav>
+    <div class="content">
+      <div class="page"></div>
+    </div>
+  </div>
+</template>
+
+  <template id="_loading-template">
+  <div class="loading nav-btn fr">
+    <span class="sr-only">Loading…</span>
+    <span class="icon-cog"></span>
+  </div>
+</template>
+
+  <template id="_error-template">
+  <div class="page">
+    <h1 class="page-title">Error</h1>
+    
+    
+    <p class="lead">
+      Sorry, an error occurred while loading <a class="this-link" href=""></a>.
+
+    </p>
+  </div>
+</template>
+
+  <template id="_permalink-template">
+  <a href="#" class="permalink">
+    <span class="sr-only">Permalink</span>
+    <span class="content-hash"></span>
+  </a>
+</template>
+
+  
+  
+    <template id="_dark-mode-template">
+  <button id="_dark-mode" class="nav-btn no-hover" >
+    <span class="sr-only">Dark Mode</span>
+    <span class="icon-brightness-contrast"></span>
+  </button>
+</template>
+
+  
+  
+    <template id="_search-template">
+  <button id="_search" class="nav-btn no-hover">
+    <label class="sr-only" for="_search-input">Search</label>
+    <span class="icon-search"></span>
+  </button>
+  <div id="_search-box">
+    <div class="nav-btn">
+      <span class="icon-search"></span>
+    </div>
+    <input 
+      id="_search-input"
+      type="search"
+      class="form-control form-control-lg nav-btn"
+      placeholder="Build with JEKYLL_ENV=production to enable search."
+    />
+    <button type="reset" class="nav-btn no-hover">
+      <span class="sr-only">Close</span>
+      <span class="icon-cross"></span>
+    </button>
+  </div>
+  <div id="_hits"></div>
+</template>
+
+  
+</div>
+
+</body>
+</html>
