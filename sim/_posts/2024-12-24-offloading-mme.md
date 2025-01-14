@@ -2,13 +2,10 @@
 layout: post
 title: 오프로딩 시뮬레이터 - MME
 description: >
-<<<<<<< HEAD
-  **Date**: 2024.11.25, 
-  **Tag**: [Traffic Prediction], [Carbon Emission], [Graduation]
-=======
+
   **Date**: 2024.12.24, 
   **Tag**: [Offloading], [Patent], [Multi Frequency Band]
->>>>>>> c9b4b85b73d42fdc5a945dcab7b288650d40921f
+
 image: 
   path: /assets/img/blog/green_ai/green-ai.png 
   srcset: 

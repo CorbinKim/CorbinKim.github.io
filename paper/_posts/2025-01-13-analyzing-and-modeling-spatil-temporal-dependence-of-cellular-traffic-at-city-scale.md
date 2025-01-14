@@ -2,7 +2,7 @@
 layout: post
 title: Analyzing and Modeling Spatio-Temporal Dependence of Cellular Traffic at City Scale
 description: >
-  **Date**: 2015.06.12, 
+  **Date**: 2015.06.12 <br>
   **Tag**: [Spatil-temporal dependence], [Traffic modeling], [Model measurement], [Correlation analysis], [Tide effects]
 image: 
   path: /assets/img/blog/0113/thumbnail/c2tm.png
