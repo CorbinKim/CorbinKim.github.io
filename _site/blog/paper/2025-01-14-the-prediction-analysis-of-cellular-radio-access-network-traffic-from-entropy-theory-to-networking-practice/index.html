@@ -106,7 +106,7 @@
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2025-01-14T17:33:45+09:00',
+    INDEX_KEY: 'index--2025-01-15T11:39:57+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -294,9 +294,26 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
     </ul>
   </li>
   <li><a href="#2-paper-summarization" id="markdown-toc-2-paper-summarization">2. Paper Summarization</a>    <ul>
-      <li><a href="#3-take-away" id="markdown-toc-3-take-away">3. Take Away</a></li>
+      <li><a href="#21-데이터셋-및-분석-방법론" id="markdown-toc-21-데이터셋-및-분석-방법론">2.1 데이터셋 및 분석 방법론</a>        <ul>
+          <li><a href="#조건부-엔트로피conditional-entropy" id="markdown-toc-조건부-엔트로피conditional-entropy">조건부 엔트로피(Conditional Entropy)</a></li>
+        </ul>
+      </li>
+      <li><a href="#22-예측-분석" id="markdown-toc-22-예측-분석">2.2 예측 분석</a>        <ul>
+          <li><a href="#221-시간적-연관성-temporal-correlation" id="markdown-toc-221-시간적-연관성-temporal-correlation">2.2.1 시간적 연관성 (Temporal Correlation)</a></li>
+          <li><a href="#222-공간적-연관성-spatial-correlation" id="markdown-toc-222-공간적-연관성-spatial-correlation">2.2.2 공간적 연관성 (Spatial Correlation)</a></li>
+          <li><a href="#223-서비스-간-연관성-inter-service-correlation" id="markdown-toc-223-서비스-간-연관성-inter-service-correlation">2.2.3 서비스 간 연관성 (Inter-Service Correlation)</a></li>
+        </ul>
+      </li>
+      <li><a href="#23-traffic-prediction-and-future-network-architecture" id="markdown-toc-23-traffic-prediction-and-future-network-architecture">2.3 Traffic Prediction and Future Network Architecture</a>        <ul>
+          <li><a href="#231-traffic-based-sdran-architecture" id="markdown-toc-231-traffic-based-sdran-architecture">2.3.1 Traffic-Based SDRAN Architecture</a></li>
+          <li><a href="#232-large-scale-traffic-aware-resource-management" id="markdown-toc-232-large-scale-traffic-aware-resource-management">2.3.2 Large-Scale Traffic-Aware Resource Management</a></li>
+          <li><a href="#233-small-scale-flow-centric-resource-allocation" id="markdown-toc-233-small-scale-flow-centric-resource-allocation">2.3.3 Small-Scale Flow-Centric Resource Allocation</a></li>
+        </ul>
+      </li>
+      <li><a href="#24-conclusion" id="markdown-toc-24-conclusion">2.4 Conclusion</a></li>
     </ul>
   </li>
+  <li><a href="#3-take-away" id="markdown-toc-3-take-away">3. Take Away</a></li>
 </ul>
 
 <h1 id="1-why-this-paper">1. Why this paper</h1>
@@ -359,15 +376,144 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
   <li>SD-RAN은 미래 네트워크 아키텍쳐의 중요한 방향성으로, 효율적인 자원 배분과 사용자 경험 향상을 가능하게 함</li>
 </ul>
 
+<hr />
+
 <h1 id="2-paper-summarization">2. Paper Summarization</h1>
 
-<p>논문의 목표는 다음과 같다.</p>
+<p>논문의 목표는 다음과 같음</p>
 
 <ol>
-  <li>엔트로피 이론을 활용하여 셀룰러 RAN 트래픽의 시간적, 공간적, 서비스 간 연관성을 분석한다.</li>
+  <li>엔트로피 이론을 활용하여 셀룰러 RAN 트래픽의 시간적, 공간적, 서비스 간 연관성을 분석</li>
+  <li>예측 결과를 기반으로 효율적인 SD-RAN 설계를 제안</li>
 </ol>
 
-<h3 id="3-take-away">3. Take Away</h3>
+<h2 id="21-데이터셋-및-분석-방법론">2.1 데이터셋 및 분석 방법론</h2>
+<ul>
+  <li><strong>데이터셋</strong>: 약 7000개의 기지국에서 수집한 1개월 분량의 트래픽 데이터 사용(음성, 문자, 데이터 서비스 포함)</li>
+  <li><strong>전처리</strong>: 데이터를 시간 간격으로 정량화하여 각 셀에서 트래픽 변화 분석</li>
+</ul>
+
+<p>엔트로피는 Shannon이 불확실성을 측정하기 위해 정의한 값으로, 트래픽의 예측 가능성을 분석하는 데 사용됨</p>
+
+<p>엔트로피의 정의는 다음과 같음</p>
+
+\[H(X) = -\sum_{i=1}^{n} p(x_i) \log_2 p(x_i) \tag{1}\]
+
+<ul>
+  <li>\(p(x_i)\): 특정 트래픽 수준 \(x_i\)가 발생할 확률</li>
+</ul>
+
+<div align="center">
+  <img src="/assets/img/blog/0114/fig/fig_1.png" alt="Fig. 1" />
+</div>
+
+<p>Fig 1은 두 개의 셀에서 음성, 문자, 데이터 트래픽의 엔트로피 값을 보여줌</p>
+<ul>
+  <li><strong>음성 트래픽</strong>: 가장 큰 변동성을 보이며, 엔트로피 값이 높음</li>
+  <li><strong>데이터 트래픽</strong>: 가장 안정적이며, 엔트로피 값이 낮음</li>
+  <li>서비스 유형에 따라 트래픽 특성이 달라짐을 나타냄</li>
+</ul>
+
+<div align="center">
+  <img src="/assets/img/blog/0114/fig/table_1.png" alt="Table. 1" />
+</div>
+
+<h4 id="조건부-엔트로피conditional-entropy">조건부 엔트로피(Conditional Entropy)</h4>
+
+<p>트래픽 예측은 과거 데이터를 기반으로 미래 트래픽의 불확실성을 줄이는 것을 목표로 함. 이를 위해 <strong>조건부 엔트로피</strong>를 계산</p>
+
+\[\begin{align}
+H(X|Y) &amp;= \sum_{i,j} p(x_i, y_j) \log \frac{p(y_j)}{p(x_i, y_j)} \notag \\
+       &amp;= H(X, Y) - H(Y) \tag{2}
+\end{align}\]
+
+<p align="center">
+  <img src="/assets/img/blog/0114/fig/fig_2.png" alt="Left Image" width="45%" style="margin-right: 10px;" />
+  <img src="/assets/img/blog/0114/fig/fig_3.png" alt="Right Image" width="45%" style="margin-left: 10px;" />
+</p>
+
+<h2 id="22-예측-분석">2.2 예측 분석</h2>
+
+<h3 id="221-시간적-연관성-temporal-correlation">2.2.1 시간적 연관성 (Temporal Correlation)</h3>
+
+<p>과거 트래픽 데이터는 현재 및 미래 트래픽 예측에 중요한 역할을 함</p>
+<ul>
+  <li>Random 엔트로피(사전 정보 X): \(H(X)\) = 2.1492 bits(음성 트래픽)</li>
+  <li>2시간 전 데이터를 추가로 사용했을 때: Conditional 엔트로피 \(H(X \vert T)\) = 0.5880 bits로 감소</li>
+  <li>이는 불확실성이 약 73% 감소했음을 의미하며, 더 긴 기간의 데이터를 사용할수록 불확실성은 더욱 감소</li>
+</ul>
+
+<h3 id="222-공간적-연관성-spatial-correlation">2.2.2 공간적 연관성 (Spatial Correlation)</h3>
+
+<p>인접한 셀에서의 트래픽 데이터는 예측 정확도를 개선할 수 있음</p>
+<ul>
+  <li>3개의 인접 셀 정보를 사용할 경우 \(H(X \vert S)\) = 0.9043</li>
+  <li>공간적 정보는 시간적 정보보다 덜 중요한 역할을 함</li>
+</ul>
+
+<h3 id="223-서비스-간-연관성-inter-service-correlation">2.2.3 서비스 간 연관성 (Inter-Service Correlation)</h3>
+
+<p>다른 서비스 유형 간의 연관성을 활용</p>
+<ul>
+  <li>문자 트래픽은 음성 트래픽 예측에 유용하며, 조건부 엔트로피 \(H(X \vert Text)\) = 1.3966</li>
+  <li>데이터 트래픽은 독립적인 특성이 강해 다른 서비스의 정보를 활용하기 어려움</li>
+</ul>
+
+<h2 id="23-traffic-prediction-and-future-network-architecture">2.3 Traffic Prediction and Future Network Architecture</h2>
+
+<h3 id="231-traffic-based-sdran-architecture">2.3.1 Traffic-Based SDRAN Architecture</h3>
+
+<div align="center">
+  <img src="/assets/img/blog/0114/fig/fig_4.png" alt="Fig. 4" />
+</div>
+
+<ul>
+  <li>제어 평면과 데이터 평면을 분리하여 네트워크 관리를 유연화</li>
+  <li>구성 요소
+    <ul>
+      <li>트래픽 예측 엔진: 실시간 트래픽 변화 감지</li>
+      <li>정책 엔진: 자원 할당 및 네트워크 상태 조정</li>
+      <li>API: 외부 어플리케이션과 상호작용</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="232-large-scale-traffic-aware-resource-management">2.3.2 Large-Scale Traffic-Aware Resource Management</h3>
+
+<div align="center">
+  <img src="/assets/img/blog/0113/fig/fig_5.png" alt="Fig 5" />
+</div>
+
+<ul>
+  <li>과거 데이터(20-34시간)를 더 많이 사용할수록 RMSE 감소</li>
+  <li>음성 트래픽의 RMSE가 데이터 트래픽보다 더 급격히 감소하여 더 쉽게 예측 가능</li>
+</ul>
+
+<h3 id="233-small-scale-flow-centric-resource-allocation">2.3.3 Small-Scale Flow-Centric Resource Allocation</h3>
+
+<ul>
+  <li>애플리케잉션 요구 사항에 맞춰 트래픽을 세분화하여 자원 배정
+    <ul>
+      <li>HTTP 브라우징: WiFi 오프로딩 가능</li>
+      <li>실시간 스트리밍: 대역폭 우선 할당</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="24-conclusion">2.4 Conclusion</h2>
+
+<ul>
+  <li>시간적 연관성이 예측 정확도에 가장 중요한 요소</li>
+  <li>공간적 연관성과 서비스 간 연관성도 보조적인 기여를 함</li>
+  <li>SDRAN은 에너지 절약 및 효율적 네트워크 자우너 관리를 위한 중요한 방향성 제시</li>
+</ul>
+
+<h1 id="3-take-away">3. Take Away</h1>
+<ul>
+  <li>엔트로피를 이용한 트래픽 시공간 사전 분석</li>
+  <li>ML을 돌릴 때 Training 시간을 조절하면서 결과 비교 그래프 첨부</li>
+  <li>데이터 각 열들간의 상관성을 바탕으로 조건부 엔트로피 계산</li>
+</ul>
 
   
 </article>
@@ -529,7 +675,7 @@ Additionally, I am passionate about cloud-native Radio Access Networks (RAN) and
     
 
 
-  <aside class="related mb4" role="complementary">  <h2 class="hr-bottom">Random Posts</h2>  <ul class="related-posts">          <li class="h4">  <a href="/blog/sim/2024-12-27-offloading-predictor/" class="flip-title"><span>오프로딩 시뮬레이터 - Predictor</span></a>  <time class="faded fine" datetime="2024-12-27T00:00:00+09:00">27 Dec 2024</time></li>          <li class="h4">  <a href="/blog/example/2020-07-03-introducing-hydejack-9/" class="flip-title"><span>Introducing Hydejack 9</span></a>  <time class="faded fine" datetime="2020-07-03T00:00:00+09:00">03 Jul 2020</time></li>          <li class="h4">  <a href="/blog/paper/2024-11-20-game-theoretic-solutions-for-data-offloading-in-next-generation-networks/" class="flip-title"><span>Game-Theoretic Solutions for Data Offloading in Next Generation Networks</span></a>  <time class="faded fine" datetime="2024-11-20T00:00:00+09:00">20 Nov 2024</time></li>      </ul></aside>
+  <aside class="related mb4" role="complementary">  <h2 class="hr-bottom">Random Posts</h2>  <ul class="related-posts">          <li class="h4">  <a href="/blog/paper/2024-11-20-game-theoretic-solutions-for-data-offloading-in-next-generation-networks/" class="flip-title"><span>Game-Theoretic Solutions for Data Offloading in Next Generation Networks</span></a>  <time class="faded fine" datetime="2024-11-20T00:00:00+09:00">20 Nov 2024</time></li>          <li class="h4">  <a href="/blog/example/2012-02-07-example-content/" class="flip-title"><span>Example Content</span></a>  <time class="faded fine" datetime="2012-02-07T00:00:00+09:00">07 Feb 2012</time></li>          <li class="h4">  <a href="/blog/example/2017-11-23-example-content-ii/" class="flip-title"><span>Example Content II</span></a>  <time class="faded fine" datetime="2017-11-23T00:00:00+09:00">23 Nov 2017</time></li>      </ul></aside>
 
   
 
