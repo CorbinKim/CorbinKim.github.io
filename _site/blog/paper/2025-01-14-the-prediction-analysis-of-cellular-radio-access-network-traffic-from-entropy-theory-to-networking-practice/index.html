@@ -106,7 +106,7 @@
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2025-01-15T11:39:57+09:00',
+    INDEX_KEY: 'index--2025-01-15T11:52:24+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -285,6 +285,23 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
   
     <!--more-->
 <ul class="large-only" id="markdown-toc">
+  <li><a href="#논문-개요-분석" id="markdown-toc-논문-개요-분석">논문 개요 분석</a>    <ul>
+      <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+      <li><a href="#traffic-prediction-theoretical-analysis-and-practical-performance" id="markdown-toc-traffic-prediction-theoretical-analysis-and-practical-performance">Traffic Prediction: Theoretical ANalysis and Practical Performance</a>        <ul>
+          <li><a href="#prediction-dataset-description-and-analysis-methodology" id="markdown-toc-prediction-dataset-description-and-analysis-methodology">Prediction Dataset Description and Analysis Methodology</a></li>
+          <li><a href="#prediction-analysis-to-what-extent-is-the-prior-information-required" id="markdown-toc-prediction-analysis-to-what-extent-is-the-prior-information-required">Prediction Analysis: To What Extent Is the Prior Information Required?</a></li>
+          <li><a href="#prediction-performance-the-current-state-of-research" id="markdown-toc-prediction-performance-the-current-state-of-research">Prediction Performance: The Current State of Research</a></li>
+        </ul>
+      </li>
+      <li><a href="#traffic-prediction-and-future-network-architecture-directions-and-applications" id="markdown-toc-traffic-prediction-and-future-network-architecture-directions-and-applications">Traffic Prediction and Future Network Architecture: Directions and Applications</a>        <ul>
+          <li><a href="#brief-description-of-the-traffic-based-sdran-architecture" id="markdown-toc-brief-description-of-the-traffic-based-sdran-architecture">Brief Description of the Traffic-Based SDRAN Architecture</a></li>
+          <li><a href="#large-scale-traffic-aware-resource-management" id="markdown-toc-large-scale-traffic-aware-resource-management">Large-Scale Traffic-Aware Resource Management</a></li>
+          <li><a href="#small-scale-flow-centric-resource-allocation" id="markdown-toc-small-scale-flow-centric-resource-allocation">Small-Scale Flow-Centric Resource Allocation</a></li>
+        </ul>
+      </li>
+      <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
+    </ul>
+  </li>
   <li><a href="#1-why-this-paper" id="markdown-toc-1-why-this-paper">1. Why this paper</a>    <ul>
       <li><a href="#11-what-is-the-research-topic-and-why-was-it-chosen" id="markdown-toc-11-what-is-the-research-topic-and-why-was-it-chosen">1.1 What is the research topic and why was it chosen?</a></li>
       <li><a href="#12-what-are-the-objectives-of-the-study" id="markdown-toc-12-what-are-the-objectives-of-the-study">1.2 What are the objectives of the study?</a></li>
@@ -315,6 +332,58 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
   </li>
   <li><a href="#3-take-away" id="markdown-toc-3-take-away">3. Take Away</a></li>
 </ul>
+
+<h1 id="논문-개요-분석">논문 개요 분석</h1>
+
+<h2 id="introduction">Introduction</h2>
+
+<ul>
+  <li>본 논문의 연구 배경과 연구 필요성 언급</li>
+  <li>기존 연구의 한계점 지적 및 본 논문의 목표와 연구 범위 제시</li>
+</ul>
+
+<h2 id="traffic-prediction-theoretical-analysis-and-practical-performance">Traffic Prediction: Theoretical ANalysis and Practical Performance</h2>
+
+<h3 id="prediction-dataset-description-and-analysis-methodology">Prediction Dataset Description and Analysis Methodology</h3>
+<ul>
+  <li>데이터 수집 과정 및 분석 방법론</li>
+  <li>데이터 전처리 및 트래픽 엔트로피 계산</li>
+</ul>
+
+<h3 id="prediction-analysis-to-what-extent-is-the-prior-information-required">Prediction Analysis: To What Extent Is the Prior Information Required?</h3>
+<ul>
+  <li>트래픽 예측에 필요한 사전 정보의 범위를 논의</li>
+  <li>시간적, 공간적, 서비스 간 상호작용을 통한 예측 가능성 분석</li>
+</ul>
+
+<h3 id="prediction-performance-the-current-state-of-research">Prediction Performance: The Current State of Research</h3>
+<ul>
+  <li>트래픽 예측 성능을 평가하고, 현재 연구 방법론의 한계를 제시</li>
+</ul>
+
+<h2 id="traffic-prediction-and-future-network-architecture-directions-and-applications">Traffic Prediction and Future Network Architecture: Directions and Applications</h2>
+
+<h3 id="brief-description-of-the-traffic-based-sdran-architecture">Brief Description of the Traffic-Based SDRAN Architecture</h3>
+<ul>
+  <li>SDRAN 구조 소개</li>
+</ul>
+
+<h3 id="large-scale-traffic-aware-resource-management">Large-Scale Traffic-Aware Resource Management</h3>
+<ul>
+  <li>대규모 트래픽 예측 기반 자원 관리 기법 논의</li>
+</ul>
+
+<h3 id="small-scale-flow-centric-resource-allocation">Small-Scale Flow-Centric Resource Allocation</h3>
+<ul>
+  <li>세부 흐름 중심의 자원 할당 방안을 설명</li>
+</ul>
+
+<h2 id="conclusion">Conclusion</h2>
+<ul>
+  <li>논문의 주요 결론과 향후 연구 방향 제시</li>
+</ul>
+
+<hr />
 
 <h1 id="1-why-this-paper">1. Why this paper</h1>
 
@@ -508,6 +577,8 @@ H(X|Y) &amp;= \sum_{i,j} p(x_i, y_j) \log \frac{p(y_j)}{p(x_i, y_j)} \notag \\
   <li>SDRAN은 에너지 절약 및 효율적 네트워크 자우너 관리를 위한 중요한 방향성 제시</li>
 </ul>
 
+<hr />
+
 <h1 id="3-take-away">3. Take Away</h1>
 <ul>
   <li>엔트로피를 이용한 트래픽 시공간 사전 분석</li>
@@ -675,7 +746,7 @@ Additionally, I am passionate about cloud-native Radio Access Networks (RAN) and
     
 
 
-  <aside class="related mb4" role="complementary">  <h2 class="hr-bottom">Random Posts</h2>  <ul class="related-posts">          <li class="h4">  <a href="/blog/paper/2024-11-20-game-theoretic-solutions-for-data-offloading-in-next-generation-networks/" class="flip-title"><span>Game-Theoretic Solutions for Data Offloading in Next Generation Networks</span></a>  <time class="faded fine" datetime="2024-11-20T00:00:00+09:00">20 Nov 2024</time></li>          <li class="h4">  <a href="/blog/example/2012-02-07-example-content/" class="flip-title"><span>Example Content</span></a>  <time class="faded fine" datetime="2012-02-07T00:00:00+09:00">07 Feb 2012</time></li>          <li class="h4">  <a href="/blog/example/2017-11-23-example-content-ii/" class="flip-title"><span>Example Content II</span></a>  <time class="faded fine" datetime="2017-11-23T00:00:00+09:00">23 Nov 2017</time></li>      </ul></aside>
+  <aside class="related mb4" role="complementary">  <h2 class="hr-bottom">Random Posts</h2>  <ul class="related-posts">          <li class="h4">  <a href="/blog/sim/2024-12-24-offloading-cell/" class="flip-title"><span>오프로딩 시뮬레이터 - Cell</span></a>  <time class="faded fine" datetime="2024-12-24T00:00:00+09:00">24 Dec 2024</time></li>          <li class="h4">  <a href="/blog/sim/2024-12-26-offloading-pathloss/" class="flip-title"><span>오프로딩 시뮬레이터 - Pathloss</span></a>  <time class="faded fine" datetime="2024-12-26T00:00:00+09:00">26 Dec 2024</time></li>          <li class="h4">  <a href="/blog/aimlfw/2024-10-04-OSC-AIMLFW-Installation/" class="flip-title"><span>OSC AIMLFW Installation</span></a>  <time class="faded fine" datetime="2024-10-04T00:00:00+09:00">04 Oct 2024</time></li>      </ul></aside>
 
   
 

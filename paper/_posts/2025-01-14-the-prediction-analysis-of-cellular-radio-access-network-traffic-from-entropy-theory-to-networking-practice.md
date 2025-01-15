@@ -20,6 +20,42 @@ hide_last_modified: true
 - Table of Contents
 {:toc .large-only}
 
+# 논문 개요 분석
+
+## Introduction
+
+- 본 논문의 연구 배경과 연구 필요성 언급
+- 기존 연구의 한계점 지적 및 본 논문의 목표와 연구 범위 제시
+
+## Traffic Prediction: Theoretical ANalysis and Practical Performance
+  
+### Prediction Dataset Description and Analysis Methodology
+  - 데이터 수집 과정 및 분석 방법론 
+  - 데이터 전처리 및 트래픽 엔트로피 계산
+  
+### Prediction Analysis: To What Extent Is the Prior Information Required?
+  - 트래픽 예측에 필요한 사전 정보의 범위를 논의
+  - 시간적, 공간적, 서비스 간 상호작용을 통한 예측 가능성 분석
+
+### Prediction Performance: The Current State of Research
+  - 트래픽 예측 성능을 평가하고, 현재 연구 방법론의 한계를 제시
+
+## Traffic Prediction and Future Network Architecture: Directions and Applications
+
+### Brief Description of the Traffic-Based SDRAN Architecture
+- SDRAN 구조 소개
+
+### Large-Scale Traffic-Aware Resource Management
+- 대규모 트래픽 예측 기반 자원 관리 기법 논의
+
+### Small-Scale Flow-Centric Resource Allocation
+- 세부 흐름 중심의 자원 할당 방안을 설명
+
+## Conclusion
+- 논문의 주요 결론과 향후 연구 방향 제시
+  
+---
+
 # 1. Why this paper
 
 1. SKT 트래픽 예측 논문 레퍼런스 조사
@@ -169,6 +205,8 @@ H(X|Y) &= \sum_{i,j} p(x_i, y_j) \log \frac{p(y_j)}{p(x_i, y_j)} \notag \\
 - 시간적 연관성이 예측 정확도에 가장 중요한 요소
 - 공간적 연관성과 서비스 간 연관성도 보조적인 기여를 함
 - SDRAN은 에너지 절약 및 효율적 네트워크 자우너 관리를 위한 중요한 방향성 제시
+
+---
 
 # 3. Take Away
 - 엔트로피를 이용한 트래픽 시공간 사전 분석
