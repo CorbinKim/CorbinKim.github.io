@@ -143,8 +143,8 @@ H(X|Y) &= \sum_{i,j} p(x_i, y_j) \log \frac{p(y_j)}{p(x_i, y_j)} \notag \\
 \end{align}$$
        
 <p align="center">
-  <img src="/assets/img/blog/0114/fig/fig_2.png" alt="Left Image" width="45%" style="margin-right: 10px;">
-  <img src="/assets/img/blog/0114/fig/fig_3.png" alt="Right Image" width="45%" style="margin-left: 10px;">
+  <img src="/assets/img/blog/0114/fig/fig_3.png" alt="Left Image" width="45%" style="margin-right: 10px;">
+  <img src="/assets/img/blog/0114/fig/fig_2.png" alt="Right Image" width="45%" style="margin-left: 10px;">
 </p>
 
 
@@ -204,7 +204,7 @@ H(X|Y) &= \sum_{i,j} p(x_i, y_j) \log \frac{p(y_j)}{p(x_i, y_j)} \notag \\
 
 - 시간적 연관성이 예측 정확도에 가장 중요한 요소
 - 공간적 연관성과 서비스 간 연관성도 보조적인 기여를 함
-- SDRAN은 에너지 절약 및 효율적 네트워크 자우너 관리를 위한 중요한 방향성 제시
+- SDRAN은 에너지 절약 및 효율적 네트워크 자원 관리를 위한 중요한 방향성 제시
 
 ---
 
