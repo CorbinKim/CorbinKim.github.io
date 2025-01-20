@@ -47,7 +47,7 @@ hide_last_modified: true
 ## 1.1 What is the research topic and why was it chosen?
 
 - **연구 주제**: HetNet에서 사용자 트래픽 예측을 활용한 에너지 절감 전략
-- **선택 이유**략
+- **선택 이유**
   - 트래픽의 급격한 증가로 네트워크 에너지 소비가 크게 증가함
   - 에너지 소비를 줄이는 것은 운영 비용 절감과 온실가스 배출 감소를 위해 매우 중요함
   
