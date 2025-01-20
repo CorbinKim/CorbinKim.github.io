@@ -391,6 +391,10 @@ $$
 ### MiLSF 알고리즘 성능
 
 ##### 실험 설정
+
+![Table 1](/assets/img/blog/0115/fig/table.1.png)
+
+
 - 다양한 네트워크 부하와 배치 조건에서 MiLSF와 기존 절전 전략의 비교. 추가적으로 low-load 기간(10:00 p.m. - 6:00 a.m.)에는 user들의 움직임이 없는 것으로 고려하였음.
 
 $$\rightarrow$$ 결정한 MiBS들을 10:00 p.m. - 6:00 a.m.에 sleep 모드로 전환
@@ -402,8 +406,53 @@ $$\rightarrow$$ 이 시간대 sleep 할 최적의 MiBS들을 고르는 것이 �
   - CUR(Closest User Reallocation): 사용자 재배치를 통해 가까운 기지국 연결
   - CBSSF(Closest Base Station Sleep First): 가장 가까운 기지국부터 절전
 
+
+#### 결과 요약
+
+- 에너지 절감
+  - MiLSF가 RS, CUR, CBSSF보다 에너지 소비를 크게 줄임
+  - 특히 네트워크 부하가 낮은 시나리오에서 에너지 절감률이 가장 높음
+
+- 기지국 배치의 영향
+  - PPP 배치: MiLSF가 효율적으로 작동하며, 부하 분산 효과를 극대화
+  - MHCPP 배치: 간섭이 줄어들며, MiLSF의 에너지 절감률이 더욱 향상
+
+- 사용자 수의 영향
+  - 사용자 수가 증가할수록 MiLSF는 에너지 절감률을 유지하면서 QoS를 만족
+  - 기존 전략은 사용자 증가 시 QoS가 약화되는 경향을 보임
+
+
+![Fig 10](/assets/img/blog/0115/fig/fig.10.png)
+
+
+- SINR 임계값 변화
+  - 높은 SINR 임계값에서도 MiLSF는 QoS를 유지하며, 에너지 절감 효과를 제공
+
+![Fig 10](/assets/img/blog/0115/fig/fig.10.png)
+
+
+
+- 절전 기지국 개수 변화
+  - 네트워크 부하가 낮을수록 더 많은 MiBS를 절전 상태로 전환 가능
+  - MiLSF는 절전 가능한 MiBS의 개수를 최대화하면서 QoS를 유지
+  - 네트워크 부하가 증가하면 MiBS를 활성 상태로 유지해야 하므로 절전 기지국 개수 감소
+
+
+![Fig 11](/assets/img/blog/0115/fig/fig.11.png)
+
+
+
+## Future Work
+
+- 빔포밍, 전력 제어와 같은 간섭 완화 기법 통합
+- 동적으로 변화하는 네트워크 환경에서의 적용
+- 트래픽 예측의 개선
+
+
 ---
 
 # 3. Take Away
 
-
+- 시뮬레이션 파라미터들을 참고하여 NS-3에서 사용
+- 10 p.m. - 6 a.m. 까지 사용자를 고정시킨 후 cell on/off를 실행
+- 예측 알고리즘과 on/off 알고리즘의 결합

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-01-17T16:37:09+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Geon Kim</title><subtitle>Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2025-01-20T11:58:40+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Geon Kim</title><subtitle>Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
 </subtitle><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><entry><title type="html">A Base Station Sleeping Strategy in Heterogeneous Cellular Networks Based on User Traffic Prediction</title><link href="http://localhost:4000/blog/paper/2025-01-15-a-basestation-sleeping-strategy-in-heterogeneous-cellular-networks-based-on-user-traffic-prediction/" rel="alternate" type="text/html" title="A Base Station Sleeping Strategy in Heterogeneous Cellular Networks Based on User Traffic Prediction" /><published>2025-01-15T00:00:00+09:00</published><updated>2025-01-15T00:00:00+09:00</updated><id>http://localhost:4000/blog/paper/a-basestation-sleeping-strategy-in-heterogeneous-cellular-networks-based-on-user-traffic-prediction</id><content type="html" xml:base="http://localhost:4000/blog/paper/2025-01-15-a-basestation-sleeping-strategy-in-heterogeneous-cellular-networks-based-on-user-traffic-prediction/"><![CDATA[<!--more-->
 <ul class="large-only" id="markdown-toc">
   <li><a href="#abstract" id="markdown-toc-abstract">Abstract</a></li>
@@ -64,10 +64,12 @@
           </li>
           <li><a href="#milsf-알고리즘-성능" id="markdown-toc-milsf-알고리즘-성능">MiLSF 알고리즘 성능</a>            <ul>
               <li><a href="#실험-설정-1" id="markdown-toc-실험-설정-1">실험 설정</a></li>
+              <li><a href="#결과-요약-1" id="markdown-toc-결과-요약-1">결과 요약</a></li>
             </ul>
           </li>
         </ul>
       </li>
+      <li><a href="#future-work" id="markdown-toc-future-work">Future Work</a></li>
     </ul>
   </li>
   <li><a href="#3-take-away" id="markdown-toc-3-take-away">3. Take Away</a></li>
@@ -564,6 +566,9 @@ p_{\theta(j)} \rho_{j,k} L_{j,k}^{-1}
 <h3 id="milsf-알고리즘-성능">MiLSF 알고리즘 성능</h3>
 
 <h5 id="실험-설정-1">실험 설정</h5>
+
+<p><img src="/assets/img/blog/0115/fig/table.1.png" alt="Table 1" /></p>
+
 <ul>
   <li>다양한 네트워크 부하와 배치 조건에서 MiLSF와 기존 절전 전략의 비교. 추가적으로 low-load 기간(10:00 p.m. - 6:00 a.m.)에는 user들의 움직임이 없는 것으로 고려하였음.</li>
 </ul>
@@ -581,9 +586,70 @@ p_{\theta(j)} \rho_{j,k} L_{j,k}^{-1}
   </li>
 </ul>
 
+<h4 id="결과-요약-1">결과 요약</h4>
+
+<ul>
+  <li>에너지 절감
+    <ul>
+      <li>MiLSF가 RS, CUR, CBSSF보다 에너지 소비를 크게 줄임</li>
+      <li>특히 네트워크 부하가 낮은 시나리오에서 에너지 절감률이 가장 높음</li>
+    </ul>
+  </li>
+  <li>기지국 배치의 영향
+    <ul>
+      <li>PPP 배치: MiLSF가 효율적으로 작동하며, 부하 분산 효과를 극대화</li>
+      <li>MHCPP 배치: 간섭이 줄어들며, MiLSF의 에너지 절감률이 더욱 향상</li>
+    </ul>
+  </li>
+  <li>사용자 수의 영향
+    <ul>
+      <li>사용자 수가 증가할수록 MiLSF는 에너지 절감률을 유지하면서 QoS를 만족</li>
+      <li>기존 전략은 사용자 증가 시 QoS가 약화되는 경향을 보임</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/assets/img/blog/0115/fig/fig.10.png" alt="Fig 10" /></p>
+
+<ul>
+  <li>SINR 임계값 변화
+    <ul>
+      <li>높은 SINR 임계값에서도 MiLSF는 QoS를 유지하며, 에너지 절감 효과를 제공</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/assets/img/blog/0115/fig/fig.10.png" alt="Fig 10" /></p>
+
+<ul>
+  <li>절전 기지국 개수 변화
+    <ul>
+      <li>네트워크 부하가 낮을수록 더 많은 MiBS를 절전 상태로 전환 가능</li>
+      <li>MiLSF는 절전 가능한 MiBS의 개수를 최대화하면서 QoS를 유지</li>
+      <li>네트워크 부하가 증가하면 MiBS를 활성 상태로 유지해야 하므로 절전 기지국 개수 감소</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/assets/img/blog/0115/fig/fig.11.png" alt="Fig 11" /></p>
+
+<h2 id="future-work">Future Work</h2>
+
+<ul>
+  <li>빔포밍, 전력 제어와 같은 간섭 완화 기법 통합</li>
+  <li>동적으로 변화하는 네트워크 환경에서의 적용</li>
+  <li>트래픽 예측의 개선</li>
+</ul>
+
 <hr />
 
-<h1 id="3-take-away">3. Take Away</h1>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="paper" /><summary type="html"><![CDATA[**Date**: 2014.06.17 **Tag**: [Heterogeneous cellular networks], [Traffic forecasting], [Energy saving], [SINR], [Quality of service], [BLSTM]]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/0115/thumbnail/thumbnail.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/0115/thumbnail/thumbnail.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">The Prediction Analysis of Cellular Radio Access Network Traffic - From Entropy Theory to Networking Practice</title><link href="http://localhost:4000/blog/paper/2025-01-14-the-prediction-analysis-of-cellular-radio-access-network-traffic-from-entropy-theory-to-networking-practice/" rel="alternate" type="text/html" title="The Prediction Analysis of Cellular Radio Access Network Traffic - From Entropy Theory to Networking Practice" /><published>2025-01-14T00:00:00+09:00</published><updated>2025-01-14T00:00:00+09:00</updated><id>http://localhost:4000/blog/paper/the-prediction-analysis-of-cellular-radio-access-network-traffic-from-entropy-theory-to-networking-practice</id><content type="html" xml:base="http://localhost:4000/blog/paper/2025-01-14-the-prediction-analysis-of-cellular-radio-access-network-traffic-from-entropy-theory-to-networking-practice/"><![CDATA[<!--more-->
+<h1 id="3-take-away">3. Take Away</h1>
+
+<ul>
+  <li>시뮬레이션 파라미터들을 참고하여 NS-3에서 사용</li>
+  <li>10 p.m. - 6 a.m. 까지 사용자를 고정시킨 후 cell on/off를 실행</li>
+  <li>예측 알고리즘과 on/off 알고리즘의 결합</li>
+</ul>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="paper" /><summary type="html"><![CDATA[**Date**: 2014.06.17 **Tag**: [Heterogeneous cellular networks], [Traffic forecasting], [Energy saving], [SINR], [Quality of service], [BLSTM]]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/0115/thumbnail/thumbnail.png" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/0115/thumbnail/thumbnail.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">The Prediction Analysis of Cellular Radio Access Network Traffic - From Entropy Theory to Networking Practice</title><link href="http://localhost:4000/blog/paper/2025-01-14-the-prediction-analysis-of-cellular-radio-access-network-traffic-from-entropy-theory-to-networking-practice/" rel="alternate" type="text/html" title="The Prediction Analysis of Cellular Radio Access Network Traffic - From Entropy Theory to Networking Practice" /><published>2025-01-14T00:00:00+09:00</published><updated>2025-01-14T00:00:00+09:00</updated><id>http://localhost:4000/blog/paper/the-prediction-analysis-of-cellular-radio-access-network-traffic-from-entropy-theory-to-networking-practice</id><content type="html" xml:base="http://localhost:4000/blog/paper/2025-01-14-the-prediction-analysis-of-cellular-radio-access-network-traffic-from-entropy-theory-to-networking-practice/"><![CDATA[<!--more-->
 <ul class="large-only" id="markdown-toc">
   <li><a href="#논문-개요-분석" id="markdown-toc-논문-개요-분석">논문 개요 분석</a>    <ul>
       <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
