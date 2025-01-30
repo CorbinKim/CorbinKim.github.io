@@ -12,7 +12,7 @@ image:
     480w:  /assets/img/blog/prediction_sleep/Prediction_Sleep@0,25x.png
 # accent_image: /assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg
 excerpt_separator: <!--more-->
-sitemap: false
+sitemap: true 
 ---
 
 <!--more-->

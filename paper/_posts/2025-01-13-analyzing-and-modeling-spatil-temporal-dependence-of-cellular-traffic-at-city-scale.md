@@ -12,7 +12,7 @@ image:
     480w:  /assets/img/blog/0113/thumbnail/c2tm@0,25x.png
 
 excerpt_separator: <!--more-->
-sitemap: false
+sitemap: true
 hide_last_modified: true
 ---
 

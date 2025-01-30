@@ -12,7 +12,7 @@ image:
     480w:  /assets/img/blog/0114/thumbnail/thumbnail@0,25x.png
 
 excerpt_separator: <!--more-->
-sitemap: false
+sitemap: true
 hide_last_modified: true
 ---
 

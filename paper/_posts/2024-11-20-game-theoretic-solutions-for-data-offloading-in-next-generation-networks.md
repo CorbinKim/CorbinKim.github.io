@@ -12,7 +12,7 @@ image:
     480w:  /assets/img/blog/game_theory/game_theory@0,25x.jpg
 # accent_image: /assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg
 excerpt_separator: <!--more-->
-sitemap: false
+sitemap: true 
 hide_last_modified: true
 ---
 
