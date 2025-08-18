@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# 크롤링 제외 디렉토리
+Disallow: /_site/
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /assets/bower_components/
+Disallow: /functions/
+
+# 중요한 페이지 허용
+Allow: /assets/img/
+Allow: /assets/css/
+Allow: /blog/
+Allow: /projects/
+
+# Sitemap 위치
+Sitemap: https://cor5in.github.io/sitemap.xml
