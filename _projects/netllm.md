@@ -12,10 +12,6 @@ caption: Revolutionizing network management through Large Language Models
 description: >
   NetLLM explores how Large Language Models can transform telecommunications 
   network management through natural language interfaces and intelligent automation.
-links:
-  - title: GitHub Repository
-    url: https://github.com/cor5in/netllm
-
 featured: true
 # 관련 포스트들은 나중에 포스트 작성 후 추가할 예정
 # related_posts:
