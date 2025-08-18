@@ -1,12 +1,10 @@
-# _posts/2024-08-17-netllm-project-inception.md
-
 ---
 layout: post
 title: "NetLLM Project Inception: Revolutionizing Network Management with Large Language Models"
 description: >
   Introducing NetLLM - a groundbreaking project that explores how Large Language Models 
   can transform telecommunications network management through natural language interfaces.
-image: /assets/img/blog/netllm-inception.jpg
+image: /assets/img/blog/netllm.jpg
 categories: [projects, netllm]
 tags: [NetLLM, LLM, network management, natural language, telecommunications, AI]
 project: netllm
