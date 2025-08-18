@@ -14,7 +14,8 @@ description: >
   network management through natural language interfaces and intelligent automation.
 featured: true
 # 관련 포스트들은 나중에 포스트 작성 후 추가할 예정
-# related_posts:
+related_posts:
+  - _posts/2024-08-17-netllm-project-inception.md
 ---
 
 # NetLLM: Large Language Models for Network Management
