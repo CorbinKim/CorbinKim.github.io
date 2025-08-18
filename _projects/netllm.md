@@ -1,7 +1,7 @@
 ---
 layout: project
 title: "NetLLM: Large Language Models for Network Management"
-date: 2024-08-17
+date: 2025-08-17
 image:
   path: /assets/img/projects/netllm.jpg
   srcset:
