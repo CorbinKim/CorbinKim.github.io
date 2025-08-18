@@ -15,10 +15,7 @@ description: >
 links:
   - title: GitHub Repository
     url: https://github.com/cor5in/netllm
-  - title: Research Paper
-    url: https://arxiv.org/abs/2024.netllm
-  - title: Live Demo
-    url: https://netllm-demo.cor5in.com
+
 featured: true
 # 관련 포스트들은 나중에 포스트 작성 후 추가할 예정
 # related_posts:
