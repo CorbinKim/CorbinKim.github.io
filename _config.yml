@@ -7,7 +7,7 @@ url: https://cor5in.github.io
 # General settings
 # ---------------------------------------------------------------------------------------
 lang: en
-title: Corbin's Journey
+title: Corbin's Tech Journey
 description: >
   Personal blog of Corbin Kim, a Telecom Software Engineer specializing in Open RAN, 
   AI-RAN, and LLM for RAN technologies. Sharing insights on next-generation wireless networks.
@@ -18,7 +18,7 @@ logo: /assets/img/logo.png
 
 # Author 정보
 author:
-  name: Corbin Kim
+  name: Geon Kim
   email: cor5inkim@gmail.com
 
 # Sidebar 메뉴
@@ -58,7 +58,7 @@ remote_theme: hydecorp/hydejack@v9
 # Posts의 permalink 형식 - 표준 Jekyll 블로그 구조
 permalink: /blog/:year/:month/:day/:title/
 
-# 페이지네이션 설정 (blog layout 사용시)
+# 페이지네이션 설정 (blog layout 사용시 필수)
 paginate: 10
 paginate_path: /blog/:num/
 
