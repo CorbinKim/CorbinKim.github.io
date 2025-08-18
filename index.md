@@ -47,8 +47,6 @@ My current research focuses on three cutting-edge areas:
 
 Through my research, I bridge theoretical innovation with practical implementation, contributing to patents and publications that advance the field of wireless communications. My goal is to drive the evolution toward intelligent, open, and AI-native wireless networks.
 
-<!--author-->
-
 ## Latest Projects
 
 <!--projects-->
