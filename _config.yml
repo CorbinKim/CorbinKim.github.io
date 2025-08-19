@@ -27,8 +27,6 @@ menu:
     url: /blog/
   - title: Projects
     url: /projects/
-  - title: NetLLM
-    url: /netllm/
   - title: CV
     url: /resume/
   - title: Documentation
