@@ -53,12 +53,6 @@ The development process of this project is thoroughly documented through daily d
 
 **📝 [View All Development Logs →](/netllm/)**
 
-{% else %}
-*Development logs will appear here as the project progresses.*
-
-**📝 [View All Development Logs →](/netllm/)**
-{% endif %}
-
 ---
 
 *This project is part of my research on LLM applications in telecommunications and represents a significant step toward autonomous network management systems.*
