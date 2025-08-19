@@ -7,6 +7,12 @@ tags: [open5gs, kubernetes, 5g-core, microservices, troubleshooting]
 description: >
   Day 1 of building an Open RAN testbed on Kubernetes - tackling SMF configuration issues, 
   storage problems, and establishing a solid foundation for 5G core network deployment.
+image: 
+  path: /assets/img/projects/netllm_project.jpg
+  srcset: 
+    1920w: /assets/img/projects/netllm_project.jpg
+    960w:  /assets/img/projects/netllm_project@0,5x.jpg
+    480w:  /assets/img/projects/netllm_project@0,25x.jpg
 ---
 
 # Day 1: Kubernetes Infrastructure Setup
