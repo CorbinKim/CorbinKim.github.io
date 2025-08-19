@@ -2,6 +2,7 @@
 layout: project
 title: "NetLLM: Large Language Models for Network Management"
 date: 2025-08-17
+categories: [netllm]
 image:
   path: /assets/img/projects/netllm.jpg
   srcset:
@@ -13,9 +14,6 @@ description: >
   NetLLM explores how Large Language Models can transform telecommunications 
   network management through natural language interfaces and intelligent automation.
 featured: true
-# 관련 포스트들은 나중에 포스트 작성 후 추가할 예정
-related_posts:
-  - _posts/2024-08-17-netllm-project-inception.md
 ---
 
 # NetLLM: Large Language Models for Network Management
@@ -41,7 +39,7 @@ Our approach combines:
 
 ## Development Journey
 
-이 프로젝트의 개발 과정은 향후 일자별 개발 로그를 통해 문서화될 예정입니다. 각 포스트는 도전과제, 돌파구, 그리고 학습한 교훈들을 기록할 것입니다.
+The development process of this project is thoroughly documented through daily development logs. Each post captures progress, challenges, breakthroughs, and lessons learned throughout the journey.
 
 ### Planned Development Phases
 
@@ -51,7 +49,30 @@ Our approach combines:
 - **Phase 4**: Testing & Optimization 
 - **Phase 5**: Deployment & Evaluation 
 
-*개발 과정의 상세한 기록은 곧 시작될 예정입니다.*
+### Recent Development Logs
+
+{% assign netllm_posts = site.posts | where_exp: "post", "post.categories contains 'netllm'" %}
+{% if netllm_posts.size > 0 %}
+<ul class="related-posts">
+  {% for post in netllm_posts limit:10 %}
+  <li class="h6">
+    <a href="{{ post.url | relative_url }}" class="flip-title">
+      <span>{{ post.title }}</span>
+    </a>
+    <time class="faded fine" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %b %Y" }}</time>
+  </li>
+  {% endfor %}
+</ul>
+
+{% if netllm_posts.size > 10 %}
+**📝 [View All Development Logs →](/netllm/)**
+{% endif %}
+
+{% else %}
+*Development logs will appear here as the project progresses.*
+
+**📝 [View All Development Logs →](/netllm/)**
+{% endif %}
 
 ---
 
