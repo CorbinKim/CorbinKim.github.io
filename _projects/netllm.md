@@ -49,23 +49,29 @@ The development process of this project is thoroughly documented through daily d
 - **Phase 4**: Testing & Optimization 
 - **Phase 5**: Deployment & Evaluation 
 
-### Recent Development Logs
+### Development Logs
 
-{%- assign netllm_posts = site.posts
-  | where_exp: "post", "post.categories | join: ',' | downcase contains 'netllm' or post.tags | join: ',' | downcase contains 'netllm'"
--%}
-
-{%- if netllm_posts and netllm_posts.size > 0 -%}
-  {%- for post in netllm_posts limit:10 -%}
-  <article class="post-inline">
-    <h3 class="h5" style="margin-bottom:0.25rem;">{{ post.title }}</h3>
+{% assign netllm_posts = site.posts | where_exp: "post", "post.categories contains 'netllm'" | reverse %}
+{% if netllm_posts.size > 0 %}
+  {% for post in netllm_posts %}
+  <article class="post-preview">
+    <h4>{{ post.title }}</h4>
     <time class="faded fine" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %b %Y" }}</time>
+    
     <div class="post-content">
       {{ post.content }}
     </div>
-    <hr>
+    
+    {% unless forloop.last %}
+    <hr style="margin: 2rem 0;">
+    {% endunless %}
   </article>
-  {%- endfor -%}
-{%- else -%}
+  {% endfor %}
+
+{% else %}
 *Development logs will appear here as the project progresses.*
-{%- endif -%}
+{% endif %}
+
+---
+
+*This project is part of my research on LLM applications in telecommunications and represents a significant step toward autonomous network management systems.*
