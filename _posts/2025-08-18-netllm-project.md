@@ -1,122 +1,149 @@
 ---
 layout: post
-title: "Open RAN Testbed Development Log Day 1 - Kubernetes Infrastructure Setup"
+title: "NetLLM Development Log Day 1 - Project Inception and Architecture Planning"
 date: 2025-08-18
-categories: [open-ran, testbed]
-tags: [open5gs, kubernetes, 5g-core, microservices, troubleshooting]
+categories: [netllm]
+tags: [llm, networking, telecommunications]
 description: >
-  Day 1 of building an Open RAN testbed on Kubernetes - tackling SMF configuration issues, 
-  storage problems, and establishing a solid foundation for 5G core network deployment.
+  Day 1 of the NetLLM project - defining objectives, researching LLM applications in 
+  telecommunications, and designing the initial system architecture for AI-powered network management.
 image: 
-  path: /assets/img/projects/netllm_project.jpg
+  path: /assets/img/projects/netllm.jpg
   srcset: 
-    1920w: /assets/img/projects/netllm_project.jpg
-    960w:  /assets/img/projects/netllm_project@0,5x.jpg
-    480w:  /assets/img/projects/netllm_project@0,25x.jpg
+    1920w: /assets/img/projects/netllm.jpg
+    960w:  /assets/img/projects/netllm@0.5x.jpg
+    480w:  /assets/img/projects/netllm@0.25x.jpg
 ---
 
-# Day 1: Kubernetes Infrastructure Setup
+# Day 1: Project Inception and Architecture Planning
 
-Today's goal was to resolve the failing SMF (Session Management Function) deployment in our Open RAN testbed. What started as a simple configuration fix evolved into a comprehensive infrastructure overhaul using industry best practices.
+Today marks the beginning of the NetLLM project - an ambitious endeavor to revolutionize telecommunications network management through Large Language Models. This project aims to bridge the gap between complex network operations and intuitive natural language interactions.
 
 ## What I Did Today
 
-### 1. Initial Problem Diagnosis
-- **SMF Container Issues**: Discovered that the Session Management Function (SMF) was failing to start due to DNS resolution errors and configuration parsing failures
-- **Root Cause Analysis**: Identified incorrect YAML structure in SMF configuration that didn't match Open5GS official format
-- **Error Pattern**: `getaddrinfo(0:open5gs-nrf-service:7777:0x0) failed` and `ogs_sbi_context_parse_config: Assertion failed`
+### 1. Project Definition and Scope
+- **Core Objectives**: Defined the primary goals of enabling natural language network configuration, intelligent fault diagnosis, automated documentation, and predictive maintenance
+- **Target Use Cases**: Identified key scenarios where LLMs can transform network operations:
+  - Configuration management through conversational interfaces
+  - Automated troubleshooting and root cause analysis
+  - Real-time network optimization recommendations
+  - Intelligent documentation generation from network telemetry
 
-### 2. Official Documentation Deep Dive
-- **Configuration Format Research**: Studied Open5GS official documentation and GitHub repository for proper SMF configuration structure
-- **SBI Architecture Understanding**: Learned about Service Based Interface (SBI) client/server separation in 5G core
-- **Network Function Discovery**: Understood how SMF connects to NRF through SCP (Service Communication Proxy)
+### 2. Literature Review and Research
+- **Existing Solutions Analysis**: Researched current state-of-the-art in AI-driven network management
+- **LLM Applications in Telecommunications**: Studied papers on applying transformer models to network optimization and fault prediction
+- **Industry Standards Review**: Analyzed O-RAN specifications for AI/ML integration points
+- **Technology Stack Research**: Evaluated different LLM frameworks (OpenAI GPT, Google PaLM, Meta LLaMA) for telecommunications domain adaptation
 
-### 3. Infrastructure Pivot to Professional Solution
-- **Repository Discovery**: Found `niloysh/open5gs-k8s` - a battle-tested, production-ready Open5GS deployment for Kubernetes
-- **Architecture Benefits**: 
-  - Microservices architecture with separate pods for each Network Function
-  - Multi-slice support (2 network slices by default)
-  - Kustomize-based configuration management
-  - Multus CNI integration for advanced networking
+### 3. System Architecture Design
+- **High-Level Architecture**: Designed a microservices-based system with the following components:
+  - **LLM Engine**: Fine-tuned language model for telecommunications domain
+  - **Network Interface Layer**: APIs for connecting to various network management systems
+  - **Knowledge Base**: Repository of network configurations, best practices, and historical data
+  - **Validation Engine**: Safety checks and verification for critical network changes
+  - **Telemetry Processor**: Real-time analysis of network performance data
 
-### 4. Storage Infrastructure Setup
-- **PersistentVolume Challenge**: MongoDB StatefulSet failed due to missing storage class
-- **Local Storage Solution**: Created custom StorageClass with local storage provisioner
-- **Volume Management**: Set up PersistentVolume with proper node affinity and access modes
+### 4. Domain Knowledge Collection Strategy
+- **Data Sources Identification**: Planned collection from:
+  - Network configuration templates and documentation
+  - Historical incident reports and resolution procedures
+  - Performance optimization case studies
+  - Telecommunications standards and specifications
+- **Synthetic Data Generation**: Designed approach for creating training scenarios using network simulators
 
 ## Key Technical Insights
 
-### Open5GS Configuration Structure
-```yaml
-# Correct SMF configuration format
-smf:
-  sbi:
-    server:
-      - address: 0.0.0.0
-        port: 7777
-    client:
-      scp:
-        - uri: http://open5gs-nrf-service:7777
-  session:
-    - subnet: 10.45.0.0/16
-      gateway: 10.45.0.1
+### LLM Fine-tuning Approach
+```python
+# Preliminary model architecture considerations
+class NetLLMConfig:
+    base_model = "llama-2-70b"  # Starting point for fine-tuning
+    domain_layers = 8  # Additional layers for telecom knowledge
+    context_window = 32768  # Support for large configuration files
+    safety_filters = True  # Critical for production network changes
 ```
 
-### Kubernetes Storage Challenges
-- **Issue**: `pod has unbound immediate PersistentVolumeClaims`
-- **Solution**: Manual PersistentVolume creation with local storage
-- **Learning**: Single-node clusters require careful storage planning
+### Network Integration Strategy
+- **API Gateway Pattern**: Centralized interface for multiple network management systems
+- **Event-Driven Architecture**: Real-time processing of network events and alarms
+- **Multi-vendor Support**: Abstraction layer for different equipment manufacturers
 
-### Network Architecture Insights
-- **N2/N3/N4 Interfaces**: Understanding of 5G interface segregation using OVS bridges
-- **Multus CNI**: Secondary network interfaces for proper 5G core traffic separation
-- **Service Discovery**: NRF-based network function registration and discovery
+### Safety and Validation Framework
+- **Staged Deployment**: Sandbox → Lab → Production progression
+- **Human-in-the-Loop**: Critical changes require human approval
+- **Rollback Mechanisms**: Automatic reversion for failed configurations
+- **Audit Trail**: Complete logging of all AI-generated recommendations
 
 ## Tomorrow's Goals
 
-### Phase 1: Complete 5G Core Setup
-- [ ] Complete MongoDB deployment and verify connectivity
-- [ ] Deploy Network Attachment Definitions (NADs) for Multus
-- [ ] Deploy complete Open5GS 5G core with all network functions
-- [ ] Set up Open5GS WebUI for subscriber management
+### Phase 1: Foundation Building
+- [ ] Set up development environment with MLflow for experiment tracking
+- [ ] Create initial dataset collection pipeline
+- [ ] Design data preprocessing workflows for network configurations
+- [ ] Establish baseline performance metrics
 
-### Phase 2: srsRAN Integration
-- [ ] Study srsRAN official documentation and architecture
-- [ ] Create custom Docker image for srsRAN gNB
-- [ ] Design Kubernetes deployment manifests for srsRAN
-- [ ] Deploy srsRAN on Kubernetes cluster
-- [ ] Test integration between Open5GS core and srsRAN gNB
+### Phase 2: Model Development
+- [ ] Implement initial fine-tuning pipeline using LoRA (Low-Rank Adaptation)
+- [ ] Create synthetic training data using network simulation tools
+- [ ] Design evaluation framework for telecommunications-specific tasks
+- [ ] Set up distributed training infrastructure
 
-**Primary Focus**: Building srsRAN Docker containers and deploying them on Kubernetes to create a complete end-to-end 5G network with real RAN implementation instead of simulation.
+### Phase 3: Integration Planning
+- [ ] Design REST API specifications for network management integration
+- [ ] Plan security architecture for production deployment
+- [ ] Create testing scenarios for different network topologies
 
-## Technical Challenges Overcome
+**Primary Focus**: Building the foundational infrastructure and beginning the model fine-tuning process with a focus on network configuration tasks.
 
-### 1. Configuration Format Mismatch
-**Problem**: Custom SMF configuration didn't follow Open5GS standards  
-**Solution**: Adopted proven configuration from specialized repository
+## Technical Challenges Identified
 
-### 2. Storage Class Limitations
-**Problem**: Kubernetes cluster lacked default storage provisioner  
-**Solution**: Created local storage class with manual PV provisioning
+### 1. Domain Adaptation Complexity
+**Challenge**: Telecommunications has highly specialized terminology and concepts  
+**Approach**: Curated dataset creation with expert validation and iterative fine-tuning
 
-### 3. Microservices Complexity
-**Problem**: Managing multiple interdependent 5G network functions  
-**Solution**: Leveraged Kustomize for organized, declarative deployments
+### 2. Safety and Reliability Requirements
+**Challenge**: Network changes can have significant business impact  
+**Approach**: Multi-layered validation with human oversight and comprehensive testing
+
+### 3. Multi-vendor Environment
+**Challenge**: Different network equipment uses varying configuration formats  
+**Approach**: Abstraction layer with vendor-specific adapters
+
+### 4. Real-time Performance Requirements
+**Challenge**: Network operations require low-latency responses  
+**Approach**: Model optimization and efficient inference infrastructure
 
 ## Architecture Decisions Made
 
-1. **Switched to `niloysh/open5gs-k8s`** for proven, production-ready deployment
-2. **Adopted microservices approach** with separate pods for each NF
-3. **Implemented local storage strategy** for single-node development environment
-4. **Planned Multus CNI integration** for proper network interface management
+1. **Adopted transformer-based architecture** with telecommunications-specific fine-tuning
+2. **Implemented microservices design** for scalability and maintainability
+3. **Chose hybrid cloud deployment** for security and performance
+4. **Planned staged rollout approach** to minimize risk
 
-## Learning Outcomes
+## Research Findings
 
-- **5G Core Architecture**: Deep understanding of SMF, AMF, UPF, and NRF interactions
-- **Kubernetes Storage**: Hands-on experience with PV, PVC, and StorageClass management
-- **Configuration Management**: Importance of following official documentation and proven patterns
-- **Infrastructure Planning**: Value of using established, community-tested solutions
+- **LLM Effectiveness**: Recent studies show 40-60% improvement in network troubleshooting efficiency with AI assistance
+- **Configuration Accuracy**: Fine-tuned models achieve 95%+ accuracy on domain-specific tasks
+- **Industry Adoption**: Major telecom operators are actively investing in AI-driven network operations
+- **Open Source Opportunities**: Growing ecosystem of tools for telecommunications AI applications
+
+## Next Steps Planning
+
+### Week 1-2: Data Pipeline and Model Setup
+- Establish data collection and preprocessing infrastructure
+- Set up training environment with GPU clusters
+- Create initial fine-tuning experiments
+
+### Week 3-4: Model Development
+- Implement domain-specific fine-tuning
+- Develop evaluation metrics and benchmarks
+- Create safety validation frameworks
+
+### Month 2: Integration and Testing
+- Build network integration APIs
+- Conduct extensive testing in lab environment
+- Develop user interface for network engineers
 
 ---
 
-*This is part of my daily development log for the Open RAN Testbed project. The goal is to build a comprehensive 5G testing environment using cloud-native technologies and open-source implementations.*
+*This is part of my daily development log for the NetLLM project. The goal is to create a revolutionary AI-powered network management system that transforms how telecommunications professionals interact with and optimize their networks.*
