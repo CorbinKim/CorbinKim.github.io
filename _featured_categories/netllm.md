@@ -12,5 +12,3 @@ sitemap: true
 # NetLLM Development Logs
 
 This page contains all development logs for the NetLLM project in chronological order.
-
-For project overview and details, visit the [NetLLM Project Page](/projects/netllm/).
