@@ -51,22 +51,6 @@ The development process of this project is thoroughly documented through daily d
 
 ### Development Logs
 
-{% assign netllm_posts = site.posts | where_exp: "post", "post.categories contains 'netllm'" | reverse %}
-{% if netllm_posts.size > 0 %}
-<ul class="related-posts">
-  {% for post in netllm_posts %}
-  <li class="h6">
-    <a href="{{ post.url | relative_url }}" class="flip-title">
-      <span>{{ post.title }}</span>
-    </a>
-    <time class="faded fine" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d %b %Y" }}</time>
-    {% if post.description %}
-    <p class="note-sm">{{ post.description }}</p>
-    {% endif %}
-  </li>
-  {% endfor %}
-</ul>
-
 **📝 [View All Development Logs →](/netllm/)**
 
 {% else %}
