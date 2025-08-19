@@ -1,7 +1,7 @@
 # Config
 # ========================================================================================
 
-# URL 설정 - GitHub Pages 사용시 이것만 설정하면 됨
+# URL setting - Only set this when using GitHub Pages
 url: https://cor5in.github.io
 
 # General settings
@@ -16,23 +16,25 @@ tagline: Telecom Software Engineer
 keywords: [Open RAN, AI-RAN, LLM, RAN optimization, 5G, 6G, telecom, wireless networks, artificial intelligence, machine learning]
 logo: /assets/img/logo.png
 
-# Author 정보
+# Author information
 author:
   name: Geon Kim
   email: cor5inkim@gmail.com
 
-# Sidebar 메뉴
+# Sidebar menu
 menu:
   - title: Blog
     url: /blog/
   - title: Projects
     url: /projects/
+  - title: NetLLM
+    url: /netllm/
   - title: CV
     url: /resume/
   - title: Documentation
     url: /docs/
 
-# Footer 링크
+# Footer links
 legal:
   - title: LICENSE
     url: /LICENSE/
@@ -41,32 +43,33 @@ legal:
   - title: CHANGELOG
     url: /CHANGELOG/
 
+# This text will appear in a `<small>` tag in the footer of every page.
 copyright: © 2024. All rights reserved.
 
-# Jekyll 빌드 설정
+# Jekyll build settings
 # ---------------------------------------------------------------------------------------
 
-# GitHub Pages용 원격 테마 설정 - 이게 핵심!
+# Remote theme setting for GitHub Pages - This is the key!
 remote_theme: hydecorp/hydejack@v9
 
-# 로컬 개발시에는 위 줄을 주석처리하고 아래를 사용
+# For local development, comment out the above line and use this instead:
 # theme: jekyll-theme-hydejack
 
-# Posts 설정 (_posts 폴더용)
+# Posts settings (for _posts folder)
 # ---------------------------------------------------------------------------------------
 
-# Posts의 permalink 형식 - 표준 Jekyll 블로그 구조
+# Posts permalink format - Standard Jekyll blog structure
 permalink: /blog/:year/:month/:day/:title/
 
-# 페이지네이션 설정 (blog layout 사용시 필수)
+# Pagination settings (required when using blog layout)
 paginate: 10
 paginate_path: /blog/:num/
 
-# 마크다운 엔진 설정
+# Markdown engine settings
 markdown: kramdown
 highlighter: rouge
 
-# kramdown 설정
+# kramdown settings
 kramdown:
   math_engine: mathjax
   math_engine_opts: {}
@@ -78,11 +81,11 @@ accent_image: /assets/img/sidebar-bg.jpg
 accent_color: rgb(79,177,186)
 theme_color: rgb(25,55,71)
 
-# Collections 설정
+# Collections settings
 # ----------------------------------------------------------------------------------------
 collections:
   featured_categories:
-    permalink: /blog/:name/
+    permalink: /:name/
     output: true
   featured_tags:
     permalink: /tag-:name/
@@ -94,44 +97,44 @@ collections:
 # Front matter defaults
 # ---------------------------------------------------------------------------------------
 defaults:
-  # Posts 기본 설정
+  # Posts default settings
   - scope:
       path: ""
       type: posts
     values:
       layout: post
       comments: false
-      # sitemap에 포함
+      # Include in sitemap
       sitemap: true
 
-  # Projects 설정
+  # Projects settings
   - scope:
       type: projects
     values:
       seo:
         type: WebPage
 
-  # Featured categories 설정
+  # Featured categories settings
   - scope:
       type: featured_categories
     values:
       seo:
         type: WebPage
 
-  # Featured tags 설정
+  # Featured tags settings
   - scope:
       type: featured_tags
     values:
       seo:
         type: WebPage
 
-  # Assets 폴더는 sitemap에서 제외
+  # Exclude assets folder from sitemap
   - scope:
       path: assets/
     values:
       sitemap: false
 
-  # License 페이지들은 sitemap에서 제외
+  # Exclude license pages from sitemap
   - scope:
       path: licenses/
     values:
@@ -154,16 +157,16 @@ plugins:
   - jekyll-include-cache
   - jekyll-last-modified-at
 
-# Hydejack 설정
+# Hydejack settings
 # ----------------------------------------------------------------------------------------
 hydejack:
-  # Post에 표시될 추가 컨텐츠 순서
+  # Order of additional content to be displayed in posts
   post_addons: [about, newsletter, related, random, comments]
   
-  # Project에 표시될 추가 컨텐츠 순서
+  # Order of additional content to be displayed in projects
   project_addons: [about, newsletter, other, comments]
   
-  # 기본 설정들
+  # Default settings
   no_mark_external: false
   no_push_state: false
   no_drawer: false
@@ -184,13 +187,13 @@ hydejack:
   hide_dates: false
   hide_last_modified: false
   
-  # 다크모드 설정
+  # Dark mode settings
   dark_mode:
     always: false
     dynamic: true
     icon: true
 
-  # 오프라인 설정 (선택사항)
+  # Offline settings (optional)
   offline:
     enabled: false
     cache_version: 13
@@ -218,7 +221,7 @@ include:
   - .well-known
   - LICENSE.md
 
-# Plugin 설정들
+# Plugin settings
 # ---------------------------------------------------------------------------------------
 optional_front_matter:
   remove_originals: true
@@ -244,7 +247,7 @@ compress_html:
 sass:
   style: compressed
 
-# Jekyll Compose 기본값 (새 포스트 생성시)
+# Jekyll Compose defaults (for creating new posts)
 # ---------------------------------------------------------------------------------------
 jekyll_compose:
   default_front_matter:
