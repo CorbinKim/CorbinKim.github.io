@@ -1,16 +1,16 @@
 ---
 layout: list
-title: NetLLM
+title: NetLLM Development Logs
 slug: netllm
 description: >
-  Development logs and research content for the NetLLM project.
-  Documenting the journey of building a network management system powered by Large Language Models.
+  Daily development logs for the NetLLM project.
+  Track the progress and insights from building a network management system powered by LLMs.
 no_groups: false
 sitemap: true
 ---
 
-# NetLLM Development Journey
+# NetLLM Development Logs
 
-This page chronicles the development process of NetLLM, a revolutionary approach to telecommunications network management using Large Language Models.
+This page contains all development logs for the NetLLM project in chronological order.
 
-Here you can find all development logs and related posts in chronological order, documenting challenges, breakthroughs, and lessons learned throughout the project.
+For project overview and details, visit the [NetLLM Project Page](/projects/netllm/).
