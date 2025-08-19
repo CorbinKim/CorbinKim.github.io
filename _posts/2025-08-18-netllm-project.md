@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "NetLLM Development Log Day 1 - Project Inception"
+title: "NetLLM Development Log Day 1 - Project Start"
 date: 2025-08-18
 categories: [netllm]
 tags: [llm, networking, project-start, architecture]
@@ -9,7 +9,7 @@ description: >
   and setting up the development environment.
 ---
 
-# Day 1: Project Inception
+# Day 1: Project Start
 
 Today marks the beginning of the NetLLM project - an ambitious attempt to revolutionize network management through Large Language Models.
 
@@ -32,7 +32,7 @@ Today marks the beginning of the NetLLM project - an ambitious attempt to revolu
 
 ## Key Insights
 
-*여기에 오늘의 주요 발견사항들을 기록*
+*Today's key discoveries and learnings*
 
 ## Tomorrow's Goals
 
@@ -42,7 +42,7 @@ Today marks the beginning of the NetLLM project - an ambitious attempt to revolu
 
 ## Challenges
 
-*오늘 겪은 도전과제들*
+*Challenges faced today*
 
 ---
 *This is part of my daily development log for the NetLLM project.*
