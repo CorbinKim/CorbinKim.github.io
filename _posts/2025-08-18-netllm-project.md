@@ -8,11 +8,11 @@ description: >
   Day 1 of the NetLLM project - defining objectives, researching LLM applications in 
   telecommunications, and designing the initial system architecture for AI-powered network management.
 image: 
-  path: /assets/img/projects/netllm.jpg
+  path: /assets/img/projects/netllm_project.jpg
   srcset: 
-    1920w: /assets/img/projects/netllm.jpg
-    960w:  /assets/img/projects/netllm@0.5x.jpg
-    480w:  /assets/img/projects/netllm@0.25x.jpg
+    1920w: /assets/img/projects/netllm_project.jpg
+    960w:  /assets/img/projects/netllm_project@0.5x.jpg
+    480w:  /assets/img/projects/netllm_project@0.25x.jpg
 ---
 
 # Day 1: Project Inception and Architecture Planning
