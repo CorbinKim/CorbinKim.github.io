@@ -20,12 +20,6 @@ hide_last_modified: true
 - Table of Contents
 {:toc .large-only}
 
----
-title: "Paper Summary: [Paper Title]"
-date: YYYY-MM-DD
-categories: [Paper Review, Communications]
-tags: [5G, 6G, Wireless, AI, RAN, Digital Twin]
----
 
 # 📑 Paper Reading Summary (Communications Research)
 
