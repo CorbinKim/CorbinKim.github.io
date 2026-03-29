@@ -1,0 +1,29 @@
+name: 📚 Daily arXiv Digest → Notion
+
+on:
+  schedule:
+    - cron: '0 0 * * *'   # 매일 UTC 00:00 = KST 09:00
+  workflow_dispatch:        # 수동 실행 가능
+
+jobs:
+  arxiv-digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run arXiv Digest
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+        run: python arxiv_digest.py
+
+      - name: Summary
+        if: always()
+        run: echo "✅ arXiv digest 완료 — $(date '+%Y-%m-%d %H:%M KST')"

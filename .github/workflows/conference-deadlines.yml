@@ -1,0 +1,35 @@
+name: 📅 Weekly Conference Deadline Check
+
+on:
+  schedule:
+    - cron: '0 1 * * 1'   # 매주 월요일 UTC 01:00 = KST 10:00
+  workflow_dispatch:
+
+jobs:
+  deadline-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Check Deadlines & Generate ICS
+        run: python conference_deadlines.py
+
+      - name: Upload ICS as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: conference-deadlines-ics
+          path: conference_deadlines.ics
+          retention-days: 7
+
+      - name: Show upcoming deadlines
+        run: |
+          echo "## 📅 이번 주 학회 데드라인 체크" >> $GITHUB_STEP_SUMMARY
+          python conference_deadlines.py >> $GITHUB_STEP_SUMMARY 2>&1 || true
