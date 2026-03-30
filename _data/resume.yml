@@ -103,7 +103,7 @@ skills:
       - "Traffic Prediction"
       - "Optimization Theory"
   - name: "Network Systems"
-    level: "Master"
+    level: "Advanced"
     keywords:
       - "O-RAN"
       - "5G/6G"
@@ -120,7 +120,7 @@ languages:
   - language: "Korean"
     fluency: "Native speaker"
   - language: "English"
-    fluency: "Fluent"
+    fluency: "Professional working proficiency"
 interests:
   - name: "Research"
     keywords:
