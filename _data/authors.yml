@@ -8,9 +8,9 @@ author1:
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    I am a telecom software engineer and a Ph.D. student conducting research on realizing Zero Touch Networks in telecommunications through Generative AI.
-    My primary interests lie in leveraging large language models (LLMs) to automate wireless resource allocation in Radio Access Networks (RAN) and enable fully autonomous network operations.
-    I am also an active contributor to the AIMLFW project within the O-RAN Software Community, where I participate in the development of AI/ML-based open-source solutions for next-generation networks.
+    Ph.D. Candidate at NextG Lab, NC State University (ECE).
+    My research focuses on applying Large Language Models to automate wireless resource management in Radio Access Networks (RAN), working toward fully autonomous Zero Touch Networks.
+    I am also an active contributor to the AIMLFW project within the O-RAN Software Community.
 
   # This photo will be used in the about section
   picture:
@@ -27,7 +27,7 @@ author1:
   social:
     # twitter:         <username>
     github:          cor5in
-    email:           gun@khu.ac.kr
+    email:           erudite.gun@gmail.com
     # rss:             https://<url>/feed.xml
     # facebook:        <username>
     # google:          <number>

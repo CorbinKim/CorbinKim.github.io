@@ -1,0 +1,25 @@
+name: 🛠 GitHub Weekly Digest
+
+on:
+  schedule:
+    - cron: "0 11 * * 0"   # 매주 일요일 KST 20:00 (UTC 11:00)
+  workflow_dispatch:
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run GitHub digest
+        env:
+          GH_TOKEN:      ${{ secrets.GH_TOKEN }}
+          NOTION_TOKEN:  ${{ secrets.NOTION_TOKEN }}
+        run: python github_digest.py
