@@ -1,0 +1,40 @@
+name: 📊 Citation Tracker
+
+on:
+  schedule:
+    - cron: "0 1 * * 1"   # 매주 월요일 KST 10:00 (UTC 01:00)
+  workflow_dispatch:
+
+jobs:
+  track:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Restore citation cache
+        uses: actions/cache@v4
+        with:
+          path: .citation_cache.json
+          key: citation-cache-${{ runner.os }}
+          restore-keys: |
+            citation-cache-
+
+      - name: Run citation tracker
+        env:
+          NOTION_TOKEN:          ${{ secrets.NOTION_TOKEN }}
+          S2_API_KEY:            ${{ secrets.S2_API_KEY }}
+          CITATION_CACHE_PATH:   ${{ github.workspace }}/.citation_cache.json
+        run: python citation_tracker.py
+
+      - name: Save updated cache
+        uses: actions/cache@v4
+        with:
+          path: .citation_cache.json
+          key: citation-cache-${{ runner.os }}-${{ github.run_id }}

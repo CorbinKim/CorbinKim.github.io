@@ -3,20 +3,21 @@
 # See also: <https://jsonresume.org/>.
 basics:
   name: "Geon Kim"
-  label: "Telecom Software Engineer"
+  label: "Ph.D. Candidate, NC State University"
   picture: "/assets/img/profile.png"
   email: "erudite.gun@gmail.com"
-  website: "https://geonkim.netlify.app/"
+  website: "https://CorbinKim.github.io"
   summary: >
-    I’m a telecom software engineer from Cheonan, currently pursuing graduate studies at Kyunghee University. 
-    My work focuses on optimizing AI models for energy-saving use cases, and I actively contribute to cloud-native RAN open-source projects. 
-    Outside of work, I’m interested in distributed systems and cloud-native technologies.
+    Ph.D. Candidate at NextG Lab, NC State University (ECE).
+    My research focuses on applying Large Language Models to automate wireless resource management in Radio Access Networks (RAN),
+    working toward fully autonomous Zero Touch Networks.
+    I actively contribute to the AIMLFW project within the O-RAN Software Community.
   location:
-    address: "Kyunghee Ungiversity EE549"
-    postalCode: "16419"
-    city: "Suwon"
-    countryCode: "KR"
-    region: "Gyeonggi-do"
+    address: "NextG Lab, ECE Department"
+    postalCode: "27695"
+    city: "Raleigh"
+    countryCode: "US"
+    region: "North Carolina"
   profiles:
     - network: "LinkedIn"
       username: "Geon Kim"
@@ -46,15 +47,20 @@ work:
 #     highlights:
 #       - "Awarded 'Teacher of the Month'"
 education:
+  - institution: "North Carolina State University"
+    area: "Electrical and Computer Engineering"
+    studyType: "Ph.D."
+    startDate: "2023-08-01"
+    endDate: ""
+    gpa: ""
+    courses: []
   - institution: "Kyunghee University"
     area: "Electronic Engineering"
     studyType: "Bachelor"
     startDate: "2017-03-01"
-    endDate: "2023-01-01"
+    endDate: "2023-02-01"
     gpa: "4.0"
-    courses:
-      - "DB1101 - Basic SQL"
-      - "CS2011 - Java Introduction"
+    courses: []
 awards:
   - title: "Digital Compression Pioneer Award"
     date: "2014-11-01"
