@@ -2,8 +2,8 @@
 layout: post
 title: A Base Station Sleeping Strategy in Heterogeneous Cellular Networks Based on User Traffic Prediction
 description: >
-  **Date**: 2014.06.17 <br>
-  **Tag**: [Heterogeneous cellular networks], [Traffic forecasting], [Energy saving], [SINR], [Quality of service], [BLSTM]
+  Paper review: BLSTM-based user traffic prediction for base station sleeping in HetNets,
+  balancing energy savings with QoS by maintaining SINR thresholds.
 image: 
   path: /assets/img/blog/0115/thumbnail/thumbnail.png
   srcset: 

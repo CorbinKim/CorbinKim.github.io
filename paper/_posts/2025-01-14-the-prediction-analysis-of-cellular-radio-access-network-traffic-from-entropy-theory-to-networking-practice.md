@@ -2,8 +2,8 @@
 layout: post
 title: The Prediction Analysis of Cellular Radio Access Network Traffic - From Entropy Theory to Networking Practice
 description: >
-  **Date**: 2014.06.14 <br>
-  **Tag**: [Cellular networks], [Predictive models], [Telecommunication traffic], [Computer architecture], [Uncertainty], [Entropy], [Signal processing]
+  Paper review: Entropy-based framework for analyzing and predicting cellular RAN traffic,
+  bridging information theory with practical telecom network traffic forecasting.
 image: 
   path: /assets/img/blog/0114/thumbnail/thumbnail.png
   srcset: 
