@@ -2,11 +2,11 @@
 # If you don't have a JSON Resume you can just edit this YAML file instead.
 # See also: <https://jsonresume.org/>.
 basics:
-  name: "Geon Kim"
+  name: "Corbin Kim"
   label: "Ph.D. Candidate, NC State University"
   picture: "/assets/img/profile.png"
-  email: "erudite.gun@gmail.com"
-  website: "https://corbinkim.github.io"
+  email: "gkim26@ncsu.edu"
+  website: "https://geonkim.netlify.app/"
   summary: >
     Ph.D. Candidate at NextG Lab, NC State University (ECE).
     My research focuses on applying Large Language Models to automate wireless resource management in Radio Access Networks (RAN),
@@ -20,7 +20,7 @@ basics:
     region: "North Carolina"
   profiles:
     - network: "LinkedIn"
-      username: "Geon Kim"
+      username: "Corbin Kim"
       url: "https://www.linkedin.com/in/corbinkim/"
 work:
   - company: "Kyung Hee University"
@@ -121,8 +121,6 @@ languages:
     fluency: "Native speaker"
   - language: "English"
     fluency: "Fluent"
-  - language: "Chinese"
-    fluency: "Intermediate (reading), Basic (speaking)"
 interests:
   - name: "Research"
     keywords:
