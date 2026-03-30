@@ -1,0 +1,50 @@
+name: 📝 Blog Publisher
+
+on:
+  schedule:
+    - cron: "0 14 * * *"   # 매일 KST 23:00 (UTC 14:00)
+  workflow_dispatch:        # 수동 실행 가능
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout blog repo
+        uses: actions/checkout@v4
+        with:
+          repository: CorbinKim/CorbinKim.github.io
+          token: ${{ secrets.GH_TOKEN }}
+          path: blog
+
+      - name: Checkout automation scripts
+        uses: actions/checkout@v4
+        with:
+          path: scripts
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run blog publisher
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          BLOG_REPO_PATH: ${{ github.workspace }}/blog
+        run: |
+          python scripts/blog_publisher.py
+
+      - name: Commit and push new posts
+        working-directory: blog
+        run: |
+          git config user.name  "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add paper/_posts/
+          if git diff --cached --quiet; then
+            echo "No new posts to commit."
+          else
+            COUNT=$(git diff --cached --name-only | wc -l)
+            git commit -m "📝 Add ${COUNT} paper review post(s) [auto]"
+            git push
+            echo "✅ Pushed ${COUNT} new post(s)"
+          fi
