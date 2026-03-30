@@ -2,8 +2,8 @@
 layout: post
 title: Analyzing and Modeling Spatio-Temporal Dependence of Cellular Traffic at City Scale
 description: >
-  **Date**: 2015.06.12 <br>
-  **Tag**: [Spatil-temporal dependence], [Traffic modeling], [Model measurement], [Correlation analysis], [Tide effects]
+  Paper review: Spatio-temporal analysis of city-scale cellular traffic patterns,
+  revealing tide effects and correlation structures for improved traffic modeling.
 image: 
   path: /assets/img/blog/0113/thumbnail/c2tm.png
   srcset: 

@@ -2,8 +2,8 @@
 layout: post
 title: AI-Ready Energy Modelling for Next Generation RAN
 description: >
-  **Date**: 2024.11.04, 
-  **Tag**: [AIMM], [System Level Simulator]
+  Paper review: AI-ready energy modeling framework (AIMM) for next-generation RAN,
+  using system-level simulation to optimize energy consumption in 5G/6G networks.
 image: 
   path: /assets/img/blog/pawel-czerwinski-848z7lbCjoo-unsplash.jpg
   srcset: 

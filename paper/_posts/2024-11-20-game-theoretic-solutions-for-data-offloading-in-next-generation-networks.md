@@ -2,8 +2,8 @@
 layout: post
 title: Game-Theoretic Solutions for Data Offloading in Next Generation Networks
 description: >
-  **Date**: 2017.11.29, 
-  **Tag**: [Mobile Network Operator(MNO)], [access point], [Stackelberg approach], [game theory], [quality of service], [Nash equilibrium]
+  Paper review: Game-theoretic approaches (Stackelberg, Nash equilibrium) for data offloading
+  between MNOs and access points, optimizing QoS in next-generation wireless networks.
 image: 
   path: /assets/img/blog/game-theory/game-theory.png
   srcset: 

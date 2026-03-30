@@ -2,8 +2,8 @@
 layout: post
 title: Intent-Aware Radio Resource Scheduling in a RAN Slicing Scenario Using Reinforcement Learning
 description: >
-  **Date**: 2021.06.14 <br>
-  **Tag**: [Radio resource scheduling], [RAN slicing], [Intent-aware scheduling], [Reinforcement learning]
+  Paper review: Reinforcement learning for intent-aware radio resource scheduling in RAN slicing,
+  dynamically allocating resources across network slices based on service-level intents.
 image: 
   path: /assets/img/blog/0115/thumbnail/thumbnail.png
   srcset: 

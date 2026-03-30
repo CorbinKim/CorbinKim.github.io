@@ -2,8 +2,8 @@
 layout: post
 title: Joint Traffic Prediction and Base Station Sleeping for Energy Saving in Cellular Networks
 description: >
-  **Date**: 2021.08.06, 
-  **Tag**: [Base station sleeping], [Long short-term memory], [Traffic prediction]
+  Paper review: LSTM-based traffic prediction for base station sleeping in cellular networks,
+  enabling energy-efficient operation by selectively deactivating underutilized base stations.
 image: 
   path: /assets/img/blog/prediction_sleep/Prediction_Sleep.png
   srcset: 
