@@ -6,7 +6,7 @@ basics:
   label: "Ph.D. Candidate, NC State University"
   picture: "/assets/img/profile.png"
   email: "erudite.gun@gmail.com"
-  website: "https://CorbinKim.github.io"
+  website: "https://corbinkim.github.io"
   summary: >
     Ph.D. Candidate at NextG Lab, NC State University (ECE).
     My research focuses on applying Large Language Models to automate wireless resource management in Radio Access Networks (RAN),
@@ -23,73 +23,106 @@ basics:
       username: "Geon Kim"
       url: "https://www.linkedin.com/in/corbinkim/"
 work:
-  - company: "Aether"
-    position: "Software Engineer"
-    website: "https://aetherproject.org/"
-    startDate: "2024-04-08"
-    endDate: ""
+  - company: "Kyung Hee University"
+    position: "Graduate Research Assistant"
+    website: ""
+    startDate: "2023-03-01"
+    endDate: "2025-02-01"
     summary: >
-      Aether is an open-source 5G platform for edge computing that runs a cloud-native mobile core (SD-Core) and an O-RAN compatible RAN (SD-RAN) on a Kubernetes-based edge cloud. 
-      The platform offers Connectivity-as-a-Service, allowing users to easily scale from small deployments to large multi-site environments through a runtime API (AMP) and DevOps lifecycle management (OnRamp). 
-      It also provides flexible deployment options through compatibility with commercial 4G/5G small cells.
+      Convergence Engineering Institute for Emerging Communication Technology,
+      Department of Electronics and Information. Adviser: Prof. EenKee Hong.
     highlights:
-      - Release process
-      - Design/Implement Scalable RAN Simulator
-      - Aether OnRamp integration
-      - Research SD-RAN/Aether
-# volunteer:
-#   - organization: "CoderDojo"
-#     position: "Teacher"
-#     website: "https://coderdojo.com/"
-#     startDate: "2012-01-01"
-#     endDate: "2013-01-01"
-#     summary: "Global movement of free coding clubs for young people."
-#     highlights:
-#       - "Awarded 'Teacher of the Month'"
+      - "O-RAN Global PlugFest 2024: Collaborated with LG Uplus to validate Open RAN interoperability"
+      - "Open RAN Workforce Development: Registered 'Traffic Forecasting for Green Network' use case in O-RAN SC AIMLFW"
+      - "5G NR Open Small Cell: Improved energy efficiency and traffic prediction using Open RAN-based small cells"
+      - "5G Open RAN Network Slicing: Developed RAN slicing technologies for service-level assurance (with Prof. Tony Q.S. Quek)"
+      - "SKT AI Fellowship: Developed cell-off recommendation using SKT's commercial network data, measured ROI at Busan testbed"
 education:
   - institution: "North Carolina State University"
     area: "Electrical and Computer Engineering"
     studyType: "Ph.D."
-    startDate: "2023-08-01"
+    startDate: "2026-01-01"
     endDate: ""
     gpa: ""
     courses: []
-  - institution: "Kyunghee University"
+  - institution: "Kyung Hee University"
+    area: "Mobile Communication"
+    studyType: "M.S."
+    startDate: "2023-03-01"
+    endDate: "2025-02-01"
+    gpa: "3.94"
+    courses:
+      - "Thesis: Green Intelligence - Traffic Forecasting for Cell Sleeping in Open RAN"
+  - institution: "Kyung Hee University"
     area: "Electronic Engineering"
-    studyType: "Bachelor"
+    studyType: "B.S."
     startDate: "2017-03-01"
     endDate: "2023-02-01"
-    gpa: "4.0"
+    gpa: ""
     courses: []
-awards: []
-publications: []
+awards:
+  - title: "Best Paper Award"
+    date: "2025-01-01"
+    awarder: "Korean Institute of Communications and Information Sciences"
+    summary: "Outstanding research on O-RAN testbed implementation"
+  - title: "Outstanding Research Award"
+    date: "2024-11-01"
+    awarder: "SKT"
+    summary: "5G Green AI Algorithm research project"
+  - title: "Best Paper Award"
+    date: "2024-10-01"
+    awarder: "Korean Institute of Communications and Information Sciences"
+    summary: "Outstanding research on traffic prediction"
+publications:
+  - name: "Traffic Prediction for Carbon Reduction in Green Cellular Networks"
+    publisher: "IEEE Trans. Green Commun. Netw. (in preparation)"
+    releaseDate: ""
+    website: ""
+    summary: "G. Kim, S.J. Lee and E.K. Hong"
+  - name: "Implementation of Ultra-Low Latency Open RAN Using Distributed Near-RT RIC"
+    publisher: "Proc. KICS Symposium"
+    releaseDate: "2024-01-01"
+    website: ""
+    summary: "G. Kim, S.J. Lee and E.K. Hong, Gangwon, Jan 2024"
+  - name: "Securing 5G Core Network Stability Using Open Source"
+    publisher: "Proc. KICS Symposium"
+    releaseDate: "2023-11-01"
+    website: ""
+    summary: "G. Kim, S.Y. Lee, S.J. Lee and E.K. Hong, Gyeongbuk, Nov 2023"
+  - name: "Cell Free Massive MIMO Downlink Power Allocation Using Deep Reinforcement Learning"
+    publisher: "Proc. KICS Symposium"
+    releaseDate: "2023-06-01"
+    website: ""
+    summary: "G. Kim and E.K. Hong, Gangwon, Jun 2023"
 skills:
   - name: "AI/ML for Wireless Networks"
     level: "Master"
     keywords:
-      - "LLM"
+      - "AI/ML"
       - "Reinforcement Learning"
       - "Traffic Prediction"
-      - "RAG"
+      - "Optimization Theory"
   - name: "Network Systems"
     level: "Master"
     keywords:
       - "O-RAN"
       - "5G/6G"
-      - "SD-RAN"
+      - "RAN Slicing"
       - "Network Slicing"
   - name: "Programming"
     level: "Master"
     keywords:
       - "Python"
-      - "PyTorch"
       - "Go"
-      - "Docker/K8s"
+      - "C/C++"
+      - "Kubernetes (CKA)"
 languages:
   - language: "Korean"
     fluency: "Native speaker"
   - language: "English"
-    fluency: "Professional working proficiency"
+    fluency: "Fluent"
+  - language: "Chinese"
+    fluency: "Intermediate (reading), Basic (speaking)"
 interests:
   - name: "Research"
     keywords:
