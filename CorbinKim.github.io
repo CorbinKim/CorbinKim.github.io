@@ -1,1 +1,0 @@
-/Users/corbin/블로그/CorbinKim.github.io
