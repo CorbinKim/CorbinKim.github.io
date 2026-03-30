@@ -103,7 +103,7 @@ skills:
       - "Traffic Prediction"
       - "Optimization Theory"
   - name: "Network Systems"
-    level: "Advanced"
+    level: "Intermediate"
     keywords:
       - "O-RAN"
       - "5G/6G"
