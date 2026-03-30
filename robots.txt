@@ -15,4 +15,4 @@ Allow: /blog/
 Allow: /projects/
 
 # Sitemap 위치
-Sitemap: https://cor5in.github.io/sitemap.xml
+Sitemap: https://corbinkim.github.io/sitemap.xml

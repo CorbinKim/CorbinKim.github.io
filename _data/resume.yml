@@ -21,7 +21,7 @@ basics:
   profiles:
     - network: "LinkedIn"
       username: "Geon Kim"
-      url: "https://www.linkedin.com/in/cor5in/"
+      url: "https://www.linkedin.com/in/corbinkim/"
 work:
   - company: "Aether"
     position: "Software Engineer"
