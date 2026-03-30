@@ -1,20 +1,22 @@
 ---
 layout: project
-title: 'Hydejack Site'
-caption: Dogfooding Hydejack to sell Hydejack.
+title: 'O-RAN AIMLFW'
+caption: AI/ML Framework for O-RAN Software Community
 description: >
-  While Hydejack is built for personal sites, it's versatility allows it to be used a product page as well.
-date: '01-01-2016'
-image: 
+  Contributing to the AIMLFW project within the O-RAN Software Community,
+  building AI/ML pipelines for intelligent RAN management.
+date: '2024-04-01'
+image:
   path: /assets/img/projects/hydejack-site.jpg
-  srcset: 
+  srcset:
     1920w: /assets/img/projects/hydejack-site.jpg
     960w:  /assets/img/projects/hydejack-site@0,5x.jpg
     480w:  /assets/img/projects/hydejack-site@0,25x.jpg
 links:
-  - title: Link
-    url: https://hydejack.com/
-sitemap: false
+  - title: O-RAN SC
+    url: https://wiki.o-ran-sc.org/display/AIMLFW
+featured: true
+sitemap: true
 ---
 
 # O-RAN AIMLFW

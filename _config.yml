@@ -42,7 +42,7 @@ legal:
     url: /CHANGELOG/
 
 # This text will appear in a `<small>` tag in the footer of every page.
-copyright: © 2024. All rights reserved.
+copyright: © 2026. All rights reserved.
 
 # Jekyll build settings
 # ---------------------------------------------------------------------------------------
@@ -213,6 +213,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - functions
+  - blog-automation
 
 include:
   - _routes.json
