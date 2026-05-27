@@ -22,6 +22,7 @@ While this manual tries to be beginner-friendly, as a user of Jekyll it is assum
 ## Using Hydejack
 * [Basics]{:.heading.flip-title} --- How to add different types of content.
 * [Writing]{:.heading.flip-title} --- Producing markdown content for Hydejack.
+* [CMS]{:.heading.flip-title} --- Browser-based paper review writing with Decap CMS.
 * [Scripts]{:.heading.flip-title} --- How to include 3rd party scripts on your site.
 * [Build]{:.heading.flip-title} --- How to build the static files for deployment.
 * [Deploy]{:.heading.flip-title} --- 🆕 How to deploy to a variety of popular providers.
@@ -39,6 +40,7 @@ While this manual tries to be beginner-friendly, as a user of Jekyll it is assum
 [config]: config.md
 [basics]: basics.md
 [writing]: writing.md
+[cms]: cms.md
 [scripts]: scripts.md
 [build]: build.md
 [deploy]: deploy.md

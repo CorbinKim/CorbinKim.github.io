@@ -1,0 +1,122 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+
+backend:
+  name: github
+  repo: CorbinKim/CorbinKim.github.io
+  branch: main
+
+media_folder: assets/img/blog/uploads
+public_folder: /assets/img/blog/uploads
+
+site_url: https://corbinkim.github.io
+display_url: https://corbinkim.github.io
+logo_url: /assets/img/logo.png
+
+slug:
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: "-"
+
+collections:
+  - name: paper_reviews
+    label: Paper Reviews
+    label_singular: Paper Review
+    folder: paper/_posts
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "blog/{{year}}/{{month}}/{{day}}/{{slug}}/"
+    editor:
+      preview: false
+    fields:
+      - { label: Layout, name: layout, widget: hidden, default: post }
+      - { label: Categories, name: categories, widget: hidden, default: ["paper"] }
+      - { label: Excerpt Separator, name: excerpt_separator, widget: hidden, default: "<!--more-->" }
+      - { label: Sitemap, name: sitemap, widget: hidden, default: true }
+      - { label: Title, name: title, widget: string }
+      - { label: Publish Date, name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: Description, name: description, widget: text, required: false }
+      - { label: Tags, name: tags, widget: list, required: false, allow_add: true, field: { label: Tag, name: tag, widget: string } }
+      - label: Hero Image
+        name: image
+        widget: object
+        required: false
+        collapsed: true
+        fields:
+          - { label: Image, name: path, widget: image, required: false }
+          - label: Responsive Sources
+            name: srcset
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - { label: "1920w", name: "1920w", widget: image, required: false }
+              - { label: "960w", name: "960w", widget: image, required: false }
+              - { label: "480w", name: "480w", widget: image, required: false }
+      - label: Body
+        name: body
+        widget: markdown
+        default: |
+          <!--more-->
+
+          * toc
+          {:toc .large-only}
+
+          ## 1. Why this paper?
+
+          ## 2. Paper Summary
+
+          ## 3. Key Contributions
+
+          ## 4. Methodology
+
+          ## 5. Results
+
+          ## 6. Takeaways
+
+  - name: blog_posts
+    label: Blog Posts
+    label_singular: Blog Post
+    folder: _posts
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "blog/{{year}}/{{month}}/{{day}}/{{slug}}/"
+    editor:
+      preview: false
+    fields:
+      - { label: Layout, name: layout, widget: hidden, default: post }
+      - { label: Excerpt Separator, name: excerpt_separator, widget: hidden, default: "<!--more-->" }
+      - { label: Sitemap, name: sitemap, widget: hidden, default: true }
+      - { label: Title, name: title, widget: string }
+      - { label: Publish Date, name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - label: Categories
+        name: categories
+        widget: select
+        multiple: true
+        min: 1
+        options: ["aimlfw", "netllm", "paper", "sim"]
+      - { label: Tags, name: tags, widget: list, required: false, allow_add: true, field: { label: Tag, name: tag, widget: string } }
+      - { label: Description, name: description, widget: text, required: false }
+      - label: Hero Image
+        name: image
+        widget: object
+        required: false
+        collapsed: true
+        fields:
+          - { label: Image, name: path, widget: image, required: false }
+          - label: Responsive Sources
+            name: srcset
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - { label: "1920w", name: "1920w", widget: image, required: false }
+              - { label: "960w", name: "960w", widget: image, required: false }
+              - { label: "480w", name: "480w", widget: image, required: false }
+      - label: Body
+        name: body
+        widget: markdown
+        default: |
+          <!--more-->
+
+          * toc
+          {:toc .large-only}
