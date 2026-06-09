@@ -29,7 +29,7 @@ export const timeline = [
   {
     period: "2023 – 2025",
     title: "Graduate Research Assistant",
-    org: "Kyung Hee University · Adviser: Prof. EenKee Hong",
+    org: "Kyung Hee University",
     note: "O-RAN Global PlugFest 2024 with LG Uplus; O-RAN SC AIMLFW use case; RAN slicing; SKT AI Fellowship (cell-off recommendation on commercial network data).",
   },
   {

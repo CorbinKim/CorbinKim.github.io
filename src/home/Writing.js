@@ -2,7 +2,8 @@ import React, {useEffect, useState} from "react";
 import {mediumUsername} from "../data/site";
 
 /* Live-fetches the latest Medium posts via the public rss2json bridge.
-   Falls back to a "Read on Medium" link if the feed is empty or unreachable. */
+   Falls back to a "Read on Medium" link if the feed is empty or unreachable.
+   Rendered inside the near-black Writing band (see Home.scss .ap-band--dark). */
 
 const FEED = `https://medium.com/feed/@${mediumUsername}`;
 const ENDPOINT = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(
@@ -11,7 +12,6 @@ const ENDPOINT = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURICompon
 const MAX_POSTS = 6;
 
 function formatDate(pubDate) {
-  // rss2json returns "YYYY-MM-DD HH:MM:SS" (UTC). Render as "Mon YYYY".
   const d = new Date(pubDate.replace(" ", "T") + "Z");
   if (isNaN(d)) return "";
   return d.toLocaleDateString("en-US", {month: "short", year: "numeric"});
@@ -44,15 +44,16 @@ export default function Writing() {
   const profileUrl = `https://medium.com/@${mediumUsername}`;
 
   return (
-    <section className="kp-section" id="writing">
-      <h2>Writing</h2>
-      {state === "loading" && <p className="kp-muted">Loading latest posts…</p>}
+    <>
+      <h2 className="ap-h2">Writing</h2>
+
+      {state === "loading" && <p className="ap-muted">Loading latest posts…</p>}
 
       {state === "ok" && (
-        <ul className="kp-list">
+        <ul className="ap-writing-list">
           {posts.map((p) => (
             <li key={p.guid || p.link}>
-              <span className="kp-date">{formatDate(p.pubDate)}</span>
+              <span className="ap-date">{formatDate(p.pubDate)}</span>
               <a href={p.link} target="_blank" rel="noopener noreferrer">
                 {p.title}
               </a>
@@ -62,7 +63,7 @@ export default function Writing() {
       )}
 
       {(state === "empty" || state === "error") && (
-        <p className="kp-muted">
+        <p className="ap-muted">
           {state === "error"
             ? "Couldn't load the feed right now — "
             : "Posts coming soon — "}
@@ -75,12 +76,12 @@ export default function Writing() {
       )}
 
       {state === "ok" && (
-        <p className="kp-more">
+        <p className="ap-more">
           <a href={profileUrl} target="_blank" rel="noopener noreferrer">
             All posts on Medium →
           </a>
         </p>
       )}
-    </section>
+    </>
   );
 }

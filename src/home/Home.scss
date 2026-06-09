@@ -1,225 +1,373 @@
-/* karpathy.ai-inspired minimal layout: white bg, single centered column,
-   system sans-serif, standard blue links, hairline dividers. Light-only. */
+/* Apple.com design language, per DESIGN.md.
+   Single Action Blue accent · SF Pro (system-ui) / Inter fallback · 17px body ·
+   negative letter-spacing on display · alternating light/parchment/near-black
+   full-bleed bands (the color change is the divider) · exactly one shadow,
+   reserved for imagery · no gradients, no chrome shadows. */
 
-$ink: #1a1a1a;
-$muted: #6a6a6a;
-$link: #1a55c0;
-$rule: #e6e6e6;
-$maxw: 720px;
+// --- Tokens (DESIGN.md) ---
+$primary: #0066cc;
+$primary-on-dark: #2997ff;
+$ink: #1d1d1f;
+$ink-80: #333333;
+$ink-48: #7a7a7a;
+$on-dark: #ffffff;
+$on-dark-muted: #cccccc;
+$canvas: #ffffff;
+$parchment: #f5f5f7;
+$pearl: #fafafc;
+$tile-dark: #272729;
+$hairline: #e0e0e0;
+$divider-soft: #f0f0f0;
 
+$font-display: "SF Pro Display", system-ui, -apple-system, BlinkMacSystemFont,
+  "Inter", "Segoe UI", Roboto, sans-serif;
+$font-text: "SF Pro Text", system-ui, -apple-system, BlinkMacSystemFont, "Inter",
+  "Segoe UI", Roboto, sans-serif;
+
+$shadow-product: rgba(0, 0, 0, 0.22) 3px 5px 30px 0;
+$wrap: 980px;
+$readable: 700px;
+
+// --- Base ---
 body {
-  background: #ffffff;
+  margin: 0;
+  background: $canvas;
   color: $ink;
+  font-family: $font-text;
+  font-size: 17px;
+  line-height: 1.47;
+  letter-spacing: -0.022em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.kp {
-  max-width: $maxw;
-  margin: 0 auto;
-  padding: 56px 20px 80px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif;
-  font-size: 17px;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-
+.ap {
   a {
-    color: $link;
+    color: $primary;
     text-decoration: none;
     &:hover {
       text-decoration: underline;
     }
   }
 
-  hr {
-    border: none;
-    border-top: 1px solid $rule;
-    margin: 36px 0;
-  }
-
-  h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin: 18px 0 6px;
-    letter-spacing: -0.01em;
-  }
-
-  h2 {
-    font-size: 1.15rem;
-    font-weight: 700;
-    margin: 0 0 14px;
-  }
-
-  p {
-    margin: 0 0 12px;
+  h1,
+  h2,
+  h3 {
+    font-family: $font-display;
+    font-weight: 600;
+    margin: 0;
   }
 }
 
-/* Header (centered) */
-.kp-header {
-  text-align: center;
+// --- Full-bleed bands; color change IS the divider ---
+.ap-band {
+  padding: 80px 24px;
+  background: $canvas;
+
+  &--parchment {
+    background: $parchment;
+  }
+  &--dark {
+    background: $tile-dark;
+    color: $on-dark;
+    a {
+      color: $primary-on-dark;
+    }
+    .ap-h2,
+    .ap-muted {
+      color: $on-dark;
+    }
+    .ap-date,
+    .ap-entry-org,
+    .ap-muted {
+      color: $on-dark-muted;
+    }
+  }
 }
 
-.kp-avatar {
-  width: 128px;
-  height: 128px;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
+.ap-wrap {
+  max-width: $wrap;
   margin: 0 auto;
 }
 
-.kp-role {
-  color: $muted;
-  margin: 0 0 4px;
+.ap-h2 {
+  font-family: $font-display;
+  font-size: clamp(26px, 4vw, 34px);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 32px;
 }
 
-.kp-tagline {
-  margin: 0 0 16px;
+.ap-muted {
+  color: $ink-48;
 }
 
-.kp-social {
-  font-size: 0.95rem;
-  .kp-dot {
-    color: $muted;
-    margin: 0 8px;
+// --- Hero ---
+.ap-hero {
+  text-align: center;
+  padding: clamp(64px, 12vh, 120px) 24px 72px;
+  background: $canvas;
+}
+
+.ap-avatar {
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 28px;
+  box-shadow: $shadow-product; // the one allowed shadow: imagery
+}
+
+.ap-name {
+  font-size: clamp(40px, 7vw, 64px);
+  line-height: 1.07;
+  letter-spacing: -0.025em;
+  margin: 0 0 12px;
+}
+
+.ap-role {
+  font-family: $font-display;
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 400;
+  line-height: 1.14;
+  color: $ink-80;
+  margin: 0 0 8px;
+}
+
+.ap-tagline {
+  font-family: $font-display;
+  font-size: clamp(18px, 2.4vw, 24px);
+  font-weight: 300;
+  color: $ink-80;
+  max-width: 640px;
+  margin: 0 auto 28px;
+}
+
+// social as pill grammar (one filled Action-Blue + ghost pills)
+.ap-social {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  a {
+    font-family: $font-text;
+    font-size: 14px;
+    letter-spacing: -0.224px;
+    padding: 9px 18px;
+    border-radius: 9999px;
+    transition: transform 0.15s ease;
+    &:hover {
+      text-decoration: none;
+    }
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+  a.is-primary {
+    background: $primary;
+    color: #fff;
+  }
+  a.is-ghost {
+    color: $primary;
+    border: 1px solid rgba(0, 0, 0, 0.12);
   }
 }
 
-/* Sections (left-aligned) */
-.kp-section {
-  text-align: left;
-}
-
-.kp-bio {
+// --- Lead (bio) ---
+.ap-lead {
+  font-family: $font-display;
+  font-size: clamp(24px, 3.4vw, 34px);
+  font-weight: 600;
+  line-height: 1.21;
+  letter-spacing: -0.02em;
+  max-width: 860px;
   margin: 0;
 }
 
-.kp-muted {
-  color: $muted;
-}
-
-.kp-more {
-  margin-top: 12px;
-  font-size: 0.95rem;
-}
-
-/* Generic lists: date/marker on the left, content on the right */
-.kp-list {
+// --- Timeline ---
+.ap-timeline {
   list-style: none;
   padding: 0;
   margin: 0;
+  max-width: $readable;
 
   li {
     display: flex;
-    gap: 14px;
-    margin-bottom: 12px;
-    align-items: baseline;
+    gap: 28px;
+    padding: 22px 0;
+    border-top: 1px solid $divider-soft;
+    &:first-child {
+      border-top: none;
+    }
   }
 }
-
-.kp-date {
-  flex: 0 0 64px;
-  color: $muted;
-  font-variant-numeric: tabular-nums;
-  font-size: 0.92rem;
+.ap-band--dark .ap-timeline li {
+  border-color: rgba(255, 255, 255, 0.12);
 }
 
-/* Timeline */
-.kp-timeline {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-
-  li {
-    display: flex;
-    gap: 18px;
-    margin-bottom: 18px;
-  }
+.ap-period {
+  flex: 0 0 110px;
+  font-family: $font-display;
+  font-weight: 600;
+  font-size: 15px;
+  color: $ink-48;
 }
-
-.kp-period {
-  flex: 0 0 96px;
-  font-weight: 700;
-  font-size: 0.95rem;
-}
-
-.kp-entry {
+.ap-entry {
   display: flex;
   flex-direction: column;
-
-  &-title {
-    font-weight: 600;
-  }
-  &-org {
-    color: $muted;
-    font-size: 0.95rem;
-  }
-  &-note {
-    margin-top: 3px;
-    font-size: 0.95rem;
-  }
+  gap: 3px;
+}
+.ap-entry-title {
+  font-weight: 600;
+  font-size: 19px;
+  letter-spacing: -0.01em;
+}
+.ap-entry-org {
+  color: $ink-48;
+  font-size: 15px;
+}
+.ap-entry-note {
+  margin-top: 4px;
 }
 
-/* Project / writing blocks */
-.kp-blocks {
+// --- Cards (projects): store-utility-card grammar, 18px radius, hairline ---
+.ap-cards {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
 
   li {
-    margin-bottom: 18px;
+    background: $canvas;
+    border: 1px solid $hairline;
+    border-radius: 18px;
+    padding: 24px;
     display: flex;
     flex-direction: column;
+    gap: 8px;
   }
 }
-
-.kp-block-title {
+.ap-card-title {
+  font-family: $font-display;
   font-weight: 600;
+  font-size: 21px;
+  letter-spacing: -0.01em;
 }
-.kp-block-desc {
-  font-size: 0.95rem;
-  margin-top: 2px;
-}
-.kp-block-links {
-  margin-top: 4px;
-  font-size: 0.92rem;
-  a {
-    margin-right: 14px;
-  }
-}
-
-/* Publications */
-.kp-pub-title {
-  font-weight: 600;
-  display: block;
-}
-.kp-pub-meta {
-  color: $muted;
-  font-size: 0.95rem;
-}
-.kp-list li > span:last-child {
+.ap-card-desc {
+  font-size: 15px;
+  line-height: 1.5;
+  color: $ink-80;
   flex: 1;
 }
-
-.kp-footer {
-  margin-top: 48px;
-  color: $muted;
-  font-size: 0.95rem;
+.ap-card-links {
+  margin-top: 4px;
+  font-size: 14px;
+  a {
+    margin-right: 16px;
+  }
 }
 
-/* Mobile */
-@media (max-width: 540px) {
-  .kp {
-    padding: 40px 18px 64px;
-    font-size: 16px;
+// --- Writing list ---
+.ap-writing-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: $readable;
+
+  li {
+    display: flex;
+    gap: 24px;
+    padding: 16px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    align-items: baseline;
+    &:first-child {
+      border-top: none;
+    }
   }
-  .kp-timeline li,
-  .kp-list li {
+  a {
+    font-family: $font-display;
+    font-size: 19px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+}
+.ap-date {
+  flex: 0 0 96px;
+  font-size: 14px;
+  color: $on-dark-muted;
+  font-variant-numeric: tabular-nums;
+}
+.ap-more {
+  margin-top: 24px;
+  font-size: 15px;
+}
+
+// --- Publications & Awards (clean lists) ---
+.ap-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 860px;
+
+  li {
+    padding: 20px 0;
+    border-top: 1px solid $divider-soft;
+    &:first-child {
+      border-top: none;
+    }
+  }
+}
+.ap-pub-title {
+  display: block;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+}
+.ap-pub-meta {
+  color: $ink-48;
+  font-size: 15px;
+}
+.ap-award {
+  display: flex;
+  gap: 24px;
+  align-items: baseline;
+}
+.ap-award .ap-date {
+  flex: 0 0 64px;
+  color: $ink-48;
+}
+
+// --- Footer ---
+.ap-footer {
+  background: $parchment;
+  color: $ink-48;
+  padding: 48px 24px;
+  text-align: center;
+  font-size: 14px;
+  a {
+    color: $primary;
+    text-decoration: none;
+  }
+}
+
+// --- Responsive ---
+@media (max-width: 640px) {
+  .ap-band {
+    padding: 56px 20px;
+  }
+  .ap-timeline li,
+  .ap-writing-list li,
+  .ap-award {
     flex-direction: column;
-    gap: 2px;
+    gap: 4px;
   }
-  .kp-period,
-  .kp-date {
+  .ap-period,
+  .ap-date {
     flex-basis: auto;
   }
 }
