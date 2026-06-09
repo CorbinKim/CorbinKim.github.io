@@ -6,7 +6,7 @@ export const site = {
   role: "Ph.D. Candidate @ NextG Lab, NC State University",
   tagline: "Agentic AI for self-managing Radio Access Networks.",
   email: "gkim26@ncsu.edu",
-  url: "https://corbinkim.github.io",
+  url: "https://corbinkim.github.io"
 };
 
 // Medium handle WITHOUT the leading "@". The Writing section live-fetches
@@ -17,5 +17,5 @@ export const social = [
   {label: "GitHub", href: "https://github.com/CorbinKim"},
   {label: "LinkedIn", href: "https://www.linkedin.com/in/corbinkim/"},
   {label: "Medium", href: `https://medium.com/@${mediumUsername}`},
-  {label: "Email", href: "mailto:gkim26@ncsu.edu"},
+  {label: "Email", href: "mailto:gkim26@ncsu.edu"}
 ];

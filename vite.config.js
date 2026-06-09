@@ -10,6 +10,6 @@ export default defineConfig({
   build: {
     // matches the GitHub Pages deploy workflow (uploads ./build) and .gitignore
     outDir: "build",
-    emptyOutDir: true,
-  },
+    emptyOutDir: true
+  }
 });

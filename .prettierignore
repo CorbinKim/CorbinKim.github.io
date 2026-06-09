@@ -1,4 +1,13 @@
-src/serviceWorker.js
-package-lock.json
-src/assets/lottie
+# Build output and dependencies
+node_modules
+build
+dist
+coverage
 
+# Agent/session state (gitignored)
+.omc
+
+# Generated / machine-written
+package-lock.json
+public/blogs.json
+public/profile.json

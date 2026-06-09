@@ -24,8 +24,8 @@ export default function Writing() {
   useEffect(() => {
     let alive = true;
     fetch(ENDPOINT)
-      .then((r) => r.json())
-      .then((data) => {
+      .then(r => r.json())
+      .then(data => {
         if (!alive) return;
         if (data.status !== "ok" || !Array.isArray(data.items)) {
           setState("error");
@@ -51,7 +51,7 @@ export default function Writing() {
 
       {state === "ok" && (
         <ul className="ap-writing-list">
-          {posts.map((p) => (
+          {posts.map(p => (
             <li key={p.guid || p.link}>
               <span className="ap-date">{formatDate(p.pubDate)}</span>
               <a href={p.link} target="_blank" rel="noopener noreferrer">

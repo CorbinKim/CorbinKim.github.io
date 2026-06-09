@@ -10,11 +10,7 @@ export default function Home() {
     <main className="ap">
       {/* Hero */}
       <header className="ap-hero">
-        <img
-          className="ap-avatar"
-          src="/profile.png"
-          alt={site.name}
-        />
+        <img className="ap-avatar" src="/profile.png" alt={site.name} />
         <h1 className="ap-name">{site.name}</h1>
         <p className="ap-role">{site.role}</p>
         <p className="ap-tagline">{site.tagline}</p>
@@ -38,7 +34,7 @@ export default function Home() {
         <div className="ap-wrap">
           <h2 className="ap-h2">Timeline</h2>
           <ul className="ap-timeline">
-            {timeline.map((t) => (
+            {timeline.map(t => (
               <li key={t.period + t.title}>
                 <div className="ap-period">{t.period}</div>
                 {t.logo ? (
@@ -69,13 +65,13 @@ export default function Home() {
         <div className="ap-wrap">
           <h2 className="ap-h2">Projects</h2>
           <ul className="ap-cards">
-            {projects.map((p) => (
+            {projects.map(p => (
               <li key={p.name}>
                 <span className="ap-card-title">{p.name}</span>
                 <span className="ap-card-desc">{p.desc}</span>
                 {p.links && p.links.length > 0 && (
                   <span className="ap-card-links">
-                    {p.links.map((l) => (
+                    {p.links.map(l => (
                       <a
                         key={l.href}
                         href={l.href}
@@ -98,7 +94,7 @@ export default function Home() {
         <div className="ap-wrap">
           <h2 className="ap-h2">Publications</h2>
           <ul className="ap-list">
-            {publications.map((p) => (
+            {publications.map(p => (
               <li key={p.title}>
                 <span className="ap-pub-title">{p.title}</span>
                 <span className="ap-pub-meta">
@@ -116,7 +112,7 @@ export default function Home() {
         <div className="ap-wrap">
           <h2 className="ap-h2">Awards</h2>
           <ul className="ap-list">
-            {awards.map((a) => (
+            {awards.map(a => (
               <li key={a.title + a.date} className="ap-award">
                 <span className="ap-date">{a.date}</span>
                 <span>
