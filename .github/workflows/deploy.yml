@@ -1,16 +1,12 @@
 name: Deploy portfolio to GitHub Pages
 
-# Builds the developerFolio (CRA) app and deploys it to GitHub Pages.
+# Builds the Vite app and deploys it to GitHub Pages.
 # One-time setup: repo Settings → Pages → Source = "GitHub Actions".
-# Optional: set a repo variable MEDIUM_USERNAME to auto-pull Medium blog posts
-#           (Settings → Secrets and variables → Actions → Variables).
 
 on:
   push:
     branches: [main]
   workflow_dispatch:
-  schedule:
-    - cron: "0 12 * * 1" # weekly refresh of GitHub/Medium data
 
 permissions:
   contents: read
@@ -24,12 +20,6 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      CI: false
-      USE_GITHUB_DATA: "true"
-      GITHUB_USERNAME: ${{ github.repository_owner }}
-      REACT_APP_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      MEDIUM_USERNAME: ${{ vars.MEDIUM_USERNAME }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4

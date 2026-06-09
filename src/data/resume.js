@@ -13,8 +13,8 @@ export const basics = {
 };
 
 // Most recent first (karpathy-style reverse-chronological), each with a logo.
-const ncsu = process.env.PUBLIC_URL + "/img/ncsu.png";
-const khu = process.env.PUBLIC_URL + "/img/khuLogo.png";
+const ncsu = "/img/ncsu.png";
+const khu = "/img/khuLogo.png";
 
 export const timeline = [
   {

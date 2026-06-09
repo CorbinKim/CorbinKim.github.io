@@ -12,7 +12,7 @@ export default function Home() {
       <header className="ap-hero">
         <img
           className="ap-avatar"
-          src={process.env.PUBLIC_URL + "/profile.png"}
+          src="/profile.png"
           alt={site.name}
         />
         <h1 className="ap-name">{site.name}</h1>
