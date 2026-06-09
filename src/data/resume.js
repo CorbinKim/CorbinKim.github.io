@@ -7,35 +7,43 @@ export const basics = {
   location: "Raleigh, North Carolina",
   summary:
     "I'm a Ph.D. Candidate at NextG Lab, NC State University (ECE). My research applies " +
-    "Large Language Models to automate wireless resource management in Radio Access " +
+    "agentic AI to automate wireless resource management in Radio Access " +
     "Networks (RAN), working toward fully autonomous Zero Touch Networks. I'm an active " +
     "contributor to the AIMLFW project within the O-RAN Software Community.",
 };
 
-// Most recent first (karpathy-style reverse-chronological).
+// Most recent first (karpathy-style reverse-chronological), each with a logo.
+const ncsu = process.env.PUBLIC_URL + "/img/ncsu.png";
+const khu = process.env.PUBLIC_URL + "/img/khuLogo.png";
+
 export const timeline = [
   {
     period: "2026 —",
+    logo: ncsu,
     title: "Ph.D., Electrical & Computer Engineering",
     org: "NC State University · NextG Lab",
-    note: "LLM-driven autonomous RAN management.",
+    note: "I research agentic AI to automate wireless resource management in Radio Access Networks (RAN), working toward fully autonomous Zero Touch Networks. I'm an active contributor to the AIMLFW project within the O-RAN Software Community.",
   },
   {
     period: "2023 – 2025",
+    logo: khu,
     title: "M.S., Mobile Communication",
     org: "Kyung Hee University",
-    note: "Thesis: Green Intelligence — Traffic Forecasting for Cell Sleeping in Open RAN. (GPA 3.94)",
+    note: "Thesis: Green Intelligence — traffic forecasting for cell sleeping in Open RAN. (GPA 3.94)",
   },
   {
     period: "2023 – 2025",
+    logo: khu,
     title: "Graduate Research Assistant",
     org: "Kyung Hee University",
-    note: "O-RAN Global PlugFest 2024 with LG Uplus; O-RAN SC AIMLFW use case; RAN slicing; SKT AI Fellowship (cell-off recommendation on commercial network data).",
+    note: "O-RAN Global PlugFest 2024 with LG Uplus; O-RAN SC AIMLFW use case; RAN slicing; and an SKT AI Fellowship on cell-off recommendation over commercial network data.",
   },
   {
     period: "2017 – 2023",
+    logo: khu,
     title: "B.S., Electronic Engineering",
     org: "Kyung Hee University",
+    note: "Summa Cum Laude.",
   },
 ];
 

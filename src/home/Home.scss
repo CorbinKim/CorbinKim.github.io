@@ -187,42 +187,55 @@ body {
   margin: 0;
 }
 
-// --- Timeline ---
+// --- Timeline (karpathy-style: year · logo · description) ---
 .ap-timeline {
   list-style: none;
   padding: 0;
   margin: 0;
-  max-width: $readable;
+  max-width: 880px;
 
   li {
     display: flex;
-    gap: 28px;
-    padding: 22px 0;
+    gap: 24px;
+    padding: 28px 0;
     border-top: 1px solid $divider-soft;
+    align-items: flex-start;
     &:first-child {
       border-top: none;
     }
   }
 }
-.ap-band--dark .ap-timeline li {
-  border-color: rgba(255, 255, 255, 0.12);
-}
 
 .ap-period {
-  flex: 0 0 110px;
+  flex: 0 0 96px;
+  padding-top: 10px;
   font-family: $font-display;
   font-weight: 600;
   font-size: 15px;
   color: $ink-48;
 }
+.ap-tl-logo {
+  flex: 0 0 60px;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: $canvas;
+  padding: 6px;
+  box-sizing: border-box;
+  border: 1px solid $divider-soft;
+}
 .ap-entry {
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 3px;
+  min-width: 0;
 }
 .ap-entry-title {
+  font-family: $font-display;
   font-weight: 600;
-  font-size: 19px;
+  font-size: 20px;
   letter-spacing: -0.01em;
 }
 .ap-entry-org {
@@ -230,7 +243,10 @@ body {
   font-size: 15px;
 }
 .ap-entry-note {
-  margin-top: 4px;
+  margin: 6px 0 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $ink-80;
 }
 
 // --- Cards (projects): store-utility-card grammar, 18px radius, hairline ---

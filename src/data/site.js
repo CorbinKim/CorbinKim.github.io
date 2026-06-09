@@ -4,8 +4,7 @@
 export const site = {
   name: "Corbin Kim",
   role: "Ph.D. Candidate @ NextG Lab, NC State University",
-  tagline:
-    "Large language models for self-managing Radio Access Networks.",
+  tagline: "Agentic AI for self-managing Radio Access Networks.",
   email: "gkim26@ncsu.edu",
   url: "https://corbinkim.github.io",
 };

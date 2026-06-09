@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.scss";
 import {site, social} from "../data/site";
-import {basics, timeline, awards, publications} from "../data/resume";
+import {timeline, awards, publications} from "../data/resume";
 import {projects} from "../data/projects";
 import Writing from "./Writing";
 
@@ -33,25 +33,23 @@ export default function Home() {
         </nav>
       </header>
 
-      {/* Bio — parchment band, big lead type */}
-      <section className="ap-band ap-band--parchment">
-        <div className="ap-wrap">
-          <p className="ap-lead">{basics.summary}</p>
-        </div>
-      </section>
-
-      {/* Timeline — white */}
-      <section className="ap-band" id="timeline">
+      {/* Timeline — karpathy-style entries with logos (replaces the bio) */}
+      <section className="ap-band ap-band--parchment" id="timeline">
         <div className="ap-wrap">
           <h2 className="ap-h2">Timeline</h2>
           <ul className="ap-timeline">
             {timeline.map((t) => (
               <li key={t.period + t.title}>
                 <div className="ap-period">{t.period}</div>
+                {t.logo ? (
+                  <img className="ap-tl-logo" src={t.logo} alt={t.org} />
+                ) : (
+                  <div className="ap-tl-logo" />
+                )}
                 <div className="ap-entry">
                   <span className="ap-entry-title">{t.title}</span>
                   <span className="ap-entry-org">{t.org}</span>
-                  {t.note && <span className="ap-entry-note">{t.note}</span>}
+                  {t.note && <p className="ap-entry-note">{t.note}</p>}
                 </div>
               </li>
             ))}
