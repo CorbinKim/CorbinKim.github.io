@@ -1,13 +1,8 @@
 import React from "react";
-import "./App.scss";
-import Main from "./containers/Main";
+import Home from "./home/Home";
 
 function App() {
-  return (
-    <div>
-      <Main />
-    </div>
-  );
+  return <Home />;
 }
 
 export default App;
