@@ -3,7 +3,7 @@
 
 export const site = {
   name: "Corbin Kim",
-  role: "Ph.D. Candidate @ NextG Lab, NC State University",
+  role: "Incoming Ph.D. Student @ NextG Wireless Lab, NC State University",
   tagline: "Agentic AI for self-managing Radio Access Networks.",
   email: "gkim26@ncsu.edu",
   url: "https://corbinkim.github.io"

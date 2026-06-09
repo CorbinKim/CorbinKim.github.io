@@ -1,13 +1,13 @@
-/* Selected projects, summarized from the archived Astro content. */
+/* Selected projects, kept in sync with Corbin_Kim___CV.pdf. */
 
 export const projects = [
   {
     name: "TelcoAgent",
     desc:
-      "A foundation-model framework for scalable 5G multi-KPM forecasting with 3GPP-grounded " +
-      "explainability — a 3GPP-derived knowledge graph grounds both the prediction and " +
-      "explanation pipelines, validated on city-scale operator KPM data. Under review at " +
-      "IEEE GLOBECOM 2026.",
+      "An LLM-based framework for scalable 5G multi-KPM forecasting with 3GPP-grounded " +
+      "explainability — a 3GPP-derived knowledge graph grounds both zero-shot forecasting " +
+      "and explainable causal reasoning, evaluated on a city-scale 5G dataset (200 cells) " +
+      "from a U.S. operator. Under review at IEEE GLOBECOM 2026.",
     links: [
       {
         label: "GitHub",
@@ -18,8 +18,9 @@ export const projects = [
   {
     name: "O-RAN AIMLFW",
     desc:
-      "Contributing to the AI/ML Framework in the O-RAN Software Community — building AI/ML " +
-      "pipelines for intelligent RAN management and use cases on open, interoperable RAN.",
+      "Contributor to the O-RAN SC AI/ML Framework — designed MLOps pipelines for AI/ML " +
+      "workflows in Open RAN, built and validated a traffic-forecasting use case for " +
+      "energy-efficient operation, and improved AIMLFW integration with Open RAN testbeds.",
     links: [
       {label: "O-RAN SC", href: "https://wiki.o-ran-sc.org/display/AIMLFW"}
     ]
@@ -27,8 +28,9 @@ export const projects = [
   {
     name: "Green AI for RAN",
     desc:
-      "Traffic forecasting for base-station cell sleeping in Open RAN, reducing energy/carbon " +
-      "with minimal QoS impact — validated on commercial network data (SKT AI Fellowship).",
+      "SKT AI Fellowship — traffic forecasting for base-station cell sleeping in Open RAN. " +
+      "Built a cell-off recommendation time window from SKT commercial network data and " +
+      "validated it on the Busan testbed, measuring energy-saving ROI.",
     links: []
   }
 ];
