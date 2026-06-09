@@ -15,10 +15,9 @@ export default function Home() {
         <p className="ap-role">{site.role}</p>
         <p className="ap-tagline">{site.tagline}</p>
         <nav className="ap-social">
-          {social.map((s, i) => (
+          {social.map(s => (
             <a
               key={s.label}
-              className={i === 0 ? "is-primary" : "is-ghost"}
               href={s.href}
               target={s.href.startsWith("http") ? "_blank" : undefined}
               rel="noopener noreferrer"
