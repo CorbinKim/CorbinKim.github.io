@@ -276,6 +276,16 @@ body {
     gap: 8px;
   }
 }
+.ap-card-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid $divider-soft;
+  background: $parchment;
+  margin-bottom: 6px;
+  display: block;
+}
 .ap-card-title {
   font-family: $font-display;
   font-weight: 600;

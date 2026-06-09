@@ -66,6 +66,9 @@ export default function Home() {
           <ul className="ap-cards">
             {projects.map(p => (
               <li key={p.name}>
+                {p.image && (
+                  <img className="ap-card-img" src={p.image} alt={p.name} />
+                )}
                 <span className="ap-card-title">{p.name}</span>
                 <span className="ap-card-desc">{p.desc}</span>
                 {p.links && p.links.length > 0 && (
