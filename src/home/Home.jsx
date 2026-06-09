@@ -124,9 +124,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="ap-footer">
-        <a href={`mailto:${site.email}`}>{site.email}</a>
-      </footer>
+      <footer className="ap-footer">© {site.name}</footer>
     </main>
   );
 }

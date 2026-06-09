@@ -41,13 +41,6 @@ export const timeline = [
     note: "Thesis: Green Intelligence — traffic forecasting for cell sleeping in Open RAN. Focus: radio resource management, Open RAN. (GPA 3.94 / 4.0)"
   },
   {
-    period: "2023 – 2025",
-    logo: khu,
-    title: "Graduate Research Assistant",
-    org: "Kyung Hee University",
-    note: "SKT AI Fellowship — 5G Green AI: a cell-off recommendation time window built from SKT commercial network data and validated on the Busan testbed, measuring energy-saving ROI."
-  },
-  {
     period: "2017 – 2023",
     logo: khu,
     title: "B.S., Electronic Engineering",
