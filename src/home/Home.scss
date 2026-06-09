@@ -175,14 +175,15 @@ body {
   }
 }
 
-// --- Lead (bio) ---
+// --- Lead (bio): confident but quiet — a readable intro, not a bold slab ---
 .ap-lead {
   font-family: $font-display;
-  font-size: clamp(24px, 3.4vw, 34px);
-  font-weight: 600;
-  line-height: 1.21;
-  letter-spacing: -0.02em;
-  max-width: 860px;
+  font-size: clamp(20px, 2.4vw, 26px);
+  font-weight: 400;
+  line-height: 1.42;
+  letter-spacing: -0.01em;
+  color: $ink-80;
+  max-width: 720px;
   margin: 0;
 }
 
