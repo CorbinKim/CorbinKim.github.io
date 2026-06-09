@@ -2,12 +2,18 @@
 
 export const projects = [
   {
-    name: "NetLLM",
+    name: "TelcoAgent",
     desc:
-      "Large Language Models for network management — natural-language network configuration, " +
-      "intelligent fault diagnosis, and predictive maintenance, with domain fine-tuning and " +
-      "safety/validation for critical network changes.",
-    links: [{label: "GitHub", href: "https://github.com/CorbinKim"}],
+      "A foundation-model framework for scalable 5G multi-KPM forecasting with 3GPP-grounded " +
+      "explainability — a 3GPP-derived knowledge graph grounds both the prediction and " +
+      "explanation pipelines, validated on city-scale operator KPM data. Under review at " +
+      "IEEE GLOBECOM 2026.",
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/NextG-Wireless-Lab-NC-State/TelcoAgent",
+      },
+    ],
   },
   {
     name: "O-RAN AIMLFW",
