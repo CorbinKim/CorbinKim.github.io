@@ -22,9 +22,9 @@ export const projects = [
     ]
   },
   {
-    name: "Green AI for RAN",
-    image: "/img/projects/green-ai.png",
-    desc: "Traffic forecasting for cell sleeping — energy-saving ROI on a commercial 5G testbed (SKT).",
+    name: "SKT Energy Saving",
+    image: "/img/projects/skt-energy.jpg",
+    desc: "Spatiotemporal traffic forecasting for base-station cell sleeping — energy-saving ROI on SKT's commercial network.",
     links: []
   }
 ];
