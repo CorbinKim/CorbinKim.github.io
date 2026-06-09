@@ -1,8 +1,16 @@
-* text eol=lf
+# Auto-detect text files and normalize to LF; binary files are left untouched.
+* text=auto eol=lf
 
-# Denote all files that are truly binary and should not be modified
-*.ttf binary
+# Denote all files that are truly binary and must never be normalized.
 *.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
 *.webp binary
+*.ico binary
+*.svg binary
+*.pdf binary
 *.woff binary
-
+*.woff2 binary
+*.ttf binary
+*.eot binary
