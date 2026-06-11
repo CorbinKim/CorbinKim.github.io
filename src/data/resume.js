@@ -15,7 +15,7 @@ export const basics = {
 };
 
 // Most recent first (karpathy-style reverse-chronological), each with a logo.
-const ncsu = "/img/ncsu.png";
+const ncsu = "/img/ncsu-blocks.png"; // NC State block-S logo
 const khu = "/img/khuLogo.png";
 
 export const timeline = [
@@ -73,7 +73,9 @@ export const publications = [
     venue: "Proc. IEEE GLOBECOM (under review)",
     authors:
       "G. Kim, D. Ron, S. Singh, S. Moogi, P. Gajjar, V. V. N. K. S. R. Koduri, E. K. Hong, V. K. Shah",
-    year: "2026"
+    year: "2026",
+    status: "Under review",
+    statusTone: "attention"
   },
   {
     title:
@@ -81,6 +83,8 @@ export const publications = [
     venue:
       "Proc. 16th Int. Conf. on Ubiquitous and Future Networks (ICUFN), Lisbon",
     authors: "G. Kim, S. J. Lee, E. K. Hong",
-    year: "2025"
+    year: "2025",
+    status: "Published",
+    statusTone: "success"
   }
 ];
