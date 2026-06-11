@@ -5,6 +5,8 @@ export const projects = [
   {
     name: "TelcoAgent",
     image: "/img/projects/telcoagent.jpg",
+    badge: "Under review",
+    badgeTone: "attention",
     desc: "LLM-based zero-shot 5G multi-KPM forecasting with 3GPP-grounded explainability. Under review at IEEE GLOBECOM 2026.",
     links: [
       {

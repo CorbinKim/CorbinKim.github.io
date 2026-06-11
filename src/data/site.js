@@ -3,8 +3,10 @@
 
 export const site = {
   name: "Corbin Kim",
-  role: "Incoming Ph.D. Student @ NextG Wireless Lab, NC State University",
-  tagline: "Agentic AI for self-managing Radio Access Networks.",
+  // "Incoming Ph.D." now lives in the hero badge pill — keep the role line
+  // to the affiliation so the two don't repeat each other.
+  role: "NextG Wireless Lab · NC State University",
+  tagline: "Agentic AI for autonomous Radio Access Networks",
   email: "gkim26@ncsu.edu",
   url: "https://corbinkim.github.io"
 };

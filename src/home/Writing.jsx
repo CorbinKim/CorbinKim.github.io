@@ -3,7 +3,7 @@ import {mediumUsername} from "../data/site";
 
 /* Live-fetches the latest Medium posts via the public rss2json bridge.
    Falls back to a "Read on Medium" link if the feed is empty or unreachable.
-   Rendered inside the near-black Writing band (see Home.scss .ap-band--dark). */
+   Rendered inside the dark card-promo-strip (see Home.scss .mt-strip). */
 
 const FEED = `https://medium.com/feed/@${mediumUsername}`;
 const ENDPOINT = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(
@@ -45,15 +45,16 @@ export default function Writing() {
 
   return (
     <>
-      <h2 className="ap-h2">Writing</h2>
+      <h2 className="mt-h2">Writing</h2>
+      <p className="mt-sub">Paper reviews and research notes.</p>
 
-      {state === "loading" && <p className="ap-muted">Loading latest posts…</p>}
+      {state === "loading" && <p className="mt-muted">Loading latest posts…</p>}
 
       {state === "ok" && (
-        <ul className="ap-writing-list">
+        <ul className="mt-writing-list">
           {posts.map(p => (
             <li key={p.guid || p.link}>
-              <span className="ap-date">{formatDate(p.pubDate)}</span>
+              <span className="mt-date">{formatDate(p.pubDate)}</span>
               <a href={p.link} target="_blank" rel="noopener noreferrer">
                 {p.title}
               </a>
@@ -63,7 +64,7 @@ export default function Writing() {
       )}
 
       {(state === "empty" || state === "error") && (
-        <p className="ap-muted">
+        <p className="mt-muted">
           {state === "error"
             ? "Couldn't load the feed right now — "
             : "Posts coming soon — "}
@@ -76,8 +77,13 @@ export default function Writing() {
       )}
 
       {state === "ok" && (
-        <p className="ap-more">
-          <a href={profileUrl} target="_blank" rel="noopener noreferrer">
+        <p className="mt-more">
+          <a
+            className="mt-btn mt-btn--on-dark"
+            href={profileUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             All posts on Medium →
           </a>
         </p>

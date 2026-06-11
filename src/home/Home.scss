@@ -1,212 +1,368 @@
-/* Apple.com design language, per DESIGN.md.
-   Single Action Blue accent · SF Pro (system-ui) / Inter fallback · 17px body ·
-   negative letter-spacing on display · alternating light/parchment/near-black
-   full-bleed bands (the color change is the divider) · exactly one shadow,
-   reserved for imagery · no gradients, no chrome shadows. */
+/* Meta design language (DESIGN.md) with a refined-retro remap, per user:
+   Stark white canvas · Optimistic VF (Montserrat fallback) · 16px body with
+   negative letter-spacing · SQUARED corners everywhere (radii zeroed — a
+   deliberate departure from Meta's pill/32px geometry) · deep academic navy
+   replaces cobalt (banner, buttons, links, near-midnight promo strip) ·
+   IBM Plex Mono for dates/periods/badges/banner microcopy (retro-tech voice).
+   Elevation runs flat: hairline borders, no marketing shadows. */
 
-// --- Tokens (DESIGN.md) ---
-$primary: #0066cc;
-$primary-on-dark: #2997ff;
-$ink: #1d1d1f;
-$ink-80: #333333;
-$ink-48: #7a7a7a;
-$on-dark: #ffffff;
-$on-dark-muted: #cccccc;
+// --- Color tokens (DESIGN.md colors:, accent remapped cobalt → deep navy) ---
+$primary: #14275a; // deep academic navy — links + accents (matches the seal)
+$primary-deep: #0d1b3e; // pressed state, promo banner, primary buttons
+$primary-tint: rgba(20, 39, 90, 0.07); // soft informational tint
+$strip-bg: #0a1830; // near-midnight navy promo strip
+$ink-button: #000000;
 $canvas: #ffffff;
-$parchment: #f5f5f7;
-$pearl: #fafafc;
-$tile-dark: #272729;
-$hairline: #e0e0e0;
-$divider-soft: #f0f0f0;
+$surface-soft: #f1f4f7;
+$ink-deep: #0a1317;
+$ink: #1c1e21;
+$charcoal: #444950;
+$slate: #4b4c4f;
+$steel: #5d6c7b;
+$stone: #8595a4;
+$hairline: #ced0d4;
+$hairline-soft: #dee3e9;
+$warning: #f7b928; // badge-promo-yellow
+$attention: #f2a918; // badge-attention
+$success: #31a24c; // badge-success
 
-$font-display: "SF Pro Display", system-ui, -apple-system, BlinkMacSystemFont,
-  "Inter", "Segoe UI", Roboto, sans-serif;
-$font-text: "SF Pro Text", system-ui, -apple-system, BlinkMacSystemFont, "Inter",
-  "Segoe UI", Roboto, sans-serif;
+// --- Type (Optimistic VF → Montserrat fallback chain, DESIGN.md) ---
+$font: "Optimistic VF", "Montserrat", -apple-system, BlinkMacSystemFont,
+  "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+// retro-tech accent face for dates, periods, badges, banner microcopy
+$font-mono: "IBM Plex Mono", "SF Mono", Menlo, Consolas, monospace;
 
-$shadow-product: rgba(0, 0, 0, 0.22) 3px 5px 30px 0;
-$wrap: 980px;
-$readable: 700px;
+// --- Layout ---
+// Squared corners throughout (user preference: refined-retro, no rounding —
+// deliberate departure from DESIGN.md's pill/32px-card geometry).
+$wrap: 1280px;
+$readable: 720px;
+$radius-pill: 0;
+$radius-card: 0;
+$radius-tile: 0;
+$radius-thumb: 0;
 
 // --- Base ---
 body {
   margin: 0;
   background: $canvas;
   color: $ink;
-  font-family: $font-text;
-  font-size: 17px;
-  line-height: 1.47;
-  letter-spacing: -0.022em;
+  font-family: $font;
+  font-size: 16px;
+  line-height: 1.5; // never below 1.50 per DESIGN.md
+  letter-spacing: -0.16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.ap {
+.mt {
   a {
     color: $primary;
     text-decoration: none;
+    font-weight: 700; // {typography.link-md}
     &:hover {
       text-decoration: underline;
+    }
+    &:active {
+      color: $primary-deep;
     }
   }
 
   h1,
   h2,
   h3 {
-    font-family: $font-display;
-    font-weight: 600;
+    font-family: $font;
+    color: $ink-deep;
     margin: 0;
+    font-feature-settings: "ss01", "ss02"; // paired alternates, always together
   }
 }
 
-// --- Full-bleed bands; color change IS the divider ---
-.ap-band {
-  padding: 80px 24px;
+// --- Pill buttons ({rounded.full} always — never squared) ---
+.mt-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.43;
+  letter-spacing: -0.14px; // {typography.button-md}
+  border-radius: $radius-pill;
+  padding: 14px 30px;
+  text-decoration: none;
+  transition: background 0.2s ease-out, color 0.2s ease-out,
+    border-color 0.2s ease-out, transform 0.15s ease-out;
+
+  &:hover {
+    text-decoration: none;
+  }
+  &:active {
+    transform: scale(0.97);
+  }
+}
+
+// button-primary: deep-navy block CTA (retro remap of the black marketing pill)
+// (`.mt a.…` keeps button text colors from being overridden by the global
+// `.mt a` navy link rule)
+.mt-btn--primary,
+.mt a.mt-btn--primary {
+  background: $primary-deep;
+  color: $canvas;
+  font-weight: 700;
+  &:hover {
+    background: $primary;
+    color: $canvas;
+  }
+}
+
+// button-secondary: outlined ghost paired with primary (dual-CTA pattern)
+.mt-btn--secondary,
+.mt a.mt-btn--secondary {
+  background: transparent;
+  color: $ink-deep;
+  border: 2px solid $ink-deep;
+  padding: 12px 28px;
+  &:hover {
+    background: $ink-deep;
+    color: $canvas;
+  }
+}
+
+// button-ghost: quieter outlined tertiary
+.mt-btn--ghost,
+.mt a.mt-btn--ghost {
+  background: transparent;
+  color: $ink-deep;
+  border: 2px solid rgba(10, 19, 23, 0.12);
+  padding: 10px 22px;
+  &:hover {
+    border-color: $ink-deep;
+  }
+}
+
+// inverted pill for the dark promo strip
+.mt-btn--on-dark,
+.mt a.mt-btn--on-dark,
+.mt .mt-strip a.mt-btn--on-dark {
   background: $canvas;
-
-  &--parchment {
-    background: $parchment;
-  }
-  &--dark {
-    background: $tile-dark;
-    color: $on-dark;
-    a {
-      color: $primary-on-dark;
-    }
-    .ap-h2,
-    .ap-muted {
-      color: $on-dark;
-    }
-    .ap-date,
-    .ap-entry-org,
-    .ap-muted {
-      color: $on-dark-muted;
-    }
+  color: $ink-deep;
+  font-weight: 700;
+  &:hover {
+    background: $hairline-soft;
+    color: $ink-deep;
   }
 }
 
-.ap-wrap {
-  max-width: $wrap;
-  margin: 0 auto;
+// --- Badges (squared chips, mono uppercase — the retro-tech signature) ---
+.mt-badge {
+  display: inline-block;
+  font-family: $font-mono;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.33;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: $radius-pill;
+  padding: 4px 10px;
+  white-space: nowrap;
+}
+.mt-badge--yellow {
+  background: $warning;
+  color: $ink-deep;
+}
+.mt-badge--attention {
+  background: $attention;
+  color: $canvas;
+}
+.mt-badge--success {
+  background: $success;
+  color: $canvas;
+}
+.mt-badge--neutral {
+  background: $surface-soft;
+  color: $slate;
 }
 
-.ap-h2 {
-  font-family: $font-display;
-  font-size: clamp(26px, 4vw, 34px);
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  margin: 0 0 32px;
-}
-
-.ap-muted {
-  color: $ink-48;
-}
-
-// --- Hero ---
-.ap-hero {
+// --- Promo banner (full-width strip ABOVE the nav, retro terminal voice) ---
+.mt-banner {
+  background: $primary-deep;
+  color: $canvas;
+  font-family: $font-mono;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 12px 24px;
   text-align: center;
-  padding: clamp(64px, 12vh, 120px) 24px 72px;
-  background: $canvas;
+
+  a {
+    color: $canvas;
+    text-decoration: underline;
+    margin-left: 10px;
+    &:hover {
+      color: $hairline-soft;
+    }
+  }
 }
 
-.ap-avatar {
-  width: 132px;
-  height: 132px;
+// --- Sticky top nav: wordmark + pill-tab category nav + contact pill ---
+.mt-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: $canvas;
+  border-bottom: 1px solid $hairline-soft;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  height: 64px;
+  padding: 0 32px;
+}
+
+.mt-wordmark {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.16px;
+  color: $ink-deep !important;
+  font-feature-settings: "ss01", "ss02";
+}
+
+.mt-tabs {
+  display: flex;
+  gap: 8px;
+  margin: 0 auto;
+
+  a {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.43;
+    letter-spacing: -0.14px;
+    color: $ink;
+    background: $canvas;
+    border: 1px solid $hairline;
+    border-radius: $radius-pill;
+    padding: 8px 16px;
+    transition: background 0.2s ease-out, color 0.2s ease-out;
+
+    &:hover {
+      text-decoration: none;
+      background: $ink-deep; // pill-tab-active: dark fill replaces border
+      border-color: $ink-deep;
+      color: $canvas;
+    }
+  }
+}
+
+.mt-nav-cta {
+  padding: 8px 20px;
+}
+
+// --- Hero (white canvas, three-tier type rhythm, dual-CTA) ---
+.mt-hero {
+  text-align: center;
+  padding: clamp(64px, 10vh, 120px) 24px 80px;
+}
+
+.mt-avatar {
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
   display: block;
-  margin: 0 auto 28px;
-  box-shadow: $shadow-product; // the one allowed shadow: imagery
+  margin: 0 auto 32px;
+  background: $surface-soft;
+  border: 1px solid $hairline-soft; // flat elevation — no hero shadows
 }
 
-.ap-name {
-  font-size: clamp(40px, 7vw, 64px);
-  line-height: 1.07;
-  letter-spacing: -0.025em;
+.mt-name {
+  font-size: clamp(36px, 6.5vw, 64px); // hero-display, 64 → 36 < 768
+  font-weight: 500;
+  line-height: 1.16;
   margin: 0 0 12px;
 }
 
-.ap-role {
-  font-family: $font-display;
-  font-size: clamp(20px, 3vw, 28px);
-  font-weight: 400;
-  line-height: 1.14;
-  color: $ink-80;
-  margin: 0 0 8px;
+.mt-role {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.44; // {typography.subtitle-lg}
+  color: $charcoal;
+  margin: 0 0 16px;
 }
 
-.ap-tagline {
-  font-family: $font-display;
-  font-size: clamp(18px, 2.4vw, 24px);
-  font-weight: 300;
-  color: $ink-80;
-  max-width: 640px;
-  margin: 0 auto 28px;
+.mt-tagline {
+  font-size: clamp(17px, 2.6vw, 28px); // shrinks so the line never breaks
+  font-weight: 300; // editorial 300-weight subhead — the signature rhythm
+  line-height: 1.21;
+  color: $slate;
+  white-space: nowrap;
+  margin: 0 auto 36px;
+  font-feature-settings: "ss01", "ss02";
 }
 
-// social as pill grammar — uniform Apple "liquid glass" pills that react on hover
-.ap-social {
+.mt-cta-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.mt-social {
   display: flex;
   gap: 10px;
   justify-content: center;
   flex-wrap: wrap;
+}
 
-  a {
-    font-family: $font-text;
-    font-size: 14px;
-    letter-spacing: -0.224px;
-    padding: 9px 18px;
-    border-radius: 9999px;
-    color: $primary;
-    background: rgba(255, 255, 255, 0.6);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(14px) saturate(180%);
-    -webkit-backdrop-filter: blur(14px) saturate(180%);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.65),
-      0 1px 2px rgba(0, 0, 0, 0.05);
-    transition: transform 0.18s ease, box-shadow 0.22s ease,
-      background 0.22s ease, border-color 0.22s ease;
+// --- Full-bleed soft band: alternating surface rhythm between sections ---
+.mt-band--soft {
+  background: $surface-soft;
+}
 
-    &:hover {
-      text-decoration: none;
-      background: rgba(255, 255, 255, 0.85);
-      border-color: rgba(0, 0, 0, 0.06);
-      transform: translateY(-1.5px);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9),
-        0 8px 20px rgba(0, 0, 0, 0.1);
-    }
-    &:active {
-      transform: translateY(0) scale(0.96);
-      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08),
-        0 1px 2px rgba(0, 0, 0, 0.04);
-    }
+// --- Section scaffolding (1280px container, 80px marketing rhythm) ---
+.mt-section {
+  max-width: $wrap;
+  margin: 0 auto;
+  padding: 40px 32px;
+  scroll-margin-top: 72px; // clear the 64px sticky nav on anchor jumps
+
+  & + & {
+    padding-top: 40px;
   }
 }
 
-// --- Lead (bio): confident but quiet — a readable intro, not a bold slab ---
-.ap-lead {
-  font-family: $font-display;
-  font-size: clamp(20px, 2.4vw, 26px);
-  font-weight: 400;
-  line-height: 1.42;
-  letter-spacing: -0.01em;
-  color: $ink-80;
-  max-width: 720px;
-  margin: 0;
+.mt-h2 {
+  font-size: clamp(28px, 4vw, 36px); // {typography.heading-lg}
+  font-weight: 500;
+  line-height: 1.28;
+  margin: 0 0 8px;
 }
 
-// --- Timeline (karpathy-style: year · logo · description) ---
-.ap-timeline {
+.mt-sub {
+  font-size: clamp(20px, 2.6vw, 28px);
+  font-weight: 300; // {typography.heading-md} editorial counterpart
+  line-height: 1.21;
+  color: $slate;
+  margin: 0 0 40px;
+  font-feature-settings: "ss01", "ss02";
+}
+
+.mt-muted {
+  color: $steel;
+}
+
+// --- Timeline (period · logo thumbnail · entry) ---
+.mt-timeline {
   list-style: none;
   padding: 0;
   margin: 0;
-  max-width: 880px;
+  max-width: 920px;
 
   li {
     display: flex;
     gap: 24px;
     padding: 28px 0;
-    border-top: 1px solid $divider-soft;
+    border-top: 1px solid $hairline-soft;
     align-items: flex-start;
     &:first-child {
       border-top: none;
@@ -214,100 +370,77 @@ body {
   }
 }
 
-.ap-period {
-  flex: 0 0 96px;
-  padding-top: 10px;
-  font-family: $font-display;
-  font-weight: 600;
-  font-size: 15px;
-  color: $ink-48;
+.mt-period {
+  flex: 0 0 110px;
+  padding-top: 18px;
+  font-family: $font-mono;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: $steel;
 }
-.ap-tl-logo {
-  flex: 0 0 60px;
-  width: 60px;
-  height: 60px;
+
+// product-thumbnail grammar: white tile + hairline so the seal reads crisply
+.mt-tl-logo {
+  flex: 0 0 64px;
+  width: 64px;
+  height: 64px;
   object-fit: contain;
-  border-radius: 12px;
+  border-radius: $radius-tile;
   background: $canvas;
-  padding: 6px;
+  border: 1px solid $hairline-soft;
+  padding: 8px;
   box-sizing: border-box;
-  border: 1px solid $divider-soft;
 }
-.ap-entry {
+
+.mt-entry {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 3px;
   min-width: 0;
 }
-.ap-entry-title {
-  font-family: $font-display;
-  font-weight: 600;
-  font-size: 20px;
-  letter-spacing: -0.01em;
+.mt-entry-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.44; // {typography.subtitle-lg}
+  color: $ink-deep;
 }
-.ap-entry-org {
-  color: $ink-48;
-  font-size: 15px;
-}
-.ap-entry-note {
-  margin: 6px 0 0;
-  font-size: 16px;
-  line-height: 1.5;
-  color: $ink-80;
-}
-
-// --- Cards (projects): store-utility-card grammar, 18px radius, hairline ---
-.ap-cards {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
-
-  li {
-    background: $canvas;
-    border: 1px solid $hairline;
-    border-radius: 18px;
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-}
-.ap-card-img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  border-radius: 12px;
-  border: 1px solid $divider-soft;
-  background: $parchment;
-  margin-bottom: 6px;
-  display: block;
-}
-.ap-card-title {
-  font-family: $font-display;
-  font-weight: 600;
-  font-size: 21px;
-  letter-spacing: -0.01em;
-}
-.ap-card-desc {
-  font-size: 15px;
-  line-height: 1.5;
-  color: $ink-80;
-  flex: 1;
-}
-.ap-card-links {
-  margin-top: 4px;
+.mt-entry-org {
   font-size: 14px;
+  color: $steel;
+}
+.mt-entry-note {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: -0.14px;
+  color: $slate;
+  max-width: $readable;
+}
+
+// --- Writing: card-promo-strip (deep-navy card, {rounded.xxxl}) ---
+.mt-strip {
+  background: $strip-bg;
+  color: $canvas;
+  border-radius: $radius-card;
+  padding: 64px; // {spacing.section} for hero presence
+
+  .mt-h2 {
+    color: $canvas;
+  }
+  .mt-sub {
+    color: $stone;
+  }
+  .mt-muted {
+    color: $stone;
+  }
   a {
-    margin-right: 16px;
+    color: $canvas;
   }
 }
 
-// --- Writing list ---
-.ap-writing-list {
+.mt-writing-list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -316,93 +449,233 @@ body {
   li {
     display: flex;
     gap: 24px;
-    padding: 16px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 18px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
     align-items: baseline;
     &:first-child {
       border-top: none;
     }
   }
   a {
-    font-family: $font-display;
-    font-size: 19px;
+    font-size: 18px;
     font-weight: 400;
-    letter-spacing: -0.01em;
+    line-height: 1.44; // {typography.subtitle-md}
+    &:hover {
+      color: $hairline-soft;
+    }
   }
 }
-.ap-date {
+.mt-date {
   flex: 0 0 96px;
-  font-size: 14px;
-  color: $on-dark-muted;
+  font-family: $font-mono;
+  font-size: 13px;
+  color: $stone;
   font-variant-numeric: tabular-nums;
 }
-.ap-more {
-  margin-top: 24px;
-  font-size: 15px;
+.mt-more {
+  margin-top: 32px;
 }
 
-// --- Publications & Awards (clean lists) ---
-.ap-list {
+// --- Projects: card-product-feature ({rounded.xxxl}, hairline-soft) ---
+.mt-cards {
   list-style: none;
   padding: 0;
   margin: 0;
-  max-width: 860px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
 
   li {
-    padding: 20px 0;
-    border-top: 1px solid $divider-soft;
+    background: $canvas;
+    border: 1px solid $hairline-soft;
+    border-radius: $radius-card;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: border-color 0.2s ease-out, transform 0.2s ease-out;
+    &:hover {
+      border-color: $primary;
+      transform: translateY(-4px);
+    }
+  }
+}
+.mt-card-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: $radius-tile;
+  background: $surface-soft;
+  margin-bottom: 8px;
+  display: block;
+}
+.mt-card-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.mt-card-title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.25; // {typography.heading-sm}
+  color: $ink-deep;
+  font-feature-settings: "ss01", "ss02";
+}
+.mt-card-desc {
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: -0.14px;
+  color: $slate;
+  flex: 1;
+}
+.mt-card-links {
+  margin-top: 4px;
+  font-size: 14px;
+  a {
+    margin-right: 16px;
+    font-weight: 700;
+  }
+}
+
+// --- Publications (tech-specs-table grammar: hairline rows + badges) ---
+.mt-pubs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 920px;
+
+  li {
+    padding: 24px 0;
+    border-top: 1px solid $hairline-soft;
     &:first-child {
       border-top: none;
     }
   }
 }
-.ap-pub-title {
-  display: block;
-  font-weight: 600;
-  font-size: 18px;
-  letter-spacing: -0.01em;
-  margin-bottom: 4px;
-}
-.ap-pub-meta {
-  color: $ink-48;
-  font-size: 15px;
-}
-.ap-award {
+.mt-pub-head {
   display: flex;
-  gap: 24px;
   align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
 }
-.ap-award .ap-date {
-  flex: 0 0 64px;
-  color: $ink-48;
+.mt-pub-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.44;
+  color: $ink-deep;
 }
-
-// --- Footer ---
-.ap-footer {
-  background: $parchment;
-  color: $ink-48;
-  padding: 48px 24px;
-  text-align: center;
+.mt-pub-meta {
+  display: block;
   font-size: 14px;
-  a {
-    color: $primary;
-    text-decoration: none;
+  line-height: 1.43;
+  color: $steel;
+}
+
+// --- Why-buy-tile grids ({rounded.xl} tiles): awards + research interests ---
+.mt-tiles {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+
+  li {
+    background: $canvas;
+    border: 1px solid $hairline-soft;
+    border-radius: $radius-tile;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    transition: border-color 0.2s ease-out, transform 0.2s ease-out;
+    &:hover {
+      border-color: $primary;
+      transform: translateY(-4px);
+    }
+  }
+}
+.mt-tile-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.44;
+  color: $ink-deep;
+}
+.mt-tile-desc {
+  font-size: 14px;
+  line-height: 1.43;
+  color: $slate;
+}
+
+// --- Footer (footer-region: hairline top border, steel links) ---
+.mt-footer {
+  border-top: 1px solid $hairline-soft;
+  margin-top: 80px;
+  padding: 64px 32px;
+  text-align: center;
+
+  nav {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+
+    a {
+      font-size: 14px;
+      font-weight: 400;
+      color: $steel;
+      &:hover {
+        color: $ink;
+      }
+    }
+  }
+
+  small {
+    display: block;
+    font-size: 12px;
+    line-height: 1.33;
+    color: $stone;
   }
 }
 
-// --- Responsive ---
-@media (max-width: 640px) {
-  .ap-band {
-    padding: 56px 20px;
+// --- Responsive (DESIGN.md collapsing strategy) ---
+@media (max-width: 767px) {
+  .mt-nav {
+    padding: 0 20px;
+    gap: 12px;
   }
-  .ap-timeline li,
-  .ap-writing-list li,
-  .ap-award {
+  .mt-tabs {
+    display: none; // pill tabs collapse below 768 (drawer omitted: 5 anchors)
+  }
+  .mt-nav-cta {
+    margin-left: auto;
+  }
+  .mt-section {
+    padding: 32px 20px;
+  }
+  .mt-tagline {
+    white-space: normal; // one-line rule only holds where it can fit
+  }
+  .mt-strip {
+    padding: 32px 24px;
+  }
+  .mt-timeline li {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .mt-period {
+    flex-basis: 100%;
+    padding-top: 0;
+  }
+  .mt-writing-list li {
     flex-direction: column;
     gap: 4px;
   }
-  .ap-period,
-  .ap-date {
+  .mt-date {
     flex-basis: auto;
   }
 }
