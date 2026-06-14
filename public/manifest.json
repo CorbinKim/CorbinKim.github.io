@@ -8,12 +8,12 @@
       "type": "image/x-icon"
     },
     {
-      "src": "/android-chrome-192x192.png?v9=ckmono26",
+      "src": "/android-chrome-192x192.png?v10=cktower26",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/android-chrome-384x384.png?v9=ckmono26",
+      "src": "/android-chrome-384x384.png?v10=cktower26",
       "type": "image/png",
       "sizes": "384x384"
     }
