@@ -23,7 +23,6 @@ $stone: #8595a4;
 $hairline: #ced0d4;
 $hairline-soft: #dee3e9;
 $warning: #f7b928; // badge-promo-yellow
-$attention: #f2a918; // badge-attention
 $success: #31a24c; // badge-success
 
 // --- Type (Optimistic VF → Montserrat fallback chain, DESIGN.md) ---
@@ -170,10 +169,6 @@ body {
 .mt-badge--yellow {
   background: $warning;
   color: $ink-deep;
-}
-.mt-badge--attention {
-  background: $attention;
-  color: $canvas;
 }
 .mt-badge--success {
   background: $success;
@@ -571,6 +566,16 @@ body {
   font-size: 14px;
   line-height: 1.43;
   color: $steel;
+}
+.mt-pub-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+  font-size: 14px;
+  a {
+    font-weight: 700;
+  }
 }
 
 // --- Why-buy-tile grids ({rounded.xl} tiles): awards + research interests ---

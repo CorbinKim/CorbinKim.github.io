@@ -1,19 +1,5 @@
 /* CV data, kept in sync with Corbin_Kim___CV.pdf (identity: Corbin Kim). */
 
-export const basics = {
-  name: "Corbin Kim",
-  label: "Incoming Ph.D. Student, NC State University",
-  email: "gkim26@ncsu.edu",
-  location: "Raleigh, North Carolina",
-  summary:
-    "I'm an incoming Ph.D. student (Fall 2026) at the NextG Wireless Lab, NC " +
-    "State University (ECE), where I have been a visiting scholar. My research " +
-    "applies agentic AI — time-series foundation models, knowledge graphs, and " +
-    "LLM agents — to forecasting and self-management of 5G and next-generation " +
-    "Radio Access Networks. I hold an M.S. from Kyung Hee University and " +
-    "contribute to the O-RAN SC AI/ML Framework (AIMLFW)."
-};
-
 // Most recent first (karpathy-style reverse-chronological), each with a logo.
 const ncsu = "/img/ncsu-blocks.png"; // NC State block-S logo
 const khu = "/img/khuLogo.png";
@@ -31,7 +17,7 @@ export const timeline = [
     logo: ncsu,
     title: "Visiting Scholar, Electrical & Computer Engineering",
     org: "NC State University · NextG Wireless Lab",
-    note: "TelcoAgent — an LLM-based framework for zero-shot multi-KPM forecasting with 3GPP-grounded explainable reasoning, evaluated on a city-scale 5G dataset (200 cells) from a U.S. operator. Advised by Prof. Vijay K. Shah, in collaboration with Samsung R&D Institute India."
+    note: "TelcoAgent — zero-shot 5G multi-KPM forecasting with 3GPP-grounded explainability, evaluated on a city-scale 5G dataset (200 cells) from a U.S. operator. Advised by Prof. Vijay K. Shah, in collaboration with Samsung R&D Institute India."
   },
   {
     period: "2023 – 2025",
@@ -70,12 +56,13 @@ export const publications = [
   {
     title:
       "TelcoAgent: A Scalable 5G Multi-KPM Forecasting With 3GPP-Grounded Explainability",
-    venue: "Proc. IEEE GLOBECOM (under review)",
+    venue: "Proc. IEEE GLOBECOM",
     authors:
       "G. Kim, D. Ron, S. Singh, S. Moogi, P. Gajjar, V. V. N. K. S. R. Koduri, E. K. Hong, V. K. Shah",
     year: "2026",
-    status: "Under review",
-    statusTone: "attention"
+    status: "Submitted",
+    statusTone: "neutral",
+    links: [{label: "arXiv", href: "https://arxiv.org/abs/2606.19821"}]
   },
   {
     title:
@@ -85,6 +72,12 @@ export const publications = [
     authors: "G. Kim, S. J. Lee, E. K. Hong",
     year: "2025",
     status: "Published",
-    statusTone: "success"
+    statusTone: "success",
+    links: [
+      {
+        label: "IEEE Xplore",
+        href: "https://ieeexplore.ieee.org/document/11170027/"
+      }
+    ]
   }
 ];
