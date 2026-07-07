@@ -18,7 +18,7 @@ export default function Home() {
     <main className="mt">
       {/* promo-banner: one-line announcement strip ABOVE the nav */}
       <div className="mt-banner">
-        <span>TelcoAgent — under review at IEEE GLOBECOM 2026</span>
+        <span>TelcoAgent — IEEE GLOBECOM 2026</span>
         <a href="#publications">See publications</a>
       </div>
 
@@ -103,7 +103,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects — showcase cards with status badges */}
+      {/* Projects — showcase cards */}
       <section className="mt-section" id="projects">
         <h2 className="mt-h2">Projects</h2>
         <ul className="mt-cards">
@@ -114,11 +114,6 @@ export default function Home() {
               )}
               <div className="mt-card-head">
                 <span className="mt-card-title">{p.name}</span>
-                {p.badge && (
-                  <span className={`mt-badge mt-badge--${p.badgeTone}`}>
-                    {p.badge}
-                  </span>
-                )}
               </div>
               <span className="mt-card-desc">{p.desc}</span>
               {p.links && p.links.length > 0 && (
@@ -158,6 +153,20 @@ export default function Home() {
                 {p.authors}. <em>{p.venue}</em>
                 {p.year ? `, ${p.year}` : ""}.
               </span>
+              {p.links && p.links.length > 0 && (
+                <span className="mt-pub-links">
+                  {p.links.map(l => (
+                    <a
+                      key={l.href}
+                      href={l.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {l.label}
+                    </a>
+                  ))}
+                </span>
+              )}
             </li>
           ))}
         </ul>

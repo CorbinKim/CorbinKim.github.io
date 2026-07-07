@@ -1,8 +1,8 @@
 # corbinkim.github.io
 
-Personal portfolio for **Corbin Kim** — Ph.D. Candidate at NextG Lab, NC State
-University. A minimal, single-page site (hero, timeline, writing, projects,
-publications, awards) live at **https://corbinkim.github.io**.
+Personal portfolio for **Corbin Kim** — incoming Ph.D. student at NextG Lab,
+NC State University. A minimal, single-page site (hero, timeline, writing,
+projects, publications, awards) live at **https://corbinkim.github.io**.
 
 ## Stack
 

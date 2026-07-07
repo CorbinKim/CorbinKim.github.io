@@ -46,7 +46,7 @@ export default function Writing() {
   return (
     <>
       <h2 className="mt-h2">Writing</h2>
-      <p className="mt-sub">Paper reviews and research notes.</p>
+      <p className="mt-sub">Research notes and updates.</p>
 
       {state === "loading" && <p className="mt-muted">Loading latest posts…</p>}
 
