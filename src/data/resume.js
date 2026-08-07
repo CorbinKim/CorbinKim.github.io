@@ -60,7 +60,7 @@ export const publications = [
     authors:
       "G. Kim, D. Ron, S. Singh, S. Moogi, P. Gajjar, V. V. N. K. S. R. Koduri, E. K. Hong, V. K. Shah",
     year: "2026",
-    status: "Submitted",
+    status: "Acceped",
     statusTone: "neutral",
     links: [{label: "arXiv", href: "https://arxiv.org/abs/2606.19821"}]
   },
