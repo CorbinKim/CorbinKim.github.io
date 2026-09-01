@@ -1,23 +1,43 @@
-/* Site-wide identity + social links for the karpathy-style home.
-   Ported from the archived Astro site.ts (identity: Corbin Kim). */
+/* Site-wide identity and social links. */
 
 export const site = {
   name: "Corbin Kim",
-  // "Incoming Ph.D." now lives in the hero badge pill — keep the role line
-  // to the affiliation so the two don't repeat each other.
-  role: "NextG Wireless Lab · NC State University",
-  tagline: "Agentic AI for autonomous Radio Access Networks",
+  role: "Wireless Communications Researcher · NC State University",
+  tagline: "Intelligent Open RAN controllers for UAV-assisted wireless connectivity",
   email: "gkim26@ncsu.edu",
   url: "https://corbinkim.github.io"
 };
 
-// Medium handle WITHOUT the leading "@". The Writing section live-fetches
-// this user's RSS feed. Change this if your handle differs.
+export const researchInterests = [
+  {
+    name: "Open RAN and RICs",
+    desc: "Designing intelligent controllers for programmable and adaptable radio access networks."
+  },
+  {
+    name: "xApps, rApps, and dApps",
+    desc: "Developing applications that support data-driven and closed-loop RAN control."
+  },
+  {
+    name: "Digital Twins",
+    desc: "Integrating digital twins to model, evaluate, and improve wireless network decisions."
+  },
+  {
+    name: "UAV-Assisted Connectivity",
+    desc: "Exploring intelligent wireless connectivity for aerial and rapidly changing network environments."
+  }
+];
+
+export const currentWork = [
+  "Contributing to the FALCON project on intelligent Open RAN controller design",
+  "Developing and evaluating xApps, rApps, and dApps",
+  "Exploring digital twin integration for UAV-assisted wireless connectivity"
+];
+
 export const mediumUsername = "corbinkim";
 
 export const social = [
   {label: "GitHub", href: "https://github.com/CorbinKim"},
   {label: "LinkedIn", href: "https://www.linkedin.com/in/corbinkim/"},
-  {label: "Medium", href: `https://medium.com/@${mediumUsername}`},
+  {label: "Medium", href: "https://medium.com/@" + mediumUsername},
   {label: "Email", href: "mailto:gkim26@ncsu.edu"}
 ];
