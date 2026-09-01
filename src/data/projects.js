@@ -3,6 +3,13 @@
 
 export const projects = [
   {
+    name: "FALCON",
+    desc: "Intelligent Open RAN controller design and digital twin integration for UAV-assisted wireless connectivity through AERPAW.",
+    links: [
+      {label: "AERPAW", href: "https://aerpaw.org/"}
+    ]
+  },
+  {
     name: "TelcoAgent",
     image: "/img/projects/telcoagent.jpg",
     desc: "Zero-shot 5G multi-KPM forecasting with 3GPP-grounded explainability.",
