@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.scss";
-import {site, social, researchInterests, currentWork} from "../data/site";
+import {site, social, researchInterest} from "../data/site";
 import {timeline, awards, publications} from "../data/resume";
 import {projects} from "../data/projects";
 import Writing from "./Writing";
