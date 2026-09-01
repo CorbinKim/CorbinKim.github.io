@@ -73,22 +73,6 @@ export default function Home() {
       </section>
 
       <div className="mt-band--soft">
-        <section className="mt-section" id="current-work">
-          <h2 className="mt-h2">Currently working on</h2>
-          <ul className="mt-cards">
-            {currentWork.map(item => (
-              <li key={item.name}>
-                <div className="mt-card-head">
-                  <span className="mt-card-title">{item.name}</span>
-                </div>
-                <span className="mt-card-desc">{item.desc}</span>
-              </li>
-            ))}
-          </ul>
-        </section>
-      </div>
-
-      <div className="mt-band--soft">
         <section className="mt-section" id="timeline">
           <h2 className="mt-h2">Timeline</h2>
           <p className="mt-sub">Where the research has taken me.</p>

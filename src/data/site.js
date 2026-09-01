@@ -27,21 +27,6 @@ export const researchInterests = [
   }
 ];
 
-export const currentWork = [
-  {
-    name: "FALCON project",
-    desc: "Intelligent Open RAN controller design."
-  },
-  {
-    name: "RAN applications",
-    desc: "xApp, rApp, and dApp development and evaluation."
-  },
-  {
-    name: "Digital twins",
-    desc: "Integration for UAV-assisted wireless connectivity."
-  }
-];
-
 export const mediumUsername = "corbinkim";
 
 export const social = [
