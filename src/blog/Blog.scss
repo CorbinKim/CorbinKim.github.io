@@ -72,27 +72,43 @@ $break-pad: 2rem; // how far boxed blocks bleed past the column on wide screens
     margin-top: 1.1em;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: $font;
     color: $ink-deep;
     font-weight: 500;
     line-height: 1.3;
     margin: 2.6em 0 0.6em;
   }
-  h2 { font-size: 1.5em; }
-  h3 { font-size: 1.2em; }
-  h4 { font-size: 1.05em; }
+  h2 {
+    font-size: 1.5em;
+  }
+  h3 {
+    font-size: 1.2em;
+  }
+  h4 {
+    font-size: 1.05em;
+  }
 
-  p { margin: 1.1em 0; }
+  p {
+    margin: 1.1em 0;
+  }
 
   a {
     color: $primary;
     font-weight: 700;
     text-decoration: none;
-    &:hover { text-decoration: underline; }
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
-  ul, ol {
+  ul,
+  ol {
     padding-left: 1.4rem;
   }
 
@@ -102,10 +118,15 @@ $break-pad: 2rem; // how far boxed blocks bleed past the column on wide screens
     border-left: 0.25rem solid $primary;
     color: $slate;
 
-    > p:last-child { margin-bottom: 0; }
+    > p:last-child {
+      margin-bottom: 0;
+    }
   }
 
-  strong { font-weight: 700; color: $ink-deep; }
+  strong {
+    font-weight: 700;
+    color: $ink-deep;
+  }
 
   code {
     font-family: $font-mono;
@@ -139,7 +160,9 @@ $break-pad: 2rem; // how far boxed blocks bleed past the column on wide screens
   }
 
   // Inline math sits flush with body text — no extra box.
-  .katex { font-size: 1.05em; }
+  .katex {
+    font-size: 1.05em;
+  }
 
   table {
     width: 100%;
@@ -147,7 +170,8 @@ $break-pad: 2rem; // how far boxed blocks bleed past the column on wide screens
     margin: 1.75em 0;
     font-size: 0.92em;
 
-    th, td {
+    th,
+    td {
       padding: 0.5em 0.75em;
       border: 1px solid $hairline-soft;
       text-align: left;

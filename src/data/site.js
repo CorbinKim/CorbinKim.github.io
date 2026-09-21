@@ -3,7 +3,8 @@
 export const site = {
   name: "Corbin Kim",
   role: "Wireless Communications Researcher · NC State University",
-  tagline: "AI-native RAN intelligence for aerial and terrestrial wireless connectivity",
+  tagline:
+    "AI-native RAN intelligence for aerial and terrestrial wireless connectivity",
   email: "gkim26@ncsu.edu",
   url: "https://corbinkim.github.io"
 };

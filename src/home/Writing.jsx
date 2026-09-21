@@ -10,7 +10,10 @@ import {posts} from "../blog/postRegistry";
 
 function formatDate(iso) {
   if (!iso) return "";
-  return new Date(iso).toLocaleDateString("en-US", {month: "short", year: "numeric"});
+  return new Date(iso).toLocaleDateString("en-US", {
+    month: "short",
+    year: "numeric"
+  });
 }
 
 export default function Writing() {
@@ -28,12 +31,20 @@ export default function Writing() {
           {posts.map(p => (
             <li key={p.slug}>
               <Link className="mt-writing-card" to={"/blog/" + p.slug}>
-                {p.date && <span className="mt-badge mt-badge--neutral">{formatDate(p.date)}</span>}
+                {p.date && (
+                  <span className="mt-badge mt-badge--neutral">
+                    {formatDate(p.date)}
+                  </span>
+                )}
                 <h3 className="mt-writing-title">{p.title}</h3>
                 {p.excerpt && <p className="mt-writing-excerpt">{p.excerpt}</p>}
                 {p.tags.length > 0 && (
                   <div className="mt-writing-tags">
-                    {p.tags.map(t => <span key={t} className="mt-badge mt-badge--neutral">{t}</span>)}
+                    {p.tags.map(t => (
+                      <span key={t} className="mt-badge mt-badge--neutral">
+                        {t}
+                      </span>
+                    ))}
                   </div>
                 )}
               </Link>

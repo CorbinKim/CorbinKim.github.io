@@ -15,10 +15,18 @@ import rehypeKatex from "rehype-katex";
 // `import React`, which is harmless under the automatic runtime.
 export default defineConfig({
   plugins: [
-    {enforce: "pre", ...mdx({
-      remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter, remarkMath, remarkGfm],
-      rehypePlugins: [rehypeKatex]
-    })},
+    {
+      enforce: "pre",
+      ...mdx({
+        remarkPlugins: [
+          remarkFrontmatter,
+          remarkMdxFrontmatter,
+          remarkMath,
+          remarkGfm
+        ],
+        rehypePlugins: [rehypeKatex]
+      })
+    },
     react({include: /\.(jsx|js|mdx|md)$/})
   ],
   base: "/",

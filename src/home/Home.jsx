@@ -18,13 +18,20 @@ export default function Home() {
   return (
     <main className="mt">
       <nav className="mt-nav">
-        <a className="mt-wordmark" href="#top">Corbin Kim</a>
+        <a className="mt-wordmark" href="#top">
+          Corbin Kim
+        </a>
         <div className="mt-tabs">
           {NAV.map(n => (
-            <a key={n.href} href={n.href}>{n.label}</a>
+            <a key={n.href} href={n.href}>
+              {n.label}
+            </a>
           ))}
         </div>
-        <a className="mt-btn mt-btn--primary mt-nav-cta" href={"mailto:" + site.email}>
+        <a
+          className="mt-btn mt-btn--primary mt-nav-cta"
+          href={"mailto:" + site.email}
+        >
           Contact
         </a>
       </nav>
@@ -35,8 +42,12 @@ export default function Home() {
         <p className="mt-role">{site.role}</p>
         <p className="mt-tagline">{site.tagline}</p>
         <div className="mt-cta-row">
-          <a className="mt-btn mt-btn--primary" href="#research">Research</a>
-          <a className="mt-btn mt-btn--secondary" href="#projects">See projects</a>
+          <a className="mt-btn mt-btn--primary" href="#research">
+            Research
+          </a>
+          <a className="mt-btn mt-btn--secondary" href="#projects">
+            See projects
+          </a>
         </div>
         <nav className="mt-social">
           {social.map(s => (
@@ -56,7 +67,9 @@ export default function Home() {
       <div className="mt-band--navy">
         <section className="mt-section" id="research">
           <h2 className="mt-h2">Research</h2>
-          <p className="mt-sub">Building intelligent, programmable wireless networks.</p>
+          <p className="mt-sub">
+            Building intelligent, programmable wireless networks.
+          </p>
           <ul className="mt-cards">
             {researchInterests.map(r => (
               <li key={r.name}>
@@ -78,7 +91,11 @@ export default function Home() {
             {timeline.map(t => (
               <li key={t.period + t.title}>
                 <div className="mt-period">{t.period}</div>
-                {t.logo ? <img className="mt-tl-logo" src={t.logo} alt={t.org} /> : <div className="mt-tl-logo" />}
+                {t.logo ? (
+                  <img className="mt-tl-logo" src={t.logo} alt={t.org} />
+                ) : (
+                  <div className="mt-tl-logo" />
+                )}
                 <div className="mt-entry">
                   <span className="mt-entry-title">{t.title}</span>
                   <span className="mt-entry-org">{t.org}</span>
@@ -95,12 +112,25 @@ export default function Home() {
         <ul className="mt-cards">
           {projects.map(p => (
             <li key={p.name}>
-              {p.image && <img className="mt-card-img" src={p.image} alt={p.name} />}
-              <div className="mt-card-head"><span className="mt-card-title">{p.name}</span></div>
+              {p.image && (
+                <img className="mt-card-img" src={p.image} alt={p.name} />
+              )}
+              <div className="mt-card-head">
+                <span className="mt-card-title">{p.name}</span>
+              </div>
               <span className="mt-card-desc">{p.desc}</span>
               {p.links && p.links.length > 0 && (
                 <span className="mt-card-links">
-                  {p.links.map(l => <a key={l.href} href={l.href} target="_blank" rel="noopener noreferrer">{l.label}</a>)}
+                  {p.links.map(l => (
+                    <a
+                      key={l.href}
+                      href={l.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {l.label}
+                    </a>
+                  ))}
                 </span>
               )}
             </li>
@@ -115,12 +145,28 @@ export default function Home() {
             <li key={p.title}>
               <div className="mt-pub-head">
                 <span className="mt-pub-title">{p.title}</span>
-                {p.status && <span className={"mt-badge mt-badge--" + p.statusTone}>{p.status}</span>}
+                {p.status && (
+                  <span className={"mt-badge mt-badge--" + p.statusTone}>
+                    {p.status}
+                  </span>
+                )}
               </div>
-              <span className="mt-pub-meta">{p.authors}. <em>{p.venue}</em>{p.year ? ", " + p.year : ""}.</span>
+              <span className="mt-pub-meta">
+                {p.authors}. <em>{p.venue}</em>
+                {p.year ? ", " + p.year : ""}.
+              </span>
               {p.links && p.links.length > 0 && (
                 <span className="mt-pub-links">
-                  {p.links.map(l => <a key={l.href} href={l.href} target="_blank" rel="noopener noreferrer">{l.label}</a>)}
+                  {p.links.map(l => (
+                    <a
+                      key={l.href}
+                      href={l.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {l.label}
+                    </a>
+                  ))}
                 </span>
               )}
             </li>
@@ -149,7 +195,16 @@ export default function Home() {
 
       <footer className="mt-footer">
         <nav>
-          {social.map(s => <a key={s.label} href={s.href} target={s.href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer">{s.label}</a>)}
+          {social.map(s => (
+            <a
+              key={s.label}
+              href={s.href}
+              target={s.href.startsWith("http") ? "_blank" : undefined}
+              rel="noopener noreferrer"
+            >
+              {s.label}
+            </a>
+          ))}
         </nav>
         <small>© {site.name} · NextG Wireless Lab, NC State University</small>
       </footer>
