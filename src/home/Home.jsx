@@ -16,11 +16,6 @@ const NAV = [
 export default function Home() {
   return (
     <main className="mt">
-      <div className="mt-banner">
-        <span>FALCON · Intelligent Open RAN for UAV-assisted connectivity</span>
-        <a href="#research">Explore my research</a>
-      </div>
-
       <nav className="mt-nav">
         <a className="mt-wordmark" href="#top">Corbin Kim</a>
         <div className="mt-tabs">
