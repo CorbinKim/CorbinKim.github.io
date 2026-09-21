@@ -25,6 +25,13 @@ $font-mono: "IBM Plex Mono", "SF Mono", Menlo, Consolas, monospace;
 $readable: 42rem; // article reading column
 $break-pad: 2rem; // how far boxed blocks bleed past the column on wide screens
 
+// --- Article nav: wordmark left, "back to Writing" link right (a lone
+// centered .mt-tabs pill looked stranded on a page with no other tabs) ----
+.mt-nav-back {
+  margin-left: auto;
+  font-size: 14px;
+}
+
 // --- Article header tags (also used inline by home/Writing.jsx via the
 // shared .mt-badge classes; the post-list/index styles that used to live
 // here were removed with the standalone /blog index — see App.jsx) --------

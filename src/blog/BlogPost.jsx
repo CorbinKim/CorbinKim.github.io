@@ -22,7 +22,7 @@ export default function BlogPost() {
       <main className="mt mt-blog">
         <nav className="mt-nav">
           <Link className="mt-wordmark" to="/">{site.name}</Link>
-          <div className="mt-tabs"><Link to="/#writing">Writing</Link></div>
+          <Link className="mt-nav-back" to="/#writing">← Writing</Link>
         </nav>
         <section className="mt-section">
           <h1 className="mt-h2">Post not found</h1>
@@ -38,7 +38,7 @@ export default function BlogPost() {
     <main className="mt mt-blog">
       <nav className="mt-nav">
         <Link className="mt-wordmark" to="/">{site.name}</Link>
-        <div className="mt-tabs"><Link to="/#writing">Writing</Link></div>
+        <Link className="mt-nav-back" to="/#writing">← Writing</Link>
       </nav>
 
       <article className="mt-article">
