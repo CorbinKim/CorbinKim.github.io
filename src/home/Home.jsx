@@ -1,5 +1,4 @@
 import React from "react";
-import {Link} from "react-router-dom";
 import "./Home.scss";
 import {site, social, researchInterests} from "../data/site";
 import {timeline, awards, publications} from "../data/resume";
@@ -9,9 +8,9 @@ import Writing from "./Writing";
 const NAV = [
   {label: "Research", href: "#research"},
   {label: "Timeline", href: "#timeline"},
-  {label: "Writing", href: "#writing"},
   {label: "Projects", href: "#projects"},
-  {label: "Publications", href: "#publications"}
+  {label: "Publications", href: "#publications"},
+  {label: "Writing", href: "#writing"}
 ];
 
 export default function Home() {
@@ -23,7 +22,6 @@ export default function Home() {
           {NAV.map(n => (
             <a key={n.href} href={n.href}>{n.label}</a>
           ))}
-          <Link to="/blog">Blog</Link>
         </div>
         <a className="mt-btn mt-btn--primary mt-nav-cta" href={"mailto:" + site.email}>
           Contact
@@ -89,10 +87,6 @@ export default function Home() {
         </section>
       </div>
 
-      <section className="mt-section" id="writing">
-        <div className="mt-strip"><Writing /></div>
-      </section>
-
       <section className="mt-section" id="projects">
         <h2 className="mt-h2">Projects</h2>
         <ul className="mt-cards">
@@ -145,6 +139,10 @@ export default function Home() {
           </ul>
         </section>
       </div>
+
+      <section className="mt-section" id="writing">
+        <div className="mt-strip"><Writing /></div>
+      </section>
 
       <footer className="mt-footer">
         <nav>

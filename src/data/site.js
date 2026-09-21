@@ -27,11 +27,8 @@ export const researchInterests = [
   }
 ];
 
-export const mediumUsername = "corbinkim";
-
 export const social = [
   {label: "GitHub", href: "https://github.com/CorbinKim"},
   {label: "LinkedIn", href: "https://www.linkedin.com/in/corbinkim/"},
-  {label: "Medium", href: "https://medium.com/@" + mediumUsername},
   {label: "Email", href: "mailto:gkim26@ncsu.edu"}
 ];

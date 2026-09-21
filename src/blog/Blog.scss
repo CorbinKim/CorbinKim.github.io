@@ -25,50 +25,9 @@ $font-mono: "IBM Plex Mono", "SF Mono", Menlo, Consolas, monospace;
 $readable: 42rem; // article reading column
 $break-pad: 2rem; // how far boxed blocks bleed past the column on wide screens
 
-// --- Blog index (/blog) ---------------------------------------------------
-.mt-blog-list {
-  max-width: $readable;
-}
-
-.mt-post-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.mt-post-card {
-  display: block;
-  padding: 28px 0;
-  border-top: 1px solid $hairline-soft;
-  text-decoration: none;
-  color: inherit;
-
-  &:hover .mt-post-title {
-    color: $primary;
-  }
-}
-
-.mt-post-list li:last-child .mt-post-card {
-  border-bottom: 1px solid $hairline-soft;
-}
-
-.mt-post-title {
-  font-family: $font;
-  font-size: 22px;
-  font-weight: 500;
-  line-height: 1.3;
-  color: $ink-deep;
-  margin: 10px 0 6px;
-  transition: color 0.15s ease-out;
-}
-
-.mt-post-excerpt {
-  font-size: 15px;
-  line-height: 1.6;
-  color: $slate;
-  margin: 0 0 10px;
-}
-
+// --- Article header tags (also used inline by home/Writing.jsx via the
+// shared .mt-badge classes; the post-list/index styles that used to live
+// here were removed with the standalone /blog index — see App.jsx) --------
 .mt-post-tags {
   display: flex;
   gap: 6px;

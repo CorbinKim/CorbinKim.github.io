@@ -425,7 +425,7 @@ body {
     gap: 24px;
     padding: 18px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.14);
-    align-items: baseline;
+    align-items: flex-start;
     &:first-child {
       border-top: none;
     }
@@ -445,6 +445,12 @@ body {
   font-size: 13px;
   color: $stone;
   font-variant-numeric: tabular-nums;
+}
+.mt-writing-excerpt {
+  margin: 4px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: $stone;
 }
 .mt-more {
   margin-top: 32px;
