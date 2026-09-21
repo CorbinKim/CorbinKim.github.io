@@ -140,10 +140,9 @@ body {
   }
 }
 
-// inverted pill for the dark promo strip
+// inverted pill for use on a dark band (e.g. .mt-band--navy)
 .mt-btn--on-dark,
-.mt a.mt-btn--on-dark,
-.mt .mt-strip a.mt-btn--on-dark {
+.mt a.mt-btn--on-dark {
   background: $canvas;
   color: $ink-deep;
   font-weight: 700;
@@ -293,6 +292,24 @@ body {
   background: $surface-soft;
 }
 
+// --- Full-bleed navy band: near-midnight section (currently Research) —
+// headings/sub/muted text flip to light so they read against the dark fill;
+// .mt-cards li tiles keep their own white background, so they read as
+// light cards sitting on the dark band without extra overrides. ---------
+.mt-band--navy {
+  background: $strip-bg;
+
+  .mt-h2 {
+    color: $canvas;
+  }
+  .mt-sub {
+    color: $stone;
+  }
+  .mt-muted {
+    color: $stone;
+  }
+}
+
 // --- Section scaffolding (1280px container, 80px marketing rhythm) ---
 .mt-section {
   max-width: $wrap;
@@ -393,67 +410,61 @@ body {
   max-width: $readable;
 }
 
-// --- Writing: card-promo-strip (deep-navy card, {rounded.xxxl}) ---
-.mt-strip {
-  background: $strip-bg;
-  color: $canvas;
-  border-radius: $radius-card;
-  padding: 64px; // {spacing.section} for hero presence
-
-  .mt-h2 {
-    color: $canvas;
-  }
-  .mt-sub {
-    color: $stone;
-  }
-  .mt-muted {
-    color: $stone;
-  }
-  a {
-    color: $canvas;
-  }
-}
-
+// --- Writing: one hairline-bordered card per post (list-card grammar,
+// matches the card-product-feature treatment used by Projects below so
+// posts read as distinct entries rather than lines in a dark promo strip) -
 .mt-writing-list {
   list-style: none;
   padding: 0;
   margin: 0;
   max-width: $readable;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
-  li {
-    display: flex;
-    gap: 24px;
-    padding: 18px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.14);
-    align-items: flex-start;
-    &:first-child {
-      border-top: none;
-    }
+.mt-writing-card {
+  display: block;
+  background: $canvas;
+  border: 1px solid $hairline-soft;
+  border-radius: $radius-card;
+  padding: 28px 32px;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.2s ease-out, transform 0.2s ease-out;
+
+  &:hover {
+    border-color: $primary;
+    transform: translateY(-4px);
+    text-decoration: none;
   }
-  a {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.44; // {typography.subtitle-md}
-    &:hover {
-      color: $hairline-soft;
-    }
+  &:hover .mt-writing-title {
+    color: $primary;
   }
 }
-.mt-date {
-  flex: 0 0 96px;
-  font-family: $font-mono;
-  font-size: 13px;
-  color: $stone;
-  font-variant-numeric: tabular-nums;
+
+.mt-writing-title {
+  font-family: $font;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: $ink-deep;
+  margin: 10px 0 6px;
+  transition: color 0.15s ease-out;
 }
+
 .mt-writing-excerpt {
-  margin: 4px 0 0;
-  font-size: 14px;
-  line-height: 1.5;
-  color: $stone;
+  font-size: 15px;
+  line-height: 1.6;
+  color: $slate;
+  margin: 0 0 10px;
 }
-.mt-more {
-  margin-top: 32px;
+
+.mt-writing-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 4px;
 }
 
 // --- Projects: card-product-feature ({rounded.xxxl}, hairline-soft) ---
@@ -650,9 +661,6 @@ body {
   .mt-tagline {
     white-space: normal; // one-line rule only holds where it can fit
   }
-  .mt-strip {
-    padding: 32px 24px;
-  }
   .mt-timeline li {
     flex-wrap: wrap;
     gap: 12px;
@@ -661,11 +669,7 @@ body {
     flex-basis: 100%;
     padding-top: 0;
   }
-  .mt-writing-list li {
-    flex-direction: column;
-    gap: 4px;
-  }
-  .mt-date {
-    flex-basis: auto;
+  .mt-writing-card {
+    padding: 20px 22px;
   }
 }

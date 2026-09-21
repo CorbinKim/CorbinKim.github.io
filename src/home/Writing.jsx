@@ -3,9 +3,10 @@ import {Link} from "react-router-dom";
 import {posts} from "../blog/postRegistry";
 
 /* Renders the site's own .mdx posts (see ../blog/postRegistry.js) inline
-   inside the dark card-promo-strip at the bottom of the portfolio (see
-   Home.scss .mt-strip). No separate /blog index page — this list IS the
-   index; only individual posts get their own route (/blog/:slug). */
+   on the portfolio, one hairline-bordered card per post so posts read as
+   distinct entries (see Home.scss .mt-writing-card). No separate /blog
+   index page — this list IS the index; only individual posts get their
+   own route (/blog/:slug). */
 
 function formatDate(iso) {
   if (!iso) return "";
@@ -26,11 +27,16 @@ export default function Writing() {
         <ul className="mt-writing-list">
           {posts.map(p => (
             <li key={p.slug}>
-              <span className="mt-date">{formatDate(p.date)}</span>
-              <div>
-                <Link to={"/blog/" + p.slug}>{p.title}</Link>
+              <Link className="mt-writing-card" to={"/blog/" + p.slug}>
+                {p.date && <span className="mt-badge mt-badge--neutral">{formatDate(p.date)}</span>}
+                <h3 className="mt-writing-title">{p.title}</h3>
                 {p.excerpt && <p className="mt-writing-excerpt">{p.excerpt}</p>}
-              </div>
+                {p.tags.length > 0 && (
+                  <div className="mt-writing-tags">
+                    {p.tags.map(t => <span key={t} className="mt-badge mt-badge--neutral">{t}</span>)}
+                  </div>
+                )}
+              </Link>
             </li>
           ))}
         </ul>

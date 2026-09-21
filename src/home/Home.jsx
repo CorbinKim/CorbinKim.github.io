@@ -34,7 +34,7 @@ export default function Home() {
         <p className="mt-role">{site.role}</p>
         <p className="mt-tagline">{site.tagline}</p>
         <div className="mt-cta-row">
-          <a className="mt-btn mt-btn--primary" href="#research">Research interests</a>
+          <a className="mt-btn mt-btn--primary" href="#research">Research</a>
           <a className="mt-btn mt-btn--secondary" href="#projects">See projects</a>
         </div>
         <nav className="mt-social">
@@ -52,20 +52,22 @@ export default function Home() {
         </nav>
       </header>
 
-      <section className="mt-section" id="research">
-        <h2 className="mt-h2">Research</h2>
-        <p className="mt-sub">Building intelligent, programmable wireless networks.</p>
-        <ul className="mt-cards">
-          {researchInterests.map(r => (
-            <li key={r.name}>
-              <div className="mt-card-head">
-                <span className="mt-card-title">{r.name}</span>
-              </div>
-              <span className="mt-card-desc">{r.desc}</span>
-            </li>
-          ))}
-        </ul>
-      </section>
+      <div className="mt-band--navy">
+        <section className="mt-section" id="research">
+          <h2 className="mt-h2">Research</h2>
+          <p className="mt-sub">Building intelligent, programmable wireless networks.</p>
+          <ul className="mt-cards">
+            {researchInterests.map(r => (
+              <li key={r.name}>
+                <div className="mt-card-head">
+                  <span className="mt-card-title">{r.name}</span>
+                </div>
+                <span className="mt-card-desc">{r.desc}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      </div>
 
       <div className="mt-band--soft">
         <section className="mt-section" id="timeline">
@@ -141,7 +143,7 @@ export default function Home() {
       </div>
 
       <section className="mt-section" id="writing">
-        <div className="mt-strip"><Writing /></div>
+        <Writing />
       </section>
 
       <footer className="mt-footer">
