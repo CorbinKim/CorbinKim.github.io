@@ -1,0 +1,42 @@
+---
+title: "Paper review: scaled dot-product attention"
+date: "2026-09-21"
+excerpt: "A quick worked-through review of the attention mechanism from \"Attention Is All You Need,\" as a template for future paper-review posts."
+tags: ["template", "deep-learning"]
+---
+
+This is a **template post** — replace it with a real paper review. It exists to demonstrate that inline math like $Q, K, V \in \mathbb{R}^{n \times d_k}$ renders inline with the text, that display equations render as a boxed block, and that code and tables pick up the same navy design system as the rest of the site.
+
+## The core equation
+
+Scaled dot-product attention computes a weighted sum of value vectors, where the weight assigned to each value depends on the dot product of the query with the corresponding key:
+
+$$
+\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^\top}{\sqrt{d_k}}\right)V
+$$
+
+The $\sqrt{d_k}$ term matters: without it, dot products grow large in magnitude as $d_k$ increases, pushing the softmax into regions with extremely small gradients.
+
+## A minimal implementation
+
+```python
+import numpy as np
+
+def attention(Q, K, V):
+    d_k = Q.shape[-1]
+    scores = Q @ K.T / np.sqrt(d_k)
+    weights = np.exp(scores) / np.exp(scores).sum(axis=-1, keepdims=True)
+    return weights @ V
+```
+
+## Complexity at a glance
+
+| Component        | Time complexity      | Space complexity |
+| ----------------- | --------------------- | ------------------ |
+| $QK^\top$          | $O(n^2 d_k)$           | $O(n^2)$            |
+| softmax            | $O(n^2)$               | $O(n^2)$            |
+| weighted sum       | $O(n^2 d_v)$           | $O(n d_v)$          |
+
+The quadratic dependence on sequence length $n$ is the well-known bottleneck that later work (linear attention, FlashAttention, etc.) tries to address.
+
+> Swap this whole file out for your own review — the frontmatter (`title`, `date`, `excerpt`, `tags`) drives the `/blog` index automatically.

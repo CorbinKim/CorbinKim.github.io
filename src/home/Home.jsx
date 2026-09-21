@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import "./Home.scss";
 import {site, social, researchInterests} from "../data/site";
 import {timeline, awards, publications} from "../data/resume";
@@ -22,6 +23,7 @@ export default function Home() {
           {NAV.map(n => (
             <a key={n.href} href={n.href}>{n.label}</a>
           ))}
+          <Link to="/blog">Blog</Link>
         </div>
         <a className="mt-btn mt-btn--primary mt-nav-cta" href={"mailto:" + site.email}>
           Contact

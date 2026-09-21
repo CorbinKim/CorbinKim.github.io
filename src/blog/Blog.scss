@@ -1,0 +1,234 @@
+/* Blog design system — mirrors the tokens in ../home/Home.scss (same navy/
+   IBM Plex Mono "refined-retro academic" language) so /blog reads as one
+   site with the portfolio, not a bolted-on theme. Reading-column rhythm,
+   heading scale, and the "break out of the column" treatment for code/
+   tables/display-math are adapted from Hydejack Pro's typography (used here
+   purely as a design reference — no Jekyll/Liquid code is reused). */
+
+$primary: #14275a;
+$primary-deep: #0d1b3e;
+$canvas: #ffffff;
+$surface-soft: #f1f4f7;
+$ink-deep: #0a1317;
+$ink: #1c1e21;
+$charcoal: #444950;
+$slate: #4b4c4f;
+$steel: #5d6c7b;
+$stone: #8595a4;
+$hairline: #ced0d4;
+$hairline-soft: #dee3e9;
+
+$font: "Optimistic VF", "Montserrat", -apple-system, BlinkMacSystemFont,
+  "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+$font-mono: "IBM Plex Mono", "SF Mono", Menlo, Consolas, monospace;
+
+$readable: 42rem; // article reading column
+$break-pad: 2rem; // how far boxed blocks bleed past the column on wide screens
+
+// --- Blog index (/blog) ---------------------------------------------------
+.mt-blog-list {
+  max-width: $readable;
+}
+
+.mt-post-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mt-post-card {
+  display: block;
+  padding: 28px 0;
+  border-top: 1px solid $hairline-soft;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover .mt-post-title {
+    color: $primary;
+  }
+}
+
+.mt-post-list li:last-child .mt-post-card {
+  border-bottom: 1px solid $hairline-soft;
+}
+
+.mt-post-title {
+  font-family: $font;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: $ink-deep;
+  margin: 10px 0 6px;
+  transition: color 0.15s ease-out;
+}
+
+.mt-post-excerpt {
+  font-size: 15px;
+  line-height: 1.6;
+  color: $slate;
+  margin: 0 0 10px;
+}
+
+.mt-post-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+// --- Article shell ----------------------------------------------------
+.mt-article {
+  max-width: $readable;
+  margin: 0 auto;
+  padding: 56px 24px 96px;
+}
+
+.mt-article-head {
+  margin-bottom: 40px;
+
+  h1 {
+    font-family: $font;
+    font-size: clamp(30px, 5vw, 44px);
+    font-weight: 500;
+    line-height: 1.2;
+    color: $ink-deep;
+    margin: 14px 0 12px;
+  }
+}
+
+// --- Article typography (Hydejack-inspired heading rhythm + reading feel) -
+.mt-article-body {
+  font-family: $font;
+  font-size: 17px;
+  line-height: 1.7;
+  color: $ink;
+
+  > * + * {
+    margin-top: 1.1em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $font;
+    color: $ink-deep;
+    font-weight: 500;
+    line-height: 1.3;
+    margin: 2.6em 0 0.6em;
+  }
+  h2 { font-size: 1.5em; }
+  h3 { font-size: 1.2em; }
+  h4 { font-size: 1.05em; }
+
+  p { margin: 1.1em 0; }
+
+  a {
+    color: $primary;
+    font-weight: 700;
+    text-decoration: none;
+    &:hover { text-decoration: underline; }
+  }
+
+  ul, ol {
+    padding-left: 1.4rem;
+  }
+
+  blockquote {
+    margin: 1.5em 0;
+    padding: 0.25em 1.25em;
+    border-left: 0.25rem solid $primary;
+    color: $slate;
+
+    > p:last-child { margin-bottom: 0; }
+  }
+
+  strong { font-weight: 700; color: $ink-deep; }
+
+  code {
+    font-family: $font-mono;
+    font-size: 0.85em;
+    background: $surface-soft;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+  }
+
+  // Code blocks + display math "break the column": boxed and slightly wider
+  // than the reading line, echoing Hydejack's pre/.katex-display treatment.
+  pre,
+  .katex-display {
+    background: $surface-soft;
+    border: 1px solid $hairline-soft;
+    padding: 1.25rem 1.5rem;
+    margin: 1.75em (-$break-pad);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    code {
+      background: none;
+      padding: 0;
+      font-size: 0.85em;
+    }
+  }
+
+  .katex-display {
+    padding: 1.5rem;
+    text-align: left;
+  }
+
+  // Inline math sits flush with body text — no extra box.
+  .katex { font-size: 1.05em; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.75em 0;
+    font-size: 0.92em;
+
+    th, td {
+      padding: 0.5em 0.75em;
+      border: 1px solid $hairline-soft;
+      text-align: left;
+    }
+
+    thead {
+      background: $surface-soft;
+      font-family: $font-mono;
+      font-size: 0.85em;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    tbody tr:nth-child(even) td {
+      background: $surface-soft;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    border: 1px solid $hairline-soft;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid $hairline-soft;
+    margin: 2.5em 0;
+  }
+
+  // Footnotes (if a post uses remark-footnotes / [^n] syntax down the line).
+  .footnotes {
+    margin-top: 3.5em;
+    padding-top: 1.5em;
+    border-top: 1px solid $hairline-soft;
+    font-size: 0.9em;
+    color: $slate;
+  }
+}
+
+@media screen and (min-width: 56rem) {
+  .mt-article-body {
+    pre,
+    .katex-display {
+      margin-left: calc(-1 * ($break-pad + 3rem));
+      margin-right: calc(-1 * ($break-pad + 3rem));
+      padding-left: calc($break-pad + 3rem);
+      padding-right: calc($break-pad + 3rem);
+    }
+  }
+}
