@@ -4,6 +4,7 @@
 export const projects = [
   {
     name: "FALCON",
+    image: "/img/projects/falcon.png", 
     desc: "Intelligent Open RAN controller design and digital twin integration for UAV-assisted wireless connectivity through AERPAW.",
     links: [
       {label: "AERPAW", href: "https://aerpaw.org/"}
