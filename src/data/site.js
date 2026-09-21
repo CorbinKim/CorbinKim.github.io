@@ -14,8 +14,8 @@ export const researchInterests = [
     desc: "Designing intelligent controllers for programmable and adaptable radio access networks."
   },
   {
-    name: "xApps, rApps, and dApps",
-    desc: "Developing applications that support data-driven and closed-loop RAN control."
+    name: "Agentic AI for RAN",
+    desc: "Building LLM-driven agents that reason over network state and automate RAN operations and decision-making."
   },
   {
     name: "Digital Twins",
