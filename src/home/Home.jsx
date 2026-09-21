@@ -10,6 +10,7 @@ const NAV = [
   {label: "Timeline", href: "#timeline"},
   {label: "Projects", href: "#projects"},
   {label: "Publications", href: "#publications"},
+  {label: "Awards", href: "#awards"},
   {label: "Writing", href: "#writing"}
 ];
 
