@@ -195,6 +195,22 @@ $break-pad: 2rem; // how far boxed blocks bleed past the column on wide screens
     border: 1px solid $hairline-soft;
   }
 
+  figure {
+    margin: 2em 0;
+
+    img {
+      display: block;
+    }
+  }
+
+  figcaption {
+    margin-top: 0.6em;
+    font-family: $font-mono;
+    font-size: 0.85em;
+    color: $steel;
+    text-align: center;
+  }
+
   hr {
     border: 0;
     border-top: 1px solid $hairline-soft;
