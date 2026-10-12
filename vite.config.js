@@ -9,6 +9,11 @@ import remarkGfm from "remark-gfm";
 import rehypeKatex from "rehype-katex";
 import rehypeFigure from "./plugins/rehype-figure.js";
 import remarkCallouts from "./plugins/remark-callouts.js";
+import {
+  katexOptions,
+  remarkMathEnvironments,
+  wrapRawEnvironments
+} from "./plugins/math-env.js";
 import rehypeSafeUrls from "./plugins/rehype-safe-urls.js";
 import {site} from "./src/data/site.js";
 import {adminCspMeta, adminPolicy} from "./tools/admin-csp.js";
@@ -58,6 +63,22 @@ export default defineConfig({
       siteName: site.name,
       siteDescription: site.tagline
     }),
+    // Overleaf-style \begin{equation}...\end{equation} written without $$ around
+    // it is wrapped in a $$ block before MDX parses the post (plugins/math-env.js)
+    {
+      name: "math-environments",
+      enforce: "pre",
+      transform(code, id) {
+        if (
+          !/[\\/]src[\\/]blog[\\/]posts[\\/][^\\/?]+\.mdx?$/.test(
+            id.split("?")[0]
+          )
+        )
+          return null;
+        const wrapped = wrapRawEnvironments(code);
+        return wrapped === code ? null : {code: wrapped, map: null};
+      }
+    },
     {
       enforce: "pre",
       ...mdx({
@@ -65,10 +86,15 @@ export default defineConfig({
           remarkFrontmatter,
           remarkMdxFrontmatter,
           remarkMath,
+          remarkMathEnvironments,
           remarkGfm,
           remarkCallouts
         ],
-        rehypePlugins: [rehypeSafeUrls, rehypeKatex, rehypeFigure]
+        rehypePlugins: [
+          rehypeSafeUrls,
+          [rehypeKatex, katexOptions],
+          rehypeFigure
+        ]
       })
     },
     react({include: /\.(jsx|js|mdx|md)$/})

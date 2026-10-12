@@ -128,6 +128,16 @@ Good to know:
   GitHub Pages cannot send real 301 redirects, so this is a page-level redirect.
   Changing the link again keeps every earlier address; going back to an earlier
   one removes it from the list.
+- **Equations the Overleaf way.** Write LaTeX as you would in a paper:
+  `\begin{equation} … \end{equation}` (also `align`, `gather`, `alignat`, and the
+  unnumbered `equation*` and so on) is shown as a display equation and **numbered
+  automatically** (1), (2) … in the order they appear; `\tag{…}` sets a number by
+  hand and `\nonumber` skips a row; `\label{…}` is accepted and ignored. In the
+  visual editor you can paste such code, or type it, and it becomes a math block
+  with the LaTeX untouched. An inline `$\begin{equation}…$` (KaTeX allows these
+  environments only in display math) is turned into a math block too.
+  Not supported: `\eqref` / `\ref` cross-references, and the `multline` /
+  `eqnarray` environments (KaTeX has neither). Plain `$…$` stays inline math.
 - **Hide a post instead of deleting it.** The **Hide from the site** switch under
   the tags (or **Hide…** on a row of the Published list, **Show…** to undo it)
   sets `draft: true` in the post's front matter: the site then leaves it out of

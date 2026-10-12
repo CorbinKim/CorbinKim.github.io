@@ -1,5 +1,6 @@
 // Pure helpers (no DOM) that turn what the editor produces into the files the
 // site builds. Unit-tested in test/postprocess.test.js.
+import {wrapRawEnvironments} from "../../plugins/math-env.js";
 import {DRAFT_IMAGE_PREFIX, IMAGE_URL_BASE} from "./config.js";
 
 // ---- slugs -----------------------------------------------------------------
@@ -133,9 +134,10 @@ export function finalizeCover(cover, slug) {
 
 /** Point placeholder image URLs at their final /img/blog/<slug>/ folder. */
 export function finalizeBody(md, slug) {
-  return String(md)
-    .split(DRAFT_IMAGE_PREFIX)
-    .join(`${IMAGE_URL_BASE}/${slug}/`);
+  // (a bare \begin{equation} typed in Markdown mode gets its $$ block too)
+  return wrapRawEnvironments(
+    String(md).split(DRAFT_IMAGE_PREFIX).join(`${IMAGE_URL_BASE}/${slug}/`)
+  );
 }
 
 // ---- Markdown ------------------------------------------------------------------

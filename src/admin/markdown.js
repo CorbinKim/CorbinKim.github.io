@@ -11,6 +11,11 @@ import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import {unified} from "unified";
 import rehypeFigure from "../../plugins/rehype-figure.js";
+import {
+  katexOptions,
+  remarkMathEnvironments,
+  wrapRawEnvironments
+} from "../../plugins/math-env.js";
 import remarkCallouts from "../../plugins/remark-callouts.js";
 import rehypeSafeUrls from "../../plugins/rehype-safe-urls.js";
 
@@ -35,16 +40,19 @@ function rehypeAlignToStyle() {
 const processor = unified()
   .use(remarkParse)
   .use(remarkMath)
+  .use(remarkMathEnvironments)
   .use(remarkGfm)
   .use(remarkCallouts)
   .use(remarkRehype)
   .use(rehypeAlignToStyle)
   .use(rehypeSafeUrls)
-  .use(rehypeKatex, {strict: "ignore", throwOnError: false})
+  .use(rehypeKatex, {...katexOptions, strict: "ignore", throwOnError: false})
   .use(rehypeFigure)
   .use(rehypeStringify);
 
 /** @returns {string} HTML for the post body (what goes in .mt-article-body) */
 export function renderBody(markdown) {
-  return String(processor.processSync(String(markdown ?? "")));
+  return String(
+    processor.processSync(wrapRawEnvironments(String(markdown ?? "")))
+  );
 }

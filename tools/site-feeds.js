@@ -26,6 +26,11 @@ import {toString} from "mdast-util-to-string";
 import {unified} from "unified";
 import rehypeFigure from "../plugins/rehype-figure.js";
 import rehypeSafeUrls from "../plugins/rehype-safe-urls.js";
+import {
+  katexMacros,
+  remarkMathEnvironments,
+  wrapRawEnvironments
+} from "../plugins/math-env.js";
 import remarkCallouts from "../plugins/remark-callouts.js";
 import {parse} from "../src/admin/frontmatter.js";
 
@@ -246,6 +251,7 @@ export function renderFeedBody(markdown, siteUrl) {
     unified()
       .use(remarkParse)
       .use(remarkMath)
+      .use(remarkMathEnvironments)
       .use(remarkGfm)
       .use(remarkCallouts)
       .use(remarkRehype)
@@ -253,12 +259,13 @@ export function renderFeedBody(markdown, siteUrl) {
       .use(rehypeKatex, {
         output: "mathml",
         strict: "ignore",
-        throwOnError: false
+        throwOnError: false,
+        macros: katexMacros
       })
       .use(rehypeFigure)
       .use(absolutizeLinks, siteUrl)
       .use(rehypeStringify)
-      .processSync(markdown)
+      .processSync(wrapRawEnvironments(markdown))
   );
 }
 

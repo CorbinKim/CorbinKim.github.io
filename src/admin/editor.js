@@ -48,8 +48,10 @@ import "@milkdown/crepe/theme/common/style.css";
 import "@milkdown/crepe/theme/frame.css";
 import {blockPlugins, calloutSchema, toggleSchema} from "./blocks.js";
 import {footnotePlugin, insertFootnote} from "./footnotes.js";
+import {mathEnvironments} from "./mathenv.js";
 import {pictureResize} from "./imageresize.js";
 import {editorStyle, joinImageSrc, splitImageSrc} from "./imageopts.js";
+import {katexOptions} from "../../plugins/math-env.js";
 import "./editor.css";
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
@@ -95,6 +97,8 @@ export async function createEditor({
         blockUploadButton: "Upload image"
       },
       [CrepeFeature.LinkTooltip]: {inputPlaceholder: "Paste a link…"},
+      // \label{...} is accepted (and not shown) in math blocks, see mathenv.js
+      [CrepeFeature.Latex]: {katexOptions},
       // the virtual cursor makes the list-typing race above much worse
       [CrepeFeature.Cursor]: {virtual: false}
     }
@@ -212,6 +216,9 @@ export async function createEditor({
 
   // drag a corner of a picture to resize it
   crepe.editor.use(pictureResize);
+
+  // Overleaf-style \begin{equation}...\end{equation} (mathenv.js)
+  crepe.editor.use(mathEnvironments);
 
   // Tell the toolbar whenever the document or selection changes, so it can show
   // which formatting is active at the caret.
