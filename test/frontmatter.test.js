@@ -3,7 +3,7 @@
 // are skipped if they cannot be imported.
 import {test} from "node:test";
 import assert from "node:assert/strict";
-import {readFileSync, readdirSync} from "node:fs";
+import {existsSync, readFileSync, readdirSync} from "node:fs";
 import {parse, setDraftFlag, stringify} from "../src/admin/frontmatter.js";
 
 const YAML = await import("yaml")
@@ -37,13 +37,13 @@ async function viaMdx(text, format = "md") {
 }
 
 const postsDir = new URL("../src/blog/posts/", import.meta.url);
-const existing = readdirSync(postsDir)
-  .filter(f => /\.mdx?$/.test(f))
-  .map(f => [f, readFileSync(new URL(f, postsDir), "utf8")]);
-
-test("fixture: at least one existing post was found", () => {
-  assert.ok(existing.length >= 1);
-});
+// The real posts (if the site has any right now: the folder is gone from git when
+// the last post is deleted) are used as extra fixtures below.
+const existing = existsSync(postsDir)
+  ? readdirSync(postsDir)
+      .filter(f => /\.mdx?$/.test(f))
+      .map(f => [f, readFileSync(new URL(f, postsDir), "utf8")])
+  : [];
 
 for (const [name, text] of existing) {
   test(`existing post ${name}: parse() == yaml oracle`, {skip: !YAML}, () => {
