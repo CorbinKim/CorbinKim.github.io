@@ -113,8 +113,10 @@ Good to know:
   saying why. An edit that does not touch the text leaves the file's body
   exactly as written.
 - _Update_ asks before overwriting a post that changed on GitHub in the
-  meantime. _Delete post from the site_ removes the post and its images in one
-  commit (it stays in git history).
+  meantime. Every row of the **Published** list has a **Delete…**
+  button (also in the open post's ⋯ menu as _Delete post from the site_): after
+  a confirmation it removes the post and its images in one commit (it stays in
+  git history, so it can be restored).
 
 ### What the site adds around a post
 

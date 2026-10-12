@@ -468,6 +468,15 @@ export function openDelete(ctx, draft, {onCommitted, returnFocus}) {
         ` (${draft.path}) and the images under ${IMAGES_DIR}/${draft.slug}/ from the site. The commit stays in GitHub's history, so it can be restored.`
       )
     );
+    if (draft.localEdits) {
+      dlg.body.append(
+        h(
+          "p",
+          {class: "muted"},
+          "Your unpublished edits to this post in this browser are discarded too."
+        )
+      );
+    }
     dlg.actions.append(cancel, go);
 
     go.addEventListener("click", async () => {
@@ -491,8 +500,11 @@ export function openDelete(ctx, draft, {onCommitted, returnFocus}) {
         });
         deleted = true;
         onCommitted?.();
-        await deleteDraft(draft.id);
-        removeSyncedCopy(ctx, draft.id);
+        // a post deleted straight from the list may have no draft in this browser
+        if (draft.id) {
+          await deleteDraft(draft.id);
+          removeSyncedCopy(ctx, draft.id);
+        }
         commitSha = res.commitSha;
         progress.set("commit", "done", commitSha.slice(0, 7));
       } catch (err) {

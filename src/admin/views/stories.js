@@ -5,6 +5,7 @@ import {pullRemoteDraft} from "../syncops.js";
 import {deleteDraft, listDrafts, saveDraft} from "../store.js";
 import {draftFromRemote, listPublished, newDraft} from "../posts.js";
 import {brandLink, topBar} from "../ui.js";
+import {openDelete} from "./publish.js";
 
 const DOCS_URL =
   "https://github.com/CorbinKim/CorbinKim.github.io/blob/main/docs/draft-sync.md";
@@ -277,6 +278,29 @@ export function storiesView(ctx) {
     }
   }
 
+  /** Delete a published post (and its pictures) from the site without opening it. */
+  async function deletePublished(post, button) {
+    // unpublished edits of this post kept in this browser go with it
+    const existing = listDrafts().find(
+      d => d.kind === "edit" && d.path === post.path
+    );
+    const {deleted} = await openDelete(
+      ctx,
+      {
+        id: existing?.id,
+        localEdits: !!existing,
+        title: post.title,
+        slug: post.slug,
+        path: post.path
+      },
+      {returnFocus: button, onCommitted: () => ctx.invalidatePublished()}
+    );
+    if (deleted && !destroyed) {
+      renderDrafts();
+      load(true);
+    }
+  }
+
   function renderPublished(posts) {
     clear(publishedHost);
     publishedHost.append(
@@ -337,6 +361,17 @@ export function storiesView(ctx) {
                 rel: "noopener noreferrer"
               },
               "View ↗"
+            ),
+            h(
+              "button",
+              {
+                class: "btn btn-quiet btn-danger",
+                type: "button",
+                title: "Delete this post from the site",
+                "aria-label": `Delete ${p.title}`,
+                onclick: e => deletePublished(p, e.currentTarget)
+              },
+              "Delete…"
             )
           );
           return row;
