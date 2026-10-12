@@ -5,9 +5,12 @@ import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import {
+  cleanRedirects,
   plainText,
   postPage,
   readPosts,
+  redirectPage,
+  redirectPages,
   renderFeedBody,
   rssXml,
   searchIndex,
@@ -250,4 +253,69 @@ test("renderFeedBody turns site-relative URLs into absolute ones", () => {
     renderFeedBody("![](/a.png) [x](/b)", SITE.siteUrl),
     /src="https:\/\/example.github.io\/a.png"[\s\S]*href="https:\/\/example.github.io\/b"/
   );
+});
+
+// ---- renamed posts: former addresses redirect to the current one ----------------------------
+
+test("cleanRedirects keeps plain path segments only", () => {
+  assert.deepEqual(cleanRedirects(["old-a", " old-b ", "old-a"]), [
+    "old-a",
+    "old-b"
+  ]);
+  assert.deepEqual(cleanRedirects("single"), ["single"]);
+  assert.deepEqual(
+    cleanRedirects([
+      "a/b",
+      "..",
+      ".",
+      "x?y",
+      "z#w",
+      "",
+      "back\\slash",
+      "tab\there"
+    ]),
+    []
+  );
+  assert.deepEqual(cleanRedirects(undefined), []);
+  assert.deepEqual(cleanRedirects(null), []);
+});
+
+test("readPosts reads redirect_from from the front matter", () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "posts-"));
+  fs.writeFileSync(
+    path.join(dir, "moved.md"),
+    '---\ntitle: "Moved"\ndate: "2026-10-01"\nredirect_from: ["first-name", "second-name"]\n---\n\nBody\n'
+  );
+  const [post] = readPosts(dir);
+  assert.deepEqual(post.redirectFrom, ["first-name", "second-name"]);
+});
+
+test("redirectPage points at the current address and cannot be broken out of", () => {
+  const html = redirectPage({slug: "new-name"}, SITE);
+  assert.match(
+    html,
+    /<link rel="canonical" href="https:\/\/example.github.io\/blog\/new-name\/" \/>/
+  );
+  assert.match(
+    html,
+    /<meta http-equiv="refresh" content="0; url=\/blog\/new-name\/" \/>/
+  );
+  assert.match(html, /location.replace\("\/blog\/new-name\/"\)/);
+  assert.match(html, /<meta name="robots" content="noindex" \/>/);
+  const nasty = redirectPage({slug: 'a"</script><b>'}, SITE);
+  assert.ok(!nasty.includes("</script><b>"));
+  assert.ok(!/<b>/.test(nasty));
+});
+
+test("redirectPages: a real post's address wins, the newer post keeps a contested one", () => {
+  const posts = [
+    {slug: "newest", redirectFrom: ["old-1", "shared", "taken"]},
+    {slug: "taken", redirectFrom: []},
+    {slug: "older", redirectFrom: ["shared", "old-2"]}
+  ];
+  const map = redirectPages(posts);
+  assert.deepEqual([...map.keys()].sort(), ["old-1", "old-2", "shared"]);
+  assert.equal(map.get("shared").slug, "newest");
+  assert.equal(map.get("old-2").slug, "older");
+  assert.equal(map.has("taken"), false);
 });

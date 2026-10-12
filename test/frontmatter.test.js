@@ -4,7 +4,7 @@
 import {test} from "node:test";
 import assert from "node:assert/strict";
 import {readFileSync, readdirSync} from "node:fs";
-import {parse, stringify} from "../src/admin/frontmatter.js";
+import {parse, setDraftFlag, stringify} from "../src/admin/frontmatter.js";
 
 const YAML = await import("yaml")
   .then(m => m.default || m)
@@ -295,4 +295,84 @@ test("fuzz: random strings survive stringify -> (own parser | yaml | mdx)", asyn
       assert.deepEqual(await viaMdx(stringify({data, body: "x\n"})), data);
     }
   }
+});
+
+// ---- setDraftFlag: hide / show a post by touching one line ----------------------------------
+
+const POST =
+  '---\ntitle: "A"\ndate: "2026-10-01"\ntags: ["x"]\n---\n\nBody $x$\n';
+
+test("setDraftFlag: adds draft: true as the last front matter line, nothing else changes", () => {
+  const out = setDraftFlag(POST, true);
+  assert.equal(
+    out,
+    '---\ntitle: "A"\ndate: "2026-10-01"\ntags: ["x"]\ndraft: true\n---\n\nBody $x$\n'
+  );
+});
+
+test("setDraftFlag: hide then show gives back the original bytes", () => {
+  assert.equal(setDraftFlag(setDraftFlag(POST, true), false), POST);
+  const hand =
+    "---\ntitle: 'Hand written'\ntags:\n  - a\n  - b\ndate: 2026-09-20 # when\n---\nText\n";
+  assert.equal(setDraftFlag(setDraftFlag(hand, true), false), hand);
+});
+
+test("setDraftFlag: an existing draft line is replaced or removed in place", () => {
+  const withFalse = "---\ntitle: A\ndraft: false\nexcerpt: e\n---\nT\n";
+  assert.equal(
+    setDraftFlag(withFalse, true),
+    "---\ntitle: A\ndraft: true\nexcerpt: e\n---\nT\n"
+  );
+  const withTrue =
+    "---\ntitle: A\ndraft: true # hidden for now\nexcerpt: e\n---\nT\n";
+  assert.equal(
+    setDraftFlag(withTrue, false),
+    "---\ntitle: A\nexcerpt: e\n---\nT\n"
+  );
+  assert.equal(
+    setDraftFlag(withTrue, true),
+    "---\ntitle: A\ndraft: true\nexcerpt: e\n---\nT\n"
+  );
+});
+
+test("setDraftFlag: showing a post that is not hidden returns the text as it is", () => {
+  assert.equal(setDraftFlag(POST, false), POST);
+});
+
+test("setDraftFlag: keeps CRLF line endings, a BOM and an empty block", () => {
+  const crlf = "---\r\ntitle: A\r\n---\r\nBody\r\n";
+  assert.equal(
+    setDraftFlag(crlf, true),
+    "---\r\ntitle: A\r\ndraft: true\r\n---\r\nBody\r\n"
+  );
+  assert.equal(
+    setDraftFlag("﻿---\ntitle: A\n---\nB\n", true),
+    "﻿---\ntitle: A\ndraft: true\n---\nB\n"
+  );
+  assert.equal(
+    setDraftFlag("---\n---\nB\n", true),
+    "---\ndraft: true\n---\nB\n"
+  );
+});
+
+test("setDraftFlag: body text that looks like front matter is never touched", () => {
+  const text = "---\ntitle: A\n---\nBody\n\n---\ndraft: false\n---\n";
+  assert.equal(
+    setDraftFlag(text, true),
+    "---\ntitle: A\ndraft: true\n---\nBody\n\n---\ndraft: false\n---\n"
+  );
+});
+
+test("setDraftFlag: no safe edit -> null", () => {
+  assert.equal(setDraftFlag("Just text\n", true), null);
+  assert.equal(setDraftFlag("---\ntitle: A\nno closing line\n", true), null);
+  assert.equal(setDraftFlag("---\ndraft:\n  true\n---\nT\n", true), null);
+});
+
+test("setDraftFlag result still parses, with draft true", () => {
+  assert.equal(parse(setDraftFlag(POST, true)).data.draft, true);
+  assert.equal(
+    parse(setDraftFlag(setDraftFlag(POST, true), false)).data.draft,
+    undefined
+  );
 });

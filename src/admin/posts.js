@@ -5,6 +5,10 @@ import {parse} from "./frontmatter.js";
 import {cleanTags, mapLimit, todayISO} from "./postprocess.js";
 import {newId} from "./store.js";
 
+/** Is this story kept off the site (`draft: true` in its front matter)? Drafts
+ *  saved before the switch existed keep the flag among their extra fields. */
+export const isHidden = draft => draft.hidden ?? draft.extra?.draft === true;
+
 export const slugOf = name => name.replace(/\.mdx?$/, "");
 export const extOf = name => (name.endsWith(".mdx") ? ".mdx" : ".md");
 
@@ -23,6 +27,7 @@ export async function listPublished(gh) {
       date: "",
       tags: [],
       draft: false,
+      redirectFrom: [],
       error: null
     };
     try {
@@ -33,7 +38,10 @@ export async function listPublished(gh) {
         title: String(data.title || base.title),
         date: String(data.date || ""),
         tags: Array.isArray(data.tags) ? data.tags.map(String) : [],
-        draft: data.draft === true
+        draft: data.draft === true,
+        redirectFrom: Array.isArray(data.redirect_from)
+          ? data.redirect_from.map(String)
+          : []
       };
     } catch (err) {
       return {...base, error: err.message || String(err)};
@@ -58,6 +66,7 @@ export function newDraft() {
     excerpt: "",
     tags: [],
     cover: "",
+    hidden: false,
     date: todayISO(),
     extra: {},
     body: "",
@@ -70,7 +79,8 @@ export function newDraft() {
 export async function draftFromRemote(gh, post) {
   const {text, sha} = await gh.readText(post.path);
   const {data, body} = parse(text);
-  const {title, date, excerpt, tags, cover, ...extra} = data;
+  // `draft: true` hides a post from the site; the editor shows it as a switch
+  const {title, date, excerpt, tags, cover, draft: hidden, ...extra} = data;
   return {
     id: newId(),
     kind: "edit",
@@ -82,6 +92,7 @@ export async function draftFromRemote(gh, post) {
     excerpt: String(excerpt ?? ""),
     tags: cleanTags(Array.isArray(tags) ? tags : []),
     cover: typeof cover === "string" ? cover : "",
+    hidden: hidden === true,
     date: String(date || todayISO()),
     extra,
     body,

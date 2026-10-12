@@ -27,6 +27,28 @@ export function isValidSlug(slug) {
   return typeof slug === "string" && slug.length <= 80 && SLUG_RE.test(slug);
 }
 
+// ---- changing a published post's link ------------------------------------------
+
+/** After a post moves to a new slug its pictures move with it: links into the
+ *  old picture folder (/img/blog/<old>/...) are pointed at the new one. Other
+ *  folders, including ones whose name merely starts with the old slug, stay. */
+export function rewriteImageDir(text, oldSlug, newSlug) {
+  const from = `${IMAGE_URL_BASE}/${oldSlug}/`;
+  return String(text ?? "")
+    .split(from)
+    .join(`${IMAGE_URL_BASE}/${newSlug}/`);
+}
+
+/** The post's `redirect_from` list after its link changed from oldSlug to
+ *  newSlug: the old address is added, the new one is removed (changing a link
+ *  back), earlier addresses are kept, duplicates dropped. */
+export function redirectsAfterRename(list, oldSlug, newSlug) {
+  const kept = (Array.isArray(list) ? list : list ? [list] : [])
+    .map(String)
+    .filter(s => s && s !== newSlug);
+  return [...new Set([...kept, oldSlug])].filter(s => s !== newSlug);
+}
+
 // ---- dates / tags ------------------------------------------------------------
 
 export function todayISO(now = new Date()) {

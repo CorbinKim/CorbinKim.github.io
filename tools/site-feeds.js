@@ -32,6 +32,22 @@ import {parse} from "../src/admin/frontmatter.js";
 const slugOf = file => file.replace(/\.mdx?$/, "");
 
 /** @returns {Array<{slug, ext, title, date, excerpt, tags, cover, body}>} newest first */
+// `redirect_from: [old-slug, ...]` in a post's front matter: earlier addresses of
+// the post (the editor adds the old one when a post's link is changed). Anything
+// that could not be a single path segment is ignored.
+export function cleanRedirects(value) {
+  const list = Array.isArray(value) ? value : value ? [value] : [];
+  return [
+    ...new Set(
+      list
+        .map(v => String(v).trim())
+        .filter(
+          v => v && v !== "." && v !== ".." && !/[\\/?#\u0000-\u001f]/.test(v)
+        )
+    )
+  ];
+}
+
 export function readPosts(dir) {
   if (!fs.existsSync(dir)) return [];
   const posts = [];
@@ -48,6 +64,7 @@ export function readPosts(dir) {
         excerpt: String(data.excerpt || ""),
         tags: Array.isArray(data.tags) ? data.tags.map(String) : [],
         cover: typeof data.cover === "string" ? data.cover : "",
+        redirectFrom: cleanRedirects(data.redirect_from),
         body
       });
     } catch (err) {
@@ -59,6 +76,49 @@ export function readPosts(dir) {
       new Date(b.date || 0) - new Date(a.date || 0) ||
       a.slug.localeCompare(b.slug)
   );
+}
+
+// ---- redirect pages for renamed posts --------------------------------------------
+
+/** A tiny static page at a post's former address that sends the visitor (and
+ *  search engines, through the canonical link) to the current one. GitHub Pages
+ *  cannot send real 301s, but it serves any <slug>/index.html we write. */
+export function redirectPage(post, {siteUrl}) {
+  const target = `/blog/${encodeURIComponent(post.slug)}/`;
+  const abs = siteUrl + target;
+  return `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Redirecting…</title>
+<meta name="robots" content="noindex" />
+<link rel="canonical" href="${esc(abs)}" />
+<meta http-equiv="refresh" content="0; url=${esc(target)}" />
+<script>location.replace(${JSON.stringify(target).replace(
+    /</g,
+    "\\u003c"
+  )});</script>
+</head>
+<body>
+<p>This post moved to <a href="${esc(target)}">${esc(abs)}</a>.</p>
+</body>
+</html>
+`;
+}
+
+/** Former addresses -> the page to write for each. A real post's own address
+ *  always wins, and when two posts claim the same old address the newer post
+ *  (the list is newest first) keeps it. */
+export function redirectPages(posts) {
+  const taken = new Set(posts.map(p => p.slug));
+  const out = new Map();
+  for (const post of posts) {
+    for (const from of post.redirectFrom ?? []) {
+      if (taken.has(from) || out.has(from)) continue;
+      out.set(from, post);
+    }
+  }
+  return out;
 }
 
 // ---- escaping ---------------------------------------------------------------------
@@ -324,11 +384,16 @@ export function siteFeeds(options) {
           `blog/${post.slug}/index.html`,
           postPage(shell, post, {siteUrl, siteName, defaultImage})
         );
+      const moved = redirectPages(posts);
+      for (const [from, post] of moved)
+        out(`blog/${from}/index.html`, redirectPage(post, {siteUrl}));
       out("feed.xml", rssXml(posts, {siteUrl, siteName, siteDescription}));
       out("sitemap.xml", sitemapXml(posts, {siteUrl}));
       out("search-index.json", JSON.stringify(searchIndex(posts)));
       console.log(
-        `[site-feeds] ${posts.length} post page(s), feed.xml, sitemap.xml, search-index.json`
+        `[site-feeds] ${posts.length} post page(s)${
+          moved.size ? `, ${moved.size} redirect(s)` : ""
+        }, feed.xml, sitemap.xml, search-index.json`
       );
     }
   };

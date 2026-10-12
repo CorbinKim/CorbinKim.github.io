@@ -368,4 +368,42 @@ export function parse(input) {
   return {data, body};
 }
 
+/**
+ * Set or clear `draft: true` in a post's front matter by touching a single line
+ * (added, replaced or removed); every other byte stays as it was written, so
+ * hiding and showing a post again gives back the original file.
+ * @returns {string|null} the new text, or null when the front matter cannot be
+ *   edited safely (none at all, never closed, or a `draft` value that spans
+ *   several lines)
+ */
+export function setDraftFlag(input, hidden) {
+  const src = String(input ?? "");
+  const open = /^\ufeff?---[ \t]*\r?\n/.exec(src);
+  if (!open) return null;
+  const rest = src.slice(open[0].length);
+  const close = /^(?:---|\.\.\.)[ \t]*(?:\r?\n|$)/m.exec(rest);
+  if (!close) return null;
+  const eol = /\r\n/.test(open[0]) ? "\r\n" : "\n";
+  const lines = rest.slice(0, close.index).split(/(?<=\n)/);
+  if (lines.length === 1 && lines[0] === "") lines.pop();
+
+  const at = lines.findIndex(l => /^["']?draft["']?[ \t]*:/.test(l));
+  if (at >= 0 && /^[ \t]+\S/.test(lines[at + 1] ?? "")) return null; // multi-line value
+  if (hidden) {
+    if (at >= 0) {
+      const had = /\r?\n$/.exec(lines[at]);
+      lines[at] = "draft: true" + (had ? had[0] : eol);
+    } else {
+      if (lines.length && !/\n$/.test(lines[lines.length - 1]))
+        lines[lines.length - 1] += eol;
+      lines.push("draft: true" + eol);
+    }
+  } else if (at >= 0) {
+    lines.splice(at, 1);
+  } else {
+    return src;
+  }
+  return open[0] + lines.join("") + rest.slice(close.index);
+}
+
 export default {parse, stringify};

@@ -117,6 +117,25 @@ Good to know:
   button (also in the open post's ⋯ menu as _Delete post from the site_): after
   a confirmation it removes the post and its images in one commit (it stays in
   git history, so it can be restored).
+- **Change a post's link.** The link (slug) is chosen when a story is first
+  published. When you **Update** a post the dialog shows it in an editable field
+  (**Use the title for the link** fills it from the current title). Changing it
+  moves the post file and its picture folder (`public/img/blog/<slug>/`) in the
+  same commit, points the post's picture links at the new folder and records the
+  old address in `redirect_from` in the front matter. The build then writes a
+  small page at every old address that sends visitors (and, through its
+  canonical link, search engines) to the new one, so old links keep working.
+  GitHub Pages cannot send real 301 redirects, so this is a page-level redirect.
+  Changing the link again keeps every earlier address; going back to an earlier
+  one removes it from the list.
+- **Hide a post instead of deleting it.** The **Hide from the site** switch under
+  the tags (or **Hide…** on a row of the Published list, **Show…** to undo it)
+  sets `draft: true` in the post's front matter: the site then leaves it out of
+  the Writing list, its own page, the feed, the sitemap and search. Hiding from
+  the list changes that one line only, so showing the post again gives back the
+  exact original file. A new story can be published hidden too. This is not a
+  privacy setting: the text stays in the public repository (and in the site's
+  JavaScript), so keep anything secret out of it.
 
 ### What the site adds around a post
 

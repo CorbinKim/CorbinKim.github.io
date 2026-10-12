@@ -5,7 +5,7 @@ import {pullRemoteDraft} from "../syncops.js";
 import {deleteDraft, listDrafts, saveDraft} from "../store.js";
 import {draftFromRemote, listPublished, newDraft} from "../posts.js";
 import {brandLink, topBar} from "../ui.js";
-import {openDelete} from "./publish.js";
+import {openDelete, openVisibility} from "./publish.js";
 
 const DOCS_URL =
   "https://github.com/CorbinKim/CorbinKim.github.io/blob/main/docs/draft-sync.md";
@@ -278,6 +278,25 @@ export function storiesView(ctx) {
     }
   }
 
+  /** Hide a published post from the site (or show it again) without opening it. */
+  async function toggleHidden(post, button) {
+    const existing = listDrafts().find(
+      d => d.kind === "edit" && d.path === post.path
+    );
+    if (existing) {
+      // the open copy would still carry the old setting and undo this change
+      ctx.toast(
+        "You have unpublished edits to this post. Open it and use “Hide from the site” there, so nothing is overwritten."
+      );
+      return;
+    }
+    const {changed} = await openVisibility(ctx, post, !post.draft, {
+      returnFocus: button,
+      onCommitted: () => ctx.invalidatePublished()
+    });
+    if (changed && !destroyed) load(true);
+  }
+
   /** Delete a published post (and its pictures) from the site without opening it. */
   async function deletePublished(post, button) {
     // unpublished edits of this post kept in this browser go with it
@@ -352,15 +371,31 @@ export function storiesView(ctx) {
                 p.error ? ` · ⚠ ${p.error}` : ""
               )
             ),
+            // a hidden post has no page on the site
+            p.draft
+              ? null
+              : h(
+                  "a",
+                  {
+                    class: "btn btn-quiet",
+                    href: `${SITE_URL}/blog/${encodeURIComponent(p.slug)}`,
+                    target: "_blank",
+                    rel: "noopener noreferrer"
+                  },
+                  "View ↗"
+                ),
             h(
-              "a",
+              "button",
               {
                 class: "btn btn-quiet",
-                href: `${SITE_URL}/blog/${encodeURIComponent(p.slug)}`,
-                target: "_blank",
-                rel: "noopener noreferrer"
+                type: "button",
+                title: p.draft
+                  ? "Show this post on the site again"
+                  : "Hide this post from the site (keeps it as a draft)",
+                "aria-label": `${p.draft ? "Show" : "Hide"} ${p.title}`,
+                onclick: e => toggleHidden(p, e.currentTarget)
               },
-              "View ↗"
+              p.draft ? "Show…" : "Hide…"
             ),
             h(
               "button",

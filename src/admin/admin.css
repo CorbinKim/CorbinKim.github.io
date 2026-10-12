@@ -384,6 +384,29 @@ details.howto summary {
   padding-bottom: 18px;
   border-bottom: 1px solid var(--hairline-soft);
 }
+.hide-switch {
+  display: flex;
+  flex: 1 0 100%;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.hide-box {
+  margin: 0;
+  accent-color: var(--navy);
+  align-self: center;
+}
+.hide-label {
+  font-weight: 500;
+  color: var(--ink-deep);
+}
+.hide-help {
+  flex: 1 1 18rem;
+  font-size: 13px;
+  color: var(--steel);
+}
 .meta .input {
   width: auto;
   padding: 5px 8px;

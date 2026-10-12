@@ -19,6 +19,7 @@ import {createToolbar} from "../toolbar.js";
 import {topBar} from "../ui.js";
 import {openDelete, openPublish} from "./publish.js";
 import {isPlainMdx} from "../mdxcheck.js";
+import {isHidden} from "../posts.js";
 
 // ---- tags --------------------------------------------------------------------------
 
@@ -191,6 +192,25 @@ export async function writeView(ctx, id) {
     onChange: schedule,
     suggestions: ctx.knownTags()
   });
+  // "Hide from the site": `draft: true` in the front matter. The site then leaves
+  // the story out of its list, feed, sitemap and search and serves no page for it.
+  const hiddenInput = h("input", {
+    type: "checkbox",
+    id: "story-hidden",
+    class: "hide-box"
+  });
+  hiddenInput.checked = isHidden(draft);
+  const hideSwitch = h(
+    "label",
+    {class: "hide-switch", for: "story-hidden"},
+    hiddenInput,
+    h("span", {class: "hide-label"}, "Hide from the site"),
+    h(
+      "span",
+      {class: "hide-help"},
+      "Not listed and no page of its own. The text still sits in the public GitHub repository, so this is not a privacy setting."
+    )
+  );
   // Cover picture: shown on the post, on its card, and in link previews.
   const coverFile = h("input", {
     type: "file",
@@ -360,6 +380,7 @@ export async function writeView(ctx, id) {
     draft.excerpt = subtitle.value;
     draft.date = dateInput.value; // empty stays empty: Publish asks for a date
     draft.tags = tagBox.get();
+    draft.hidden = hiddenInput.checked;
     draft.body = currentBody();
     draft.mode = mode;
   }
@@ -866,7 +887,8 @@ export async function writeView(ctx, id) {
         date: draft.date,
         excerpt: draft.excerpt.trim(),
         tags: cleanTags(draft.tags),
-        cover: draft.cover || undefined
+        cover: draft.cover || undefined,
+        draft: isHidden(draft) ? true : undefined
       },
       body: draft.body
     });
@@ -958,6 +980,7 @@ export async function writeView(ctx, id) {
     schedule();
   });
   dateInput.addEventListener("change", schedule);
+  hiddenInput.addEventListener("change", schedule);
 
   title.addEventListener("keydown", e => {
     if (e.key === "Enter" && !isImeEnter(e)) {
@@ -1034,7 +1057,7 @@ export async function writeView(ctx, id) {
           : null,
         title,
         subtitle,
-        h("div", {class: "meta"}, dateInput, tagBox.el),
+        h("div", {class: "meta"}, dateInput, tagBox.el, hideSwitch),
         coverBox,
         coverFile,
         toolbar.el,

@@ -2,7 +2,7 @@
 // follow the Pages deploy workflow until the site is live.
 import {h, append, clear} from "../dom.js";
 import {IMAGES_DIR, POSTS_DIR, SITE_URL} from "../config.js";
-import {stringify} from "../frontmatter.js";
+import {setDraftFlag, stringify} from "../frontmatter.js";
 import {
   cleanTags,
   finalizeBody,
@@ -10,8 +10,12 @@ import {
   finalizeCover,
   isBlankBody,
   isValidSlug,
+  mapLimit,
+  redirectsAfterRename,
+  rewriteImageDir,
   suggestSlug
 } from "../postprocess.js";
+import {isHidden} from "../posts.js";
 import {deleteDraft, listImages} from "../store.js";
 import {createDialog} from "../ui.js";
 
@@ -31,8 +35,12 @@ function oneLine(text, max = 72) {
   return s.length > max ? s.slice(0, max - 1) + "…" : s;
 }
 
-/** The files one publish commits: the post, plus every image it references. */
-async function buildFiles(draft, slug) {
+/** The files one publish commits: the post, plus every image it references.
+ *  When an edited post gets a new slug (its link changes) the commit also moves
+ *  the post file and its picture folder, and the old address is kept as a
+ *  `redirect_from` entry so old links still reach the post. */
+async function buildFiles(draft, slug, gh) {
+  const renamed = draft.kind === "edit" && !!draft.slug && slug !== draft.slug;
   const names = draftImageNames(draft);
   const stored = new Map(
     (await listImages(draft.id)).map(i => [i.name, i.blob])
@@ -45,26 +53,58 @@ async function buildFiles(draft, slug) {
       )}. ` + "Delete them from the story and insert them again."
     );
   }
-  const path = draft.path || `${POSTS_DIR}/${slug}${draft.ext}`;
+  const path =
+    renamed || !draft.path ? `${POSTS_DIR}/${slug}${draft.ext}` : draft.path;
+
+  let body = finalizeBody(draft.body, slug);
+  let cover = finalizeCover(draft.cover, slug);
+  const extra = {...draft.extra};
+  const deletes = [];
+  const moved = new Map(); // new path -> bytes of a picture that moves with the post
+  if (renamed) {
+    body = rewriteImageDir(body, draft.slug, slug);
+    cover = rewriteImageDir(cover, draft.slug, slug);
+    extra.redirect_from = redirectsAfterRename(
+      extra.redirect_from,
+      draft.slug,
+      slug
+    );
+    deletes.push(draft.path);
+    const oldDir = `${IMAGES_DIR}/${draft.slug}`;
+    const pictures = await gh.listTree(oldDir);
+    await mapLimit(pictures, 4, async f => {
+      const {bytes} = await gh.readBytes(f.path);
+      moved.set(
+        `${IMAGES_DIR}/${slug}/${f.path.slice(oldDir.length + 1)}`,
+        bytes
+      );
+    });
+    deletes.push(...pictures.map(f => f.path));
+  }
+
   const text = stringify({
     data: {
-      ...draft.extra,
+      ...extra,
       title: draft.title.trim(),
       date: draft.date,
       excerpt: draft.excerpt.trim(),
       tags: cleanTags(draft.tags),
-      cover: finalizeCover(draft.cover, slug) || undefined
+      cover: cover || undefined,
+      draft: isHidden(draft) ? true : undefined
     },
-    body: finalizeBody(draft.body, slug)
+    body
   });
   const writes = [{path, text}];
   for (const name of names) {
+    const target = `${IMAGES_DIR}/${slug}/${name}`;
+    moved.delete(target); // a fresh upload of the same name wins
     writes.push({
-      path: `${IMAGES_DIR}/${slug}/${name}`,
+      path: target,
       bytes: new Uint8Array(await stored.get(name).arrayBuffer())
     });
   }
-  return {path, writes};
+  for (const [target, bytes] of moved) writes.push({path: target, bytes});
+  return {path, writes, deletes, renamed};
 }
 
 function problemsWith(draft) {
@@ -154,13 +194,14 @@ async function trackDeploy(gh, commitSha, progress, signal) {
   }
 }
 
-function resultNotice(outcome, {liveUrl, verb}) {
+function resultNotice(outcome, {liveUrl, verb, successText}) {
   switch (outcome.state) {
     case "success":
       return h(
         "p",
         {class: "notice"},
-        `${verb} and live. Browsers cache the site for up to 10 minutes; this link skips that.`
+        successText ||
+          `${verb} and live. Browsers cache the site for up to 10 minutes; this link skips that.`
       );
     case "failure":
       return h(
@@ -251,12 +292,27 @@ export function openPublish(ctx, draft, {onCommitted, returnFocus}) {
         class: "input",
         id: "slug",
         value: chosenSlug,
-        readOnly: isEdit,
         spellcheck: false,
         autocapitalize: "off",
         autocomplete: "off"
       });
       const slugMsg = h("p", {class: "mono muted"});
+      const renameNote = h("p", {class: "notice hidden"});
+      const useTitle = isEdit
+        ? h(
+            "button",
+            {
+              class: "btn btn-quiet",
+              type: "button",
+              onclick: () => {
+                slugInput.value = suggestSlug(draft.title, draft.date);
+                refresh();
+                slugInput.focus();
+              }
+            },
+            "Use the title for the link"
+          )
+        : null;
       const filesHost = h("ul", {class: "files"});
       const go = h(
         "button",
@@ -273,9 +329,26 @@ export function openPublish(ctx, draft, {onCommitted, returnFocus}) {
           ? `${SITE_URL.replace("https://", "")}/blog/${slug}`
           : "Use lowercase letters, numbers and single hyphens (a-z, 0-9, -).";
         slugMsg.style.color = ok ? "" : "var(--danger)";
+        const renamed = isEdit && ok && slug !== draft.slug;
+        renameNote.classList.toggle("hidden", !renamed);
+        renameNote.textContent = renamed
+          ? `The link changes from /blog/${draft.slug} to /blog/${slug}. The post and its pictures move to the new name, and the old link keeps working: visitors who open it are sent to the new one.`
+          : "";
         clear(filesHost);
-        const path = draft.path || `${POSTS_DIR}/${slug || "…"}${draft.ext}`;
-        filesHost.append(h("li", null, path));
+        const path = renamed
+          ? `${POSTS_DIR}/${slug}${draft.ext}`
+          : draft.path || `${POSTS_DIR}/${slug || "…"}${draft.ext}`;
+        filesHost.append(
+          h("li", null, renamed ? `${draft.path} → ${path}` : path)
+        );
+        if (renamed)
+          filesHost.append(
+            h(
+              "li",
+              null,
+              `${IMAGES_DIR}/${draft.slug}/ → ${IMAGES_DIR}/${slug}/ (its pictures)`
+            )
+          );
         for (const n of names)
           filesHost.append(h("li", null, `${IMAGES_DIR}/${slug || "…"}/${n}`));
         go.disabled = !ok || problems.length > 0;
@@ -289,6 +362,13 @@ export function openPublish(ctx, draft, {onCommitted, returnFocus}) {
           {class: "muted"},
           `One commit to ${gh.branch} on ${gh.fullName}. The site rebuilds automatically, about a minute.`
         ),
+        isHidden(draft)
+          ? h(
+              "p",
+              {class: "notice"},
+              "This story is set to stay hidden: it is saved to GitHub but not listed or reachable on the site until you switch it on again."
+            )
+          : null,
         problems.length
           ? h(
               "ul",
@@ -299,10 +379,12 @@ export function openPublish(ctx, draft, {onCommitted, returnFocus}) {
         h(
           "label",
           {class: "field", for: "slug"},
-          h("span", null, isEdit ? "Slug (fixed)" : "Slug (URL)"),
+          h("span", null, isEdit ? "Link (slug)" : "Slug (URL)"),
           slugInput
         ),
         slugMsg,
+        useTitle,
+        renameNote,
         filesHost
       ]);
       dlg.actions.append(closeButton("Cancel"), go);
@@ -335,12 +417,13 @@ export function openPublish(ctx, draft, {onCommitted, returnFocus}) {
       progress.set("commit", "active");
 
       let commitSha = null;
+      let movedFrom = ""; // the old slug when this publish changed the post's link
       try {
-        const {path, writes} = await buildFiles(draft, slug);
+        const {writes, deletes, renamed} = await buildFiles(draft, slug, gh);
 
         // Compare with what is on GitHub right now (one cheap directory read).
         const entries = await gh.listDir(POSTS_DIR, {missingOk: true});
-        if (!isEdit) {
+        if (!isEdit || renamed) {
           if (
             entries.some(
               e => e.name === `${slug}.md` || e.name === `${slug}.mdx`
@@ -349,8 +432,20 @@ export function openPublish(ctx, draft, {onCommitted, returnFocus}) {
             throw new UserError(
               `A post called “${slug}” already exists. Choose a different slug.`
             );
-        } else {
-          const remote = entries.find(e => e.path === path);
+        }
+        if (renamed) {
+          const known = await ctx.getPublished().catch(() => []);
+          if (
+            known.some(
+              p => p.slug !== draft.slug && p.redirectFrom?.includes(slug)
+            )
+          )
+            throw new UserError(
+              `“${slug}” is an earlier link of another post, which would stop working. Choose a different slug.`
+            );
+        }
+        if (isEdit) {
+          const remote = entries.find(e => e.path === draft.path);
           if (remote && remote.sha !== draft.baseSha) {
             const overwrite = confirm(
               "This post was changed on GitHub after you opened it here.\n\nOverwrite those changes with your version?"
@@ -362,8 +457,9 @@ export function openPublish(ctx, draft, {onCommitted, returnFocus}) {
 
         const message = `${isEdit ? "Update" : "Publish"}: ${oneLine(
           draft.title
-        )}`;
-        const res = await gh.commitFiles({message, writes});
+        )}${renamed ? ` (link: ${draft.slug} → ${slug})` : ""}`;
+        const res = await gh.commitFiles({message, writes, deletes});
+        movedFrom = renamed ? draft.slug : "";
         published = true;
         onCommitted?.();
         await deleteDraft(draft.id);
@@ -406,10 +502,28 @@ export function openPublish(ctx, draft, {onCommitted, returnFocus}) {
       dlg.setTitle(
         outcome.state === "failure" ? "Saved, build failed" : `${verb}`
       );
-      const notice = resultNotice(outcome, {liveUrl, verb});
+      const hidden = isHidden(draft);
+      const notice = resultNotice(outcome, {
+        liveUrl,
+        verb,
+        successText: hidden
+          ? `${verb}. The story is hidden, so it is not shown on the site.`
+          : undefined
+      });
       if (notice) dlg.body.append(notice);
+      if (movedFrom && !hidden && outcome.state === "success")
+        dlg.body.append(
+          h(
+            "p",
+            {class: "muted"},
+            `The old link /blog/${movedFrom} now forwards to /blog/${slug}.`
+          )
+        );
       dlg.actions.append(closeButton("Done"));
-      if (outcome.state === "success" || outcome.state === "cancelled") {
+      if (
+        !hidden &&
+        (outcome.state === "success" || outcome.state === "cancelled")
+      ) {
         dlg.actions.append(
           h(
             "a",
@@ -534,6 +648,150 @@ export function openDelete(ctx, draft, {onCommitted, returnFocus}) {
       clear(dlg.actions);
       dlg.setTitle("Deleted");
       const notice = resultNotice(outcome, {verb: "Deleted"});
+      if (notice) dlg.body.append(notice);
+      dlg.actions.append(
+        h(
+          "button",
+          {class: "btn btn-primary", type: "button", onclick: dlg.close},
+          "Done"
+        )
+      );
+    });
+  });
+}
+
+// ---- hide / show --------------------------------------------------------------------------
+
+/** Hide a published post from the site (`draft: true`) or show it again, by
+ *  changing one front matter line and committing just that file.
+ *  @returns {Promise<{changed: boolean}>} */
+export function openVisibility(ctx, post, hidden, {onCommitted, returnFocus}) {
+  return new Promise(resolve => {
+    const gh = ctx.gh;
+    const ac = new AbortController();
+    let running = false;
+    let changed = false;
+    const verb = hidden ? "Hide" : "Show";
+
+    const dlg = createDialog({
+      title: hidden ? "Hide post from the site" : "Show post on the site",
+      returnFocus,
+      canClose: () => !running,
+      onClose: () => {
+        ac.abort();
+        resolve({changed});
+      }
+    });
+
+    const cancel = h(
+      "button",
+      {class: "btn", type: "button", onclick: dlg.close},
+      "Cancel"
+    );
+    const go = h(
+      "button",
+      {class: "btn btn-primary", type: "button"},
+      hidden ? "Hide post" : "Show post"
+    );
+    dlg.body.append(
+      h(
+        "p",
+        null,
+        hidden
+          ? [
+              h("strong", null, post.title || post.slug),
+              " will disappear from the Writing list, its page stops working, and it leaves the feed, the sitemap and search. "
+            ]
+          : [
+              h("strong", null, post.title || post.slug),
+              " will be listed on the site again, with its page, feed entry and search. "
+            ],
+        hidden
+          ? "This is not a privacy setting: the text stays in the public GitHub repository. You can show it again at any time."
+          : ""
+      )
+    );
+    dlg.actions.append(cancel, go);
+
+    go.addEventListener("click", async () => {
+      running = true;
+      clear(dlg.body);
+      clear(dlg.actions);
+      dlg.setTitle(hidden ? "Hiding…" : "Showing…");
+      const progress = progressList([
+        ["commit", "Saving to GitHub"],
+        ["build", "Rebuilding the site"],
+        ["live", "Live"]
+      ]);
+      dlg.body.append(progress.el);
+      progress.set("commit", "active");
+      let commitSha;
+      try {
+        const {text} = await gh.readText(post.path);
+        const next = setDraftFlag(text, hidden);
+        if (next === null) {
+          throw new UserError(
+            "The front matter of this post cannot be edited automatically. Open the post and use its switch instead."
+          );
+        }
+        if (next === text) {
+          progress.set(
+            "commit",
+            "done",
+            "already " + (hidden ? "hidden" : "shown")
+          );
+          progress.set("build", "done", "nothing to build");
+          progress.set("live", "done");
+          running = false;
+          dlg.actions.append(
+            h(
+              "button",
+              {class: "btn", type: "button", onclick: dlg.close},
+              "Done"
+            )
+          );
+          return;
+        }
+        const res = await gh.commitFiles({
+          message: `${verb}: ${oneLine(post.title || post.slug)}`,
+          writes: [{path: post.path, text: next}]
+        });
+        changed = true;
+        onCommitted?.();
+        commitSha = res.commitSha;
+        progress.set("commit", "done", commitSha.slice(0, 7));
+      } catch (err) {
+        running = false;
+        progress.set("commit", "fail");
+        dlg.body.append(h("p", {class: "error"}, err.message || String(err)));
+        dlg.actions.append(
+          h(
+            "button",
+            {class: "btn", type: "button", onclick: dlg.close},
+            "Close"
+          )
+        );
+        return;
+      }
+      running = false;
+      dlg.setTitle(hidden ? "Hidden, rebuilding…" : "Shown, rebuilding…");
+      dlg.actions.append(
+        h(
+          "button",
+          {class: "btn", type: "button", onclick: dlg.close},
+          "Close (keep building)"
+        )
+      );
+      const outcome = await trackDeploy(gh, commitSha, progress, ac.signal);
+      if (outcome.state === "aborted") return;
+      clear(dlg.actions);
+      dlg.setTitle(hidden ? "Hidden" : "Shown");
+      const notice = resultNotice(outcome, {
+        verb: hidden ? "Hidden" : "Shown",
+        successText: hidden
+          ? "Hidden: the post is no longer on the live site. Browsers cache the site for up to 10 minutes."
+          : "Shown: the post is live again. Browsers cache the site for up to 10 minutes."
+      });
       if (notice) dlg.body.append(notice);
       dlg.actions.append(
         h(

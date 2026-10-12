@@ -18,11 +18,13 @@ import {
   isBlankBody,
   isValidSlug,
   mapLimit,
+  redirectsAfterRename,
   referencedDraftImages,
+  rewriteImageDir,
   slugify,
   suggestSlug,
-  todayISO,
-  toSiteMd
+  toSiteMd,
+  todayISO
 } from "../src/admin/postprocess.js";
 import {parse, stringify} from "../src/admin/frontmatter.js";
 
@@ -214,4 +216,45 @@ test("end to end: Crepe-style output -> post file -> site HTML", async () => {
   assert.doesNotMatch(html, /__draft__|1\.00|<br/);
   assert.match(html, /<li>one<\/li>\s*<li>two<\/li>/);
   assert.ok(body.startsWith("## Method"));
+});
+
+// ---- changing a published post's link ----------------------------------------------
+
+test("rewriteImageDir moves links into the new picture folder only", () => {
+  const body = [
+    "![](/img/blog/old-name/a.png#w=50)",
+    "![](/img/blog/old-name-2/b.png)",
+    "![](/img/blog/other/old-name/c.png)",
+    "![](/img/blog/09-21-2026/fig_1.png)",
+    "text /img/blog/old-name/x.jpg again"
+  ].join("\n");
+  assert.equal(
+    rewriteImageDir(body, "old-name", "new-name"),
+    [
+      "![](/img/blog/new-name/a.png#w=50)",
+      "![](/img/blog/old-name-2/b.png)",
+      "![](/img/blog/other/old-name/c.png)",
+      "![](/img/blog/09-21-2026/fig_1.png)",
+      "text /img/blog/new-name/x.jpg again"
+    ].join("\n")
+  );
+  assert.equal(rewriteImageDir("", "a", "b"), "");
+  assert.equal(rewriteImageDir(undefined, "a", "b"), "");
+});
+
+test("redirectsAfterRename keeps earlier addresses and never lists the current one", () => {
+  assert.deepEqual(redirectsAfterRename(undefined, "old", "new"), ["old"]);
+  assert.deepEqual(redirectsAfterRename(["first"], "second", "third"), [
+    "first",
+    "second"
+  ]);
+  assert.deepEqual(
+    redirectsAfterRename(["first", "second"], "third", "first"),
+    ["second", "third"]
+  );
+  assert.deepEqual(redirectsAfterRename(["old", "old"], "old", "new"), ["old"]);
+  assert.deepEqual(redirectsAfterRename("single", "old", "new"), [
+    "single",
+    "old"
+  ]);
 });
