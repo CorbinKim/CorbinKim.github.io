@@ -73,8 +73,11 @@ const cdata = s =>
 
 export const absolute = (siteUrl, p) =>
   /^https?:\/\//i.test(p) ? p : siteUrl + (p.startsWith("/") ? p : "/" + p);
+// With the trailing slash: GitHub Pages serves each post as a directory
+// (blog/<slug>/index.html) and 301-redirects the slash-less address to it, so the
+// slash form is the one canonical URL.
 const postUrl = (siteUrl, slug) =>
-  `${siteUrl}/blog/${encodeURIComponent(slug)}`;
+  `${siteUrl}/blog/${encodeURIComponent(slug)}/`;
 const rfc822 = date => {
   const d = new Date(
     /^\d{4}-\d{2}-\d{2}$/.test(date) ? date + "T12:00:00Z" : date

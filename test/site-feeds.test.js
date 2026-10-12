@@ -97,7 +97,7 @@ test("postPage: replaces the site's head tags with the post's, keeps the rest", 
   );
   assert.match(
     html,
-    /<meta property="og:url" content="https:\/\/example.github.io\/blog\/newer" \/>/
+    /<meta property="og:url" content="https:\/\/example.github.io\/blog\/newer\/" \/>/
   );
   assert.match(
     html,
@@ -109,7 +109,7 @@ test("postPage: replaces the site's head tags with the post's, keeps the rest", 
   );
   assert.match(
     html,
-    /<link rel="canonical" href="https:\/\/example.github.io\/blog\/newer" \/>/
+    /<link rel="canonical" href="https:\/\/example.github.io\/blog\/newer\/" \/>/
   );
   assert.match(html, /<meta property="article:tag" content="ECE-591" \/>/);
   // the site-level tags are gone (one title, one description, no stale og:title "Site")
@@ -159,7 +159,9 @@ test("rssXml: items newest first, absolute links, full text only for .md", () =>
   assert.match(xml, /<title>Corbin Kim<\/title>/);
   assert.match(xml, /<description>Notes &amp; papers<\/description>/);
   const order = [
-    ...xml.matchAll(/<link>https:\/\/example.github.io\/blog\/([^<]+)<\/link>/g)
+    ...xml.matchAll(
+      /<link>https:\/\/example.github.io\/blog\/([^</]+)\/<\/link>/g
+    )
   ].map(m => m[1]);
   assert.deepEqual(order, ["newer", "hand", "older"]);
   assert.match(xml, /<pubDate>Thu, 01 Oct 2026 12:00:00 GMT<\/pubDate>/);
@@ -210,7 +212,7 @@ test("sitemapXml lists the home page and every post", () => {
   assert.match(xml, /<loc>https:\/\/example.github.io\/<\/loc>/);
   assert.match(
     xml,
-    /<loc>https:\/\/example.github.io\/blog\/newer<\/loc><lastmod>2026-10-01<\/lastmod>/
+    /<loc>https:\/\/example.github.io\/blog\/newer\/<\/loc><lastmod>2026-10-01<\/lastmod>/
   );
 });
 
@@ -225,7 +227,7 @@ test("slugs with spaces are percent-encoded in URLs", () => {
     cover: "",
     body: ""
   };
-  assert.match(sitemapXml([post], SITE), /blog\/copy%20of%20post</);
+  assert.match(sitemapXml([post], SITE), /blog\/copy%20of%20post\/</);
 });
 
 test("searchIndex carries searchable plain text", () => {
