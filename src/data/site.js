@@ -9,6 +9,15 @@ export const site = {
   url: "https://corbinkim.github.io"
 };
 
+// Comments under each post (optional). Uses giscus, which stores them as GitHub
+// Discussions of this repository. Leave `null` to show no comments. To turn them
+// on: enable Discussions in the repo settings, install https://github.com/apps/giscus
+// on the repo, then fill in the four values that https://giscus.app shows you.
+// Note: giscus' script then runs on every post page, on the same origin as the
+// editor (see docs/editor-hosting.md for hosting the editor elsewhere).
+export const comments = null;
+// export const comments = {repo: "CorbinKim/CorbinKim.github.io", repoId: "...", category: "Comments", categoryId: "..."};
+
 export const researchInterests = [
   {
     name: "Open RAN and RICs",

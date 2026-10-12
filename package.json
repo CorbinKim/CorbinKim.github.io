@@ -5,28 +5,38 @@
   "private": true,
   "type": "module",
   "dependencies": {
+    "@milkdown/crepe": "7.22.3",
+    "@milkdown/kit": "7.22.3",
+    "katex": "^0.16.11",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-router-dom": "^6.28.0",
-    "sass": "^1.32.8",
-    "katex": "^0.16.11"
+    "sass": "^1.32.8"
   },
   "scripts": {
     "dev": "vite",
     "build": "vite build && cp build/index.html build/404.html",
     "preview": "vite preview",
+    "build:admin": "vite build --config vite.admin.config.js",
+    "preview:admin": "vite preview --config vite.admin.config.js",
+    "test": "node --test test/",
     "format": "prettier --write \"./**/*.{js,jsx,css,json,scss}\"",
     "check-format": "prettier -c \"./**/*.{js,jsx,css,json,scss}\""
   },
   "devDependencies": {
     "@mdx-js/rollup": "^3.1.0",
     "@vitejs/plugin-react": "^6.0.2",
+    "mdast-util-to-string": "^4.0.0",
     "prettier": "^2.8.8",
     "rehype-katex": "^7.0.1",
+    "rehype-stringify": "^10.0.1",
     "remark-frontmatter": "^5.0.0",
     "remark-gfm": "^4.0.0",
     "remark-math": "^6.0.0",
     "remark-mdx-frontmatter": "^5.0.0",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.2",
+    "unified": "^11.0.5",
     "vite": "^8.0.16"
   }
 }

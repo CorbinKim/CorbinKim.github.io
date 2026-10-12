@@ -1,0 +1,360 @@
+/* Skin for Crepe so the editor looks like the published article
+   (src/blog/Blog.scss: Montserrat 17px/1.7, navy accent, squared corners).
+   Loaded AFTER Crepe's own theme CSS, so equal-specificity rules here win. */
+
+.milkdown {
+  --crepe-color-background: #fff;
+  --crepe-color-on-background: #1c1e21;
+  --crepe-color-primary: #14275a;
+  --crepe-color-selected: rgba(20, 39, 90, 0.12);
+  --crepe-color-inline-code: #14275a;
+  --crepe-font-title: var(--admin-font);
+  --crepe-font-default: var(--admin-font);
+  --crepe-font-code: var(--admin-mono);
+  /* Do NOT raise --crepe-base-font-size: menus size off it. */
+}
+
+/* ProseMirror ships "padding: 60px 120px"; the page column already centres
+   and caps the width. */
+.milkdown .ProseMirror {
+  padding: 0;
+  font-family: var(--admin-font);
+  font-size: 17px;
+  line-height: 1.7;
+  letter-spacing: -0.16px;
+  color: #1c1e21;
+}
+.milkdown .ProseMirror p {
+  margin: 1.1em 0;
+  padding: 0;
+  line-height: 1.7;
+}
+.milkdown .ProseMirror h1,
+.milkdown .ProseMirror h2,
+.milkdown .ProseMirror h3,
+.milkdown .ProseMirror h4,
+.milkdown .ProseMirror h5,
+.milkdown .ProseMirror h6 {
+  font-family: var(--admin-font);
+  font-weight: 500;
+  line-height: 1.3;
+  color: #0a1317;
+  margin: 2.2em 0 0.6em;
+}
+.milkdown .ProseMirror h1 {
+  font-size: 1.7em;
+}
+.milkdown .ProseMirror h2 {
+  font-size: 1.5em;
+}
+.milkdown .ProseMirror h3 {
+  font-size: 1.2em;
+}
+.milkdown .ProseMirror h4 {
+  font-size: 1.05em;
+}
+.milkdown .ProseMirror a {
+  color: #14275a;
+  font-weight: 700;
+  text-decoration: none;
+}
+.milkdown .ProseMirror blockquote {
+  margin: 1.5em 0;
+  padding: 0.25em 1.25em;
+  border-left: 0.25rem solid #14275a;
+  color: #4b4c4f;
+}
+.milkdown .ProseMirror code {
+  font-family: var(--admin-mono);
+  font-size: 0.85em;
+}
+.milkdown .ProseMirror hr {
+  border: 0;
+  border-top: 1px solid #dee3e9;
+  margin: 2.5em 0;
+}
+
+/* Tables follow the article table look. */
+.milkdown .ProseMirror table {
+  font-size: 0.92em;
+}
+
+/* Images: hairline border like the article; the figure caption is mono. */
+.milkdown .milkdown-image-block img {
+  border: 1px solid #dee3e9;
+}
+.milkdown .milkdown-image-block .caption-input {
+  font-family: var(--admin-mono);
+  font-size: 0.85em;
+  color: #5d6c7b;
+  text-align: center;
+}
+/* the vertical resize handle only changes a "ratio" the site ignores */
+.milkdown .milkdown-image-block .image-resize-handle {
+  display: none;
+}
+
+/* Plain <li> lists (CrepeFeature.ListItem is off, see editor.js). Milkdown puts
+   data-label ("•" / "1.") and, for tasks, data-checked on the <li>. */
+.milkdown .ProseMirror ul,
+.milkdown .ProseMirror ol {
+  list-style: none;
+  padding: 0;
+  margin: 1.1em 0;
+}
+.milkdown .ProseMirror li {
+  position: relative;
+  padding-left: 1.6em;
+}
+.milkdown .ProseMirror li > p {
+  margin: 0.35em 0;
+}
+.milkdown .ProseMirror li::before {
+  content: attr(data-label);
+  position: absolute;
+  left: 0.15em;
+  top: 0;
+  line-height: 1.7;
+  color: #5d6c7b;
+  user-select: none;
+}
+.milkdown .ProseMirror li[data-item-type="task"]::before {
+  content: "";
+  left: 0;
+  top: 0.45em;
+  width: 17px;
+  height: 17px;
+  box-sizing: border-box;
+  border: 2px solid #5d6c7b;
+  cursor: pointer;
+}
+.milkdown .ProseMirror li[data-item-type="task"][data-checked="true"]::before {
+  background: #14275a
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 6.2l2.4 2.4 4.6-5' fill='none' stroke='white' stroke-width='1.8'/%3E%3C/svg%3E")
+    center / 100% no-repeat;
+  border-color: #14275a;
+}
+.milkdown .ProseMirror li[data-item-type="task"][data-checked="true"] > p {
+  color: #5d6c7b;
+  text-decoration: line-through;
+}
+
+/* "or paste an image link": the editor's CSP (img-src 'self' blob: data:)
+   blocks remote images, so a pasted link would show an empty box. Upload is the
+   only way to add an image. */
+.milkdown .milkdown-image-block .link-input-area,
+.milkdown .milkdown-image-block .placeholder .text {
+  display: none;
+}
+
+/* A picture with a size/alignment (see imageopts.js): Crepe fixes the <img>
+   height in pixels for the full-width layout, which would crop it once the block
+   is narrower, so let the height follow the width. */
+.milkdown .milkdown-image-block[data-sized] .image-wrapper {
+  width: 100%;
+}
+.milkdown .milkdown-image-block[data-sized] img {
+  width: 100%;
+  height: auto !important;
+  /* Crepe keeps pictures at least 100px tall and fills the box (cover): a
+     narrow picture would be cropped instead of shown whole */
+  min-height: 0;
+  object-fit: contain;
+}
+
+/* Drag a corner to resize (imageresize.js hit-tests these squares: keep the
+   inset/size in sync with HANDLE_INSET / HANDLE_SIZE there). Shown while the
+   pointer is over the picture or it is selected; which corners exist depends
+   on the alignment (right edge for left/none, left edge for right, both when
+   centered). */
+.milkdown .milkdown-image-block .image-wrapper::before,
+.milkdown .milkdown-image-block .image-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  z-index: 2;
+  box-sizing: border-box;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  background: #14275a;
+  box-shadow: 0 0 0 1px rgba(20, 39, 90, 0.55);
+  opacity: 0;
+  transition: opacity 0.12s;
+}
+.milkdown .milkdown-image-block .image-wrapper::before {
+  left: 8px;
+  cursor: nesw-resize;
+  display: none;
+}
+.milkdown .milkdown-image-block .image-wrapper::after {
+  right: 8px;
+  cursor: nwse-resize;
+}
+.milkdown .milkdown-image-block[data-align="right"] .image-wrapper::before,
+.milkdown .milkdown-image-block[data-align="center"] .image-wrapper::before {
+  display: block;
+}
+.milkdown .milkdown-image-block[data-align="right"] .image-wrapper::after {
+  display: none;
+}
+.milkdown .milkdown-image-block:hover .image-wrapper::before,
+.milkdown .milkdown-image-block:hover .image-wrapper::after,
+.milkdown .milkdown-image-block.selected .image-wrapper::before,
+.milkdown .milkdown-image-block.selected .image-wrapper::after {
+  opacity: 1;
+}
+/* live readout while dragging */
+.milkdown .milkdown-image-block[data-resizing] {
+  position: relative;
+}
+.milkdown .milkdown-image-block[data-resizing]::after {
+  content: attr(data-resizing);
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 2px 8px;
+  background: #14275a;
+  color: #fff;
+  font-family: var(--admin-mono);
+  font-size: 12px;
+  pointer-events: none;
+}
+/* the live preview is an <iframe>: it would swallow the pointer (and the
+   button release) as soon as the drag crosses into it */
+html.is-resizing-picture iframe {
+  pointer-events: none;
+}
+html.is-resizing-picture,
+html.is-resizing-picture * {
+  cursor: nwse-resize !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+}
+
+/* ---- callout boxes and collapsible blocks (blocks.js); same look as the site --- */
+.milkdown .ProseMirror [data-type="callout"] {
+  margin: 1.75em 0;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid #14275a;
+  background: #f1f4f7;
+}
+.milkdown .ProseMirror [data-type="callout"]::before {
+  content: attr(data-kind);
+  display: block;
+  margin-bottom: 0.4em;
+  font-family: var(--admin-mono);
+  font-size: 0.72em;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #14275a;
+  user-select: none;
+}
+.milkdown .ProseMirror [data-type="callout"] > p {
+  margin: 0.6em 0;
+}
+.milkdown .ProseMirror [data-type="callout"] > :last-child {
+  margin-bottom: 0;
+}
+.milkdown .ProseMirror [data-type="callout"][data-kind="tip"] {
+  border-left-color: #1f7a3d;
+  background: #eef7f0;
+}
+.milkdown .ProseMirror [data-type="callout"][data-kind="tip"]::before {
+  color: #1f7a3d;
+}
+.milkdown .ProseMirror [data-type="callout"][data-kind="important"] {
+  border-left-color: #6b3fa0;
+  background: #f4eefa;
+}
+.milkdown .ProseMirror [data-type="callout"][data-kind="important"]::before {
+  color: #6b3fa0;
+}
+.milkdown .ProseMirror [data-type="callout"][data-kind="warning"] {
+  border-left-color: #b7791f;
+  background: #fff7e6;
+}
+.milkdown .ProseMirror [data-type="callout"][data-kind="warning"]::before {
+  color: #8a5a12;
+}
+.milkdown .ProseMirror [data-type="callout"][data-kind="caution"] {
+  border-left-color: #b3261e;
+  background: #fdf0ef;
+}
+.milkdown .ProseMirror [data-type="callout"][data-kind="caution"]::before {
+  color: #b3261e;
+}
+
+.milkdown .ProseMirror [data-type="toggle"] {
+  margin: 1.5em 0;
+  padding: 0 1.1rem;
+  border: 1px solid #dee3e9;
+}
+.milkdown .ProseMirror [data-type="toggle"] > :first-child {
+  margin: 0;
+  padding: 0.75rem 0;
+  font-weight: 500;
+  color: #0a1317;
+}
+.milkdown .ProseMirror [data-type="toggle"] > :first-child::before {
+  content: "▸  ";
+  color: #5d6c7b;
+}
+.milkdown
+  .ProseMirror
+  [data-type="toggle"]
+  > :first-child:has(> br.ProseMirror-trailingBreak:only-child)::after {
+  content: "Title of the collapsible block";
+  color: #b0b8c0;
+  font-weight: 400;
+}
+.milkdown .ProseMirror [data-type="toggle"] > :not(:first-child) {
+  border-top: 1px solid #dee3e9;
+  padding-top: 0.5rem;
+}
+.milkdown .ProseMirror [data-type="toggle"] > :last-child {
+  margin-bottom: 1rem;
+}
+
+/* ---- footnotes (footnotes.js) ------------------------------------------------------ */
+.milkdown .ProseMirror sup[data-type="footnote_reference"] {
+  padding: 0 1px;
+  font-weight: 600;
+  color: #14275a;
+  cursor: pointer;
+}
+.milkdown .ProseMirror dl[data-type="footnote_definition"] {
+  display: flex;
+  gap: 0.6em;
+  margin: 0.4em 0;
+  font-size: 0.9em;
+  color: #4b4c4f;
+}
+.milkdown
+  .ProseMirror
+  :not(dl[data-type="footnote_definition"])
+  + dl[data-type="footnote_definition"] {
+  margin-top: 2.5em;
+  padding-top: 1em;
+  border-top: 1px solid #dee3e9;
+}
+.milkdown .ProseMirror dl[data-type="footnote_definition"] > dt {
+  min-width: 1.6em;
+  font-weight: 600;
+  color: #14275a;
+  cursor: pointer;
+  user-select: none;
+}
+.milkdown .ProseMirror dl[data-type="footnote_definition"] > dt::after {
+  content: ".";
+}
+.milkdown .ProseMirror dl[data-type="footnote_definition"] > dd {
+  flex: 1;
+  margin: 0;
+}
+.milkdown .ProseMirror dl[data-type="footnote_definition"] > dd > p {
+  margin: 0;
+}

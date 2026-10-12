@@ -1,0 +1,215 @@
+/* Extra article blocks: callouts, collapsible blocks, footnotes, cover image.
+   Kept apart from Blog.scss on purpose; same tokens (see Blog.scss). Used by the
+   article page (BlogPost.jsx) and by the editor's live preview. */
+
+$primary: #14275a;
+$canvas: #ffffff;
+$surface-soft: #f1f4f7;
+$ink-deep: #0a1317;
+$slate: #4b4c4f;
+$steel: #5d6c7b;
+$hairline-soft: #dee3e9;
+$font-mono: "IBM Plex Mono", "SF Mono", Menlo, Consolas, monospace;
+
+// ---- cover picture: article header and Writing card -------------------------------
+.mt-article-cover {
+  margin: 0 0 2rem;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid $hairline-soft;
+  }
+}
+
+.mt-writing-card.has-cover {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 200px;
+  column-gap: 28px;
+  align-items: start;
+
+  > * {
+    grid-column: 1;
+  }
+  // grid items stretch; the date badge should keep its own width
+  > .mt-badge {
+    justify-self: start;
+  }
+  > .mt-writing-thumb {
+    grid-column: 2;
+    grid-row: 1 / span 4;
+    box-sizing: border-box;
+    width: 200px;
+    aspect-ratio: 1200 / 630;
+    object-fit: cover;
+    border: 1px solid $hairline-soft;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 640px) {
+  .mt-writing-card.has-cover {
+    grid-template-columns: 1fr;
+
+    > .mt-writing-thumb {
+      grid-column: 1;
+      grid-row: auto;
+      order: -1;
+      width: 100%;
+      margin: 0 0 12px;
+    }
+  }
+}
+
+// ---- Writing search box ------------------------------------------------------------------
+.mt-writing-search {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: 28rem;
+  margin: 0 0 24px;
+
+  input[type="search"] {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 14px;
+    font: inherit;
+    color: $ink-deep;
+    background: $canvas;
+    border: 1px solid $hairline-soft;
+    border-radius: 0;
+    -webkit-appearance: none;
+    appearance: none;
+
+    &:focus {
+      outline: 2px solid $primary;
+      outline-offset: -1px;
+    }
+  }
+}
+.mt-writing-count {
+  font-family: $font-mono;
+  font-size: 12px;
+  color: $steel;
+  white-space: nowrap;
+}
+
+// ---- comments (giscus) -----------------------------------------------------------------------
+.mt-comments {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 0 24px 64px;
+}
+
+.mt-article-body {
+  // ---- callouts: > [!NOTE] ... (plugins/remark-callouts.js) -------------------
+  .callout {
+    margin: 1.75em 0;
+    padding: 1rem 1.25rem;
+    border-left: 4px solid $primary;
+    background: $surface-soft;
+    color: $ink-deep;
+
+    > p {
+      margin: 0.6em 0;
+    }
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+  .callout-title {
+    margin: 0 0 0.4em !important;
+    font-family: $font-mono;
+    font-size: 0.72em;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $primary;
+  }
+  .callout-tip {
+    border-left-color: #1f7a3d;
+    background: #eef7f0;
+    .callout-title {
+      color: #1f7a3d;
+    }
+  }
+  .callout-important {
+    border-left-color: #6b3fa0;
+    background: #f4eefa;
+    .callout-title {
+      color: #6b3fa0;
+    }
+  }
+  .callout-warning {
+    border-left-color: #b7791f;
+    background: #fff7e6;
+    .callout-title {
+      color: #8a5a12;
+    }
+  }
+  .callout-caution {
+    border-left-color: #b3261e;
+    background: #fdf0ef;
+    .callout-title {
+      color: #b3261e;
+    }
+  }
+
+  // ---- collapsible block: > [!TOGGLE] Title -----------------------------------
+  details.toggle {
+    margin: 1.5em 0;
+    padding: 0 1.1rem;
+    border: 1px solid $hairline-soft;
+    background: $canvas;
+
+    > summary {
+      cursor: pointer;
+      padding: 0.75rem 0;
+      font-weight: 500;
+      color: $ink-deep;
+      list-style-position: inside;
+    }
+    &[open] > summary {
+      border-bottom: 1px solid $hairline-soft;
+      margin-bottom: 0.5em;
+    }
+    > :last-child {
+      margin-bottom: 1rem;
+    }
+  }
+
+  // ---- footnotes (remark-gfm: [^1]) --------------------------------------------
+  // remark-rehype marks the "Footnotes" heading .sr-only (visually hidden);
+  // the site has no such utility, so define it for the article only.
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  .footnotes {
+    ol {
+      padding-left: 1.4rem;
+    }
+    li {
+      margin: 0.5em 0;
+    }
+    p {
+      margin: 0.3em 0;
+    }
+  }
+  sup a[data-footnote-ref] {
+    padding: 0 0.1em;
+    text-decoration: none;
+  }
+  .data-footnote-backref {
+    text-decoration: none;
+    margin-left: 0.3em;
+  }
+}

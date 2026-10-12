@@ -1,12 +1,17 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {Link, useParams} from "react-router-dom";
 import "./Blog.scss";
+import "./Extras.scss";
 import {site} from "../data/site";
+import Comments from "./Comments";
 import {getPost} from "./postRegistry";
 
 function formatDate(iso) {
   if (!iso) return null;
-  return new Date(iso).toLocaleDateString("en-US", {
+  // "2026-09-21" alone is parsed as UTC midnight, which is the previous evening
+  // in US time zones: read a date-only string as a local date instead.
+  const d = new Date(/^\d{4}-\d{2}-\d{2}$/.test(iso) ? iso + "T00:00:00" : iso);
+  return d.toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
     day: "numeric"
@@ -16,6 +21,17 @@ function formatDate(iso) {
 export default function BlogPost() {
   const {slug} = useParams();
   const post = getPost(slug);
+
+  // tab title / history entry: the story's own title (the static page for this
+  // URL already carries it for crawlers, see tools/site-feeds.js)
+  useEffect(() => {
+    if (!post) return undefined;
+    const before = document.title;
+    document.title = `${post.title} | ${site.name}`;
+    return () => {
+      document.title = before;
+    };
+  }, [post]);
 
   if (!post) {
     return (
@@ -70,10 +86,18 @@ export default function BlogPost() {
           )}
         </header>
 
+        {post.cover && (
+          <figure className="mt-article-cover">
+            <img src={post.cover} alt="" />
+          </figure>
+        )}
+
         <div className="mt-article-body">
           <Component />
         </div>
       </article>
+
+      <Comments slug={post.slug} />
 
       <footer className="mt-footer">
         <small>© {site.name} · NextG Wireless Lab, NC State University</small>
