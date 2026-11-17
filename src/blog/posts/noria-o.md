@@ -27,7 +27,7 @@ The questions cover topics such as the resources affected by an incident, logs a
 
 The CQs serve two purposes in the paper: they guide the conceptual design and later provide the basis for testing whether the implemented ontology supports the experts' information needs.
 
-### 2.2 Four Facets of the Domain
+## 2.2 Four Facets of the Domain
 
 NORIA-O organizes its domain into four facets.
 
@@ -42,7 +42,7 @@ For instance, an alarm raised by a switch belongs to the dynamic facet. The swit
 
 ![](/img/blog/noria-o/image-d74b2e53.png)
 
-### 2.3 Formalization and Reuse
+## 2.3 Formalization and Reuse
 
 The authors primarily use RDFS to express class hierarchies and use OWL where additional logical structure is needed, such as class disjointness or property qualifications. The implemented ontology contains **59 classes**, **107 object properties**, and **71 datatype properties**.
 
@@ -76,7 +76,7 @@ This design makes the event's **origin**, **meaning**, and **relationships** ava
 
 A **TroubleTicket** is a record used to track an issue and coordinate restoration work; it is not itself the event that occurred. Corrective actions can be recorded as **TroubleTicketNote** instances linked to the parent ticket. The model can also connect an action to its responsible agent and to digital traces, such as a login or configuration-change EventRecord.
 
-The authors include properties for grouping tickets, categorizing problems, and relating corrective actions to a more general **OperationPlan**. A **ChangeRequest** records**** scheduled changes. By relating changes to affected resources and applications and to their start and end times, the model supports investigation of a potential causal connection between a change and a subsequent trouble ticket.
+The authors include properties for grouping tickets, categorizing problems, and relating corrective actions to a more general **OperationPlan**. A **ChangeRequest** records\*\*\*\* scheduled changes. By relating changes to affected resources and applications and to their start and end times, the model supports investigation of a potential causal connection between a change and a subsequent trouble ticket.
 
 ## 3.4 Agents, Teams, and Organizations
 
