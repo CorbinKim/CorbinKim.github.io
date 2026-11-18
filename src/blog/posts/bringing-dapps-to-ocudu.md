@@ -2,7 +2,7 @@
 title: "Bringing dApps to OCUDU"
 date: "2026-11-18"
 excerpt: "An E3 Controller for Real-Time Open RAN Intelligence"
-tags: []
+tags: ["In-network processing", "Network experimentation", "Network measurement"]
 cover: "/img/blog/bringing-dapps-to-ocudu/unknown-1746f2dc.png"
 ---
 
