@@ -36,6 +36,11 @@ export const timeline = [
 
 export const awards = [
   {
+    date: "Oct 2026",
+    title: "First Prize",
+    awarder: "OpenAirInterface Workshop Hackathon — RAN MAC/RRM implementation"
+  },
+  {
     date: "Jan 2025",
     title: "Best Paper Award",
     awarder: "KICS Symposium — O-RAN testbed implementation"
