@@ -3,6 +3,7 @@ title: "FActScore"
 date: "2026-11-23"
 excerpt: "Evaluating Factual Precision One Claim at a Time"
 tags: ["Language Models", "Factuality", "Long-form Generation", "Atomic Facts", "Fact Verification"]
+cover: "/img/blog/factscore/screenshot-2026-11-23-at-2-53-17-pm-eb4d471a.png"
 ---
 
 - Authors: Min et al.
