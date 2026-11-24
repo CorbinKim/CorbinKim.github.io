@@ -3,6 +3,7 @@ title: "TSVer"
 date: "2026-11-24"
 excerpt: "Evaluating Fact Verification Against Time-Series Evidence"
 tags: ["Fact Verification", "Time series", "Evidence retrieval", "Explanation evaluation"]
+cover: "/img/blog/tsver/screenshot-2026-11-24-at-4-22-13-pm-96fbe148.png"
 ---
 
 - Authors: Strong et al.
